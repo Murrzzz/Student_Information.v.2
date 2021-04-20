@@ -1,0 +1,38 @@
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.exe
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.exe
+c:\users\administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.pdb
+C:\Users\Administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmMain.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmLogin.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmLogin.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Properties.Resources.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.csproj.GenerateResource.Cache
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.exe
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.pdb
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.exe
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.pdb
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.csprojResolveAssemblyReference.cache
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmCreateAcc.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmHome.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmMain.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmSearch.resources
+C:\Users\intel2020\Desktop\SIS\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmAddClass.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.exe
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.pdb
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.exe
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.pdb
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmCreateAcc.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmHome.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmMain.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.frmLogin.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.MainMenu.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Panel.resources
+C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Settings.resources
