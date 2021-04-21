@@ -41,9 +41,9 @@ namespace Student_Information.v._2
         }
         private void Hide_panels()//Hide all panels
         {
-            pnlAddClass.Hide();
-            pnlAddStudents.Hide();
+            pnlClass.Hide();
             pnlRecords.Hide();
+            pnlSubjects.Hide();
             pnlSearch.Hide();
 
         }
@@ -51,27 +51,27 @@ namespace Student_Information.v._2
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlSearch.Show();
+            pnlClass.Show();
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlAddClass.Show();
+            pnlSubjects.Show();
 
         }
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlAddStudents.Show();
+            pnlRecords.Show();
 
         }
 
         private void btnRecords_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlAddStudents.Show();
+            pnlRecords.Show();
         }
 
         private void pnlAddStudents_Paint(object sender, PaintEventArgs e)
