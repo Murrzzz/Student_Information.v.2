@@ -39,9 +39,9 @@
             this.UsernameTextField = new System.Windows.Forms.Label();
             this.checkShow = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,7 +107,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(245, 35);
-            this.txtPassword.TabIndex = 24;
+            this.txtPassword.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -120,7 +120,7 @@
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(245, 35);
-            this.txtUsername.TabIndex = 23;
+            this.txtUsername.TabIndex = 0;
             // 
             // PasswordTextField
             // 
@@ -175,20 +175,10 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(123, 33);
-            this.btnLogin.TabIndex = 19;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.SystemColors.MenuText;
-            this.lineShape1.BorderWidth = 2;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 102;
-            this.lineShape1.X2 = 324;
-            this.lineShape1.Y1 = 102;
-            this.lineShape1.Y2 = 103;
             // 
             // shapeContainer2
             // 
@@ -211,6 +201,16 @@
             this.lineShape2.X2 = 324;
             this.lineShape2.Y1 = 182;
             this.lineShape2.Y2 = 183;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.SystemColors.MenuText;
+            this.lineShape1.BorderWidth = 2;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 102;
+            this.lineShape1.X2 = 324;
+            this.lineShape1.Y1 = 102;
+            this.lineShape1.Y2 = 103;
             // 
             // pictureBox1
             // 

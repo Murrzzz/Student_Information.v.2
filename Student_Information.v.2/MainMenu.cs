@@ -11,6 +11,8 @@ namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
     {
+       
+
         public MainMenu()
         {
             InitializeComponent();
@@ -44,7 +46,7 @@ namespace Student_Information.v._2
             pnlClass.Hide();
             pnlRecords.Hide();
             pnlSubjects.Hide();
-            pnlSearch.Hide();
+            pnlAccounts.Hide();
 
         }
 
@@ -71,7 +73,7 @@ namespace Student_Information.v._2
         private void btnRecords_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlRecords.Show();
+            pnlAccounts.Show();
         }
 
         private void pnlAddStudents_Paint(object sender, PaintEventArgs e)
@@ -85,6 +87,23 @@ namespace Student_Information.v._2
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Add ad = new Add(this);
+            this.Hide();
+            ad.Show();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlSearch_Paint(object sender, PaintEventArgs e)
         {
 
         }
