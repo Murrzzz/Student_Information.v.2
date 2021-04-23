@@ -247,6 +247,7 @@ namespace Student_Information.v._2
             {
                 Application.Exit();
             }
+            Writeline.Console("Hello Mundo");
             }
 }
 
