@@ -54,6 +54,7 @@
             this.picexit = new System.Windows.Forms.PictureBox();
             this.panelChildform = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             this.panelSettingsSubmenu.SuspendLayout();
             this.panelMainSubmenu.SuspendLayout();
@@ -423,6 +424,7 @@
             // panelChildform
             // 
             this.panelChildform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelChildform.Controls.Add(this.btnInfo);
             this.panelChildform.Controls.Add(this.pictureBox2);
             this.panelChildform.Location = new System.Drawing.Point(236, 43);
             this.panelChildform.Name = "panelChildform";
@@ -441,6 +443,20 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInfo.Location = new System.Drawing.Point(490, 531);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(95, 29);
+            this.btnInfo.TabIndex = 1;
+            this.btnInfo.Text = "Info";
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // frmHome
             // 
@@ -503,5 +519,6 @@
         private System.Windows.Forms.PictureBox picexit;
         private System.Windows.Forms.Panel panelChildform;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

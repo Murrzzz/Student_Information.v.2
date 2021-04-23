@@ -242,6 +242,11 @@ namespace Student_Information.v._2
                 mgraphics.FillRectangle(lgb, area);
                 mgraphics.DrawRectangle(pen, area);
             }
+
+            private void btnInfo_Click(object sender, EventArgs e)
+            {
+                Application.Exit();
+            }
             }
 }
 

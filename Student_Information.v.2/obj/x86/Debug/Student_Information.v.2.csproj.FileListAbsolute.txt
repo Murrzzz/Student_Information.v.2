@@ -36,3 +36,5 @@ C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2
 C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.MainMenu.resources
 C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Panel.resources
 C:\Users\Administrator\Downloads\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Settings.resources
+C:\Users\intel2020\Desktop\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.exe
+C:\Users\intel2020\Desktop\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.pdb
