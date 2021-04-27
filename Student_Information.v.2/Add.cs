@@ -22,5 +22,12 @@ namespace Student_Information.v._2
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu main = new MainMenu();
+            main.Show();
+        }
     }
 }

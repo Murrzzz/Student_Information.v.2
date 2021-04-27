@@ -57,6 +57,7 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
