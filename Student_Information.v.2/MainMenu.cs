@@ -113,7 +113,39 @@ namespace Student_Information.v._2
             adapt.Fill(table);
             dgvClass.DataSource = table;
 
-            
+            dgvClass.AllowUserToAddRows = false;
+            dgvClass.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+        }
+
+        private void dgvClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
+                txtDepartment.Text=row.Cells["Department"].Value .ToString();
+                txtCourse.Text = row.Cells["Course"].Value.ToString();
+                txtSection.Text = row.Cells["Section"].Value.ToString();
+                txtYearLevel .Text  = row.Cells["Year_Level"].Value.ToString();
+                txtSchoolYear.Text  = row.Cells["School_Year"].Value.ToString();
+            }
+        }
+
+        private void btnUpdate_Class_Click(object sender, EventArgs e)
+        {
+            string Department = txtDepartment.Text;
+            string Course = txtCourse.Text;
+            string Section = txtSection.Text;
+            string School_Year = txtSchoolYear.Text ;
+            string Year_Level = txtYearLevel.Text;
+
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]='" + txtDepartment.Text + "',[Course]='" + txtCourse.Text + "',[Section]='" + txtSection.Text + "',[Year_Level]='" + txtYearLevel.Text + "',[School_Year]='" + txtSchoolYear.Text + "' WHERE [Course]='" + Course + "' AND [Section]='" + Section  + "' AND [Year_Level]='" + Year_Level +"'" , con);
+            cmd.ExecuteNonQuery();
+
+            Class_SelectAll();
+            con.Close();
         }
     
     }

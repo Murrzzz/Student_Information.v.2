@@ -372,6 +372,7 @@
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.Size = new System.Drawing.Size(729, 241);
             this.dgvClass.TabIndex = 23;
+            this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick);
             // 
             // txtSchoolYear
             // 
@@ -417,6 +418,7 @@
             this.btnUpdate_Class.TabIndex = 7;
             this.btnUpdate_Class.Text = "Update";
             this.btnUpdate_Class.UseVisualStyleBackColor = false;
+            this.btnUpdate_Class.Click += new System.EventHandler(this.btnUpdate_Class_Click);
             // 
             // btnAdd_Class
             // 
