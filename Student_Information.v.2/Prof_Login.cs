@@ -19,19 +19,7 @@ namespace Student_Information.v._2
         {
             InitializeComponent();
         }
-        private void Prof_Login_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics mgraphics = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
-
-            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
-            mgraphics.DrawRectangle(pen, area);
-            mgraphics.FillRectangle(lgb, area);
-            mgraphics.DrawRectangle(pen, area);
-
-        }
-
+        
         private void Prof_Login_Load(object sender, EventArgs e)
         {
             
@@ -60,6 +48,18 @@ namespace Student_Information.v._2
 
             con.Close();
 
+        }
+
+        private void Prof_Login_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics mgraphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
+
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
+            mgraphics.DrawRectangle(pen, area);
+            mgraphics.FillRectangle(lgb, area);
+            mgraphics.DrawRectangle(pen, area);
         }
 
     }

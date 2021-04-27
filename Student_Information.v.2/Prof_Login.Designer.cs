@@ -238,6 +238,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prof_Login";
             this.Load += new System.EventHandler(this.Prof_Login_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Prof_Login_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
