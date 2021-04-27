@@ -53,7 +53,6 @@
             this.dgvClass = new System.Windows.Forms.DataGridView();
             this.txtSchoolYear = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDelete_Class = new System.Windows.Forms.Button();
             this.btnUpdate_Class = new System.Windows.Forms.Button();
             this.btnAdd_Class = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,6 +84,10 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.txtClass_Name = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtClass_Des = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -330,11 +333,14 @@
             // 
             // pnlClass
             // 
+            this.pnlClass.Controls.Add(this.label20);
+            this.pnlClass.Controls.Add(this.txtClass_Des);
+            this.pnlClass.Controls.Add(this.lblClass);
+            this.pnlClass.Controls.Add(this.txtClass_Name);
             this.pnlClass.Controls.Add(this.button6);
             this.pnlClass.Controls.Add(this.dgvClass);
             this.pnlClass.Controls.Add(this.txtSchoolYear);
             this.pnlClass.Controls.Add(this.label7);
-            this.pnlClass.Controls.Add(this.btnDelete_Class);
             this.pnlClass.Controls.Add(this.btnUpdate_Class);
             this.pnlClass.Controls.Add(this.btnAdd_Class);
             this.pnlClass.Controls.Add(this.label6);
@@ -377,7 +383,7 @@
             // txtSchoolYear
             // 
             this.txtSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSchoolYear.Location = new System.Drawing.Point(392, 181);
+            this.txtSchoolYear.Location = new System.Drawing.Point(56, 196);
             this.txtSchoolYear.Multiline = true;
             this.txtSchoolYear.Name = "txtSchoolYear";
             this.txtSchoolYear.Size = new System.Drawing.Size(95, 33);
@@ -387,24 +393,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(391, 158);
+            this.label7.Location = new System.Drawing.Point(55, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 20;
             this.label7.Text = "School Year";
-            // 
-            // btnDelete_Class
-            // 
-            this.btnDelete_Class.BackColor = System.Drawing.Color.Crimson;
-            this.btnDelete_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete_Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete_Class.ForeColor = System.Drawing.Color.White;
-            this.btnDelete_Class.Location = new System.Drawing.Point(536, 267);
-            this.btnDelete_Class.Name = "btnDelete_Class";
-            this.btnDelete_Class.Size = new System.Drawing.Size(127, 36);
-            this.btnDelete_Class.TabIndex = 8;
-            this.btnDelete_Class.Text = "Delete";
-            this.btnDelete_Class.UseVisualStyleBackColor = false;
             // 
             // btnUpdate_Class
             // 
@@ -412,7 +405,7 @@
             this.btnUpdate_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate_Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate_Class.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate_Class.Location = new System.Drawing.Point(374, 267);
+            this.btnUpdate_Class.Location = new System.Drawing.Point(462, 272);
             this.btnUpdate_Class.Name = "btnUpdate_Class";
             this.btnUpdate_Class.Size = new System.Drawing.Size(127, 36);
             this.btnUpdate_Class.TabIndex = 7;
@@ -426,7 +419,7 @@
             this.btnAdd_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd_Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd_Class.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Class.Location = new System.Drawing.Point(206, 267);
+            this.btnAdd_Class.Location = new System.Drawing.Point(294, 272);
             this.btnAdd_Class.Name = "btnAdd_Class";
             this.btnAdd_Class.Size = new System.Drawing.Size(127, 36);
             this.btnAdd_Class.TabIndex = 6;
@@ -741,6 +734,44 @@
             this.textBox22.Size = new System.Drawing.Size(187, 33);
             this.textBox22.TabIndex = 24;
             // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(240, 170);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(94, 20);
+            this.lblClass.TabIndex = 26;
+            this.lblClass.Text = "Class Name";
+            // 
+            // txtClass_Name
+            // 
+            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Name.Location = new System.Drawing.Point(189, 193);
+            this.txtClass_Name.Multiline = true;
+            this.txtClass_Name.Name = "txtClass_Name";
+            this.txtClass_Name.Size = new System.Drawing.Size(187, 33);
+            this.txtClass_Name.TabIndex = 25;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(561, 168);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 20);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Class Description";
+            // 
+            // txtClass_Des
+            // 
+            this.txtClass_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Des.Location = new System.Drawing.Point(411, 191);
+            this.txtClass_Des.Multiline = true;
+            this.txtClass_Des.Name = "txtClass_Des";
+            this.txtClass_Des.Size = new System.Drawing.Size(410, 33);
+            this.txtClass_Des.TabIndex = 27;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,7 +818,6 @@
         private System.Windows.Forms.Button btnSear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlClass;
-        private System.Windows.Forms.Button btnDelete_Class;
         private System.Windows.Forms.Button btnUpdate_Class;
         private System.Windows.Forms.Button btnAdd_Class;
         private System.Windows.Forms.Label label6;
@@ -832,5 +862,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtClass_Des;
+        private System.Windows.Forms.Label lblClass;
+        private System.Windows.Forms.TextBox txtClass_Name;
     }
 }
