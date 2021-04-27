@@ -100,12 +100,21 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
             cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
             cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear;
+            cmd.ExecuteNonQuery();
 
-
-
+            Class_SelectAll();
             con.Close();
         }
 
+        private void Class_SelectAll()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [class]",con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvClass.DataSource = table;
+
+            
+        }
     
     }
 }

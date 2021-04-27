@@ -50,7 +50,7 @@
             this.btnSear = new System.Windows.Forms.Button();
             this.pnlClass = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvClass = new System.Windows.Forms.DataGridView();
             this.txtSchoolYear = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDelete_Class = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlClass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.pnlSubjects.SuspendLayout();
@@ -331,7 +331,7 @@
             // pnlClass
             // 
             this.pnlClass.Controls.Add(this.button6);
-            this.pnlClass.Controls.Add(this.dataGridView2);
+            this.pnlClass.Controls.Add(this.dgvClass);
             this.pnlClass.Controls.Add(this.txtSchoolYear);
             this.pnlClass.Controls.Add(this.label7);
             this.pnlClass.Controls.Add(this.btnDelete_Class);
@@ -364,14 +364,14 @@
             this.button6.Text = "Set";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // dataGridView2
+            // dgvClass
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(70, 332);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(729, 241);
-            this.dataGridView2.TabIndex = 23;
+            this.dgvClass.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClass.Location = new System.Drawing.Point(70, 332);
+            this.dgvClass.Name = "dgvClass";
+            this.dgvClass.Size = new System.Drawing.Size(729, 241);
+            this.dgvClass.TabIndex = 23;
             // 
             // txtSchoolYear
             // 
@@ -761,7 +761,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -802,7 +802,7 @@
         private System.Windows.Forms.TextBox txtSchoolYear;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvClass;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button7;
