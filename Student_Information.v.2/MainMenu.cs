@@ -88,25 +88,28 @@ namespace Student_Information.v._2
 
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
-            con.Open();
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "")||(txtClass_Des.Text =="")||(txtClass_Name .Text ==""))
+            
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Des.Text == "") || (txtClass_Name.Text == ""))
             {
                 MessageBox.Show("Please fill the blank");
             }
+            else
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Description],[Class_Name]) values(?,?,?,?,?,?,?)", con);
+                cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
+                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
+                cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
+                cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear.Text;
+                cmd.Parameters.AddWithValue("@Class_Description", OleDbType.VarChar).Value = txtClass_Des.Text;
+                cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name.Text;
 
-            OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Description],[Class_Name]) values(?,?,?,?,?,?,?)",con);
-            cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
-            cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
-            cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
-            cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
-            cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear.Text ;
-            cmd.Parameters.AddWithValue("@Class_Description", OleDbType.VarChar).Value = txtClass_Des .Text ;
-            cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name .Text ;
+                cmd.ExecuteNonQuery();
 
-            cmd.ExecuteNonQuery();
-
-            Class_SelectAll();
-            con.Close();
+                Class_SelectAll();
+                con.Close();
+            }
         }
 
         private void Class_SelectAll()
