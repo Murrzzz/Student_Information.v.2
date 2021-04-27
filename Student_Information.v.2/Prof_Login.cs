@@ -33,7 +33,7 @@ namespace Student_Information.v._2
 
             }
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("select count(*) from[Account] where [Username]=? and [Password]=?", con);
+            OleDbCommand cmd = new OleDbCommand("select count(*) from[Prof_account] where [username]=? and [password]=?", con);
             cmd.Parameters.AddWithValue("@Username", OleDbType.VarChar).Value = txtUsername.Text;
             cmd.Parameters.AddWithValue("@Password", OleDbType.VarChar).Value = txtPassword.Text;
 

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Data.OleDb;
 namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
     {
-       
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
+      
 
         public MainMenu()
         {
@@ -76,21 +78,7 @@ namespace Student_Information.v._2
             pnlAccounts.Show();
         }
 
-        private void pnlAddStudents_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+   
         private void button5_Click_1(object sender, EventArgs e)
         {
             Add ad = new Add(this);
@@ -98,14 +86,26 @@ namespace Student_Information.v._2
             ad.Show();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void btnAdd_Class_Click(object sender, EventArgs e)
         {
+            con.Open();
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == ""))
+            {
+                MessageBox.Show("Please fill the blank");
+            }
 
+            OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year]) values(?,?,?,?,?)",con);
+            cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
+            cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
+            cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
+            cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
+            cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear;
+
+
+
+            con.Close();
         }
 
-        private void pnlSearch_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }
