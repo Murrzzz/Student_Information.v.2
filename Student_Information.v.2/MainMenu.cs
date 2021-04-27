@@ -135,6 +135,8 @@ namespace Student_Information.v._2
                 txtSection.Text = row.Cells["Section"].Value.ToString();
                 txtYearLevel .Text  = row.Cells["Year_Level"].Value.ToString();
                 txtSchoolYear.Text  = row.Cells["School_Year"].Value.ToString();
+                txtClass_Des.Text = row.Cells["Class_Description"].Value.ToString();
+                txtClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
             }
         }
 
