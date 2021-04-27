@@ -78,6 +78,11 @@ namespace Student_Information.v._2
             pnlRecycleBin.Show();
         }
 
+        private void pnlSaveData_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
       
     }
 }

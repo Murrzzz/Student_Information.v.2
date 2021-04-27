@@ -53,3 +53,4 @@ C:\Users\Administrator\Desktop\System\Student_Information.v.2\Student_Informatio
 C:\Users\Administrator\Desktop\System\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Properties.Resources.resources
 C:\Users\Administrator\Desktop\System\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\System\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Add.resources
+C:\Users\Administrator\Desktop\System\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Prof_Login.resources

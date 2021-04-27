@@ -43,7 +43,7 @@ namespace Student_Information.v._2
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            new Settings().Show();
+            new Prof_Login().Show();
             this.Hide();
         }
 

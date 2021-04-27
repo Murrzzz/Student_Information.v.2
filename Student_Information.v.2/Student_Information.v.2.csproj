@@ -58,6 +58,12 @@
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs" />
+    <Compile Include="Prof_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prof_Login.Designer.cs">
+      <DependentUpon>Prof_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Login.resx">
+      <DependentUpon>Prof_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
