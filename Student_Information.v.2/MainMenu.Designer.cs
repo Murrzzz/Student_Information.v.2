@@ -49,6 +49,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSear = new System.Windows.Forms.Button();
             this.pnlClass = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtClass_Des = new System.Windows.Forms.TextBox();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.txtClass_Name = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.dgvClass = new System.Windows.Forms.DataGridView();
             this.txtSchoolYear = new System.Windows.Forms.TextBox();
@@ -81,13 +85,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.txtClass_Name = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtClass_Des = new System.Windows.Forms.TextBox();
+            this.txtSub_Name = new System.Windows.Forms.TextBox();
+            this.txtSub_Units = new System.Windows.Forms.TextBox();
+            this.txtSub_Code = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -357,6 +357,44 @@
             this.pnlClass.Size = new System.Drawing.Size(860, 664);
             this.pnlClass.TabIndex = 7;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(561, 168);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 20);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Class Description";
+            // 
+            // txtClass_Des
+            // 
+            this.txtClass_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Des.Location = new System.Drawing.Point(411, 191);
+            this.txtClass_Des.Multiline = true;
+            this.txtClass_Des.Name = "txtClass_Des";
+            this.txtClass_Des.Size = new System.Drawing.Size(410, 33);
+            this.txtClass_Des.TabIndex = 27;
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(240, 170);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(94, 20);
+            this.lblClass.TabIndex = 26;
+            this.lblClass.Text = "Class Name";
+            // 
+            // txtClass_Name
+            // 
+            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Name.Location = new System.Drawing.Point(189, 193);
+            this.txtClass_Name.Multiline = true;
+            this.txtClass_Name.Name = "txtClass_Name";
+            this.txtClass_Name.Size = new System.Drawing.Size(187, 33);
+            this.txtClass_Name.TabIndex = 25;
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -620,9 +658,9 @@
             this.pnlSubjects.Controls.Add(this.label28);
             this.pnlSubjects.Controls.Add(this.label29);
             this.pnlSubjects.Controls.Add(this.label30);
-            this.pnlSubjects.Controls.Add(this.textBox18);
-            this.pnlSubjects.Controls.Add(this.textBox21);
-            this.pnlSubjects.Controls.Add(this.textBox22);
+            this.pnlSubjects.Controls.Add(this.txtSub_Name);
+            this.pnlSubjects.Controls.Add(this.txtSub_Units);
+            this.pnlSubjects.Controls.Add(this.txtSub_Code);
             this.pnlSubjects.Location = new System.Drawing.Point(189, 0);
             this.pnlSubjects.Name = "pnlSubjects";
             this.pnlSubjects.Size = new System.Drawing.Size(857, 661);
@@ -680,17 +718,17 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(582, 108);
+            this.label28.Location = new System.Drawing.Point(349, 149);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(109, 20);
+            this.label28.Size = new System.Drawing.Size(147, 20);
             this.label28.TabIndex = 30;
-            this.label28.Text = "Subject Name";
+            this.label28.Text = "Subject Description";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(375, 109);
+            this.label29.Location = new System.Drawing.Point(480, 76);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(104, 20);
             this.label29.TabIndex = 29;
@@ -701,76 +739,38 @@
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(157, 108);
+            this.label30.Location = new System.Drawing.Point(264, 75);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(123, 20);
+            this.label30.Size = new System.Drawing.Size(105, 20);
             this.label30.TabIndex = 28;
-            this.label30.Text = "Subject Number";
+            this.label30.Text = "Subject Code";
             // 
-            // textBox18
+            // txtSub_Name
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(535, 131);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(187, 33);
-            this.textBox18.TabIndex = 26;
+            this.txtSub_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSub_Name.Location = new System.Drawing.Point(230, 173);
+            this.txtSub_Name.Multiline = true;
+            this.txtSub_Name.Name = "txtSub_Name";
+            this.txtSub_Name.Size = new System.Drawing.Size(393, 33);
+            this.txtSub_Name.TabIndex = 26;
             // 
-            // textBox21
+            // txtSub_Units
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(329, 131);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(187, 33);
-            this.textBox21.TabIndex = 25;
+            this.txtSub_Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSub_Units.Location = new System.Drawing.Point(436, 98);
+            this.txtSub_Units.Multiline = true;
+            this.txtSub_Units.Name = "txtSub_Units";
+            this.txtSub_Units.Size = new System.Drawing.Size(187, 33);
+            this.txtSub_Units.TabIndex = 25;
             // 
-            // textBox22
+            // txtSub_Code
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(123, 131);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(187, 33);
-            this.textBox22.TabIndex = 24;
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(240, 170);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(94, 20);
-            this.lblClass.TabIndex = 26;
-            this.lblClass.Text = "Class Name";
-            // 
-            // txtClass_Name
-            // 
-            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass_Name.Location = new System.Drawing.Point(189, 193);
-            this.txtClass_Name.Multiline = true;
-            this.txtClass_Name.Name = "txtClass_Name";
-            this.txtClass_Name.Size = new System.Drawing.Size(187, 33);
-            this.txtClass_Name.TabIndex = 25;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(561, 168);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(132, 20);
-            this.label20.TabIndex = 28;
-            this.label20.Text = "Class Description";
-            // 
-            // txtClass_Des
-            // 
-            this.txtClass_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass_Des.Location = new System.Drawing.Point(411, 191);
-            this.txtClass_Des.Multiline = true;
-            this.txtClass_Des.Name = "txtClass_Des";
-            this.txtClass_Des.Size = new System.Drawing.Size(410, 33);
-            this.txtClass_Des.TabIndex = 27;
+            this.txtSub_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSub_Code.Location = new System.Drawing.Point(230, 98);
+            this.txtSub_Code.Multiline = true;
+            this.txtSub_Code.Name = "txtSub_Code";
+            this.txtSub_Code.Size = new System.Drawing.Size(187, 33);
+            this.txtSub_Code.TabIndex = 24;
             // 
             // MainMenu
             // 
@@ -779,10 +779,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlClass);
-            this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.pnlClass);
+            this.Controls.Add(this.pnlAccounts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -843,9 +843,9 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtSub_Name;
+        private System.Windows.Forms.TextBox txtSub_Units;
+        private System.Windows.Forms.TextBox txtSub_Code;
         public System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label11;
