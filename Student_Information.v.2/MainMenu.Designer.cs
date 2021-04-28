@@ -80,8 +80,8 @@
             this.pnlSubjects = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnSub_Upt = new System.Windows.Forms.Button();
+            this.btnSub_Add = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -653,8 +653,8 @@
             // 
             this.pnlSubjects.Controls.Add(this.dataGridView3);
             this.pnlSubjects.Controls.Add(this.button7);
-            this.pnlSubjects.Controls.Add(this.button8);
-            this.pnlSubjects.Controls.Add(this.button9);
+            this.pnlSubjects.Controls.Add(this.btnSub_Upt);
+            this.pnlSubjects.Controls.Add(this.btnSub_Add);
             this.pnlSubjects.Controls.Add(this.label28);
             this.pnlSubjects.Controls.Add(this.label29);
             this.pnlSubjects.Controls.Add(this.label30);
@@ -688,31 +688,32 @@
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnSub_Upt
             // 
-            this.button8.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(368, 279);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(127, 36);
-            this.button8.TabIndex = 33;
-            this.button8.Text = "Update";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnSub_Upt.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSub_Upt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub_Upt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub_Upt.ForeColor = System.Drawing.Color.White;
+            this.btnSub_Upt.Location = new System.Drawing.Point(368, 279);
+            this.btnSub_Upt.Name = "btnSub_Upt";
+            this.btnSub_Upt.Size = new System.Drawing.Size(127, 36);
+            this.btnSub_Upt.TabIndex = 33;
+            this.btnSub_Upt.Text = "Update";
+            this.btnSub_Upt.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnSub_Add
             // 
-            this.button9.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(200, 279);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(127, 36);
-            this.button9.TabIndex = 32;
-            this.button9.Text = "Add";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnSub_Add.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnSub_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub_Add.ForeColor = System.Drawing.Color.White;
+            this.btnSub_Add.Location = new System.Drawing.Point(200, 279);
+            this.btnSub_Add.Name = "btnSub_Add";
+            this.btnSub_Add.Size = new System.Drawing.Size(127, 36);
+            this.btnSub_Add.TabIndex = 32;
+            this.btnSub_Add.Text = "Add";
+            this.btnSub_Add.UseVisualStyleBackColor = false;
+            this.btnSub_Add.Click += new System.EventHandler(this.button9_Click);
             // 
             // label28
             // 
@@ -838,8 +839,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnSub_Upt;
+        private System.Windows.Forms.Button btnSub_Add;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;

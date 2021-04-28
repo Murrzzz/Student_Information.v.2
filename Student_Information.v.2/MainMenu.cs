@@ -155,6 +155,11 @@ namespace Student_Information.v._2
             Class_SelectAll();
             con.Close();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     
     }
 }
