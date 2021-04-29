@@ -89,13 +89,47 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-          
+            select_class();
+            select_students();
+        }
+        private void select_students()
+        {
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students] where[Class_Name]='"+lblClass_Name.Text  +"'", con);
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            dgvStudent.DataSource = table1;
+
+            dgvStudent.AllowUserToAddRows = false;
+            dgvStudent.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void select_class()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [class]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvClass.DataSource = table;
+
+            dgvClass.AllowUserToAddRows = false;
+            dgvClass.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void btnGrade_Click(object sender, EventArgs e)
         {
             Hide_panels();
             pnlGrade.Show();
+        }
+
+        private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
+                lblClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
+               
+            }
         }
 
       

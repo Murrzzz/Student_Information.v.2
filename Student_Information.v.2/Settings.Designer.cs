@@ -43,9 +43,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnGrade = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvSubject = new System.Windows.Forms.DataGridView();
+            this.dgvClass = new System.Windows.Forms.DataGridView();
             this.Class = new System.Windows.Forms.Label();
             this.pnlRecycleBin = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,11 +70,15 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSubjectCode = new System.Windows.Forms.Label();
             this.lblSubjectName = new System.Windows.Forms.Label();
+            this.lblClass_Name = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlRecords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlRecycleBin.SuspendLayout();
             this.pnlGrade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -201,14 +205,18 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.label17);
+            this.pnlRecords.Controls.Add(this.label16);
+            this.pnlRecords.Controls.Add(this.label15);
+            this.pnlRecords.Controls.Add(this.lblClass_Name);
             this.pnlRecords.Controls.Add(this.label6);
             this.pnlRecords.Controls.Add(this.label5);
             this.pnlRecords.Controls.Add(this.label2);
             this.pnlRecords.Controls.Add(this.label30);
             this.pnlRecords.Controls.Add(this.btnGrade);
-            this.pnlRecords.Controls.Add(this.dataGridView1);
+            this.pnlRecords.Controls.Add(this.dgvStudent);
             this.pnlRecords.Controls.Add(this.label1);
-            this.pnlRecords.Controls.Add(this.dgvSubject);
+            this.pnlRecords.Controls.Add(this.dgvClass);
             this.pnlRecords.Controls.Add(this.Class);
             this.pnlRecords.Location = new System.Drawing.Point(189, 0);
             this.pnlRecords.Name = "pnlRecords";
@@ -274,14 +282,14 @@
             this.btnGrade.UseVisualStyleBackColor = false;
             this.btnGrade.Click += new System.EventHandler(this.btnGrade_Click);
             // 
-            // dataGridView1
+            // dgvStudent
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 335);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(729, 296);
-            this.dataGridView1.TabIndex = 42;
+            this.dgvStudent.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudent.Location = new System.Drawing.Point(78, 335);
+            this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.Size = new System.Drawing.Size(729, 296);
+            this.dgvStudent.TabIndex = 42;
             // 
             // label1
             // 
@@ -293,14 +301,15 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Student List";
             // 
-            // dgvSubject
+            // dgvClass
             // 
-            this.dgvSubject.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubject.Location = new System.Drawing.Point(78, 57);
-            this.dgvSubject.Name = "dgvSubject";
-            this.dgvSubject.Size = new System.Drawing.Size(359, 217);
-            this.dgvSubject.TabIndex = 40;
+            this.dgvClass.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClass.Location = new System.Drawing.Point(78, 57);
+            this.dgvClass.Name = "dgvClass";
+            this.dgvClass.Size = new System.Drawing.Size(359, 217);
+            this.dgvClass.TabIndex = 40;
+            this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_CellContentClick);
             // 
             // Class
             // 
@@ -573,6 +582,50 @@
             this.lblSubjectName.TabIndex = 64;
             this.lblSubjectName.Text = "-";
             // 
+            // lblClass_Name
+            // 
+            this.lblClass_Name.AutoSize = true;
+            this.lblClass_Name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass_Name.Location = new System.Drawing.Point(587, 84);
+            this.lblClass_Name.Name = "lblClass_Name";
+            this.lblClass_Name.Size = new System.Drawing.Size(14, 20);
+            this.lblClass_Name.TabIndex = 49;
+            this.lblClass_Name.Text = "-";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(552, 114);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 20);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "-";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(631, 143);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 20);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "-";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(546, 173);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 20);
+            this.label17.TabIndex = 52;
+            this.label17.Text = "-";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,8 +645,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.pnlRecycleBin.ResumeLayout(false);
             this.pnlRecycleBin.PerformLayout();
             this.pnlGrade.ResumeLayout(false);
@@ -619,9 +672,9 @@
         private System.Windows.Forms.Panel pnlGrade;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudent;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSubject;
+        private System.Windows.Forms.DataGridView dgvClass;
         private System.Windows.Forms.Button btnGrade;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -647,5 +700,9 @@
         private System.Windows.Forms.Label lblStudentNumber;
         private System.Windows.Forms.Label lblFname;
         private System.Windows.Forms.Label lblClassName;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblClass_Name;
     }
 }
