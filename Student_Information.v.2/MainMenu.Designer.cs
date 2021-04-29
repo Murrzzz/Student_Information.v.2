@@ -674,6 +674,7 @@
             this.dgvSubject.Name = "dgvSubject";
             this.dgvSubject.Size = new System.Drawing.Size(729, 241);
             this.dgvSubject.TabIndex = 39;
+            this.dgvSubject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_CellContentClick);
             // 
             // button7
             // 

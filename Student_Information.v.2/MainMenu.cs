@@ -189,5 +189,17 @@ namespace Student_Information.v._2
             dgvSubject.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         
         }
+
+        private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvSubject.Rows[e.RowIndex];
+                txtSub_Code.Text = row.Cells["Sub_Code"].Value.ToString();
+                txtSub_Units.Text = row.Cells["Sub_Name"].Value.ToString();
+                txtSub_Name.Text = row.Cells["Sub_Description"].Value.ToString();
+               
+            }
+        }
     }
 }
