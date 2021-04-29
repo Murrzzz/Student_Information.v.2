@@ -258,6 +258,17 @@ namespace Student_Information.v._2
             department = txtDepartment.Text;
             course = txtCourse.Text;
             section = txtSection.Text;
+
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
+            {
+                MessageBox.Show("Setup Failed Please Choose to the table or add ");
+              
+            }
+            else
+            {
+                MessageBox.Show("Setup Successfully");
+            }
+
             
         }
     }

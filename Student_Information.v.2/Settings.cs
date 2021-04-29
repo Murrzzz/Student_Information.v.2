@@ -45,7 +45,7 @@ namespace Student_Information.v._2
         }
         private void Hide_panels()//Hide all panels
         {
-            pnlHelp.Hide();
+            pnlGrade.Hide();
             pnlRecycleBin.Hide();
             pnlRecords.Hide();
             pnlSend.Hide();
@@ -73,7 +73,7 @@ namespace Student_Information.v._2
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlHelp.Show();
+            pnlGrade.Show();
         }
 
         private void btnRecycle_Click(object sender, EventArgs e)
@@ -89,14 +89,13 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Description] from [Subject]", con);
-            DataTable table = new DataTable();
-            adapt.Fill(table);
-            dgvSubject.DataSource = table;
+          
+        }
 
-            dgvSubject.AllowUserToAddRows = false;
-            dgvSubject.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvSubject.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        private void btnGrade_Click(object sender, EventArgs e)
+        {
+            Hide_panels();
+            pnlGrade.Show();
         }
 
       
