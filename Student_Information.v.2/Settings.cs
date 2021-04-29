@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Data.OleDb;
 namespace Student_Information.v._2
 {
     public partial class Settings : Form
@@ -15,6 +16,9 @@ namespace Student_Information.v._2
         {
             InitializeComponent();
         }
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
+      
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -43,9 +47,9 @@ namespace Student_Information.v._2
         {
             pnlHelp.Hide();
             pnlRecycleBin.Hide();
-            pnlUserUpdate.Hide();
-            pnlSaveData.Hide();
-            pnlUserUpdate.Hide();
+            pnlRecords.Hide();
+            pnlSend.Hide();
+            pnlRecords.Hide();
         }
 
 
@@ -57,13 +61,13 @@ namespace Student_Information.v._2
         private void btnUserUpdate_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlUserUpdate.Show();
+            pnlRecords.Show();
         }
 
         private void btnSaveData_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlSaveData.Show();
+            pnlSend.Show();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -81,6 +85,18 @@ namespace Student_Information.v._2
         private void pnlSaveData_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pnlRecords_Paint(object sender, PaintEventArgs e)
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Description] from [Subject]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvSubject.DataSource = table;
+
+            dgvSubject.AllowUserToAddRows = false;
+            dgvSubject.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvSubject.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
       
