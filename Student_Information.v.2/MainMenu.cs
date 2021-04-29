@@ -13,7 +13,8 @@ namespace Student_Information.v._2
     public partial class MainMenu : Form
     {
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
-      
+
+        Boolean set = false;
 
         public MainMenu()
         {
