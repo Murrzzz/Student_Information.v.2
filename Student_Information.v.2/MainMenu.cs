@@ -15,6 +15,7 @@ namespace Student_Information.v._2
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
 
         Boolean set = false;
+        public static string classname = "";
 
         public MainMenu()
         {
@@ -34,7 +35,7 @@ namespace Student_Information.v._2
         }
 
         private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
+        {   
             Graphics mgraphics = e.Graphics;
             Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
 
@@ -90,20 +91,21 @@ namespace Student_Information.v._2
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
             
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Des.Text == "") || (txtClass_Name.Text == ""))
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
             {
                 MessageBox.Show("Please fill the blank");
             }
             else
             {
+                 
+
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Description],[Class_Name]) values(?,?,?,?,?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Name]) values(?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
                 cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
                 cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
                 cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
                 cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear.Text;
-                cmd.Parameters.AddWithValue("@Class_Description", OleDbType.VarChar).Value = txtClass_Des.Text;
                 cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name.Text;
 
                 cmd.ExecuteNonQuery();
@@ -137,7 +139,6 @@ namespace Student_Information.v._2
                 txtSection.Text = row.Cells["Section"].Value.ToString();
                 txtYearLevel.Text = row.Cells["Year_Level"].Value.ToString();
                 txtSchoolYear.Text = row.Cells["School_Year"].Value.ToString();
-                txtClass_Des.Text = row.Cells["Class_Description"].Value.ToString();
                 txtClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
             }
         }
@@ -233,6 +234,15 @@ namespace Student_Information.v._2
         private void pnlClass_Paint(object sender, PaintEventArgs e)
         {
             Class_SelectAll();
+           
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            classname = txtClass_Name.Text;
+            
+            
         }
     }
 }

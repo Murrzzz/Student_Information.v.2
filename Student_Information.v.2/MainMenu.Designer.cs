@@ -49,8 +49,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSear = new System.Windows.Forms.Button();
             this.pnlClass = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtClass_Des = new System.Windows.Forms.TextBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.txtClass_Name = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -333,8 +331,6 @@
             // 
             // pnlClass
             // 
-            this.pnlClass.Controls.Add(this.label20);
-            this.pnlClass.Controls.Add(this.txtClass_Des);
             this.pnlClass.Controls.Add(this.lblClass);
             this.pnlClass.Controls.Add(this.txtClass_Name);
             this.pnlClass.Controls.Add(this.button6);
@@ -358,30 +354,11 @@
             this.pnlClass.TabIndex = 7;
             this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(561, 168);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(132, 20);
-            this.label20.TabIndex = 28;
-            this.label20.Text = "Class Description";
-            // 
-            // txtClass_Des
-            // 
-            this.txtClass_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass_Des.Location = new System.Drawing.Point(411, 191);
-            this.txtClass_Des.Multiline = true;
-            this.txtClass_Des.Name = "txtClass_Des";
-            this.txtClass_Des.Size = new System.Drawing.Size(410, 33);
-            this.txtClass_Des.TabIndex = 27;
-            // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(240, 170);
+            this.lblClass.Location = new System.Drawing.Point(478, 164);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(94, 20);
             this.lblClass.TabIndex = 26;
@@ -390,7 +367,7 @@
             // txtClass_Name
             // 
             this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass_Name.Location = new System.Drawing.Point(189, 193);
+            this.txtClass_Name.Location = new System.Drawing.Point(427, 187);
             this.txtClass_Name.Multiline = true;
             this.txtClass_Name.Name = "txtClass_Name";
             this.txtClass_Name.Size = new System.Drawing.Size(187, 33);
@@ -408,6 +385,7 @@
             this.button6.TabIndex = 24;
             this.button6.Text = "Set";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dgvClass
             // 
@@ -422,7 +400,7 @@
             // txtSchoolYear
             // 
             this.txtSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSchoolYear.Location = new System.Drawing.Point(56, 196);
+            this.txtSchoolYear.Location = new System.Drawing.Point(294, 190);
             this.txtSchoolYear.Multiline = true;
             this.txtSchoolYear.Name = "txtSchoolYear";
             this.txtSchoolYear.Size = new System.Drawing.Size(95, 33);
@@ -432,7 +410,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(55, 173);
+            this.label7.Location = new System.Drawing.Point(294, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 20;
@@ -785,10 +763,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -830,10 +808,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSection;
-        private System.Windows.Forms.TextBox txtCourse;
         private System.Windows.Forms.TextBox txtYearLevel;
-        private System.Windows.Forms.TextBox txtDepartment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.Panel pnlSubjects;
@@ -868,9 +843,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtClass_Des;
         private System.Windows.Forms.Label lblClass;
-        private System.Windows.Forms.TextBox txtClass_Name;
+        public System.Windows.Forms.TextBox txtClass_Name;
+        public System.Windows.Forms.TextBox txtSection;
+        public System.Windows.Forms.TextBox txtDepartment;
+        public System.Windows.Forms.TextBox txtCourse;
     }
 }

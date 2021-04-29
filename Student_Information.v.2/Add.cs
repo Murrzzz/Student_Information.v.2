@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
+
+
 namespace Student_Information.v._2
 {
     public partial class Add : Form
@@ -24,6 +26,7 @@ namespace Student_Information.v._2
         private void Add_Load(object sender, EventArgs e)
         {
             pnlAdd_Subject.Hide();
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -75,12 +78,13 @@ namespace Student_Information.v._2
             {
                 MessageBox.Show("Please fill the blank");
             }
+
             else
             {
 
                 con.Open();
 
-                OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus],[Class_Name]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.VarChar).Value = txtStudentNumber.Text;
                 cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
                 cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
@@ -98,6 +102,11 @@ namespace Student_Information.v._2
                 cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = cmbStatus.Text;
                 cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtSchoolYear.Text;
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = cmbCivilStatus.Text;
+                
+                
+                
+                MainMenu menu = new MainMenu();//from Mainmenu
+                cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = MainMenu .classname;
 
 
                 cmd.ExecuteNonQuery();
@@ -150,6 +159,15 @@ namespace Student_Information.v._2
             select_Student_Subject();
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+        private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
+        {
+
+
+         //   txtSection.ReadOnly = true;
+          //  TxtDepartment.ReadOnly = true;
+          //  txtCourse.ReadOnly = true;
         }
 
 
