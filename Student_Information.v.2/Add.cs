@@ -29,5 +29,10 @@ namespace Student_Information.v._2
             MainMenu main = new MainMenu();
             main.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
