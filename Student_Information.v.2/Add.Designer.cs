@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAdd_Subject = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGmail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbCivilStatus = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
+            this.cmbSex = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,18 +60,18 @@
             this.label36 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtSchoolYear = new System.Windows.Forms.TextBox();
+            this.txtReligion = new System.Windows.Forms.TextBox();
+            this.txtBirthdate = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.TxtDepartment = new System.Windows.Forms.TextBox();
+            this.txtContactNumber = new System.Windows.Forms.TextBox();
+            this.txtSection = new System.Windows.Forms.TextBox();
+            this.txtStudentNumber = new System.Windows.Forms.TextBox();
+            this.txtCourse = new System.Windows.Forms.TextBox();
+            this.txtFname = new System.Windows.Forms.TextBox();
+            this.txtMname = new System.Windows.Forms.TextBox();
+            this.txtLname = new System.Windows.Forms.TextBox();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@
             this.pnlAdd_Subject.Controls.Add(this.dataGridView1);
             this.pnlAdd_Subject.Controls.Add(this.dgvSubject);
             this.pnlAdd_Subject.Controls.Add(this.button7);
-            this.pnlAdd_Subject.Controls.Add(this.button5);
+            this.pnlAdd_Subject.Controls.Add(this.btnAdd);
             this.pnlAdd_Subject.Location = new System.Drawing.Point(-2, 52);
             this.pnlAdd_Subject.Name = "pnlAdd_Subject";
             this.pnlAdd_Subject.Size = new System.Drawing.Size(946, 781);
@@ -128,30 +128,31 @@
             this.button7.Text = "Close";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnAdd
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(764, 717);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 36);
-            this.button5.TabIndex = 101;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(773, 717);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(127, 36);
+            this.btnAdd.TabIndex = 101;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // pnlAddStudent
             // 
             this.pnlAddStudent.Controls.Add(this.label3);
-            this.pnlAddStudent.Controls.Add(this.textBox2);
+            this.pnlAddStudent.Controls.Add(this.txtGmail);
             this.pnlAddStudent.Controls.Add(this.button1);
             this.pnlAddStudent.Controls.Add(this.label4);
             this.pnlAddStudent.Controls.Add(this.btnNext);
-            this.pnlAddStudent.Controls.Add(this.comboBox1);
-            this.pnlAddStudent.Controls.Add(this.comboBox6);
-            this.pnlAddStudent.Controls.Add(this.comboBox7);
-            this.pnlAddStudent.Controls.Add(this.comboBox8);
+            this.pnlAddStudent.Controls.Add(this.cmbCivilStatus);
+            this.pnlAddStudent.Controls.Add(this.cmbStatus);
+            this.pnlAddStudent.Controls.Add(this.cmbYear);
+            this.pnlAddStudent.Controls.Add(this.cmbSex);
             this.pnlAddStudent.Controls.Add(this.label5);
             this.pnlAddStudent.Controls.Add(this.label6);
             this.pnlAddStudent.Controls.Add(this.label7);
@@ -170,18 +171,18 @@
             this.pnlAddStudent.Controls.Add(this.label36);
             this.pnlAddStudent.Controls.Add(this.button3);
             this.pnlAddStudent.Controls.Add(this.pictureBox1);
-            this.pnlAddStudent.Controls.Add(this.textBox3);
-            this.pnlAddStudent.Controls.Add(this.textBox4);
-            this.pnlAddStudent.Controls.Add(this.textBox5);
-            this.pnlAddStudent.Controls.Add(this.textBox6);
-            this.pnlAddStudent.Controls.Add(this.textBox7);
-            this.pnlAddStudent.Controls.Add(this.textBox8);
-            this.pnlAddStudent.Controls.Add(this.textBox10);
-            this.pnlAddStudent.Controls.Add(this.textBox11);
-            this.pnlAddStudent.Controls.Add(this.textBox18);
-            this.pnlAddStudent.Controls.Add(this.textBox21);
-            this.pnlAddStudent.Controls.Add(this.textBox22);
-            this.pnlAddStudent.Controls.Add(this.textBox24);
+            this.pnlAddStudent.Controls.Add(this.txtSchoolYear);
+            this.pnlAddStudent.Controls.Add(this.txtReligion);
+            this.pnlAddStudent.Controls.Add(this.txtBirthdate);
+            this.pnlAddStudent.Controls.Add(this.txtAddress);
+            this.pnlAddStudent.Controls.Add(this.TxtDepartment);
+            this.pnlAddStudent.Controls.Add(this.txtContactNumber);
+            this.pnlAddStudent.Controls.Add(this.txtSection);
+            this.pnlAddStudent.Controls.Add(this.txtStudentNumber);
+            this.pnlAddStudent.Controls.Add(this.txtCourse);
+            this.pnlAddStudent.Controls.Add(this.txtFname);
+            this.pnlAddStudent.Controls.Add(this.txtMname);
+            this.pnlAddStudent.Controls.Add(this.txtLname);
             this.pnlAddStudent.Location = new System.Drawing.Point(1, 53);
             this.pnlAddStudent.Name = "pnlAddStudent";
             this.pnlAddStudent.Size = new System.Drawing.Size(943, 780);
@@ -197,14 +198,14 @@
             this.label3.TabIndex = 122;
             this.label3.Text = "Gmail";
             // 
-            // textBox2
+            // txtGmail
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(340, 175);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(547, 33);
-            this.textBox2.TabIndex = 121;
+            this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGmail.Location = new System.Drawing.Point(340, 175);
+            this.txtGmail.Multiline = true;
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Size = new System.Drawing.Size(547, 33);
+            this.txtGmail.TabIndex = 121;
             // 
             // button1
             // 
@@ -243,53 +244,53 @@
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // comboBox1
+            // cmbCivilStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbCivilStatus.FormattingEnabled = true;
+            this.cmbCivilStatus.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.comboBox1.Location = new System.Drawing.Point(616, 611);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 98;
+            this.cmbCivilStatus.Location = new System.Drawing.Point(616, 611);
+            this.cmbCivilStatus.Name = "cmbCivilStatus";
+            this.cmbCivilStatus.Size = new System.Drawing.Size(223, 21);
+            this.cmbCivilStatus.TabIndex = 98;
             // 
-            // comboBox6
+            // cmbStatus
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
             "Regular",
             "Irregular",
             "Tranferee",
             "Drop"});
-            this.comboBox6.Location = new System.Drawing.Point(619, 551);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(223, 21);
-            this.comboBox6.TabIndex = 97;
+            this.cmbStatus.Location = new System.Drawing.Point(619, 551);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(223, 21);
+            this.cmbStatus.TabIndex = 97;
             // 
-            // comboBox7
+            // cmbYear
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Items.AddRange(new object[] {
             "First Year",
             "Second Year",
             "Third Year",
             "Fourth Year"});
-            this.comboBox7.Location = new System.Drawing.Point(538, 246);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(160, 21);
-            this.comboBox7.TabIndex = 88;
+            this.cmbYear.Location = new System.Drawing.Point(538, 246);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(160, 21);
+            this.cmbYear.TabIndex = 88;
             // 
-            // comboBox8
+            // cmbSex
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbSex.FormattingEnabled = true;
+            this.cmbSex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox8.Location = new System.Drawing.Point(344, 477);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(160, 21);
-            this.comboBox8.TabIndex = 94;
+            this.cmbSex.Location = new System.Drawing.Point(344, 477);
+            this.cmbSex.Name = "cmbSex";
+            this.cmbSex.Size = new System.Drawing.Size(160, 21);
+            this.cmbSex.TabIndex = 94;
             // 
             // label5
             // 
@@ -469,114 +470,114 @@
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // txtSchoolYear
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(347, 611);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 33);
-            this.textBox3.TabIndex = 99;
+            this.txtSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSchoolYear.Location = new System.Drawing.Point(347, 611);
+            this.txtSchoolYear.Multiline = true;
+            this.txtSchoolYear.Name = "txtSchoolYear";
+            this.txtSchoolYear.Size = new System.Drawing.Size(164, 33);
+            this.txtSchoolYear.TabIndex = 99;
             // 
-            // textBox4
+            // txtReligion
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(586, 474);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(301, 33);
-            this.textBox4.TabIndex = 96;
+            this.txtReligion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReligion.Location = new System.Drawing.Point(586, 474);
+            this.txtReligion.Multiline = true;
+            this.txtReligion.Name = "txtReligion";
+            this.txtReligion.Size = new System.Drawing.Size(301, 33);
+            this.txtReligion.TabIndex = 96;
             // 
-            // textBox5
+            // txtBirthdate
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(346, 539);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 33);
-            this.textBox5.TabIndex = 95;
+            this.txtBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthdate.Location = new System.Drawing.Point(346, 539);
+            this.txtBirthdate.Multiline = true;
+            this.txtBirthdate.Name = "txtBirthdate";
+            this.txtBirthdate.Size = new System.Drawing.Size(223, 33);
+            this.txtBirthdate.TabIndex = 95;
             // 
-            // textBox6
+            // txtAddress
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(340, 406);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(547, 33);
-            this.textBox6.TabIndex = 93;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(340, 406);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(547, 33);
+            this.txtAddress.TabIndex = 93;
             // 
-            // textBox7
+            // TxtDepartment
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(724, 328);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(164, 33);
-            this.textBox7.TabIndex = 91;
+            this.TxtDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDepartment.Location = new System.Drawing.Point(724, 328);
+            this.TxtDepartment.Multiline = true;
+            this.TxtDepartment.Name = "TxtDepartment";
+            this.TxtDepartment.Size = new System.Drawing.Size(164, 33);
+            this.TxtDepartment.TabIndex = 91;
             // 
-            // textBox8
+            // txtContactNumber
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(534, 328);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(164, 33);
-            this.textBox8.TabIndex = 92;
+            this.txtContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactNumber.Location = new System.Drawing.Point(534, 328);
+            this.txtContactNumber.Multiline = true;
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Size = new System.Drawing.Size(164, 33);
+            this.txtContactNumber.TabIndex = 92;
             // 
-            // textBox10
+            // txtSection
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(336, 328);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 33);
-            this.textBox10.TabIndex = 90;
+            this.txtSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSection.Location = new System.Drawing.Point(336, 328);
+            this.txtSection.Multiline = true;
+            this.txtSection.Name = "txtSection";
+            this.txtSection.Size = new System.Drawing.Size(164, 33);
+            this.txtSection.TabIndex = 90;
             // 
-            // textBox11
+            // txtStudentNumber
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(727, 241);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(164, 33);
-            this.textBox11.TabIndex = 89;
+            this.txtStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentNumber.Location = new System.Drawing.Point(727, 241);
+            this.txtStudentNumber.Multiline = true;
+            this.txtStudentNumber.Name = "txtStudentNumber";
+            this.txtStudentNumber.Size = new System.Drawing.Size(164, 33);
+            this.txtStudentNumber.TabIndex = 89;
             // 
-            // textBox18
+            // txtCourse
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(337, 243);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(164, 33);
-            this.textBox18.TabIndex = 87;
+            this.txtCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCourse.Location = new System.Drawing.Point(337, 243);
+            this.txtCourse.Multiline = true;
+            this.txtCourse.Name = "txtCourse";
+            this.txtCourse.Size = new System.Drawing.Size(164, 33);
+            this.txtCourse.TabIndex = 87;
             // 
-            // textBox21
+            // txtFname
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(536, 100);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(164, 33);
-            this.textBox21.TabIndex = 85;
+            this.txtFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFname.Location = new System.Drawing.Point(536, 100);
+            this.txtFname.Multiline = true;
+            this.txtFname.Name = "txtFname";
+            this.txtFname.Size = new System.Drawing.Size(164, 33);
+            this.txtFname.TabIndex = 85;
             // 
-            // textBox22
+            // txtMname
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(729, 100);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(164, 33);
-            this.textBox22.TabIndex = 86;
+            this.txtMname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMname.Location = new System.Drawing.Point(729, 100);
+            this.txtMname.Multiline = true;
+            this.txtMname.Name = "txtMname";
+            this.txtMname.Size = new System.Drawing.Size(164, 33);
+            this.txtMname.TabIndex = 86;
             // 
-            // textBox24
+            // txtLname
             // 
-            this.textBox24.BackColor = System.Drawing.Color.White;
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(340, 100);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(164, 33);
-            this.textBox24.TabIndex = 84;
+            this.txtLname.BackColor = System.Drawing.Color.White;
+            this.txtLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLname.Location = new System.Drawing.Point(340, 100);
+            this.txtLname.Multiline = true;
+            this.txtLname.Name = "txtLname";
+            this.txtLname.Size = new System.Drawing.Size(164, 33);
+            this.txtLname.TabIndex = 84;
             // 
             // dgvSubject
             // 
@@ -707,17 +708,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlAdd_Subject;
         private System.Windows.Forms.Button button7;
-        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlAddStudent;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGmail;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cmbCivilStatus;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.ComboBox cmbYear;
+        private System.Windows.Forms.ComboBox cmbSex;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -736,18 +737,18 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtSchoolYear;
+        private System.Windows.Forms.TextBox txtReligion;
+        private System.Windows.Forms.TextBox txtBirthdate;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox TxtDepartment;
+        private System.Windows.Forms.TextBox txtContactNumber;
+        private System.Windows.Forms.TextBox txtSection;
+        private System.Windows.Forms.TextBox txtStudentNumber;
+        private System.Windows.Forms.TextBox txtCourse;
+        private System.Windows.Forms.TextBox txtFname;
+        private System.Windows.Forms.TextBox txtMname;
+        private System.Windows.Forms.TextBox txtLname;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.Button button4;
