@@ -68,7 +68,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -86,6 +85,14 @@
             this.txtSub_Name = new System.Windows.Forms.TextBox();
             this.txtSub_Units = new System.Windows.Forms.TextBox();
             this.txtSub_Code = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblSection = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -532,8 +539,15 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.lblSex);
+            this.pnlRecords.Controls.Add(this.lblStatus);
+            this.pnlRecords.Controls.Add(this.lblSection);
+            this.pnlRecords.Controls.Add(this.lblCourse);
+            this.pnlRecords.Controls.Add(this.lblYear);
+            this.pnlRecords.Controls.Add(this.lblName);
+            this.pnlRecords.Controls.Add(this.label20);
+            this.pnlRecords.Controls.Add(this.label21);
             this.pnlRecords.Controls.Add(this.label14);
-            this.pnlRecords.Controls.Add(this.label13);
             this.pnlRecords.Controls.Add(this.label12);
             this.pnlRecords.Controls.Add(this.label11);
             this.pnlRecords.Controls.Add(this.label10);
@@ -555,16 +569,6 @@
             this.label14.Size = new System.Drawing.Size(116, 31);
             this.label14.TabIndex = 92;
             this.label14.Text = "Records";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(514, 70);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 20);
-            this.label13.TabIndex = 91;
-            this.label13.Text = "Name:";
             // 
             // label12
             // 
@@ -600,7 +604,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(155, 70);
+            this.label9.Location = new System.Drawing.Point(153, 70);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 87;
@@ -756,6 +760,86 @@
             this.txtSub_Code.Size = new System.Drawing.Size(187, 33);
             this.txtSub_Code.TabIndex = 24;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(492, 111);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 20);
+            this.label20.TabIndex = 94;
+            this.label20.Text = "Sex";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(489, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 20);
+            this.label21.TabIndex = 93;
+            this.label21.Text = "Status";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(231, 70);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(14, 20);
+            this.lblName.TabIndex = 95;
+            this.lblName.Text = "-";
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Location = new System.Drawing.Point(231, 112);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(14, 20);
+            this.lblYear.TabIndex = 96;
+            this.lblYear.Text = "-";
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(231, 151);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(14, 20);
+            this.lblCourse.TabIndex = 97;
+            this.lblCourse.Text = "-";
+            // 
+            // lblSection
+            // 
+            this.lblSection.AutoSize = true;
+            this.lblSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSection.Location = new System.Drawing.Point(231, 191);
+            this.lblSection.Name = "lblSection";
+            this.lblSection.Size = new System.Drawing.Size(14, 20);
+            this.lblSection.TabIndex = 98;
+            this.lblSection.Text = "-";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(560, 70);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(14, 20);
+            this.lblStatus.TabIndex = 99;
+            this.lblStatus.Text = "-";
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(559, 109);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(14, 20);
+            this.lblSex.TabIndex = 100;
+            this.lblSex.Text = "-";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -763,10 +847,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -839,7 +923,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -848,5 +931,13 @@
         public System.Windows.Forms.TextBox txtSection;
         public System.Windows.Forms.TextBox txtDepartment;
         public System.Windows.Forms.TextBox txtCourse;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblSection;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblYear;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }

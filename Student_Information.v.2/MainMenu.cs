@@ -16,6 +16,9 @@ namespace Student_Information.v._2
 
         Boolean set = false;
         public static string classname = "";
+        public static string department = "";
+        public static string course = "";
+        public static string section = "";
 
         public MainMenu()
         {
@@ -175,6 +178,7 @@ namespace Student_Information.v._2
 
                 
                 cmd.ExecuteNonQuery();
+                select_Subject();
                 con.Close();
             }
         }
@@ -223,7 +227,17 @@ namespace Student_Information.v._2
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
+                lblName.Text = row.Cells["Stud_Fname"].Value.ToString();
+                lblYear.Text = row.Cells["Stud_Year"].Value.ToString();
+                lblCourse.Text = row.Cells["Stud_Course"].Value.ToString();
+                lblSection.Text = row.Cells["Stud_Section"].Value.ToString();
+                lblStatus.Text = row.Cells["Stud_Status"].Value.ToString();
+                lblSex.Text = row.Cells["Stud_Sex"].Value.ToString();
+            }
         }
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
@@ -241,7 +255,9 @@ namespace Student_Information.v._2
         private void button6_Click(object sender, EventArgs e)
         {
             classname = txtClass_Name.Text;
-            
+            department = txtDepartment.Text;
+            course = txtCourse.Text;
+            section = txtSection.Text;
             
         }
     }

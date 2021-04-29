@@ -54,7 +54,7 @@ namespace Student_Information.v._2
         }
         private void select_Student_Subject()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Student_Subject]", con);
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Student_Subject] where[Stud_Id]='"+txtStudentNumber .Text +"'", con);
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dgvStudent_Subject.DataSource = table1;
@@ -67,7 +67,7 @@ namespace Student_Information.v._2
         {
             select_Subject();
 
-            select_Student_Subject();
+         
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -83,6 +83,10 @@ namespace Student_Information.v._2
             {
 
                 con.Open();
+                MainMenu menu = new MainMenu();//from Mainmenu
+                
+
+
 
                 OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus],[Class_Name]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.VarChar).Value = txtStudentNumber.Text;
@@ -90,11 +94,11 @@ namespace Student_Information.v._2
                 cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
                 cmd.Parameters.AddWithValue("@Stud_Mname", OleDbType.VarChar).Value = txtMname.Text;
                 cmd.Parameters.AddWithValue("@Stud_Gmail", OleDbType.VarChar).Value = txtGmail.Text;
-                cmd.Parameters.AddWithValue("@Stud_Course", OleDbType.VarChar).Value = txtCourse.Text;
+                cmd.Parameters.AddWithValue("@Stud_Course", OleDbType.VarChar).Value = MainMenu.course;
                 cmd.Parameters.AddWithValue("@Stud_Year", OleDbType.VarChar).Value = cmbYear.Text;
-                cmd.Parameters.AddWithValue("@Stud_Section", OleDbType.VarChar).Value = txtSection.Text;
+                cmd.Parameters.AddWithValue("@Stud_Section", OleDbType.VarChar).Value = MainMenu.section;
                 cmd.Parameters.AddWithValue("@Stud_ContactNumber", OleDbType.VarChar).Value = txtContactNumber.Text;
-                cmd.Parameters.AddWithValue("@Stud_Department", OleDbType.VarChar).Value = TxtDepartment.Text;
+                cmd.Parameters.AddWithValue("@Stud_Department", OleDbType.VarChar).Value = MainMenu.department;
                 cmd.Parameters.AddWithValue("@Stud_Address", OleDbType.VarChar).Value = txtAddress.Text;
                 cmd.Parameters.AddWithValue("@Stud_Sex", OleDbType.VarChar).Value = cmbSex.Text;
                 cmd.Parameters.AddWithValue("@Stud_Religion", OleDbType.VarChar).Value = txtReligion.Text;
@@ -102,10 +106,6 @@ namespace Student_Information.v._2
                 cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = cmbStatus.Text;
                 cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtSchoolYear.Text;
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = cmbCivilStatus.Text;
-                
-                
-                
-                MainMenu menu = new MainMenu();//from Mainmenu
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = MainMenu .classname;
 
 
@@ -149,6 +149,8 @@ namespace Student_Information.v._2
 
         private void btnSet_Click(object sender, EventArgs e)
         {
+           
+        
             con.Open();
             OleDbCommand cmd = new OleDbCommand(" insert into[Student_Subject]([Stud_Id],[Sub_Code],[Sub_Name],[Sub_Units]) values(?,?,?,?)", con);
             cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtStudentNumber .Text ;
@@ -156,13 +158,27 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Name .Text ;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Units .Text ;
 
-            select_Student_Subject();
+           
             cmd.ExecuteNonQuery();
+            select_Student_Subject();
             con.Close();
         }
 
         private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
         {
+            TxtDepartment.Text = MainMenu.department;
+            txtSection.Text = MainMenu.section;
+            txtCourse.Text = MainMenu.course;
+
+
+            TxtDepartment.ReadOnly = true;//for text box not to Edit
+            TxtDepartment.BackColor = System.Drawing.SystemColors.Window;//for color of the textbox
+
+            txtSection.ReadOnly = true;
+            txtSection.BackColor = System.Drawing.SystemColors.Window;
+
+            TxtDepartment.ReadOnly = true;
+            TxtDepartment.BackColor = System.Drawing.SystemColors.Window;
 
 
          //   txtSection.ReadOnly = true;
