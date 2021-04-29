@@ -78,7 +78,7 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.pnlSubjects = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.btnSub_Upt = new System.Windows.Forms.Button();
             this.btnSub_Add = new System.Windows.Forms.Button();
@@ -97,7 +97,7 @@
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.pnlSubjects.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -651,7 +651,7 @@
             // 
             // pnlSubjects
             // 
-            this.pnlSubjects.Controls.Add(this.dataGridView3);
+            this.pnlSubjects.Controls.Add(this.dgvSubject);
             this.pnlSubjects.Controls.Add(this.button7);
             this.pnlSubjects.Controls.Add(this.btnSub_Upt);
             this.pnlSubjects.Controls.Add(this.btnSub_Add);
@@ -666,14 +666,14 @@
             this.pnlSubjects.Size = new System.Drawing.Size(857, 661);
             this.pnlSubjects.TabIndex = 9;
             // 
-            // dataGridView3
+            // dgvSubject
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(64, 344);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(729, 241);
-            this.dataGridView3.TabIndex = 39;
+            this.dgvSubject.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubject.Location = new System.Drawing.Point(64, 344);
+            this.dgvSubject.Name = "dgvSubject";
+            this.dgvSubject.Size = new System.Drawing.Size(729, 241);
+            this.dgvSubject.TabIndex = 39;
             // 
             // button7
             // 
@@ -713,7 +713,7 @@
             this.btnSub_Add.TabIndex = 32;
             this.btnSub_Add.Text = "Add";
             this.btnSub_Add.UseVisualStyleBackColor = false;
-            this.btnSub_Add.Click += new System.EventHandler(this.button9_Click);
+            this.btnSub_Add.Click += new System.EventHandler(this.btnAdd);
             // 
             // label28
             // 
@@ -801,7 +801,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.pnlSubjects.ResumeLayout(false);
             this.pnlSubjects.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -837,7 +837,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvClass;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnSub_Upt;
         private System.Windows.Forms.Button btnSub_Add;

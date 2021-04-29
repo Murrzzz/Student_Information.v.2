@@ -156,10 +156,38 @@ namespace Student_Information.v._2
             con.Close();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnAdd(object sender, EventArgs e)
         {
+            if ((txtSub_Code.Text == "") || (txtSub_Units.Text == "") || (txtSub_Name.Text == ""))
+            {
+                MessageBox.Show("Please fill the blank");
+            }
+            else
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand(" insert into[Subject]([Sub_Code],[Sub_Name],[Sub_Description]) values(?,?,?)", con);
+                cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
+                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Units.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSub_Name.Text;
 
+                select_Subject();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
-    
+
+
+        private void select_Subject()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Subject]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvSubject.DataSource = table;
+
+            dgvSubject.AllowUserToAddRows = false;
+            dgvSubject.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvSubject.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        
+        }
     }
 }
