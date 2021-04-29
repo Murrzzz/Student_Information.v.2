@@ -127,14 +127,15 @@ namespace Student_Information.v._2
 
         private void dgvClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                txtDepartment.Text=row.Cells["Department"].Value .ToString();
+                txtDepartment.Text = row.Cells["Department"].Value.ToString();
                 txtCourse.Text = row.Cells["Course"].Value.ToString();
                 txtSection.Text = row.Cells["Section"].Value.ToString();
-                txtYearLevel .Text  = row.Cells["Year_Level"].Value.ToString();
-                txtSchoolYear.Text  = row.Cells["School_Year"].Value.ToString();
+                txtYearLevel.Text = row.Cells["Year_Level"].Value.ToString();
+                txtSchoolYear.Text = row.Cells["School_Year"].Value.ToString();
                 txtClass_Des.Text = row.Cells["Class_Description"].Value.ToString();
                 txtClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
             }
@@ -165,12 +166,12 @@ namespace Student_Information.v._2
             else
             {
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[Subject]([Sub_Code],[Sub_Name],[Sub_Description]) values(?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[Subject]([Sub_Code],[Sub_Name],[Sub_Units]) values(?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
                 cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Units.Text;
                 cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSub_Name.Text;
 
-                select_Subject();
+                
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -197,9 +198,40 @@ namespace Student_Information.v._2
                 DataGridViewRow row = this.dgvSubject.Rows[e.RowIndex];
                 txtSub_Code.Text = row.Cells["Sub_Code"].Value.ToString();
                 txtSub_Units.Text = row.Cells["Sub_Name"].Value.ToString();
-                txtSub_Name.Text = row.Cells["Sub_Description"].Value.ToString();
+                txtSub_Name.Text = row.Cells["Sub_Units"].Value.ToString();
                
             }
+        }
+
+        private void pnlSubjects_Paint(object sender, PaintEventArgs e)
+        {
+            select_Subject();
+        }
+        private void select_students()
+        {
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students]", con);
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            dgvStudents.DataSource = table1;
+
+            dgvStudents.AllowUserToAddRows = false;
+            dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void pnlRecords_Paint(object sender, PaintEventArgs e)
+        {
+            select_students();
+        }
+
+        private void pnlClass_Paint(object sender, PaintEventArgs e)
+        {
+            Class_SelectAll();
         }
     }
 }

@@ -75,7 +75,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.pnlSubjects = new System.Windows.Forms.Panel();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
@@ -95,7 +95,7 @@
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlRecords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.pnlSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.SuspendLayout();
@@ -356,6 +356,7 @@
             this.pnlClass.Name = "pnlClass";
             this.pnlClass.Size = new System.Drawing.Size(860, 664);
             this.pnlClass.TabIndex = 7;
+            this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
             // 
             // label20
             // 
@@ -559,12 +560,13 @@
             this.pnlRecords.Controls.Add(this.label11);
             this.pnlRecords.Controls.Add(this.label10);
             this.pnlRecords.Controls.Add(this.label9);
-            this.pnlRecords.Controls.Add(this.dataGridView4);
+            this.pnlRecords.Controls.Add(this.dgvStudents);
             this.pnlRecords.Controls.Add(this.button5);
             this.pnlRecords.Location = new System.Drawing.Point(189, 0);
             this.pnlRecords.Name = "pnlRecords";
             this.pnlRecords.Size = new System.Drawing.Size(860, 664);
             this.pnlRecords.TabIndex = 8;
+            this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
             // 
             // label14
             // 
@@ -626,14 +628,15 @@
             this.label9.TabIndex = 87;
             this.label9.Text = "Name:";
             // 
-            // dataGridView4
+            // dgvStudents
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(72, 245);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(729, 328);
-            this.dataGridView4.TabIndex = 86;
+            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Location = new System.Drawing.Point(72, 245);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.Size = new System.Drawing.Size(729, 328);
+            this.dgvStudents.TabIndex = 86;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // button5
             // 
@@ -665,6 +668,7 @@
             this.pnlSubjects.Name = "pnlSubjects";
             this.pnlSubjects.Size = new System.Drawing.Size(857, 661);
             this.pnlSubjects.TabIndex = 9;
+            this.pnlSubjects.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSubjects_Paint);
             // 
             // dgvSubject
             // 
@@ -781,10 +785,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -799,7 +803,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.pnlSubjects.ResumeLayout(false);
             this.pnlSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
@@ -849,7 +853,7 @@
         private System.Windows.Forms.TextBox txtSub_Units;
         private System.Windows.Forms.TextBox txtSub_Code;
         public System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

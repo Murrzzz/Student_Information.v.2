@@ -73,7 +73,7 @@
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudent_Subject = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -81,11 +81,20 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnSet = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.lblSubject_Code = new System.Windows.Forms.Label();
+            this.lblSub_Name = new System.Windows.Forms.Label();
+            this.lblSub_Units = new System.Windows.Forms.Label();
+            this.lblSub_Units1 = new System.Windows.Forms.Label();
+            this.lblSub_Name1 = new System.Windows.Forms.Label();
+            this.lblSubject_Code1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.pnlAdd_Subject.SuspendLayout();
             this.pnlAddStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent_Subject)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,11 +102,20 @@
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.Location = new System.Drawing.Point(-6, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 51);
+            this.panel1.Size = new System.Drawing.Size(958, 51);
             this.panel1.TabIndex = 0;
             // 
             // pnlAdd_Subject
             // 
+            this.pnlAdd_Subject.Controls.Add(this.lblSub_Units1);
+            this.pnlAdd_Subject.Controls.Add(this.lblSub_Name1);
+            this.pnlAdd_Subject.Controls.Add(this.lblSubject_Code1);
+            this.pnlAdd_Subject.Controls.Add(this.label15);
+            this.pnlAdd_Subject.Controls.Add(this.label16);
+            this.pnlAdd_Subject.Controls.Add(this.label17);
+            this.pnlAdd_Subject.Controls.Add(this.lblSub_Units);
+            this.pnlAdd_Subject.Controls.Add(this.lblSub_Name);
+            this.pnlAdd_Subject.Controls.Add(this.lblSubject_Code);
             this.pnlAdd_Subject.Controls.Add(this.button4);
             this.pnlAdd_Subject.Controls.Add(this.btnSet);
             this.pnlAdd_Subject.Controls.Add(this.label11);
@@ -105,7 +123,7 @@
             this.pnlAdd_Subject.Controls.Add(this.label9);
             this.pnlAdd_Subject.Controls.Add(this.label2);
             this.pnlAdd_Subject.Controls.Add(this.label1);
-            this.pnlAdd_Subject.Controls.Add(this.dataGridView1);
+            this.pnlAdd_Subject.Controls.Add(this.dgvStudent_Subject);
             this.pnlAdd_Subject.Controls.Add(this.dgvSubject);
             this.pnlAdd_Subject.Controls.Add(this.button7);
             this.pnlAdd_Subject.Controls.Add(this.btnAdd);
@@ -587,15 +605,17 @@
             this.dgvSubject.Name = "dgvSubject";
             this.dgvSubject.Size = new System.Drawing.Size(353, 241);
             this.dgvSubject.TabIndex = 121;
+            this.dgvSubject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_CellContentClick);
             // 
-            // dataGridView1
+            // dgvStudent_Subject
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 394);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(353, 241);
-            this.dataGridView1.TabIndex = 122;
+            this.dgvStudent_Subject.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudent_Subject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudent_Subject.Location = new System.Drawing.Point(62, 394);
+            this.dgvStudent_Subject.Name = "dgvStudent_Subject";
+            this.dgvStudent_Subject.Size = new System.Drawing.Size(353, 241);
+            this.dgvStudent_Subject.TabIndex = 122;
+            this.dgvStudent_Subject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -664,6 +684,7 @@
             this.btnSet.TabIndex = 128;
             this.btnSet.Text = "Set";
             this.btnSet.UseVisualStyleBackColor = false;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
             // 
             // button4
             // 
@@ -678,6 +699,105 @@
             this.button4.Text = "Remove";
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // lblSubject_Code
+            // 
+            this.lblSubject_Code.AutoSize = true;
+            this.lblSubject_Code.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSubject_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject_Code.Location = new System.Drawing.Point(596, 104);
+            this.lblSubject_Code.Name = "lblSubject_Code";
+            this.lblSubject_Code.Size = new System.Drawing.Size(14, 20);
+            this.lblSubject_Code.TabIndex = 130;
+            this.lblSubject_Code.Text = "-";
+            // 
+            // lblSub_Name
+            // 
+            this.lblSub_Name.AutoSize = true;
+            this.lblSub_Name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSub_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub_Name.Location = new System.Drawing.Point(596, 158);
+            this.lblSub_Name.Name = "lblSub_Name";
+            this.lblSub_Name.Size = new System.Drawing.Size(14, 20);
+            this.lblSub_Name.TabIndex = 131;
+            this.lblSub_Name.Text = "-";
+            // 
+            // lblSub_Units
+            // 
+            this.lblSub_Units.AutoSize = true;
+            this.lblSub_Units.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSub_Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub_Units.Location = new System.Drawing.Point(598, 212);
+            this.lblSub_Units.Name = "lblSub_Units";
+            this.lblSub_Units.Size = new System.Drawing.Size(14, 20);
+            this.lblSub_Units.TabIndex = 132;
+            this.lblSub_Units.Text = "-";
+            // 
+            // lblSub_Units1
+            // 
+            this.lblSub_Units1.AutoSize = true;
+            this.lblSub_Units1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSub_Units1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub_Units1.Location = new System.Drawing.Point(593, 564);
+            this.lblSub_Units1.Name = "lblSub_Units1";
+            this.lblSub_Units1.Size = new System.Drawing.Size(14, 20);
+            this.lblSub_Units1.TabIndex = 138;
+            this.lblSub_Units1.Text = "-";
+            // 
+            // lblSub_Name1
+            // 
+            this.lblSub_Name1.AutoSize = true;
+            this.lblSub_Name1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSub_Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub_Name1.Location = new System.Drawing.Point(591, 510);
+            this.lblSub_Name1.Name = "lblSub_Name1";
+            this.lblSub_Name1.Size = new System.Drawing.Size(14, 20);
+            this.lblSub_Name1.TabIndex = 137;
+            this.lblSub_Name1.Text = "-";
+            // 
+            // lblSubject_Code1
+            // 
+            this.lblSubject_Code1.AutoSize = true;
+            this.lblSubject_Code1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSubject_Code1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject_Code1.Location = new System.Drawing.Point(591, 456);
+            this.lblSubject_Code1.Name = "lblSubject_Code1";
+            this.lblSubject_Code1.Size = new System.Drawing.Size(14, 20);
+            this.lblSubject_Code1.TabIndex = 136;
+            this.lblSubject_Code1.Text = "-";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(462, 564);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(108, 20);
+            this.label15.TabIndex = 135;
+            this.label15.Text = "Subject Units:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(462, 510);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(113, 20);
+            this.label16.TabIndex = 134;
+            this.label16.Text = "Subject Name:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(462, 456);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(105, 20);
+            this.label17.TabIndex = 133;
+            this.label17.Text = "Subject Code";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,8 +805,8 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(941, 833);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAddStudent);
             this.Controls.Add(this.pnlAdd_Subject);
+            this.Controls.Add(this.pnlAddStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -698,7 +818,7 @@
             this.pnlAddStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent_Subject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -749,7 +869,7 @@
         private System.Windows.Forms.TextBox txtFname;
         private System.Windows.Forms.TextBox txtMname;
         private System.Windows.Forms.TextBox txtLname;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudent_Subject;
         private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button btnSet;
@@ -758,5 +878,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSub_Units;
+        private System.Windows.Forms.Label lblSub_Name;
+        private System.Windows.Forms.Label lblSubject_Code;
+        private System.Windows.Forms.Label lblSub_Units1;
+        private System.Windows.Forms.Label lblSub_Name1;
+        private System.Windows.Forms.Label lblSubject_Code1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
