@@ -46,7 +46,7 @@ namespace Student_Information.v._2
         private void Hide_panels()//Hide all panels
         {
             pnlGrade.Hide();
-            pnlRecycleBin.Hide();
+            pnlPrint.Hide();
             pnlRecords.Hide();
             pnlSend.Hide();
             pnlRecords.Hide();
@@ -73,13 +73,13 @@ namespace Student_Information.v._2
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlGrade.Show();
+            pnlPrint.Show();
         }
 
         private void btnRecycle_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlRecycleBin.Show();
+            pnlPrint.Show();
         }
 
         private void pnlSaveData_Paint(object sender, PaintEventArgs e)
@@ -123,8 +123,6 @@ namespace Student_Information.v._2
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            select_class();
-            select_students();
 
             if (e.RowIndex >= 0)
             {
@@ -132,6 +130,7 @@ namespace Student_Information.v._2
                 lblClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
                
             }
+            select_students();
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -149,7 +148,7 @@ namespace Student_Information.v._2
 
         private void Students()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students]", con);
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students] where [Class_Name]='"+lblClassName.Text  +"'", con);
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dgvStudents.DataSource = table1;
@@ -211,6 +210,11 @@ namespace Student_Information.v._2
             cmd.ExecuteNonQuery();
             select_subject();
             con.Close();
+        }
+
+        private void pnlPrint_Paint(object sender, PaintEventArgs e)
+        {
+
         }
       
     }

@@ -66,22 +66,6 @@
             this.txtYearLevel = new System.Windows.Forms.TextBox();
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnlRecords = new System.Windows.Forms.Panel();
-            this.lblSex = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.lblSection = new System.Windows.Forms.Label();
-            this.lblCourse = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
             this.pnlSubjects = new System.Windows.Forms.Panel();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
@@ -93,16 +77,34 @@
             this.txtSub_Name = new System.Windows.Forms.TextBox();
             this.txtSub_Units = new System.Windows.Forms.TextBox();
             this.txtSub_Code = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblSection = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.pnlRecords = new System.Windows.Forms.Panel();
+            this.picexit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
-            this.pnlRecords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.pnlSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
+            this.pnlRecords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -213,7 +215,7 @@
             this.pnlAccounts.Controls.Add(this.btnSear);
             this.pnlAccounts.Location = new System.Drawing.Point(189, 0);
             this.pnlAccounts.Name = "pnlAccounts";
-            this.pnlAccounts.Size = new System.Drawing.Size(860, 664);
+            this.pnlAccounts.Size = new System.Drawing.Size(821, 664);
             this.pnlAccounts.TabIndex = 1;
             // 
             // label19
@@ -357,7 +359,7 @@
             this.pnlClass.Controls.Add(this.label2);
             this.pnlClass.Location = new System.Drawing.Point(189, 0);
             this.pnlClass.Name = "pnlClass";
-            this.pnlClass.Size = new System.Drawing.Size(860, 664);
+            this.pnlClass.Size = new System.Drawing.Size(821, 664);
             this.pnlClass.TabIndex = 7;
             this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
             // 
@@ -537,183 +539,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Add Class";
             // 
-            // pnlRecords
-            // 
-            this.pnlRecords.Controls.Add(this.lblSex);
-            this.pnlRecords.Controls.Add(this.lblStatus);
-            this.pnlRecords.Controls.Add(this.lblSection);
-            this.pnlRecords.Controls.Add(this.lblCourse);
-            this.pnlRecords.Controls.Add(this.lblYear);
-            this.pnlRecords.Controls.Add(this.lblName);
-            this.pnlRecords.Controls.Add(this.label20);
-            this.pnlRecords.Controls.Add(this.label21);
-            this.pnlRecords.Controls.Add(this.label14);
-            this.pnlRecords.Controls.Add(this.label12);
-            this.pnlRecords.Controls.Add(this.label11);
-            this.pnlRecords.Controls.Add(this.label10);
-            this.pnlRecords.Controls.Add(this.label9);
-            this.pnlRecords.Controls.Add(this.dgvStudents);
-            this.pnlRecords.Controls.Add(this.button5);
-            this.pnlRecords.Location = new System.Drawing.Point(189, 0);
-            this.pnlRecords.Name = "pnlRecords";
-            this.pnlRecords.Size = new System.Drawing.Size(860, 664);
-            this.pnlRecords.TabIndex = 8;
-            this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
-            // 
-            // lblSex
-            // 
-            this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(559, 109);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(14, 20);
-            this.lblSex.TabIndex = 100;
-            this.lblSex.Text = "-";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(560, 70);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(14, 20);
-            this.lblStatus.TabIndex = 99;
-            this.lblStatus.Text = "-";
-            // 
-            // lblSection
-            // 
-            this.lblSection.AutoSize = true;
-            this.lblSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSection.Location = new System.Drawing.Point(231, 191);
-            this.lblSection.Name = "lblSection";
-            this.lblSection.Size = new System.Drawing.Size(14, 20);
-            this.lblSection.TabIndex = 98;
-            this.lblSection.Text = "-";
-            // 
-            // lblCourse
-            // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(231, 151);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(14, 20);
-            this.lblCourse.TabIndex = 97;
-            this.lblCourse.Text = "-";
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(231, 112);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(14, 20);
-            this.lblYear.TabIndex = 96;
-            this.lblYear.Text = "-";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(231, 70);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(14, 20);
-            this.lblName.TabIndex = 95;
-            this.lblName.Text = "-";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(492, 111);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(36, 20);
-            this.label20.TabIndex = 94;
-            this.label20.Text = "Sex";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(489, 70);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 20);
-            this.label21.TabIndex = 93;
-            this.label21.Text = "Status";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(42, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 31);
-            this.label14.TabIndex = 92;
-            this.label14.Text = "Records";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(155, 190);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 20);
-            this.label12.TabIndex = 90;
-            this.label12.Text = "Section:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(154, 151);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 20);
-            this.label11.TabIndex = 89;
-            this.label11.Text = "Course:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(155, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 20);
-            this.label10.TabIndex = 88;
-            this.label10.Text = "Year:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(153, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 20);
-            this.label9.TabIndex = 87;
-            this.label9.Text = "Name:";
-            // 
-            // dgvStudents
-            // 
-            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(72, 245);
-            this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.Size = new System.Drawing.Size(729, 328);
-            this.dgvStudents.TabIndex = 86;
-            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(672, 591);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 36);
-            this.button5.TabIndex = 85;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
             // pnlSubjects
             // 
             this.pnlSubjects.Controls.Add(this.dgvSubject);
@@ -728,7 +553,7 @@
             this.pnlSubjects.Controls.Add(this.txtSub_Code);
             this.pnlSubjects.Location = new System.Drawing.Point(189, 0);
             this.pnlSubjects.Name = "pnlSubjects";
-            this.pnlSubjects.Size = new System.Drawing.Size(857, 661);
+            this.pnlSubjects.Size = new System.Drawing.Size(818, 661);
             this.pnlSubjects.TabIndex = 9;
             this.pnlSubjects.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSubjects_Paint);
             // 
@@ -840,17 +665,207 @@
             this.txtSub_Code.Size = new System.Drawing.Size(187, 33);
             this.txtSub_Code.TabIndex = 24;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(672, 591);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 36);
+            this.button5.TabIndex = 85;
+            this.button5.Text = "Add";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // dgvStudents
+            // 
+            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Location = new System.Drawing.Point(72, 245);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.Size = new System.Drawing.Size(729, 328);
+            this.dgvStudents.TabIndex = 86;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(153, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 20);
+            this.label9.TabIndex = 87;
+            this.label9.Text = "Name:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(155, 111);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 20);
+            this.label10.TabIndex = 88;
+            this.label10.Text = "Year:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(154, 151);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 20);
+            this.label11.TabIndex = 89;
+            this.label11.Text = "Course:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(155, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 20);
+            this.label12.TabIndex = 90;
+            this.label12.Text = "Section:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(42, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 31);
+            this.label14.TabIndex = 92;
+            this.label14.Text = "Records";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(489, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 20);
+            this.label21.TabIndex = 93;
+            this.label21.Text = "Status";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(492, 111);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 20);
+            this.label20.TabIndex = 94;
+            this.label20.Text = "Sex";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(231, 70);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(14, 20);
+            this.lblName.TabIndex = 95;
+            this.lblName.Text = "-";
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Location = new System.Drawing.Point(231, 112);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(14, 20);
+            this.lblYear.TabIndex = 96;
+            this.lblYear.Text = "-";
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(231, 151);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(14, 20);
+            this.lblCourse.TabIndex = 97;
+            this.lblCourse.Text = "-";
+            // 
+            // lblSection
+            // 
+            this.lblSection.AutoSize = true;
+            this.lblSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSection.Location = new System.Drawing.Point(231, 191);
+            this.lblSection.Name = "lblSection";
+            this.lblSection.Size = new System.Drawing.Size(14, 20);
+            this.lblSection.TabIndex = 98;
+            this.lblSection.Text = "-";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(560, 70);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(14, 20);
+            this.lblStatus.TabIndex = 99;
+            this.lblStatus.Text = "-";
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(559, 109);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(14, 20);
+            this.lblSex.TabIndex = 100;
+            this.lblSex.Text = "-";
+            // 
+            // pnlRecords
+            // 
+            this.pnlRecords.Controls.Add(this.lblSex);
+            this.pnlRecords.Controls.Add(this.lblStatus);
+            this.pnlRecords.Controls.Add(this.lblSection);
+            this.pnlRecords.Controls.Add(this.lblCourse);
+            this.pnlRecords.Controls.Add(this.lblYear);
+            this.pnlRecords.Controls.Add(this.lblName);
+            this.pnlRecords.Controls.Add(this.label20);
+            this.pnlRecords.Controls.Add(this.label21);
+            this.pnlRecords.Controls.Add(this.label14);
+            this.pnlRecords.Controls.Add(this.label12);
+            this.pnlRecords.Controls.Add(this.label11);
+            this.pnlRecords.Controls.Add(this.label10);
+            this.pnlRecords.Controls.Add(this.label9);
+            this.pnlRecords.Controls.Add(this.dgvStudents);
+            this.pnlRecords.Controls.Add(this.button5);
+            this.pnlRecords.Location = new System.Drawing.Point(189, 0);
+            this.pnlRecords.Name = "pnlRecords";
+            this.pnlRecords.Size = new System.Drawing.Size(821, 664);
+            this.pnlRecords.TabIndex = 8;
+            this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
+            // 
+            // picexit
+            // 
+            this.picexit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picexit.Image = ((System.Drawing.Image)(resources.GetObject("picexit.Image")));
+            this.picexit.Location = new System.Drawing.Point(1014, 4);
+            this.picexit.Name = "picexit";
+            this.picexit.Size = new System.Drawing.Size(33, 27);
+            this.picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picexit.TabIndex = 28;
+            this.picexit.TabStop = false;
+            this.picexit.Click += new System.EventHandler(this.picexit_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
+            this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -863,12 +878,13 @@
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
-            this.pnlRecords.ResumeLayout(false);
-            this.pnlRecords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.pnlSubjects.ResumeLayout(false);
             this.pnlSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
+            this.pnlRecords.ResumeLayout(false);
+            this.pnlRecords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -894,7 +910,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtYearLevel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.Panel pnlSubjects;
         private System.Windows.Forms.TextBox txtSchoolYear;
         private System.Windows.Forms.Label label7;
@@ -911,18 +926,11 @@
         private System.Windows.Forms.TextBox txtSub_Name;
         private System.Windows.Forms.TextBox txtSub_Units;
         private System.Windows.Forms.TextBox txtSub_Code;
-        public System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dgvStudents;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -931,13 +939,22 @@
         public System.Windows.Forms.TextBox txtSection;
         public System.Windows.Forms.TextBox txtDepartment;
         public System.Windows.Forms.TextBox txtCourse;
-        private System.Windows.Forms.Label lblSex;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblSection;
-        private System.Windows.Forms.Label lblCourse;
-        private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dgvStudents;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblYear;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblSection;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Panel pnlRecords;
+        private System.Windows.Forms.PictureBox picexit;
     }
 }

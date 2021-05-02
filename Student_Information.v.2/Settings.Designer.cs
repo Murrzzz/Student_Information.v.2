@@ -37,6 +37,12 @@
             this.btnUserUpdate = new System.Windows.Forms.Button();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.pnlSend = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -51,7 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClass = new System.Windows.Forms.DataGridView();
             this.Class = new System.Windows.Forms.Label();
-            this.pnlRecycleBin = new System.Windows.Forms.Panel();
+            this.pnlPrint = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlGrade = new System.Windows.Forms.Panel();
             this.lblSubjectName = new System.Windows.Forms.Label();
@@ -76,10 +82,14 @@
             this.Student = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlSend.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
-            this.pnlRecycleBin.SuspendLayout();
+            this.pnlPrint.SuspendLayout();
             this.pnlGrade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -129,7 +139,7 @@
             this.btnRecycle.Name = "btnRecycle";
             this.btnRecycle.Size = new System.Drawing.Size(189, 55);
             this.btnRecycle.TabIndex = 3;
-            this.btnRecycle.Text = "Recycle Bin";
+            this.btnRecycle.Text = "Manage Accounts";
             this.btnRecycle.UseVisualStyleBackColor = false;
             this.btnRecycle.Click += new System.EventHandler(this.btnRecycle_Click);
             // 
@@ -157,7 +167,7 @@
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(189, 55);
             this.btnHelp.TabIndex = 2;
-            this.btnHelp.Text = " Help";
+            this.btnHelp.Text = "Print";
             this.btnHelp.UseVisualStyleBackColor = false;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -197,11 +207,74 @@
             // 
             // pnlSend
             // 
+            this.pnlSend.Controls.Add(this.dataGridView3);
+            this.pnlSend.Controls.Add(this.label19);
+            this.pnlSend.Controls.Add(this.dataGridView2);
+            this.pnlSend.Controls.Add(this.label18);
+            this.pnlSend.Controls.Add(this.dataGridView1);
+            this.pnlSend.Controls.Add(this.label14);
             this.pnlSend.Location = new System.Drawing.Point(189, 0);
             this.pnlSend.Name = "pnlSend";
             this.pnlSend.Size = new System.Drawing.Size(860, 664);
             this.pnlSend.TabIndex = 1;
             this.pnlSend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSaveData_Paint);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(70, 348);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView3.TabIndex = 48;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(18, 298);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(122, 31);
+            this.label19.TabIndex = 47;
+            this.label19.Text = "Students";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(489, 57);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(294, 217);
+            this.dataGridView2.TabIndex = 46;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(437, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 31);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "Subject";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(70, 57);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(294, 217);
+            this.dataGridView1.TabIndex = 44;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(18, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 31);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Class";
             // 
             // pnlRecords
             // 
@@ -365,13 +438,14 @@
             this.Class.TabIndex = 7;
             this.Class.Text = "Class";
             // 
-            // pnlRecycleBin
+            // pnlPrint
             // 
-            this.pnlRecycleBin.Controls.Add(this.label4);
-            this.pnlRecycleBin.Location = new System.Drawing.Point(189, 0);
-            this.pnlRecycleBin.Name = "pnlRecycleBin";
-            this.pnlRecycleBin.Size = new System.Drawing.Size(860, 664);
-            this.pnlRecycleBin.TabIndex = 8;
+            this.pnlPrint.Controls.Add(this.label4);
+            this.pnlPrint.Location = new System.Drawing.Point(189, 0);
+            this.pnlPrint.Name = "pnlPrint";
+            this.pnlPrint.Size = new System.Drawing.Size(860, 664);
+            this.pnlPrint.TabIndex = 8;
+            this.pnlPrint.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPrint_Paint);
             // 
             // label4
             // 
@@ -379,9 +453,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(26, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 31);
+            this.label4.Size = new System.Drawing.Size(70, 31);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Recycle Bin";
+            this.label4.Text = "Print";
             // 
             // pnlGrade
             // 
@@ -638,10 +712,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlGrade);
-            this.Controls.Add(this.pnlRecycleBin);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
+            this.Controls.Add(this.pnlGrade);
+            this.Controls.Add(this.pnlPrint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -649,12 +723,17 @@
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlSend.ResumeLayout(false);
+            this.pnlSend.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
-            this.pnlRecycleBin.ResumeLayout(false);
-            this.pnlRecycleBin.PerformLayout();
+            this.pnlPrint.ResumeLayout(false);
+            this.pnlPrint.PerformLayout();
             this.pnlGrade.ResumeLayout(false);
             this.pnlGrade.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).EndInit();
@@ -674,7 +753,7 @@
         private System.Windows.Forms.Panel pnlSend;
         private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.Label Class;
-        private System.Windows.Forms.Panel pnlRecycleBin;
+        private System.Windows.Forms.Panel pnlPrint;
         private System.Windows.Forms.Panel pnlGrade;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label4;
@@ -710,5 +789,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblClass_Name;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label14;
     }
 }

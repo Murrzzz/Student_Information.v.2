@@ -186,6 +186,14 @@ namespace Student_Information.v._2
           //  txtCourse.ReadOnly = true;
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='"+txtStudentNumber .Text +"',[Stud_Fname]='"+txtFname .Text +"',[Stud_Lname]='"+txtLname .Text +"',[Stud_Mname]='"+txtMname .Text +"',[Stud_Gmail]='"+txtGmail .Text +"',[Stud_Course]='"+txtCourse .Text +"',[Stud_Year]='"+cmbYear.Text +"',[Stud_Section]='"+txtSection .Text +"',[Stud_Contact]='"+txtContactNumber .Text +"',[Stud_Department]='"+TxtDepartment .Text +"',[Stud_Address]='"+txtAddress .Text+"',[Stud_Sex]='"+cmbSex .Text +"',[Stud_Religion]='"+txtReligion .Text +"',[Stud_BirthDate]='"+txtBirthdate .Text +"',[Stud_Status]='"+cmbStatus .Text +"',[Stud_SchoolYear]='"+txtSchoolYear .Text +"',[Stud_CivilStatus]='"+cmbCivilStatus .Text +"',[Class_Name]='"+MainMenu .classname +"'",con);
+
+
+            cmd.ExecuteNonQuery();
+        }
+
 
         
     }

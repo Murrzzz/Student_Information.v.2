@@ -271,5 +271,13 @@ namespace Student_Information.v._2
 
             
         }
+
+        private void picexit_Click(object sender, EventArgs e)
+        {
+            Panel pan = new Panel();
+
+            this.Hide();
+            pan.Show();
+        }
     }
 }

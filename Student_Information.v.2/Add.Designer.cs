@@ -54,7 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtGmail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.cmbCivilStatus = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -90,6 +89,7 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.pnlAdd_Subject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent_Subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -363,10 +363,10 @@
             // 
             // pnlAddStudent
             // 
+            this.pnlAddStudent.Controls.Add(this.btnUpdate);
             this.pnlAddStudent.Controls.Add(this.label3);
             this.pnlAddStudent.Controls.Add(this.txtGmail);
             this.pnlAddStudent.Controls.Add(this.button1);
-            this.pnlAddStudent.Controls.Add(this.label4);
             this.pnlAddStudent.Controls.Add(this.btnNext);
             this.pnlAddStudent.Controls.Add(this.cmbCivilStatus);
             this.pnlAddStudent.Controls.Add(this.cmbStatus);
@@ -433,34 +433,24 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(611, 717);
+            this.button1.Location = new System.Drawing.Point(474, 717);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 120;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(227, 31);
-            this.label4.TabIndex = 119;
-            this.label4.Text = "ADD STUDENTS";
-            // 
             // btnNext
             // 
-            this.btnNext.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnNext.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(764, 717);
+            this.btnNext.Location = new System.Drawing.Point(765, 717);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(127, 36);
             this.btnNext.TabIndex = 101;
-            this.btnNext.Text = "Next";
+            this.btnNext.Text = "Add";
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -799,6 +789,20 @@
             this.txtLname.Size = new System.Drawing.Size(164, 33);
             this.txtLname.TabIndex = 84;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(619, 717);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(127, 36);
+            this.btnUpdate.TabIndex = 123;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,8 +810,8 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(941, 833);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAdd_Subject);
             this.Controls.Add(this.pnlAddStudent);
+            this.Controls.Add(this.pnlAdd_Subject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -834,7 +838,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGmail;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ComboBox cmbCivilStatus;
         private System.Windows.Forms.ComboBox cmbStatus;
@@ -888,5 +891,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
