@@ -38,6 +38,10 @@
             this.btnSaveData = new System.Windows.Forms.Button();
             this.pnlSend = new System.Windows.Forms.Panel();
             this.pnlRecords = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblClass_Name = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,30 +54,26 @@
             this.pnlRecycleBin = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlGrade = new System.Windows.Forms.Panel();
-            this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.Student = new System.Windows.Forms.Label();
-            this.dgvStubject_Students = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblSubjectName = new System.Windows.Forms.Label();
+            this.lblSubjectCode = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblStudentNumber = new System.Windows.Forms.Label();
+            this.lblLname = new System.Windows.Forms.Label();
+            this.lblClassName = new System.Windows.Forms.Label();
+            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGrade_Students = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGrade_Students = new System.Windows.Forms.Button();
-            this.txtGrade = new System.Windows.Forms.TextBox();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.lblFname = new System.Windows.Forms.Label();
-            this.lblStudentNumber = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSubjectCode = new System.Windows.Forms.Label();
-            this.lblSubjectName = new System.Windows.Forms.Label();
-            this.lblClass_Name = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.Student = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlRecords.SuspendLayout();
@@ -81,8 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlRecycleBin.SuspendLayout();
             this.pnlGrade.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStubject_Students)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -224,6 +224,50 @@
             this.pnlRecords.TabIndex = 7;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(546, 173);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 20);
+            this.label17.TabIndex = 52;
+            this.label17.Text = "-";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(631, 143);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 20);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "-";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(552, 114);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 20);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "-";
+            // 
+            // lblClass_Name
+            // 
+            this.lblClass_Name.AutoSize = true;
+            this.lblClass_Name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass_Name.Location = new System.Drawing.Point(587, 84);
+            this.lblClass_Name.Name = "lblClass_Name";
+            this.lblClass_Name.Size = new System.Drawing.Size(14, 20);
+            this.lblClass_Name.TabIndex = 49;
+            this.lblClass_Name.Text = "-";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -345,7 +389,7 @@
             this.pnlGrade.Controls.Add(this.lblSubjectCode);
             this.pnlGrade.Controls.Add(this.lblEmail);
             this.pnlGrade.Controls.Add(this.lblStudentNumber);
-            this.pnlGrade.Controls.Add(this.lblFname);
+            this.pnlGrade.Controls.Add(this.lblLname);
             this.pnlGrade.Controls.Add(this.lblClassName);
             this.pnlGrade.Controls.Add(this.txtGrade);
             this.pnlGrade.Controls.Add(this.button1);
@@ -357,7 +401,7 @@
             this.pnlGrade.Controls.Add(this.label8);
             this.pnlGrade.Controls.Add(this.label9);
             this.pnlGrade.Controls.Add(this.label10);
-            this.pnlGrade.Controls.Add(this.dgvStubject_Students);
+            this.pnlGrade.Controls.Add(this.dgvSubject_Students);
             this.pnlGrade.Controls.Add(this.label7);
             this.pnlGrade.Controls.Add(this.dgvStudents);
             this.pnlGrade.Controls.Add(this.Student);
@@ -365,44 +409,143 @@
             this.pnlGrade.Name = "pnlGrade";
             this.pnlGrade.Size = new System.Drawing.Size(857, 661);
             this.pnlGrade.TabIndex = 9;
+            this.pnlGrade.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrade_Paint);
             // 
-            // dgvStudents
+            // lblSubjectName
             // 
-            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(89, 57);
-            this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.Size = new System.Drawing.Size(409, 217);
-            this.dgvStudents.TabIndex = 42;
+            this.lblSubjectName.AutoSize = true;
+            this.lblSubjectName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubjectName.Location = new System.Drawing.Point(677, 303);
+            this.lblSubjectName.Name = "lblSubjectName";
+            this.lblSubjectName.Size = new System.Drawing.Size(14, 20);
+            this.lblSubjectName.TabIndex = 64;
+            this.lblSubjectName.Text = "-";
             // 
-            // Student
+            // lblSubjectCode
             // 
-            this.Student.AutoSize = true;
-            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Student.Location = new System.Drawing.Point(37, 20);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(122, 31);
-            this.Student.TabIndex = 41;
-            this.Student.Text = "Students";
+            this.lblSubjectCode.AutoSize = true;
+            this.lblSubjectCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubjectCode.Location = new System.Drawing.Point(671, 268);
+            this.lblSubjectCode.Name = "lblSubjectCode";
+            this.lblSubjectCode.Size = new System.Drawing.Size(14, 20);
+            this.lblSubjectCode.TabIndex = 63;
+            this.lblSubjectCode.Text = "-";
             // 
-            // dgvStubject_Students
+            // lblEmail
             // 
-            this.dgvStubject_Students.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvStubject_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStubject_Students.Location = new System.Drawing.Point(89, 335);
-            this.dgvStubject_Students.Name = "dgvStubject_Students";
-            this.dgvStubject_Students.Size = new System.Drawing.Size(409, 217);
-            this.dgvStubject_Students.TabIndex = 44;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(617, 193);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(14, 20);
+            this.lblEmail.TabIndex = 62;
+            this.lblEmail.Text = "-";
             // 
-            // label7
+            // lblStudentNumber
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 298);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 31);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Subject";
+            this.lblStudentNumber.AutoSize = true;
+            this.lblStudentNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentNumber.Location = new System.Drawing.Point(691, 161);
+            this.lblStudentNumber.Name = "lblStudentNumber";
+            this.lblStudentNumber.Size = new System.Drawing.Size(14, 20);
+            this.lblStudentNumber.TabIndex = 61;
+            this.lblStudentNumber.Text = "-";
+            // 
+            // lblLname
+            // 
+            this.lblLname.AutoSize = true;
+            this.lblLname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLname.Location = new System.Drawing.Point(616, 134);
+            this.lblLname.Name = "lblLname";
+            this.lblLname.Size = new System.Drawing.Size(14, 20);
+            this.lblLname.TabIndex = 60;
+            this.lblLname.Text = "-";
+            // 
+            // lblClassName
+            // 
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassName.Location = new System.Drawing.Point(656, 103);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(14, 20);
+            this.lblClassName.TabIndex = 59;
+            this.lblClassName.Text = "-";
+            this.lblClassName.Click += new System.EventHandler(this.lblClassName_Click);
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrade.Location = new System.Drawing.Point(556, 406);
+            this.txtGrade.Multiline = true;
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(187, 33);
+            this.txtGrade.TabIndex = 58;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(688, 505);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 36);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnGrade_Students
+            // 
+            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
+            this.btnGrade_Students.Location = new System.Drawing.Point(540, 505);
+            this.btnGrade_Students.Name = "btnGrade_Students";
+            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
+            this.btnGrade_Students.TabIndex = 56;
+            this.btnGrade_Students.Text = "Grade";
+            this.btnGrade_Students.UseVisualStyleBackColor = false;
+            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(558, 383);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 20);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Grade:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(558, 303);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 20);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "Subject Name:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(558, 268);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 20);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Subject Code:";
             // 
             // label3
             // 
@@ -448,183 +591,45 @@
             this.label10.TabIndex = 49;
             this.label10.Text = "Class Name:";
             // 
-            // label11
+            // dgvSubject_Students
             // 
-            this.label11.AutoSize = true;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(558, 268);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
-            this.label11.TabIndex = 53;
-            this.label11.Text = "Subject Code:";
+            this.dgvSubject_Students.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvSubject_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubject_Students.Location = new System.Drawing.Point(89, 335);
+            this.dgvSubject_Students.Name = "dgvSubject_Students";
+            this.dgvSubject_Students.Size = new System.Drawing.Size(409, 217);
+            this.dgvSubject_Students.TabIndex = 44;
+            this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
-            // label12
+            // label7
             // 
-            this.label12.AutoSize = true;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(558, 303);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 20);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Subject Name:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(37, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 31);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Subject";
             // 
-            // label13
+            // dgvStudents
             // 
-            this.label13.AutoSize = true;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(558, 383);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 20);
-            this.label13.TabIndex = 55;
-            this.label13.Text = "Grade:";
+            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Location = new System.Drawing.Point(89, 57);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.Size = new System.Drawing.Size(409, 217);
+            this.dgvStudents.TabIndex = 42;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
-            // button1
+            // Student
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(688, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 36);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnGrade_Students
-            // 
-            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(540, 505);
-            this.btnGrade_Students.Name = "btnGrade_Students";
-            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
-            this.btnGrade_Students.TabIndex = 56;
-            this.btnGrade_Students.Text = "Grade";
-            this.btnGrade_Students.UseVisualStyleBackColor = false;
-            // 
-            // txtGrade
-            // 
-            this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrade.Location = new System.Drawing.Point(556, 406);
-            this.txtGrade.Multiline = true;
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(187, 33);
-            this.txtGrade.TabIndex = 58;
-            // 
-            // lblClassName
-            // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassName.Location = new System.Drawing.Point(656, 103);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(14, 20);
-            this.lblClassName.TabIndex = 59;
-            this.lblClassName.Text = "-";
-            // 
-            // lblFname
-            // 
-            this.lblFname.AutoSize = true;
-            this.lblFname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFname.Location = new System.Drawing.Point(616, 134);
-            this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(14, 20);
-            this.lblFname.TabIndex = 60;
-            this.lblFname.Text = "-";
-            // 
-            // lblStudentNumber
-            // 
-            this.lblStudentNumber.AutoSize = true;
-            this.lblStudentNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentNumber.Location = new System.Drawing.Point(691, 161);
-            this.lblStudentNumber.Name = "lblStudentNumber";
-            this.lblStudentNumber.Size = new System.Drawing.Size(14, 20);
-            this.lblStudentNumber.TabIndex = 61;
-            this.lblStudentNumber.Text = "-";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(617, 193);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(14, 20);
-            this.lblEmail.TabIndex = 62;
-            this.lblEmail.Text = "-";
-            // 
-            // lblSubjectCode
-            // 
-            this.lblSubjectCode.AutoSize = true;
-            this.lblSubjectCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjectCode.Location = new System.Drawing.Point(671, 268);
-            this.lblSubjectCode.Name = "lblSubjectCode";
-            this.lblSubjectCode.Size = new System.Drawing.Size(14, 20);
-            this.lblSubjectCode.TabIndex = 63;
-            this.lblSubjectCode.Text = "-";
-            // 
-            // lblSubjectName
-            // 
-            this.lblSubjectName.AutoSize = true;
-            this.lblSubjectName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjectName.Location = new System.Drawing.Point(677, 303);
-            this.lblSubjectName.Name = "lblSubjectName";
-            this.lblSubjectName.Size = new System.Drawing.Size(14, 20);
-            this.lblSubjectName.TabIndex = 64;
-            this.lblSubjectName.Text = "-";
-            // 
-            // lblClass_Name
-            // 
-            this.lblClass_Name.AutoSize = true;
-            this.lblClass_Name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass_Name.Location = new System.Drawing.Point(587, 84);
-            this.lblClass_Name.Name = "lblClass_Name";
-            this.lblClass_Name.Size = new System.Drawing.Size(14, 20);
-            this.lblClass_Name.TabIndex = 49;
-            this.lblClass_Name.Text = "-";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(552, 114);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 20);
-            this.label15.TabIndex = 50;
-            this.label15.Text = "-";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(631, 143);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 20);
-            this.label16.TabIndex = 51;
-            this.label16.Text = "-";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(546, 173);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 20);
-            this.label17.TabIndex = 52;
-            this.label17.Text = "-";
+            this.Student.AutoSize = true;
+            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Student.Location = new System.Drawing.Point(37, 20);
+            this.Student.Name = "Student";
+            this.Student.Size = new System.Drawing.Size(122, 31);
+            this.Student.TabIndex = 41;
+            this.Student.Text = "Students";
             // 
             // Settings
             // 
@@ -633,14 +638,15 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
-            this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlRecycleBin);
+            this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.pnlSend);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlRecords.ResumeLayout(false);
@@ -651,8 +657,8 @@
             this.pnlRecycleBin.PerformLayout();
             this.pnlGrade.ResumeLayout(false);
             this.pnlGrade.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStubject_Students)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -689,7 +695,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgvStubject_Students;
+        private System.Windows.Forms.DataGridView dgvSubject_Students;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.Label Student;
@@ -698,7 +704,7 @@
         private System.Windows.Forms.Label lblSubjectCode;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblStudentNumber;
-        private System.Windows.Forms.Label lblFname;
+        private System.Windows.Forms.Label lblLname;
         private System.Windows.Forms.Label lblClassName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;

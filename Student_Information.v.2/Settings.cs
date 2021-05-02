@@ -89,8 +89,7 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-            select_class();
-            select_students();
+            
         }
         private void select_students()
         {
@@ -124,6 +123,9 @@ namespace Student_Information.v._2
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            select_class();
+            select_students();
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
@@ -132,6 +134,84 @@ namespace Student_Information.v._2
             }
         }
 
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            select_class();
+            select_students();
+        }
+
+        private void pnlGrade_Paint(object sender, PaintEventArgs e)
+        {
+            lblClassName.Text = lblClass_Name.Text;
+            Students();
+            select_subject();
+        }
+
+        private void Students()
+        {
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students]", con);
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            dgvStudents.DataSource = table1;
+
+            dgvStudents.AllowUserToAddRows = false;
+            dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void select_subject()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Student_Subject] where [Stud_Id]='"+lblStudentNumber.Text +"'", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvSubject_Students.DataSource = table;
+
+            dgvSubject_Students.AllowUserToAddRows = false;
+            dgvSubject_Students.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvSubject_Students.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+        }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            select_subject();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
+                lblLname.Text = row.Cells["Stud_Lname"].Value.ToString();
+                lblEmail.Text = row.Cells["Stud_Gmail"].Value.ToString();
+                lblStudentNumber.Text = row.Cells["Stud_Id"].Value.ToString();
+                
+            }
+        }
+
+        private void dgvSubject_Students_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvSubject_Students.Rows[e.RowIndex];
+                lblSubjectCode.Text = row.Cells["Sub_Code"].Value.ToString();
+                lblSubjectName.Text = row.Cells["Sub_Name"].Value.ToString();
+                txtGrade.Text = row.Cells["Sub_Grade"].Value.ToString();
+
+            }
+        }
+
+        private void lblClassName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGrade_Students_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand(" update[Student_Subject] set [Sub_Grade] ='"+txtGrade .Text +"' where Sub_Code='"+lblSubjectCode.Text +"'", con);
+           
+           
+            cmd.ExecuteNonQuery();
+            select_subject();
+            con.Close();
+        }
       
     }
 }
