@@ -15,10 +15,27 @@ namespace Student_Information.v._2
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
 
         Boolean set = false;
+        public static string Stud_Id = "";
         public static string classname = "";
         public static string department = "";
         public static string course = "";
         public static string section = "";
+        public static string Fname = "";
+        public static string Lname = "";
+        public static string Mname = "";
+        public static string Gmail = "";
+        public static string Year = "";
+        public static string ContactNumber = "";
+        public static string Address = "";
+        public static string Sex = "";
+        public static string Religion = "";
+        public static string BirthDate = "";
+        public static string Status = "";
+        public static string SchoolYear = "";
+        public static string CivilStatus = "";
+
+
+        public static string SetupClassName = "";
 
         public MainMenu()
         {
@@ -215,7 +232,7 @@ namespace Student_Information.v._2
         }
         private void select_students()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students]", con);
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students] where [Class_Name]='"+ SetupClassName  +"'", con);
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dgvStudents.DataSource = table1;
@@ -231,12 +248,26 @@ namespace Student_Information.v._2
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
-                lblName.Text = row.Cells["Stud_Fname"].Value.ToString();
-                lblYear.Text = row.Cells["Stud_Year"].Value.ToString();
-                lblCourse.Text = row.Cells["Stud_Course"].Value.ToString();
-                lblSection.Text = row.Cells["Stud_Section"].Value.ToString();
-                lblStatus.Text = row.Cells["Stud_Status"].Value.ToString();
-                lblSex.Text = row.Cells["Stud_Sex"].Value.ToString();
+                Stud_Id = row.Cells["Stud_Id"].Value.ToString();
+                Fname  = row.Cells["Stud_Fname"].Value.ToString();
+                Lname  = row.Cells["Stud_Lname"].Value.ToString();
+                Mname  = row.Cells["Stud_Mname"].Value.ToString();
+                Gmail  = row.Cells["Stud_Gmail"].Value.ToString();
+                course  = row.Cells["Stud_Course"].Value.ToString();
+                Year  = row.Cells["Stud_Year"].Value.ToString();
+                section  = row.Cells["Stud_Section"].Value.ToString();
+                ContactNumber  = row.Cells["Stud_ContactNumber"].Value.ToString();
+                department  = row.Cells["Stud_Departmnent"].Value.ToString();
+                Address  = row.Cells["Stud_Address"].Value.ToString();
+                Sex  = row.Cells["Stud_Sex"].Value.ToString();
+                Religion  = row.Cells["Stud_Religion"].Value.ToString();
+                BirthDate  = row.Cells["Stud_BirthDate"].Value.ToString();
+                Status  = row.Cells["Stud_Status"].Value.ToString();
+                SchoolYear  = row.Cells["Stud_SchoolYear"].Value.ToString();
+                CivilStatus  = row.Cells["Stud_CivilStatus"].Value.ToString();
+                classname  = row.Cells["Class_Name"].Value.ToString();
+
+
             }
         }
 
@@ -251,14 +282,17 @@ namespace Student_Information.v._2
            
 
         }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void VariableImported()
         {
             classname = txtClass_Name.Text;
             department = txtDepartment.Text;
             course = txtCourse.Text;
             section = txtSection.Text;
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SetupClassName = txtClass_Name.Text;
             if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
             {
                 MessageBox.Show("Setup Failed Please Choose to the table or add ");
