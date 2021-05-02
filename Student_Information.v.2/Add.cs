@@ -163,6 +163,28 @@ namespace Student_Information.v._2
             select_Student_Subject();
             con.Close();
         }
+        private void DataImported()
+        {
+            txtStudentNumber.Text = MainMenu.Stud_Id;
+            txtFname.Text = MainMenu.Fname;
+            txtLname.Text = MainMenu.Lname;
+            txtMname.Text = MainMenu.Mname;
+            txtGmail.Text = MainMenu.Gmail;
+            txtCourse.Text = MainMenu.course;
+            cmbYear.Text = MainMenu.Year;
+            txtSection.Text = MainMenu.section;
+            txtContactNumber.Text = MainMenu.ContactNumber;
+            TxtDepartment.Text = MainMenu.department;
+            txtAddress.Text = MainMenu.Address;
+            cmbSex.Text = MainMenu.Sex;
+            txtReligion.Text = MainMenu.Religion;
+            txtBirthdate.Text = MainMenu.BirthDate;
+            cmbStatus.Text = MainMenu.Status;
+            txtSchoolYear.Text = MainMenu.SchoolYear;
+            cmbCivilStatus.Text = MainMenu.CivilStatus;
+            
+            //Update button
+        }
 
         private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
         {

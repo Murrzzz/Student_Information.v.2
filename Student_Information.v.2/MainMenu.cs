@@ -257,7 +257,7 @@ namespace Student_Information.v._2
                 Year  = row.Cells["Stud_Year"].Value.ToString();
                 section  = row.Cells["Stud_Section"].Value.ToString();
                 ContactNumber  = row.Cells["Stud_ContactNumber"].Value.ToString();
-                department  = row.Cells["Stud_Departmnent"].Value.ToString();
+                department  = row.Cells["Stud_Department"].Value.ToString();
                 Address  = row.Cells["Stud_Address"].Value.ToString();
                 Sex  = row.Cells["Stud_Sex"].Value.ToString();
                 Religion  = row.Cells["Stud_Religion"].Value.ToString();
