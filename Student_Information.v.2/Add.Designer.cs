@@ -49,8 +49,8 @@
             this.dgvStudent_Subject = new System.Windows.Forms.DataGridView();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGmail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,7 +89,7 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlAdd_Subject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent_Subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -126,7 +126,6 @@
             this.pnlAdd_Subject.Controls.Add(this.dgvStudent_Subject);
             this.pnlAdd_Subject.Controls.Add(this.dgvSubject);
             this.pnlAdd_Subject.Controls.Add(this.button7);
-            this.pnlAdd_Subject.Controls.Add(this.btnAdd);
             this.pnlAdd_Subject.Location = new System.Drawing.Point(-2, 52);
             this.pnlAdd_Subject.Name = "pnlAdd_Subject";
             this.pnlAdd_Subject.Size = new System.Drawing.Size(946, 781);
@@ -244,6 +243,7 @@
             this.button4.TabIndex = 129;
             this.button4.Text = "Remove";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnSet
             // 
@@ -340,29 +340,17 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(611, 717);
+            this.button7.Location = new System.Drawing.Point(732, 718);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 36);
             this.button7.TabIndex = 120;
             this.button7.Text = "Close";
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(773, 717);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 36);
-            this.btnAdd.TabIndex = 101;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.button5_Click_1);
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // pnlAddStudent
             // 
+            this.pnlAddStudent.Controls.Add(this.button2);
             this.pnlAddStudent.Controls.Add(this.btnUpdate);
             this.pnlAddStudent.Controls.Add(this.label3);
             this.pnlAddStudent.Controls.Add(this.txtGmail);
@@ -408,6 +396,20 @@
             this.pnlAddStudent.TabIndex = 2;
             this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddStudent_Paint);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(619, 717);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(127, 36);
+            this.btnUpdate.TabIndex = 123;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -433,12 +435,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(474, 717);
+            this.button1.Location = new System.Drawing.Point(305, 717);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 120;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNext
             // 
@@ -546,7 +549,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(423, 575);
+            this.label25.Location = new System.Drawing.Point(413, 575);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(81, 20);
             this.label25.TabIndex = 114;
@@ -789,19 +792,19 @@
             this.txtLname.Size = new System.Drawing.Size(164, 33);
             this.txtLname.TabIndex = 84;
             // 
-            // btnUpdate
+            // button2
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(619, 717);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(127, 36);
-            this.btnUpdate.TabIndex = 123;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(463, 717);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.TabIndex = 124;
+            this.button2.Text = "Subject";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Add
             // 
@@ -810,8 +813,8 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(941, 833);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAddStudent);
             this.Controls.Add(this.pnlAdd_Subject);
+            this.Controls.Add(this.pnlAddStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -833,7 +836,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlAdd_Subject;
         private System.Windows.Forms.Button button7;
-        public System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlAddStudent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGmail;
@@ -892,5 +894,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button button2;
     }
 }

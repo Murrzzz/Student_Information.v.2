@@ -66,7 +66,7 @@ namespace Student_Information.v._2
         private void pnlAdd_Subject_Paint(object sender, PaintEventArgs e)
         {
             select_Subject();
-
+            select_Student_Subject();
          
         }
 
@@ -218,14 +218,56 @@ namespace Student_Information.v._2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='" + txtStudentNumber.Text + "',[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString () + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString () + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "' where [Stud_Id]='"+txtStudentNumber .Text  +"'", con);
+                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='" + txtStudentNumber.Text + "',[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "' where [Stud_Id]='" + txtStudentNumber.Text + "'", con);
 
 
                 cmd.ExecuteNonQuery();
                 con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pnlAddStudent.Hide();
+            pnlAdd_Subject.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu main = new MainMenu();
+            main.Show();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu main = new MainMenu();
+            main.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("delete from [Student_Subject] where[Sub_Code]='"+lblSubject_Code1 .Text +"'",con );
+                cmd.ExecuteNonQuery();
+                select_Student_Subject();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+            }
         }
 
 
