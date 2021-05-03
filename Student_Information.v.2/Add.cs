@@ -145,6 +145,7 @@ namespace Student_Information.v._2
                 lblSubject_Code1.Text = row.Cells["Sub_Code"].Value.ToString();
                 lblSub_Name1.Text = row.Cells["Sub_Name"].Value.ToString();
                 lblSub_Units1.Text = row.Cells["Sub_Units"].Value.ToString();
+                lblSem.Text = row.Cells["Sem"].Value.ToString();
 
             }
         }
@@ -154,12 +155,12 @@ namespace Student_Information.v._2
 
 
             con.Open();
-            OleDbCommand cmd = new OleDbCommand(" insert into[Student_Subject]([Stud_Id],[Sub_Code],[Sub_Name],[Sub_Units]) values(?,?,?,?)", con);
+            OleDbCommand cmd = new OleDbCommand(" insert into[Student_Subject]([Stud_Id],[Sub_Code],[Sub_Name],[Sub_Units],[Sem]) values(?,?,?,?,?)", con);
             cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtStudentNumber.Text;
             cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = lblSubject_Code.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Name.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Units.Text;
-
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = lblSem.Text;
 
             cmd.ExecuteNonQuery();
             select_Student_Subject();

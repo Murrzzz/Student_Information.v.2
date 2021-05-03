@@ -287,6 +287,7 @@ namespace Student_Information.v._2
                 SchoolYear  = row.Cells["Stud_SchoolYear"].Value.ToString();
                 CivilStatus  = row.Cells["Stud_CivilStatus"].Value.ToString();
                 classname  = row.Cells["Class_Name"].Value.ToString();
+                Sem  = row.Cells["Sem"].Value.ToString();
 
                 int id = Convert.ToInt32(dgvStudents.Rows[e.RowIndex].Cells["Stud_Id"].FormattedValue);
                 OleDbCommand cmd = new OleDbCommand("select [Stud_Image] from[Students] where [Stud_Id]="+id  +"", con);
@@ -342,6 +343,7 @@ namespace Student_Information.v._2
                 Course1 = txtCourse.Text;
                 Department1 = txtDepartment.Text;
                 Section1 = txtSection.Text;
+                Sem = txtSem.Text;
                 MessageBox.Show("Setup Successfully");
             }
 
