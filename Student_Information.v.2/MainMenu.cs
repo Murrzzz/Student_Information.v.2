@@ -34,6 +34,7 @@ namespace Student_Information.v._2
         public static string Status = "";
         public static string SchoolYear = "";
         public static string CivilStatus = "";
+        public static string Sem = "";
         //for ADD
         public static string Department1 = "";
         public static string Section1 = "";
@@ -110,11 +111,18 @@ namespace Student_Information.v._2
    
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Add ad = new Add(this);
-            this.Hide();
-            addUp = 1;
-            ad.Show();
-            addUp = 1;
+            if((Course1 =="")||(Department1 =="")||(Section1 ==""))
+            {
+                MessageBox.Show("Please Setup First the Class !");
+            }
+            else 
+            {
+                Add ad = new Add(this);
+                this.Hide();
+                addUp = 1;
+                ad.Show();
+                addUp = 1;
+            }
         }
 
         private void btnAdd_Class_Click(object sender, EventArgs e)
@@ -330,6 +338,7 @@ namespace Student_Information.v._2
             }
             else
             {
+
                 Course1 = txtCourse.Text;
                 Department1 = txtDepartment.Text;
                 Section1 = txtSection.Text;
@@ -349,10 +358,20 @@ namespace Student_Information.v._2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Add ad = new Add(this);
-            this.Hide();
-            ad.Show();
-            addUp = 0;//add to Add form
+            SetupClassName = txtClass_Name.Text;
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
+            {
+                MessageBox.Show("Setup Failed Please Choose to the table or add ");
+
+            }
+            else
+            {
+                Add ad = new Add(this);
+                this.Hide();
+                ad.Show();
+                addUp = 0;//add to Add form
+            }
+           
         }
     }
 }

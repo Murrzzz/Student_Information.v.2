@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAdd_Subject = new System.Windows.Forms.Panel();
+            this.lblSem = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblSub_Units1 = new System.Windows.Forms.Label();
             this.lblSub_Name1 = new System.Windows.Forms.Label();
             this.lblSubject_Code1 = new System.Windows.Forms.Label();
@@ -107,6 +109,8 @@
             // 
             // pnlAdd_Subject
             // 
+            this.pnlAdd_Subject.Controls.Add(this.lblSem);
+            this.pnlAdd_Subject.Controls.Add(this.label12);
             this.pnlAdd_Subject.Controls.Add(this.lblSub_Units1);
             this.pnlAdd_Subject.Controls.Add(this.lblSub_Name1);
             this.pnlAdd_Subject.Controls.Add(this.lblSubject_Code1);
@@ -131,6 +135,28 @@
             this.pnlAdd_Subject.Size = new System.Drawing.Size(946, 781);
             this.pnlAdd_Subject.TabIndex = 1;
             this.pnlAdd_Subject.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAdd_Subject_Paint);
+            // 
+            // lblSem
+            // 
+            this.lblSem.AutoSize = true;
+            this.lblSem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSem.Location = new System.Drawing.Point(591, 417);
+            this.lblSem.Name = "lblSem";
+            this.lblSem.Size = new System.Drawing.Size(14, 20);
+            this.lblSem.TabIndex = 140;
+            this.lblSem.Text = "-";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(519, 416);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(42, 20);
+            this.label12.TabIndex = 139;
+            this.label12.Text = "Sem";
             // 
             // lblSub_Units1
             // 
@@ -899,5 +925,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblSem;
+        private System.Windows.Forms.Label label12;
     }
 }
