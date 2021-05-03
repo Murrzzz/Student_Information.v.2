@@ -188,7 +188,7 @@ namespace Student_Information.v._2
 
         private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
         {
-            if (MainMenu.addUp == false)
+            if (MainMenu.addUp == 1)
             {
                 TxtDepartment.Text = MainMenu.department;
                 txtSection.Text = MainMenu.section;
@@ -203,11 +203,12 @@ namespace Student_Information.v._2
 
                 TxtDepartment.ReadOnly = true;
                 TxtDepartment.BackColor = System.Drawing.SystemColors.Window;
+                MainMenu.addUp = 3;
             }
-            else if (MainMenu.addUp == true)
+            else if (MainMenu.addUp == 0)
             {
                 DataImported();
-            
+                MainMenu.addUp = 3;
             }
     
          //   txtSection.ReadOnly = true;
@@ -217,10 +218,14 @@ namespace Student_Information.v._2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='"+txtStudentNumber .Text +"',[Stud_Fname]='"+txtFname .Text +"',[Stud_Lname]='"+txtLname .Text +"',[Stud_Mname]='"+txtMname .Text +"',[Stud_Gmail]='"+txtGmail .Text +"',[Stud_Course]='"+txtCourse .Text +"',[Stud_Year]='"+cmbYear.Text +"',[Stud_Section]='"+txtSection .Text +"',[Stud_Contact]='"+txtContactNumber .Text +"',[Stud_Department]='"+TxtDepartment .Text +"',[Stud_Address]='"+txtAddress .Text+"',[Stud_Sex]='"+cmbSex .Text +"',[Stud_Religion]='"+txtReligion .Text +"',[Stud_BirthDate]='"+txtBirthdate .Text +"',[Stud_Status]='"+cmbStatus .Text +"',[Stud_SchoolYear]='"+txtSchoolYear .Text +"',[Stud_CivilStatus]='"+cmbCivilStatus .Text +"',[Class_Name]='"+MainMenu .classname +"'",con);
+            
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='" + txtStudentNumber.Text + "',[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString () + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString () + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "' where [Stud_Id]='"+txtStudentNumber .Text  +"'", con);
 
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            
         }
 
 

@@ -35,7 +35,7 @@ namespace Student_Information.v._2
         public static string CivilStatus = "";
 
 
-        public static Boolean addUp = false;
+        public static int  addUp = 1;
 
         public static string SetupClassName = "";
 
@@ -108,7 +108,7 @@ namespace Student_Information.v._2
             Add ad = new Add(this);
             this.Hide();
             ad.Show();
-            addUp = false;
+            addUp = 1;
         }
 
         private void btnAdd_Class_Click(object sender, EventArgs e)
@@ -271,6 +271,15 @@ namespace Student_Information.v._2
                 classname  = row.Cells["Class_Name"].Value.ToString();
 
 
+                lblFname.Text = Fname;
+                lblLName.Text = Lname;
+                lblMname.Text = Mname;
+                lblYear.Text = Year;
+                lblCourse.Text = course;
+                lblSection.Text = section;
+                lblStatus.Text = Status;
+                lblSex.Text = Sex;
+
             }
         }
 
@@ -322,7 +331,7 @@ namespace Student_Information.v._2
             Add ad = new Add(this);
             this.Hide();
             ad.Show();
-            addUp = true;
+            addUp = 0;//add to Add form
         }
     }
 }

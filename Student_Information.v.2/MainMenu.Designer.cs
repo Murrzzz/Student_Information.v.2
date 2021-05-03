@@ -86,7 +86,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
+            this.lblLName = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.lblCourse = new System.Windows.Forms.Label();
             this.lblSection = new System.Windows.Forms.Label();
@@ -95,6 +95,8 @@
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.picexit = new System.Windows.Forms.PictureBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblFname = new System.Windows.Forms.Label();
+            this.lblMname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -760,15 +762,15 @@
             this.label20.TabIndex = 94;
             this.label20.Text = "Sex";
             // 
-            // lblName
+            // lblLName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(231, 70);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(14, 20);
-            this.lblName.TabIndex = 95;
-            this.lblName.Text = "-";
+            this.lblLName.AutoSize = true;
+            this.lblLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLName.Location = new System.Drawing.Point(231, 70);
+            this.lblLName.Name = "lblLName";
+            this.lblLName.Size = new System.Drawing.Size(14, 20);
+            this.lblLName.TabIndex = 95;
+            this.lblLName.Text = "-";
             // 
             // lblYear
             // 
@@ -822,13 +824,15 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.lblMname);
+            this.pnlRecords.Controls.Add(this.lblFname);
             this.pnlRecords.Controls.Add(this.btnUpdate);
             this.pnlRecords.Controls.Add(this.lblSex);
             this.pnlRecords.Controls.Add(this.lblStatus);
             this.pnlRecords.Controls.Add(this.lblSection);
             this.pnlRecords.Controls.Add(this.lblCourse);
             this.pnlRecords.Controls.Add(this.lblYear);
-            this.pnlRecords.Controls.Add(this.lblName);
+            this.pnlRecords.Controls.Add(this.lblLName);
             this.pnlRecords.Controls.Add(this.label20);
             this.pnlRecords.Controls.Add(this.label21);
             this.pnlRecords.Controls.Add(this.label14);
@@ -869,6 +873,26 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblFname
+            // 
+            this.lblFname.AutoSize = true;
+            this.lblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFname.Location = new System.Drawing.Point(303, 70);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(14, 20);
+            this.lblFname.TabIndex = 102;
+            this.lblFname.Text = "-";
+            // 
+            // lblMname
+            // 
+            this.lblMname.AutoSize = true;
+            this.lblMname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMname.Location = new System.Drawing.Point(407, 70);
+            this.lblMname.Name = "lblMname";
+            this.lblMname.Size = new System.Drawing.Size(14, 20);
+            this.lblMname.TabIndex = 103;
+            this.lblMname.Text = "-";
             // 
             // MainMenu
             // 
@@ -964,7 +988,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblLName;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblCourse;
         private System.Windows.Forms.Label lblSection;
@@ -973,5 +997,7 @@
         private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.PictureBox picexit;
         public System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblMname;
+        private System.Windows.Forms.Label lblFname;
     }
 }
