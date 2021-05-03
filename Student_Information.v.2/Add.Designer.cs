@@ -50,6 +50,7 @@
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGmail = new System.Windows.Forms.TextBox();
@@ -89,7 +90,6 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnlAdd_Subject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent_Subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -396,6 +396,20 @@
             this.pnlAddStudent.TabIndex = 2;
             this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddStudent_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(463, 717);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.TabIndex = 124;
+            this.button2.Text = "Subject";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.MediumTurquoise;
@@ -674,12 +688,14 @@
             this.button3.TabIndex = 100;
             this.button3.Text = "Change ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(59, 179);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(227, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
@@ -792,20 +808,6 @@
             this.txtLname.Size = new System.Drawing.Size(164, 33);
             this.txtLname.TabIndex = 84;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(463, 717);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 36);
-            this.button2.TabIndex = 124;
-            this.button2.Text = "Subject";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,8 +815,8 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(941, 833);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAdd_Subject);
             this.Controls.Add(this.pnlAddStudent);
+            this.Controls.Add(this.pnlAdd_Subject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
