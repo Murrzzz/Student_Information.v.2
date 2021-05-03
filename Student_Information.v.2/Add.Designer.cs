@@ -752,6 +752,7 @@
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(164, 33);
             this.txtContactNumber.TabIndex = 92;
+            this.txtContactNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNumber_KeyPress);
             // 
             // txtSection
             // 
@@ -770,6 +771,7 @@
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(164, 33);
             this.txtStudentNumber.TabIndex = 89;
+            this.txtStudentNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentNumber_KeyPress);
             // 
             // txtCourse
             // 

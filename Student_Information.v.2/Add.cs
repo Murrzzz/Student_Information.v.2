@@ -192,9 +192,10 @@ namespace Student_Information.v._2
         {
             if (MainMenu.addUp == 1)
             {
-                TxtDepartment.Text = MainMenu.department;
-                txtSection.Text = MainMenu.section;
-                txtCourse.Text = MainMenu.course;
+               
+                TxtDepartment.Text = MainMenu .Department1  ;
+                txtSection.Text = MainMenu .Section1 ;
+                txtCourse.Text = MainMenu .Course1  ;
 
 
                 TxtDepartment.ReadOnly = true;//for text box not to Edit
@@ -223,8 +224,9 @@ namespace Student_Information.v._2
             try
             {
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='" + txtStudentNumber.Text + "',[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "' where [Stud_Id]='" + txtStudentNumber.Text + "'", con);
+                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]='" + txtStudentNumber.Text + "',[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "',[Stud_Image]=? where [Stud_Id]='" + txtStudentNumber.Text + "'", con);
 
+                cmd.Parameters.AddWithValue("@1", pictureBox1.Image);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -302,5 +304,36 @@ namespace Student_Information.v._2
 
 
         }
+
+        private void txtStudentNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
         }
+
+        private void txtContactNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        }     
 }

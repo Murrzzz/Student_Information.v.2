@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.OleDb;
+using System.IO;
 namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
@@ -33,6 +34,10 @@ namespace Student_Information.v._2
         public static string Status = "";
         public static string SchoolYear = "";
         public static string CivilStatus = "";
+        //for ADD
+        public static string Department1 = "";
+        public static string Section1 = "";
+        public static string Course1 = "";
 
 
         public static int  addUp = 1;
@@ -107,6 +112,7 @@ namespace Student_Information.v._2
         {
             Add ad = new Add(this);
             this.Hide();
+            addUp = 1;
             ad.Show();
             addUp = 1;
         }
@@ -251,9 +257,11 @@ namespace Student_Information.v._2
 
             if (e.RowIndex >= 0)
             {
+                
+
                 DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
                 Console.WriteLine(row.Cells["Stud_Gmail"]);
-                Stud_Id = row.Cells["Stud_Id"].Value.ToString();
+                //Stud_Id = row.Cells["Stud_Id"].Value.ToString();
                 Fname  = row.Cells["Stud_Fname"].Value.ToString();
                 Lname  = row.Cells["Stud_Lname"].Value.ToString();
                 Mname  = row.Cells["Stud_Mname"].Value.ToString();
@@ -272,7 +280,15 @@ namespace Student_Information.v._2
                 CivilStatus  = row.Cells["Stud_CivilStatus"].Value.ToString();
                 classname  = row.Cells["Class_Name"].Value.ToString();
 
+                int id = Convert.ToInt32(dgvStudents.Rows[e.RowIndex].Cells["Stud_Id"].FormattedValue);
+                OleDbCommand cmd = new OleDbCommand("select [Stud_Image] from[Students] where [Stud_Id]="+id  +"", con);
+                con.Open();
+                string img = cmd.ExecuteScalar().ToString();
+                pictureBox2.Image = Image.FromFile(img);
 
+                con.Close();
+
+              
                 lblFname.Text = Fname;
                 lblLName.Text = Lname;
                 lblMname.Text = Mname;
@@ -314,6 +330,9 @@ namespace Student_Information.v._2
             }
             else
             {
+                Course1 = txtCourse.Text;
+                Department1 = txtDepartment.Text;
+                Section1 = txtSection.Text;
                 MessageBox.Show("Setup Successfully");
             }
 
