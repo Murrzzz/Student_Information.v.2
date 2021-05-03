@@ -188,21 +188,28 @@ namespace Student_Information.v._2
 
         private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
         {
-            TxtDepartment.Text = MainMenu.department;
-            txtSection.Text = MainMenu.section;
-            txtCourse.Text = MainMenu.course;
+            if (MainMenu.addUp == false)
+            {
+                TxtDepartment.Text = MainMenu.department;
+                txtSection.Text = MainMenu.section;
+                txtCourse.Text = MainMenu.course;
 
 
-            TxtDepartment.ReadOnly = true;//for text box not to Edit
-            TxtDepartment.BackColor = System.Drawing.SystemColors.Window;//for color of the textbox
+                TxtDepartment.ReadOnly = true;//for text box not to Edit
+                TxtDepartment.BackColor = System.Drawing.SystemColors.Window;//for color of the textbox
 
-            txtSection.ReadOnly = true;
-            txtSection.BackColor = System.Drawing.SystemColors.Window;
+                txtSection.ReadOnly = true;
+                txtSection.BackColor = System.Drawing.SystemColors.Window;
 
-            TxtDepartment.ReadOnly = true;
-            TxtDepartment.BackColor = System.Drawing.SystemColors.Window;
-
-
+                TxtDepartment.ReadOnly = true;
+                TxtDepartment.BackColor = System.Drawing.SystemColors.Window;
+            }
+            else if (MainMenu.addUp == true)
+            {
+                DataImported();
+            
+            }
+    
          //   txtSection.ReadOnly = true;
           //  TxtDepartment.ReadOnly = true;
           //  txtCourse.ReadOnly = true;

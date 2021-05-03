@@ -35,6 +35,8 @@ namespace Student_Information.v._2
         public static string CivilStatus = "";
 
 
+        public static Boolean addUp = false;
+
         public static string SetupClassName = "";
 
         public MainMenu()
@@ -106,6 +108,7 @@ namespace Student_Information.v._2
             Add ad = new Add(this);
             this.Hide();
             ad.Show();
+            addUp = false;
         }
 
         private void btnAdd_Class_Click(object sender, EventArgs e)
@@ -312,6 +315,14 @@ namespace Student_Information.v._2
 
             this.Hide();
             pan.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Add ad = new Add(this);
+            this.Hide();
+            ad.Show();
+            addUp = true;
         }
     }
 }

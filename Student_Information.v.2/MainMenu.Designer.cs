@@ -94,6 +94,7 @@
             this.lblSex = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.picexit = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -671,7 +672,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(672, 591);
+            this.button5.Location = new System.Drawing.Point(530, 173);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 36);
             this.button5.TabIndex = 85;
@@ -821,6 +822,7 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.btnUpdate);
             this.pnlRecords.Controls.Add(this.lblSex);
             this.pnlRecords.Controls.Add(this.lblStatus);
             this.pnlRecords.Controls.Add(this.lblSection);
@@ -853,6 +855,20 @@
             this.picexit.TabIndex = 28;
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(388, 173);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(127, 36);
+            this.btnUpdate.TabIndex = 101;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // MainMenu
             // 
@@ -956,5 +972,6 @@
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.PictureBox picexit;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }
