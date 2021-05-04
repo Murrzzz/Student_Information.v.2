@@ -581,4 +581,12 @@
         8KgrZEsCDPwfPCUVggqG2u8AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Note: You can add Subject by clicking the add
+           button and fill up the data needed. 
+           You can click update if you want to update
+            the properties. And you can also click 
+            delete if you want to delete the subject.
+</value>
+  </data>
 </root>

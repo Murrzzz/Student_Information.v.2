@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 
 namespace Student_Information.v._2
@@ -55,7 +56,7 @@ namespace Student_Information.v._2
         }
         private void select_Student_Subject()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Student_Subject] where[Stud_Id]='" + txtStudentNumber.Text + "' and [Sem]='"+MainMenu .Sem+"'", con);
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Student_Subject] where[Stud_Id]='" + txtStudentNumber.Text + "'", con);
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dgvStudent_Subject.DataSource = table1;
@@ -73,7 +74,7 @@ namespace Student_Information.v._2
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            pnlAddStudent.Hide();
+         
 
             if ((txtFname.Text == "") || (txtLname.Text == "") || (txtMname.Text == "") || (txtGmail.Text == "") || (txtCourse.Text == "") || (cmbYear.Text == "") || (txtStudentNumber.Text == "") || (txtSection.Text == "") || (txtContactNumber.Text == "") || (TxtDepartment.Text == "") || (txtAddress.Text == "") || (cmbSex.Text == "") || (txtReligion.Text == "") || (txtBirthdate.Text == "") || (cmbStatus.Text == "") || (txtSchoolYear.Text == "") || (cmbCivilStatus.Text == ""))
             {
@@ -82,7 +83,7 @@ namespace Student_Information.v._2
 
             else
             {
-
+                pnlAddStudent.Hide();
                 con.Open();
                 MainMenu menu = new MainMenu();//from Mainmenu
 
@@ -145,7 +146,7 @@ namespace Student_Information.v._2
                 lblSubject_Code1.Text = row.Cells["Sub_Code"].Value.ToString();
                 lblSub_Name1.Text = row.Cells["Sub_Name"].Value.ToString();
                 lblSub_Units1.Text = row.Cells["Sub_Units"].Value.ToString();
-                lblSem.Text = row.Cells["Sem"].Value.ToString();
+               
 
             }
         }
@@ -160,7 +161,7 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = lblSubject_Code.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Name.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Units.Text;
-            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = lblSem.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = MainMenu .Sem;
 
             cmd.ExecuteNonQuery();
             select_Student_Subject();
@@ -335,6 +336,48 @@ namespace Student_Information.v._2
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtFname_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtFname.Text == "FirstName")
+            {
+                txtFname.Text = "";
+                txtFname.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtFname_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtFname.Text == "")
+            {
+                txtFname.Text = "FirstName";
+                txtFname.ForeColor = Color.Gray;
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics mgraphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
+
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
+            mgraphics.DrawRectangle(pen, area);
+            mgraphics.FillRectangle(lgb, area);
+            mgraphics.DrawRectangle(pen, area);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics mgraphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
+
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
+            mgraphics.DrawRectangle(pen, area);
+            mgraphics.FillRectangle(lgb, area);
+            mgraphics.DrawRectangle(pen, area);
         }
         }     
 }

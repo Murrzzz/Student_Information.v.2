@@ -375,5 +375,10 @@ namespace Student_Information.v._2
             }
            
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            Hide_panels();
+        }
     }
 }

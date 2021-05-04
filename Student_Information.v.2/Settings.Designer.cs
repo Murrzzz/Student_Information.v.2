@@ -80,6 +80,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.Student = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
@@ -93,6 +95,8 @@
             this.pnlGrade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -459,26 +463,14 @@
             // 
             // pnlGrade
             // 
-            this.pnlGrade.Controls.Add(this.lblSubjectName);
-            this.pnlGrade.Controls.Add(this.lblSubjectCode);
-            this.pnlGrade.Controls.Add(this.lblEmail);
-            this.pnlGrade.Controls.Add(this.lblStudentNumber);
-            this.pnlGrade.Controls.Add(this.lblLname);
-            this.pnlGrade.Controls.Add(this.lblClassName);
-            this.pnlGrade.Controls.Add(this.txtGrade);
+            this.pnlGrade.Controls.Add(this.groupBox2);
+            this.pnlGrade.Controls.Add(this.groupBox1);
             this.pnlGrade.Controls.Add(this.button1);
             this.pnlGrade.Controls.Add(this.btnGrade_Students);
-            this.pnlGrade.Controls.Add(this.label13);
-            this.pnlGrade.Controls.Add(this.label12);
-            this.pnlGrade.Controls.Add(this.label11);
-            this.pnlGrade.Controls.Add(this.label3);
-            this.pnlGrade.Controls.Add(this.label8);
-            this.pnlGrade.Controls.Add(this.label9);
-            this.pnlGrade.Controls.Add(this.label10);
-            this.pnlGrade.Controls.Add(this.dgvSubject_Students);
             this.pnlGrade.Controls.Add(this.label7);
-            this.pnlGrade.Controls.Add(this.dgvStudents);
             this.pnlGrade.Controls.Add(this.Student);
+            this.pnlGrade.Controls.Add(this.dgvStudents);
+            this.pnlGrade.Controls.Add(this.dgvSubject_Students);
             this.pnlGrade.Location = new System.Drawing.Point(189, 0);
             this.pnlGrade.Name = "pnlGrade";
             this.pnlGrade.Size = new System.Drawing.Size(857, 661);
@@ -490,7 +482,7 @@
             this.lblSubjectName.AutoSize = true;
             this.lblSubjectName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjectName.Location = new System.Drawing.Point(677, 303);
+            this.lblSubjectName.Location = new System.Drawing.Point(141, 63);
             this.lblSubjectName.Name = "lblSubjectName";
             this.lblSubjectName.Size = new System.Drawing.Size(14, 20);
             this.lblSubjectName.TabIndex = 64;
@@ -501,7 +493,7 @@
             this.lblSubjectCode.AutoSize = true;
             this.lblSubjectCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjectCode.Location = new System.Drawing.Point(671, 268);
+            this.lblSubjectCode.Location = new System.Drawing.Point(135, 28);
             this.lblSubjectCode.Name = "lblSubjectCode";
             this.lblSubjectCode.Size = new System.Drawing.Size(14, 20);
             this.lblSubjectCode.TabIndex = 63;
@@ -512,7 +504,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(617, 193);
+            this.lblEmail.Location = new System.Drawing.Point(84, 137);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(14, 20);
             this.lblEmail.TabIndex = 62;
@@ -523,7 +515,7 @@
             this.lblStudentNumber.AutoSize = true;
             this.lblStudentNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentNumber.Location = new System.Drawing.Point(691, 161);
+            this.lblStudentNumber.Location = new System.Drawing.Point(158, 105);
             this.lblStudentNumber.Name = "lblStudentNumber";
             this.lblStudentNumber.Size = new System.Drawing.Size(14, 20);
             this.lblStudentNumber.TabIndex = 61;
@@ -534,7 +526,7 @@
             this.lblLname.AutoSize = true;
             this.lblLname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLname.Location = new System.Drawing.Point(616, 134);
+            this.lblLname.Location = new System.Drawing.Point(83, 78);
             this.lblLname.Name = "lblLname";
             this.lblLname.Size = new System.Drawing.Size(14, 20);
             this.lblLname.TabIndex = 60;
@@ -545,7 +537,7 @@
             this.lblClassName.AutoSize = true;
             this.lblClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassName.Location = new System.Drawing.Point(656, 103);
+            this.lblClassName.Location = new System.Drawing.Point(123, 47);
             this.lblClassName.Name = "lblClassName";
             this.lblClassName.Size = new System.Drawing.Size(14, 20);
             this.lblClassName.TabIndex = 59;
@@ -555,7 +547,7 @@
             // txtGrade
             // 
             this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrade.Location = new System.Drawing.Point(556, 406);
+            this.txtGrade.Location = new System.Drawing.Point(89, 141);
             this.txtGrade.Multiline = true;
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(187, 33);
@@ -567,7 +559,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(688, 505);
+            this.button1.Location = new System.Drawing.Point(635, 585);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 57;
@@ -580,7 +572,7 @@
             this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(540, 505);
+            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
             this.btnGrade_Students.Name = "btnGrade_Students";
             this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
             this.btnGrade_Students.TabIndex = 56;
@@ -593,7 +585,7 @@
             this.label13.AutoSize = true;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(558, 383);
+            this.label13.Location = new System.Drawing.Point(91, 118);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 20);
             this.label13.TabIndex = 55;
@@ -604,7 +596,7 @@
             this.label12.AutoSize = true;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(558, 303);
+            this.label12.Location = new System.Drawing.Point(22, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 20);
             this.label12.TabIndex = 54;
@@ -615,7 +607,7 @@
             this.label11.AutoSize = true;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(558, 268);
+            this.label11.Location = new System.Drawing.Point(22, 28);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 20);
             this.label11.TabIndex = 53;
@@ -626,7 +618,7 @@
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(555, 193);
+            this.label3.Location = new System.Drawing.Point(22, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 52;
@@ -637,7 +629,7 @@
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(555, 161);
+            this.label8.Location = new System.Drawing.Point(22, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 20);
             this.label8.TabIndex = 51;
@@ -648,7 +640,7 @@
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(555, 134);
+            this.label9.Location = new System.Drawing.Point(22, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 50;
@@ -659,7 +651,7 @@
             this.label10.AutoSize = true;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(552, 103);
+            this.label10.Location = new System.Drawing.Point(19, 47);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 20);
             this.label10.TabIndex = 49;
@@ -669,9 +661,9 @@
             // 
             this.dgvSubject_Students.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvSubject_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubject_Students.Location = new System.Drawing.Point(89, 335);
+            this.dgvSubject_Students.Location = new System.Drawing.Point(80, 332);
             this.dgvSubject_Students.Name = "dgvSubject_Students";
-            this.dgvSubject_Students.Size = new System.Drawing.Size(409, 217);
+            this.dgvSubject_Students.Size = new System.Drawing.Size(368, 217);
             this.dgvSubject_Students.TabIndex = 44;
             this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
@@ -691,7 +683,7 @@
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(89, 57);
             this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.Size = new System.Drawing.Size(409, 217);
+            this.dgvStudents.Size = new System.Drawing.Size(368, 217);
             this.dgvStudents.TabIndex = 42;
             this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
@@ -705,6 +697,36 @@
             this.Student.TabIndex = 41;
             this.Student.Text = "Students";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblStudentNumber);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblClassName);
+            this.groupBox1.Controls.Add(this.lblLname);
+            this.groupBox1.Location = new System.Drawing.Point(443, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(368, 217);
+            this.groupBox1.TabIndex = 65;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtGrade);
+            this.groupBox2.Controls.Add(this.lblSubjectName);
+            this.groupBox2.Controls.Add(this.lblSubjectCode);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Location = new System.Drawing.Point(443, 335);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(368, 217);
+            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,10 +734,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlGrade);
-            this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
+            this.Controls.Add(this.pnlGrade);
+            this.Controls.Add(this.pnlPrint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -738,6 +760,10 @@
             this.pnlGrade.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -795,5 +821,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

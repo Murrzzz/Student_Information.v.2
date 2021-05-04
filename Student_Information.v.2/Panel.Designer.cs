@@ -37,6 +37,8 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +102,7 @@
             // 
             this.btnMainMenu.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainMenu.Location = new System.Drawing.Point(312, 180);
+            this.btnMainMenu.Location = new System.Drawing.Point(315, 126);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(260, 226);
             this.btnMainMenu.TabIndex = 3;
@@ -111,7 +113,7 @@
             // 
             this.btnSettings.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Location = new System.Drawing.Point(606, 180);
+            this.btnSettings.Location = new System.Drawing.Point(609, 126);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(260, 226);
             this.btnSettings.TabIndex = 4;
@@ -125,11 +127,36 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(308, 28);
+            this.label1.Location = new System.Drawing.Point(391, 366);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Home";
+            this.label1.Text = "Admin Portal";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(671, 366);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Teacher Portal";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label4.Location = new System.Drawing.Point(377, 425);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(493, 80);
+            this.label4.TabIndex = 142;
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // Panel
             // 
@@ -137,6 +164,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(900, 585);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnMainMenu);
@@ -163,6 +192,8 @@
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
 
 
     }
