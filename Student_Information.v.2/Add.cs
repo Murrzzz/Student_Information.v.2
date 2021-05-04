@@ -90,7 +90,7 @@ namespace Student_Information.v._2
 
 
 
-                OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus],[Class_Name],[Stud_Image],[Sem]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus],[Class_Name],[Sem]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.VarChar).Value = txtStudentNumber.Text;
                 cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
                 cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
@@ -109,7 +109,6 @@ namespace Student_Information.v._2
                 cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtSchoolYear.Text;
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = cmbCivilStatus.Text;
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = MainMenu.classname;
-                cmd.Parameters.AddWithValue("@Stud_Image", pictureBox1);
                 cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = MainMenu .Sem ;
               
                 cmd.ExecuteNonQuery();
