@@ -100,7 +100,7 @@
             this.lblMname = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.picexit = new System.Windows.Forms.PictureBox();
+            this.btnEx = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -112,7 +112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -876,7 +875,7 @@
             // 
             // pnlRecords
             // 
-            this.pnlRecords.Controls.Add(this.picexit);
+            this.pnlRecords.Controls.Add(this.btnEx);
             this.pnlRecords.Controls.Add(this.pictureBox2);
             this.pnlRecords.Controls.Add(this.lblMname);
             this.pnlRecords.Controls.Add(this.lblFname);
@@ -944,24 +943,28 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // picexit
+            // btnEx
             // 
-            this.picexit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picexit.Image = ((System.Drawing.Image)(resources.GetObject("picexit.Image")));
-            this.picexit.Location = new System.Drawing.Point(785, 3);
-            this.picexit.Name = "picexit";
-            this.picexit.Size = new System.Drawing.Size(33, 27);
-            this.picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picexit.TabIndex = 28;
-            this.picexit.TabStop = false;
-            this.picexit.Click += new System.EventHandler(this.picexit_Click);
+            this.btnEx.BackColor = System.Drawing.Color.Transparent;
+            this.btnEx.FlatAppearance.BorderSize = 0;
+            this.btnEx.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEx.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEx.ForeColor = System.Drawing.Color.Cyan;
+            this.btnEx.Location = new System.Drawing.Point(781, 3);
+            this.btnEx.Name = "btnEx";
+            this.btnEx.Size = new System.Drawing.Size(37, 32);
+            this.btnEx.TabIndex = 105;
+            this.btnEx.Text = "X";
+            this.btnEx.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1051, 664);
+            this.ClientSize = new System.Drawing.Size(1011, 664);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
@@ -987,7 +990,6 @@
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1056,7 +1058,6 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Panel pnlRecords;
-        private System.Windows.Forms.PictureBox picexit;
         public System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblMname;
         private System.Windows.Forms.Label lblFname;
@@ -1066,5 +1067,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnEx;
     }
 }

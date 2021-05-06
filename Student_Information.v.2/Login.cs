@@ -102,6 +102,11 @@ namespace Student_Information.v._2
                 MessageBox.Show("Success");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
         }
 
 }
