@@ -37,12 +37,6 @@
             this.btnUserUpdate = new System.Windows.Forms.Button();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.pnlSend = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,17 +71,15 @@
             this.lblClassName = new System.Windows.Forms.Label();
             this.lblLname = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnGrade_Students = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Student = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
+            this.btnGrade_Students = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
@@ -211,74 +203,12 @@
             // 
             // pnlSend
             // 
-            this.pnlSend.Controls.Add(this.dataGridView3);
-            this.pnlSend.Controls.Add(this.label19);
-            this.pnlSend.Controls.Add(this.dataGridView2);
-            this.pnlSend.Controls.Add(this.label18);
-            this.pnlSend.Controls.Add(this.dataGridView1);
-            this.pnlSend.Controls.Add(this.label14);
+            this.pnlSend.Controls.Add(this.button2);
             this.pnlSend.Location = new System.Drawing.Point(189, 0);
             this.pnlSend.Name = "pnlSend";
             this.pnlSend.Size = new System.Drawing.Size(860, 664);
             this.pnlSend.TabIndex = 1;
             this.pnlSend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSaveData_Paint);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(70, 348);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(399, 217);
-            this.dataGridView3.TabIndex = 48;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(18, 298);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 31);
-            this.label19.TabIndex = 47;
-            this.label19.Text = "Students";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(489, 57);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(294, 217);
-            this.dataGridView2.TabIndex = 46;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(437, 20);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(105, 31);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "Subject";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(294, 217);
-            this.dataGridView1.TabIndex = 44;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 31);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Class";
             // 
             // pnlRecords
             // 
@@ -673,20 +603,6 @@
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnGrade_Students
-            // 
-            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
-            this.btnGrade_Students.Name = "btnGrade_Students";
-            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
-            this.btnGrade_Students.TabIndex = 56;
-            this.btnGrade_Students.Text = "Grade";
-            this.btnGrade_Students.UseVisualStyleBackColor = false;
-            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -727,6 +643,34 @@
             this.dgvSubject_Students.TabIndex = 44;
             this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
+            // btnGrade_Students
+            // 
+            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
+            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
+            this.btnGrade_Students.Name = "btnGrade_Students";
+            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
+            this.btnGrade_Students.TabIndex = 56;
+            this.btnGrade_Students.Text = "Grade";
+            this.btnGrade_Students.UseVisualStyleBackColor = false;
+            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(89, 298);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Send";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,10 +678,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -746,10 +690,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSend.ResumeLayout(false);
-            this.pnlSend.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
@@ -792,7 +732,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnGrade_Students;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -815,13 +754,9 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblClass_Name;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGrade_Students;
     }
 }

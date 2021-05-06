@@ -17,7 +17,7 @@ namespace Student_Information.v._2
         NetworkCredential login;
         SmtpClient client;
         MailMessage msg;
-
+        int num = 0;
 
         public Inbox()
         {
@@ -50,9 +50,15 @@ namespace Student_Information.v._2
         private void Students()
         {
             OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students] where [Class_Name]='" + cmbClass.Text + "'", con);
+
+
+
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dgvStudents.DataSource = table1;
+
+            num = table1.Rows.Count;
+            Console.WriteLine(num);
 
             dgvStudents.AllowUserToAddRows = false;
             dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -103,7 +109,48 @@ namespace Student_Information.v._2
 
         private void btnGrade_Students_Click(object sender, EventArgs e)
         {
-            if (rdPersonal.Checked)
+           
+        }
+
+        private static void SendCompletedCallback(object sender, AsyncCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+                MessageBox.Show(string.Format("{0} send canceled.", e.UserState), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (e.Error != null)
+                MessageBox.Show(string.Format("{0} {1}.", e.UserState, e.Error), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Your message has been successfully sent.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
+
+        private void Inbox_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'student_InfoDataSet_ClassName._class' table. You can move, or remove it, as needed.
+            this.classTableAdapter1.Fill(this.student_InfoDataSet_ClassName._class);
+
+        }
+
+        private void dgvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
+                txtReciepients.Text = row.Cells["Stud_Gmail"].Value.ToString();
+
+                txtReciepients.ReadOnly = true;
+                txtReciepients.BackColor = System.Drawing.SystemColors.Window;
+            }
+        }
+
+        private void btnGrade_Students_Click_1(object sender, EventArgs e)
+        {
+             if (rdPersonal.Checked==true)
             {
                 try
                 {
@@ -139,22 +186,21 @@ namespace Student_Information.v._2
                     MessageBox.Show(ex.Message);
                 }
             }
-            else if (rdGroup.Checked)
+
+            else if (rdGroup.Checked==true )
             {
                 string email;
                 string Emails = " ";
 
                 try
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select count(*) from [Students] where [Class_Name]='" + cmbClass.Text + "'");
-                    Int32 count = (Int32)cmd.ExecuteScalar();
-                    Console.WriteLine(count);
-
-                    for (int i = 0; i < count; i++)
+                  
+                    for (int i = 0; i < num; i++)//the variable num is in students method
                     {
                         DataGridViewRow row = this.dgvStudents.Rows[i];
-                        email = row.Cells["Department"].Value.ToString();
+                        email = row.Cells["Stud_Gmail"].Value.ToString ();
                         Emails = Emails.Insert(0, "" + email + ";");
+                        Console.WriteLine(email );
                     }
 
                 }
@@ -188,6 +234,8 @@ namespace Student_Information.v._2
                     {
                         msg.To.Add(item);
                     }
+                    Console.WriteLine("Items");
+                    Console.WriteLine(Emails );
 
                     if (!string.IsNullOrEmpty(To)) ;
 
@@ -204,40 +252,11 @@ namespace Student_Information.v._2
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Console.WriteLine("Items");
+                    Console.WriteLine(Emails);
                 }
 
             }
-        }
-
-        private static void SendCompletedCallback(object sender, AsyncCompletedEventArgs e)
-        {
-            if (e.Cancelled)
-                MessageBox.Show(string.Format("{0} send canceled.", e.UserState), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (e.Error != null)
-                MessageBox.Show(string.Format("{0} {1}.", e.UserState, e.Error), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Your message has been successfully sent.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }
-
-
-        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
-                txtReciepients.Text = row.Cells["Stud_Gmail"].Value.ToString();
-
-                txtReciepients.ReadOnly = true;
-                txtReciepients.BackColor = System.Drawing.SystemColors.Window;
-            }
-        }
-
-        private void Inbox_Load_1(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'student_InfoDataSet_ClassName._class' table. You can move, or remove it, as needed.
-            this.classTableAdapter1.Fill(this.student_InfoDataSet_ClassName._class);
-
         }
 
       

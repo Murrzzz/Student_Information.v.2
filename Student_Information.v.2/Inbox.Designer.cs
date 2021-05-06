@@ -58,6 +58,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cmbClass = new System.Windows.Forms.ComboBox();
+            this.classBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.student_InfoDataSet_ClassName = new Student_Information.v._2.Student_InfoDataSet_ClassName();
+            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
@@ -66,23 +69,20 @@
             this.rdGroup = new System.Windows.Forms.RadioButton();
             this.rdPersonal = new System.Windows.Forms.RadioButton();
             this.pnlAnnouncements = new System.Windows.Forms.Panel();
-            this.student_InfoDataSet_ClassName = new Student_Information.v._2.Student_InfoDataSet_ClassName();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classTableAdapter1 = new Student_Information.v._2.Student_InfoDataSet_ClassNameTableAdapters.classTableAdapter();
-            this.classBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_InfoDataSet_ClassName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel8.SuspendLayout();
             this.pnlAnnouncements.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.student_InfoDataSet_ClassName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -365,6 +365,7 @@
             this.btnGrade_Students.TabIndex = 62;
             this.btnGrade_Students.Text = "Send";
             this.btnGrade_Students.UseVisualStyleBackColor = false;
+            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click_1);
             // 
             // button1
             // 
@@ -401,6 +402,21 @@
             this.cmbClass.TabIndex = 4;
             this.cmbClass.ValueMember = "Class_Name";
             // 
+            // classBindingSource1
+            // 
+            this.classBindingSource1.DataMember = "class";
+            this.classBindingSource1.DataSource = this.student_InfoDataSet_ClassName;
+            // 
+            // student_InfoDataSet_ClassName
+            // 
+            this.student_InfoDataSet_ClassName.DataSetName = "Student_InfoDataSet_ClassName";
+            this.student_InfoDataSet_ClassName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classBindingSource
+            // 
+            this.classBindingSource.DataMember = "class";
+            this.classBindingSource.DataSource = this.student_InfoDataSet_ClassName;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -430,6 +446,7 @@
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.Size = new System.Drawing.Size(323, 284);
             this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick_1);
             // 
             // panel8
             // 
@@ -498,24 +515,9 @@
             this.pnlAnnouncements.TabIndex = 0;
             this.pnlAnnouncements.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAnnouncements_Paint);
             // 
-            // student_InfoDataSet_ClassName
-            // 
-            this.student_InfoDataSet_ClassName.DataSetName = "Student_InfoDataSet_ClassName";
-            this.student_InfoDataSet_ClassName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataMember = "class";
-            this.classBindingSource.DataSource = this.student_InfoDataSet_ClassName;
-            // 
             // classTableAdapter1
             // 
             this.classTableAdapter1.ClearBeforeFill = true;
-            // 
-            // classBindingSource1
-            // 
-            this.classBindingSource1.DataMember = "class";
-            this.classBindingSource1.DataSource = this.student_InfoDataSet_ClassName;
             // 
             // Inbox
             // 
@@ -541,15 +543,15 @@
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_InfoDataSet_ClassName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.pnlAnnouncements.ResumeLayout(false);
             this.pnlAnnouncements.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.student_InfoDataSet_ClassName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

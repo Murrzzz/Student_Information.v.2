@@ -216,6 +216,13 @@ namespace Student_Information.v._2
         {
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Inbox inb = new Inbox();
+
+            inb.Show();
+        }
       
     }
 }

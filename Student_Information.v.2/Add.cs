@@ -160,7 +160,7 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = lblSubject_Code.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Name.Text;
             cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Units.Text;
-            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = MainMenu .Sem;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = cmbSem .Text ;
 
             cmd.ExecuteNonQuery();
             select_Student_Subject();
