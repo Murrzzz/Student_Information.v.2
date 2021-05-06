@@ -100,7 +100,9 @@
             // labLogin
             // 
             this.labLogin.AutoSize = true;
+            this.labLogin.BackColor = System.Drawing.Color.Transparent;
             this.labLogin.Font = new System.Drawing.Font("Nunito", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLogin.ForeColor = System.Drawing.Color.Black;
             this.labLogin.Location = new System.Drawing.Point(139, 80);
             this.labLogin.Name = "labLogin";
             this.labLogin.Size = new System.Drawing.Size(145, 55);

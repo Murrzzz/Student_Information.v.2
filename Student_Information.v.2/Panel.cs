@@ -64,6 +64,12 @@ namespace Student_Information.v._2
             mgraphics.DrawRectangle(pen, area);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new MainMenu().Show();
+            this.Hide();
+        }
+
         
     }
 }
