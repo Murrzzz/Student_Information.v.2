@@ -127,7 +127,7 @@ namespace Student_Information.v._2
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                lblClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
+                lblClass_Name.Text = row.Cells["ClassName"].Value.ToString();
                
             }
             select_students();
@@ -222,6 +222,22 @@ namespace Student_Information.v._2
             Inbox inb = new Inbox();
 
             inb.Show();
+        }
+
+        Bitmap btmp;
+        private void btnprint_Click(object sender, EventArgs e)
+        {
+            int height = dgvStudent.Height;
+            dgvStudent.Height = dgvStudent.RowCount * dgvStudent.RowTemplate.Height * 2;
+            btmp = new Bitmap(dgvStudent.Width, dgvStudent.Height);
+            dgvStudent .DrawToBitmap (btmp , new Rectangle(0,0, dgvStudent.Width , dgvStudent .Height ));
+            dgvStudent .Height =height ;
+            printPreviewDialog1 .ShowDialog ();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(btmp, 0, 0);
         }
       
     }

@@ -165,22 +165,7 @@ namespace Student_Information.v._2
 
         }
 
-        private void dgvClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                txtDepartment.Text = row.Cells["Department"].Value.ToString();
-                txtCourse.Text = row.Cells["Course"].Value.ToString();
-                cmbSection.Text = row.Cells["Section"].Value.ToString();
-                cmbYearLevel.Text = row.Cells["Year_Level"].Value.ToString();
-                cmbSchoolYear.Text = row.Cells["School_Year"].Value.ToString();
-                txtClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
-                cmbSem.Text = row.Cells["Sem"].Value.ToString();
-            }
-        }
-
+     
         private void btnUpdate_Class_Click(object sender, EventArgs e)
         {
             string Department = txtDepartment.Text;
@@ -383,6 +368,21 @@ namespace Student_Information.v._2
         private void txtClass_Name_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
+                txtDepartment.Text = row.Cells["Department"].Value.ToString();
+                txtCourse.Text = row.Cells["Course"].Value.ToString();
+                cmbSection .Text  = row.Cells["Section"].Value.ToString();
+                cmbYearLevel.Text  = row.Cells["YearLevel"].Value.ToString();
+                cmbSchoolYear.Text  = row.Cells["SchoolYear"].Value.ToString();
+                txtClass_Name.Text = row.Cells["ClassName"].Value.ToString();
+                cmbSem.Text = row.Cells["Sem"].Value.ToString();
+            }
         }
     }
 }

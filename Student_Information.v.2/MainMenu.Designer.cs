@@ -992,10 +992,10 @@
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1091,9 +1091,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cmbSection;
-        private System.Windows.Forms.ComboBox cmbSem;
-        private System.Windows.Forms.ComboBox cmbSchoolYear;
-        private System.Windows.Forms.ComboBox cmbYearLevel;
+        public System.Windows.Forms.ComboBox cmbSection;
+        public System.Windows.Forms.ComboBox cmbSem;
+        public System.Windows.Forms.ComboBox cmbSchoolYear;
+        public System.Windows.Forms.ComboBox cmbYearLevel;
     }
 }
