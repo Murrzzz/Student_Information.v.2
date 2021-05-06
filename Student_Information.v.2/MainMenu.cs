@@ -128,7 +128,7 @@ namespace Student_Information.v._2
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
             
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == "") ||(txtSem.Text  ==""))
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == "") ||(cmbSem.Text  ==""))
             {
                 MessageBox.Show("Please fill the blank");
             }
@@ -140,11 +140,11 @@ namespace Student_Information.v._2
                 OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Name],[Sem]) values(?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
                 cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSection.Text;
-                cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = txtYearLevel.Text;
-                cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = txtSchoolYear.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSection.Text;
+                cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = cmbYearLevel.Text;
+                cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = cmbSchoolYear.Text;
                 cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name.Text;
-                cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSem.Text;
+                cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = cmbSem.Text;
                 cmd.ExecuteNonQuery();
 
                 Class_SelectAll();
@@ -173,11 +173,11 @@ namespace Student_Information.v._2
                 DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
                 txtDepartment.Text = row.Cells["Department"].Value.ToString();
                 txtCourse.Text = row.Cells["Course"].Value.ToString();
-                txtSection.Text = row.Cells["Section"].Value.ToString();
-                txtYearLevel.Text = row.Cells["Year_Level"].Value.ToString();
-                txtSchoolYear.Text = row.Cells["School_Year"].Value.ToString();
+                cmbSection.Text = row.Cells["Section"].Value.ToString();
+                cmbYearLevel.Text = row.Cells["Year_Level"].Value.ToString();
+                cmbSchoolYear.Text = row.Cells["School_Year"].Value.ToString();
                 txtClass_Name.Text = row.Cells["Class_Name"].Value.ToString();
-                txtSem.Text = row.Cells["Sem"].Value.ToString();
+                cmbSem.Text = row.Cells["Sem"].Value.ToString();
             }
         }
 
@@ -185,12 +185,12 @@ namespace Student_Information.v._2
         {
             string Department = txtDepartment.Text;
             string Course = txtCourse.Text;
-            string Section = txtSection.Text;
-            string School_Year = txtSchoolYear.Text ;
-            string Year_Level = txtYearLevel.Text;
+            string Section = cmbSection.Text;
+            string School_Year = cmbSchoolYear.Text ;
+            string Year_Level = cmbYearLevel.Text;
 
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]='" + txtDepartment.Text + "',[Course]='" + txtCourse.Text + "',[Section]='" + txtSection.Text + "',[Year_Level]='" + txtYearLevel.Text + "',[School_Year]='" + txtSchoolYear.Text + "',[Sem]='"+txtSem .Text +"' WHERE [Course]='" + Course + "' AND [Section]='" + Section  + "' AND [Year_Level]='" + Year_Level +"'" , con);
+            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]='" + txtDepartment.Text + "',[Course]='" + txtCourse.Text + "',[Section]='" + cmbSection.Text + "',[Year_Level]='" + cmbYearLevel.Text + "',[School_Year]='" + cmbSchoolYear.Text + "',[Sem]='"+cmbSem .Text +"' WHERE [Course]='" + Course + "' AND [Section]='" + Section  + "' AND [Year_Level]='" + Year_Level +"'" , con);
             cmd.ExecuteNonQuery();
 
             Class_SelectAll();
@@ -322,13 +322,13 @@ namespace Student_Information.v._2
             classname = txtClass_Name.Text;
             department = txtDepartment.Text;
             course = txtCourse.Text;
-            section = txtSection.Text;
+            section = cmbSection.Text;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             SetupClassName = txtClass_Name.Text;
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == ""))
             {
                 MessageBox.Show("Setup Failed Please Choose to the table or add ");
               
@@ -340,8 +340,8 @@ namespace Student_Information.v._2
                 Course1 = txtCourse.Text;
                 Department1 = txtDepartment.Text;
                 department = txtDepartment.Text;
-                Section1 = txtSection.Text;
-                Sem = txtSem.Text;
+                Section1 = cmbSection.Text;
+                Sem = cmbSem.Text;
                 MessageBox.Show("Setup Successfully");
             }
 
@@ -359,7 +359,7 @@ namespace Student_Information.v._2
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             SetupClassName = txtClass_Name.Text;
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (txtSchoolYear.Text == "") || (txtSection.Text == "") || (txtYearLevel.Text == "") || (txtClass_Name.Text == ""))
+            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == ""))
             {
                 MessageBox.Show("Setup Failed Please Choose to the table or add ");
 
@@ -377,6 +377,11 @@ namespace Student_Information.v._2
         private void MainMenu_Load(object sender, EventArgs e)
         {
             Hide_panels();
+        }
+
+        private void txtClass_Name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
