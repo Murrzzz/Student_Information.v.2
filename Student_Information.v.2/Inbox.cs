@@ -195,12 +195,22 @@ namespace Student_Information.v._2
                 try
                 {
                   
-                    for (int i = 0; i < num; i++)//the variable num is in students method
+                    for (int i = 0; i <= num-1; i++)//the variable num is in students method
                     {
-                        DataGridViewRow row = this.dgvStudents.Rows[i];
-                        email = row.Cells["Stud_Gmail"].Value.ToString ();
-                        Emails = Emails.Insert(0, "" + email + ";");
-                        Console.WriteLine(email );
+                        if(i==num-1 )
+                        {
+                            DataGridViewRow row = this.dgvStudents.Rows[i];
+                            email = row.Cells["Stud_Gmail"].Value.ToString();
+                            Emails = Emails.Insert(0, "" + email + "; ");
+                            Console.WriteLine(email);
+                        }
+                        else
+                        {
+                            DataGridViewRow row = this.dgvStudents.Rows[i];
+                            email = row.Cells["Stud_Gmail"].Value.ToString();
+                            Emails = Emails.Insert(0, "" + email + " ");
+                            Console.WriteLine(email);
+                        }
                     }
 
                 }
