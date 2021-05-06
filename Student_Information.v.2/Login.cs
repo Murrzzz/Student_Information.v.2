@@ -69,6 +69,11 @@ namespace Student_Information.v._2
 
 
         }
+
+        private void checkShow_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = default(char);
+        }
         }
 
 }

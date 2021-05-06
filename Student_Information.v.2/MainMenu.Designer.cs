@@ -49,6 +49,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSear = new System.Windows.Forms.Button();
             this.pnlClass = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSem = new System.Windows.Forms.TextBox();
             this.lblClass = new System.Windows.Forms.Label();
@@ -68,6 +70,7 @@
             this.txtYearLevel = new System.Windows.Forms.TextBox();
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.pnlSubjects = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.btnSub_Upt = new System.Windows.Forms.Button();
@@ -98,9 +101,6 @@
             this.lblFname = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picexit = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.btnAddClass);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 652);
+            this.panel1.Size = new System.Drawing.Size(191, 664);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -374,6 +374,32 @@
             this.pnlClass.TabIndex = 7;
             this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label13.Location = new System.Drawing.Point(290, 592);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(357, 40);
+            this.label13.TabIndex = 143;
+            this.label13.Text = "Note: Dont forget to click the set button for you to\r\n           update students " +
+                "or add new data.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(437, 245);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(360, 60);
+            this.label2.TabIndex = 142;
+            this.label2.Text = "Note: Use the Add button to add the Class and fill\r\n          up the data needed." +
+                " And Click Update if you\r\n          need to update the propeties of Class";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -577,6 +603,18 @@
             this.pnlSubjects.Size = new System.Drawing.Size(818, 661);
             this.pnlSubjects.TabIndex = 9;
             this.pnlSubjects.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSubjects_Paint);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label14.Location = new System.Drawing.Point(455, 407);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(351, 100);
+            this.label14.TabIndex = 142;
+            this.label14.Text = resources.GetString("label14.Text");
             // 
             // dgvSubject
             // 
@@ -838,6 +876,7 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.picexit);
             this.pnlRecords.Controls.Add(this.pictureBox2);
             this.pnlRecords.Controls.Add(this.lblMname);
             this.pnlRecords.Controls.Add(this.lblFname);
@@ -909,7 +948,7 @@
             // 
             this.picexit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picexit.Image = ((System.Drawing.Image)(resources.GetObject("picexit.Image")));
-            this.picexit.Location = new System.Drawing.Point(1014, 10);
+            this.picexit.Location = new System.Drawing.Point(785, 3);
             this.picexit.Name = "picexit";
             this.picexit.Size = new System.Drawing.Size(33, 27);
             this.picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -917,51 +956,12 @@
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(437, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 60);
-            this.label2.TabIndex = 142;
-            this.label2.Text = "Note: Use the Add button to add the Class and fill\r\n          up the data needed." +
-                " And Click Update if you\r\n          need to update the propeties of Class";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label13.Location = new System.Drawing.Point(290, 592);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(357, 40);
-            this.label13.TabIndex = 143;
-            this.label13.Text = "Note: Dont forget to click the set button for you to\r\n           update students " +
-                "or add new data.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label14.Location = new System.Drawing.Point(455, 407);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(351, 100);
-            this.label14.TabIndex = 142;
-            this.label14.Text = resources.GetString("label14.Text");
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
-            this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
