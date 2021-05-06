@@ -53,6 +53,9 @@
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtClass_Name = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,9 +84,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtSchoolYear = new System.Windows.Forms.TextBox();
             this.txtReligion = new System.Windows.Forms.TextBox();
-            this.txtBirthdate = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.TxtDepartment = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
@@ -93,10 +94,9 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtClass_Name = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSem = new System.Windows.Forms.TextBox();
+            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
+            this.cmbSem = new System.Windows.Forms.ComboBox();
             this.pnlAdd_Subject.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -394,8 +394,10 @@
             // 
             // pnlAddStudent
             // 
+            this.pnlAddStudent.Controls.Add(this.cmbSem);
+            this.pnlAddStudent.Controls.Add(this.cmbSchoolYear);
+            this.pnlAddStudent.Controls.Add(this.dtpBirthdate);
             this.pnlAddStudent.Controls.Add(this.label13);
-            this.pnlAddStudent.Controls.Add(this.txtSem);
             this.pnlAddStudent.Controls.Add(this.label12);
             this.pnlAddStudent.Controls.Add(this.txtClass_Name);
             this.pnlAddStudent.Controls.Add(this.button2);
@@ -426,9 +428,7 @@
             this.pnlAddStudent.Controls.Add(this.label36);
             this.pnlAddStudent.Controls.Add(this.button3);
             this.pnlAddStudent.Controls.Add(this.pictureBox1);
-            this.pnlAddStudent.Controls.Add(this.txtSchoolYear);
             this.pnlAddStudent.Controls.Add(this.txtReligion);
-            this.pnlAddStudent.Controls.Add(this.txtBirthdate);
             this.pnlAddStudent.Controls.Add(this.txtAddress);
             this.pnlAddStudent.Controls.Add(this.TxtDepartment);
             this.pnlAddStudent.Controls.Add(this.txtContactNumber);
@@ -443,6 +443,35 @@
             this.pnlAddStudent.Size = new System.Drawing.Size(943, 780);
             this.pnlAddStudent.TabIndex = 2;
             this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddStudent_Paint);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(155, 525);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 20);
+            this.label13.TabIndex = 128;
+            this.label13.Text = "Sem";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(130, 463);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 20);
+            this.label12.TabIndex = 126;
+            this.label12.Text = "Class Name:";
+            // 
+            // txtClass_Name
+            // 
+            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Name.Location = new System.Drawing.Point(63, 427);
+            this.txtClass_Name.Multiline = true;
+            this.txtClass_Name.Name = "txtClass_Name";
+            this.txtClass_Name.Size = new System.Drawing.Size(223, 29);
+            this.txtClass_Name.TabIndex = 125;
             // 
             // button2
             // 
@@ -488,7 +517,7 @@
             this.txtGmail.Location = new System.Drawing.Point(340, 175);
             this.txtGmail.Multiline = true;
             this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Size = new System.Drawing.Size(547, 33);
+            this.txtGmail.Size = new System.Drawing.Size(547, 29);
             this.txtGmail.TabIndex = 121;
             // 
             // button1
@@ -521,17 +550,19 @@
             // 
             // cmbCivilStatus
             // 
+            this.cmbCivilStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCivilStatus.FormattingEnabled = true;
             this.cmbCivilStatus.Items.AddRange(new object[] {
             "Single",
             "Married"});
             this.cmbCivilStatus.Location = new System.Drawing.Point(616, 611);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
-            this.cmbCivilStatus.Size = new System.Drawing.Size(223, 21);
+            this.cmbCivilStatus.Size = new System.Drawing.Size(223, 28);
             this.cmbCivilStatus.TabIndex = 98;
             // 
             // cmbStatus
             // 
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "Regular",
@@ -540,31 +571,33 @@
             "Drop"});
             this.cmbStatus.Location = new System.Drawing.Point(619, 551);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(223, 21);
+            this.cmbStatus.Size = new System.Drawing.Size(223, 28);
             this.cmbStatus.TabIndex = 97;
             // 
             // cmbYear
             // 
+            this.cmbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Items.AddRange(new object[] {
-            "First Year",
-            "Second Year",
-            "Third Year",
-            "Fourth Year"});
+            "1st Year",
+            "2nd Year",
+            "3rd Year",
+            "4th Year"});
             this.cmbYear.Location = new System.Drawing.Point(538, 246);
             this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(160, 21);
+            this.cmbYear.Size = new System.Drawing.Size(160, 28);
             this.cmbYear.TabIndex = 88;
             // 
             // cmbSex
             // 
+            this.cmbSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSex.FormattingEnabled = true;
             this.cmbSex.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.cmbSex.Location = new System.Drawing.Point(344, 477);
             this.cmbSex.Name = "cmbSex";
-            this.cmbSex.Size = new System.Drawing.Size(160, 21);
+            this.cmbSex.Size = new System.Drawing.Size(160, 28);
             this.cmbSex.TabIndex = 94;
             // 
             // label5
@@ -621,7 +654,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(410, 502);
+            this.label26.Location = new System.Drawing.Point(409, 506);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(36, 20);
             this.label26.TabIndex = 113;
@@ -747,32 +780,14 @@
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
-            // txtSchoolYear
-            // 
-            this.txtSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSchoolYear.Location = new System.Drawing.Point(347, 611);
-            this.txtSchoolYear.Multiline = true;
-            this.txtSchoolYear.Name = "txtSchoolYear";
-            this.txtSchoolYear.Size = new System.Drawing.Size(164, 33);
-            this.txtSchoolYear.TabIndex = 99;
-            // 
             // txtReligion
             // 
             this.txtReligion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReligion.Location = new System.Drawing.Point(586, 474);
             this.txtReligion.Multiline = true;
             this.txtReligion.Name = "txtReligion";
-            this.txtReligion.Size = new System.Drawing.Size(301, 33);
+            this.txtReligion.Size = new System.Drawing.Size(301, 29);
             this.txtReligion.TabIndex = 96;
-            // 
-            // txtBirthdate
-            // 
-            this.txtBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthdate.Location = new System.Drawing.Point(346, 539);
-            this.txtBirthdate.Multiline = true;
-            this.txtBirthdate.Name = "txtBirthdate";
-            this.txtBirthdate.Size = new System.Drawing.Size(223, 33);
-            this.txtBirthdate.TabIndex = 95;
             // 
             // txtAddress
             // 
@@ -780,7 +795,7 @@
             this.txtAddress.Location = new System.Drawing.Point(340, 406);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(547, 33);
+            this.txtAddress.Size = new System.Drawing.Size(547, 29);
             this.txtAddress.TabIndex = 93;
             // 
             // TxtDepartment
@@ -789,7 +804,7 @@
             this.TxtDepartment.Location = new System.Drawing.Point(724, 328);
             this.TxtDepartment.Multiline = true;
             this.TxtDepartment.Name = "TxtDepartment";
-            this.TxtDepartment.Size = new System.Drawing.Size(164, 33);
+            this.TxtDepartment.Size = new System.Drawing.Size(164, 29);
             this.TxtDepartment.TabIndex = 91;
             // 
             // txtContactNumber
@@ -798,7 +813,7 @@
             this.txtContactNumber.Location = new System.Drawing.Point(534, 328);
             this.txtContactNumber.Multiline = true;
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(164, 33);
+            this.txtContactNumber.Size = new System.Drawing.Size(164, 29);
             this.txtContactNumber.TabIndex = 92;
             this.txtContactNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNumber_KeyPress);
             // 
@@ -808,7 +823,7 @@
             this.txtSection.Location = new System.Drawing.Point(336, 328);
             this.txtSection.Multiline = true;
             this.txtSection.Name = "txtSection";
-            this.txtSection.Size = new System.Drawing.Size(164, 33);
+            this.txtSection.Size = new System.Drawing.Size(164, 29);
             this.txtSection.TabIndex = 90;
             // 
             // txtStudentNumber
@@ -817,7 +832,7 @@
             this.txtStudentNumber.Location = new System.Drawing.Point(727, 241);
             this.txtStudentNumber.Multiline = true;
             this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.Size = new System.Drawing.Size(164, 33);
+            this.txtStudentNumber.Size = new System.Drawing.Size(164, 29);
             this.txtStudentNumber.TabIndex = 89;
             this.txtStudentNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentNumber_KeyPress);
             // 
@@ -827,7 +842,7 @@
             this.txtCourse.Location = new System.Drawing.Point(337, 243);
             this.txtCourse.Multiline = true;
             this.txtCourse.Name = "txtCourse";
-            this.txtCourse.Size = new System.Drawing.Size(164, 33);
+            this.txtCourse.Size = new System.Drawing.Size(164, 29);
             this.txtCourse.TabIndex = 87;
             // 
             // txtFname
@@ -836,7 +851,7 @@
             this.txtFname.Location = new System.Drawing.Point(536, 100);
             this.txtFname.Multiline = true;
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(164, 33);
+            this.txtFname.Size = new System.Drawing.Size(164, 29);
             this.txtFname.TabIndex = 85;
             this.txtFname.MouseEnter += new System.EventHandler(this.txtFname_MouseEnter);
             this.txtFname.MouseLeave += new System.EventHandler(this.txtFname_MouseLeave);
@@ -847,7 +862,7 @@
             this.txtMname.Location = new System.Drawing.Point(729, 100);
             this.txtMname.Multiline = true;
             this.txtMname.Name = "txtMname";
-            this.txtMname.Size = new System.Drawing.Size(164, 33);
+            this.txtMname.Size = new System.Drawing.Size(164, 29);
             this.txtMname.TabIndex = 86;
             this.txtMname.MouseEnter += new System.EventHandler(this.txtFname_MouseEnter);
             this.txtMname.MouseLeave += new System.EventHandler(this.txtFname_MouseLeave);
@@ -859,48 +874,52 @@
             this.txtLname.Location = new System.Drawing.Point(340, 100);
             this.txtLname.Multiline = true;
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(164, 33);
+            this.txtLname.Size = new System.Drawing.Size(164, 29);
             this.txtLname.TabIndex = 84;
             this.txtLname.MouseEnter += new System.EventHandler(this.txtFname_MouseEnter);
             this.txtLname.MouseLeave += new System.EventHandler(this.txtFname_MouseLeave);
             // 
-            // label12
+            // dtpBirthdate
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(130, 463);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 20);
-            this.label12.TabIndex = 126;
-            this.label12.Text = "Class Name:";
+            this.dtpBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthdate.Location = new System.Drawing.Point(344, 547);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(200, 26);
+            this.dtpBirthdate.TabIndex = 129;
             // 
-            // txtClass_Name
+            // cmbSchoolYear
             // 
-            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass_Name.Location = new System.Drawing.Point(63, 427);
-            this.txtClass_Name.Multiline = true;
-            this.txtClass_Name.Name = "txtClass_Name";
-            this.txtClass_Name.Size = new System.Drawing.Size(223, 33);
-            this.txtClass_Name.TabIndex = 125;
+            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSchoolYear.FormattingEnabled = true;
+            this.cmbSchoolYear.Items.AddRange(new object[] {
+            "2020-2021",
+            "2021-2022",
+            "2022-2023",
+            "2023-2024",
+            "2024-2025",
+            "2025-2026",
+            "2026-2027",
+            "2027-2028",
+            "2028-2029",
+            "2029-2030"});
+            this.cmbSchoolYear.Location = new System.Drawing.Point(344, 616);
+            this.cmbSchoolYear.Name = "cmbSchoolYear";
+            this.cmbSchoolYear.Size = new System.Drawing.Size(167, 28);
+            this.cmbSchoolYear.TabIndex = 145;
+            this.cmbSchoolYear.SelectedIndexChanged += new System.EventHandler(this.cmbSchoolYear_SelectedIndexChanged);
             // 
-            // label13
+            // cmbSem
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(155, 525);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 20);
-            this.label13.TabIndex = 128;
-            this.label13.Text = "Sem";
-            // 
-            // txtSem
-            // 
-            this.txtSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSem.Location = new System.Drawing.Point(59, 489);
-            this.txtSem.Multiline = true;
-            this.txtSem.Name = "txtSem";
-            this.txtSem.Size = new System.Drawing.Size(223, 33);
-            this.txtSem.TabIndex = 127;
+            this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSem.FormattingEnabled = true;
+            this.cmbSem.Items.AddRange(new object[] {
+            "1st Sem",
+            "2nd Sem",
+            "3rd Sem"});
+            this.cmbSem.Location = new System.Drawing.Point(59, 495);
+            this.cmbSem.Name = "cmbSem";
+            this.cmbSem.Size = new System.Drawing.Size(227, 28);
+            this.cmbSem.TabIndex = 146;
             // 
             // Add
             // 
@@ -963,9 +982,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtSchoolYear;
         private System.Windows.Forms.TextBox txtReligion;
-        private System.Windows.Forms.TextBox txtBirthdate;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox TxtDepartment;
         private System.Windows.Forms.TextBox txtContactNumber;
@@ -1001,6 +1018,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtClass_Name;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtSem;
+        private System.Windows.Forms.DateTimePicker dtpBirthdate;
+        private System.Windows.Forms.ComboBox cmbSchoolYear;
+        private System.Windows.Forms.ComboBox cmbSem;
     }
 }

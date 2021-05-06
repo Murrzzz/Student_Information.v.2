@@ -49,6 +49,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSear = new System.Windows.Forms.Button();
             this.pnlClass = new System.Windows.Forms.Panel();
+            this.cmbYearLevel = new System.Windows.Forms.ComboBox();
+            this.cmbSection = new System.Windows.Forms.ComboBox();
+            this.cmbSem = new System.Windows.Forms.ComboBox();
+            this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -97,10 +101,6 @@
             this.lblFname = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picexit = new System.Windows.Forms.PictureBox();
-            this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
-            this.cmbSem = new System.Windows.Forms.ComboBox();
-            this.cmbSection = new System.Windows.Forms.ComboBox();
-            this.cmbYearLevel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -373,6 +373,70 @@
             this.pnlClass.Size = new System.Drawing.Size(821, 664);
             this.pnlClass.TabIndex = 7;
             this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
+            // 
+            // cmbYearLevel
+            // 
+            this.cmbYearLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbYearLevel.FormattingEnabled = true;
+            this.cmbYearLevel.Items.AddRange(new object[] {
+            "1st Year",
+            "2nd Year",
+            "3rd Year",
+            "4th Year"});
+            this.cmbYearLevel.Location = new System.Drawing.Point(635, 113);
+            this.cmbYearLevel.Name = "cmbYearLevel";
+            this.cmbYearLevel.Size = new System.Drawing.Size(186, 28);
+            this.cmbYearLevel.TabIndex = 147;
+            // 
+            // cmbSection
+            // 
+            this.cmbSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSection.FormattingEnabled = true;
+            this.cmbSection.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.cmbSection.Location = new System.Drawing.Point(442, 112);
+            this.cmbSection.Name = "cmbSection";
+            this.cmbSection.Size = new System.Drawing.Size(186, 28);
+            this.cmbSection.TabIndex = 146;
+            // 
+            // cmbSem
+            // 
+            this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSem.FormattingEnabled = true;
+            this.cmbSem.Items.AddRange(new object[] {
+            "1st Sem",
+            "2nd Sem",
+            "3rd Sem"});
+            this.cmbSem.Location = new System.Drawing.Point(496, 190);
+            this.cmbSem.Name = "cmbSem";
+            this.cmbSem.Size = new System.Drawing.Size(186, 28);
+            this.cmbSem.TabIndex = 145;
+            // 
+            // cmbSchoolYear
+            // 
+            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSchoolYear.FormattingEnabled = true;
+            this.cmbSchoolYear.Items.AddRange(new object[] {
+            "2020-2021",
+            "2021-2022",
+            "2022-2023",
+            "2023-2024",
+            "2024-2025",
+            "2025-2026",
+            "2026-2027",
+            "2027-2028",
+            "2028-2029",
+            "2029-2030"});
+            this.cmbSchoolYear.Location = new System.Drawing.Point(142, 192);
+            this.cmbSchoolYear.Name = "cmbSchoolYear";
+            this.cmbSchoolYear.Size = new System.Drawing.Size(114, 28);
+            this.cmbSchoolYear.TabIndex = 144;
             // 
             // label13
             // 
@@ -919,42 +983,6 @@
             this.picexit.TabIndex = 28;
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
-            // 
-            // cmbSchoolYear
-            // 
-            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSchoolYear.FormattingEnabled = true;
-            this.cmbSchoolYear.Location = new System.Drawing.Point(142, 192);
-            this.cmbSchoolYear.Name = "cmbSchoolYear";
-            this.cmbSchoolYear.Size = new System.Drawing.Size(114, 28);
-            this.cmbSchoolYear.TabIndex = 144;
-            // 
-            // cmbSem
-            // 
-            this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSem.FormattingEnabled = true;
-            this.cmbSem.Location = new System.Drawing.Point(496, 190);
-            this.cmbSem.Name = "cmbSem";
-            this.cmbSem.Size = new System.Drawing.Size(186, 28);
-            this.cmbSem.TabIndex = 145;
-            // 
-            // cmbSection
-            // 
-            this.cmbSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSection.FormattingEnabled = true;
-            this.cmbSection.Location = new System.Drawing.Point(442, 112);
-            this.cmbSection.Name = "cmbSection";
-            this.cmbSection.Size = new System.Drawing.Size(186, 28);
-            this.cmbSection.TabIndex = 146;
-            // 
-            // cmbYearLevel
-            // 
-            this.cmbYearLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbYearLevel.FormattingEnabled = true;
-            this.cmbYearLevel.Location = new System.Drawing.Point(635, 113);
-            this.cmbYearLevel.Name = "cmbYearLevel";
-            this.cmbYearLevel.Size = new System.Drawing.Size(186, 28);
-            this.cmbYearLevel.TabIndex = 147;
             // 
             // MainMenu
             // 

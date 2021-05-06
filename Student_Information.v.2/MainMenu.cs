@@ -314,7 +314,8 @@ namespace Student_Information.v._2
         private void pnlClass_Paint(object sender, PaintEventArgs e)
         {
             Class_SelectAll();
-           
+
+
 
         }
         private void VariableImported()

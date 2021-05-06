@@ -214,9 +214,7 @@ namespace Student_Information.v._2
 
         private void pnlPrint_Paint(object sender, PaintEventArgs e)
         {
-            Inbox inb =new Inbox ();
-            inb.Show();
-            this.Hide();
+           
         }
       
     }

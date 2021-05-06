@@ -76,7 +76,7 @@ namespace Student_Information.v._2
         {
          
 
-            if ((txtFname.Text == "") || (txtLname.Text == "") || (txtMname.Text == "") || (txtGmail.Text == "") || (txtCourse.Text == "") || (cmbYear.Text == "") || (txtStudentNumber.Text == "") || (txtSection.Text == "") || (txtContactNumber.Text == "") || (TxtDepartment.Text == "") || (txtAddress.Text == "") || (cmbSex.Text == "") || (txtReligion.Text == "") || (txtBirthdate.Text == "") || (cmbStatus.Text == "") || (txtSchoolYear.Text == "") || (cmbCivilStatus.Text == ""))
+            if ((txtFname.Text == "") || (txtLname.Text == "") || (txtMname.Text == "") || (txtGmail.Text == "") || (txtCourse.Text == "") || (cmbYear.Text == "") || (txtStudentNumber.Text == "") || (txtSection.Text == "") || (txtContactNumber.Text == "") || (TxtDepartment.Text == "") || (txtAddress.Text == "") || (cmbSex.Text == "") || (txtReligion.Text == "") || (dtpBirthdate.Text == "") || (cmbStatus.Text == "") || (cmbSchoolYear.Text == "") || (cmbCivilStatus.Text == ""))
             {
                 MessageBox.Show("Please fill the blank");
             }
@@ -104,9 +104,9 @@ namespace Student_Information.v._2
                 cmd.Parameters.AddWithValue("@Stud_Address", OleDbType.VarChar).Value = txtAddress.Text;
                 cmd.Parameters.AddWithValue("@Stud_Sex", OleDbType.VarChar).Value = cmbSex.Text;
                 cmd.Parameters.AddWithValue("@Stud_Religion", OleDbType.VarChar).Value = txtReligion.Text;
-                cmd.Parameters.AddWithValue("@Stud_BirthDate", OleDbType.VarChar).Value = txtBirthdate.Text;
+                cmd.Parameters.AddWithValue("@Stud_BirthDate", OleDbType .Date).Value = dtpBirthdate.Text;
                 cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = cmbStatus.Text;
-                cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtSchoolYear.Text;
+                cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = cmbSchoolYear.Text;
                 cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = cmbCivilStatus.Text;
                 cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name .Text ;
                 cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = MainMenu .Sem ;
@@ -181,12 +181,12 @@ namespace Student_Information.v._2
             txtAddress.Text = MainMenu.Address;
             cmbSex.Text = MainMenu.Sex;
             txtReligion.Text = MainMenu.Religion;
-            txtBirthdate.Text = MainMenu.BirthDate;
+            dtpBirthdate.Text = MainMenu.BirthDate;
             cmbStatus.Text = MainMenu.Status;
-            txtSchoolYear.Text = MainMenu.SchoolYear;
+            cmbSchoolYear.Text = MainMenu.SchoolYear;
             cmbCivilStatus.Text = MainMenu.CivilStatus;
             txtClass_Name.Text = MainMenu.classname;
-            txtSem.Text = MainMenu.Sem;
+            cmbSem.Text = MainMenu.Sem;
             //Update button
         }
 
@@ -199,7 +199,7 @@ namespace Student_Information.v._2
                 txtSection.Text = MainMenu .Section1 ;
                 txtCourse.Text = MainMenu .Course1  ;
                 txtClass_Name.Text = MainMenu.classname;
-                txtSem.Text = MainMenu.Sem;
+                cmbSem.Text = MainMenu.Sem;
 
                
                 MainMenu.addUp = 3;
@@ -220,7 +220,7 @@ namespace Student_Information.v._2
             try
             {
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]=" + txtStudentNumber.Text + ",[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Department]='"+TxtDepartment .Text +"',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + txtBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + txtSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "',[Class_Name]='"+txtClass_Name .Text +"',[Sem]='"+txtSem .Text +"' where [Stud_Id]=" + txtStudentNumber.Text + "", con);
+                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]=" + txtStudentNumber.Text + ",[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Department]='"+TxtDepartment .Text +"',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + dtpBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + cmbSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "',[Class_Name]='"+txtClass_Name .Text +"',[Sem]='"+cmbSem .Text +"' where [Stud_Id]=" + txtStudentNumber.Text + "", con);
 
               
 
@@ -372,6 +372,11 @@ namespace Student_Information.v._2
             mgraphics.DrawRectangle(pen, area);
             mgraphics.FillRectangle(lgb, area);
             mgraphics.DrawRectangle(pen, area);
+        }
+
+        private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         }     
 }
