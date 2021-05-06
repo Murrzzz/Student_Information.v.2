@@ -33,6 +33,7 @@
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.labSis = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labLogin = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.PasswordTextField = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 514);
             this.panel1.TabIndex = 30;
+            // 
+            // labLogin
+            // 
+            this.labLogin.AutoSize = true;
+            this.labLogin.Font = new System.Drawing.Font("Nunito", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLogin.Location = new System.Drawing.Point(139, 80);
+            this.labLogin.Name = "labLogin";
+            this.labLogin.Size = new System.Drawing.Size(145, 55);
+            this.labLogin.TabIndex = 26;
+            this.labLogin.Text = "LOGIN";
             // 
             // txtPassword
             // 
@@ -225,16 +235,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
-            // 
-            // labLogin
-            // 
-            this.labLogin.AutoSize = true;
-            this.labLogin.Font = new System.Drawing.Font("Nunito", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLogin.Location = new System.Drawing.Point(139, 80);
-            this.labLogin.Name = "labLogin";
-            this.labLogin.Size = new System.Drawing.Size(145, 55);
-            this.labLogin.TabIndex = 26;
-            this.labLogin.Text = "LOGIN";
             // 
             // frmLogin
             // 
