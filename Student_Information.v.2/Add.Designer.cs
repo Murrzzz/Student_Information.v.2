@@ -93,6 +93,10 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtClass_Name = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtSem = new System.Windows.Forms.TextBox();
             this.pnlAdd_Subject.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -390,6 +394,10 @@
             // 
             // pnlAddStudent
             // 
+            this.pnlAddStudent.Controls.Add(this.label13);
+            this.pnlAddStudent.Controls.Add(this.txtSem);
+            this.pnlAddStudent.Controls.Add(this.label12);
+            this.pnlAddStudent.Controls.Add(this.txtClass_Name);
             this.pnlAddStudent.Controls.Add(this.button2);
             this.pnlAddStudent.Controls.Add(this.btnUpdate);
             this.pnlAddStudent.Controls.Add(this.label3);
@@ -856,6 +864,44 @@
             this.txtLname.MouseEnter += new System.EventHandler(this.txtFname_MouseEnter);
             this.txtLname.MouseLeave += new System.EventHandler(this.txtFname_MouseLeave);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(130, 463);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 20);
+            this.label12.TabIndex = 126;
+            this.label12.Text = "Class Name:";
+            // 
+            // txtClass_Name
+            // 
+            this.txtClass_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass_Name.Location = new System.Drawing.Point(63, 427);
+            this.txtClass_Name.Multiline = true;
+            this.txtClass_Name.Name = "txtClass_Name";
+            this.txtClass_Name.Size = new System.Drawing.Size(223, 33);
+            this.txtClass_Name.TabIndex = 125;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(155, 525);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 20);
+            this.label13.TabIndex = 128;
+            this.label13.Text = "Sem";
+            // 
+            // txtSem
+            // 
+            this.txtSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSem.Location = new System.Drawing.Point(59, 489);
+            this.txtSem.Multiline = true;
+            this.txtSem.Name = "txtSem";
+            this.txtSem.Size = new System.Drawing.Size(223, 33);
+            this.txtSem.TabIndex = 127;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -952,5 +998,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtClass_Name;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtSem;
     }
 }

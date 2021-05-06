@@ -299,6 +299,14 @@
         IAABCEAAAhCAAAQgAIF//vk/u6MTxEN2y2sAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Note: You can add Subject by clicking the add
+           button and fill up the data needed. 
+           You can click update if you want to update
+            the properties. And you can also click 
+            delete if you want to delete the subject.
+</value>
+  </data>
   <data name="picexit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAADd
@@ -579,14 +587,6 @@
         Ql2vUNNP9JMPBij+EYu/jwHlmHkWCglL/UXE1dL08+7bpN0r7SFpj0t7TpquoPWO9wPS3pb2nrQPpP1O
         2h+kfSZNf5f+H9K+kabb6z9WTf9v/d/03/Rv9G/1NfpaPYYeS4+px9b30PfS99T31nPQc9Fz0nPTc+SX
         8KgrZEsCDPwfPCUVggqG2u8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Note: You can add Subject by clicking the add
-           button and fill up the data needed. 
-           You can click update if you want to update
-            the properties. And you can also click 
-            delete if you want to delete the subject.
 </value>
   </data>
 </root>

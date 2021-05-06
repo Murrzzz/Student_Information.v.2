@@ -13,8 +13,8 @@ namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
     {
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
-
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Info.accdb;Persist Security Info = False");
+      
         Boolean set = false;
         public static string Stud_Id = "";
         public static string classname = "";
@@ -288,13 +288,9 @@ namespace Student_Information.v._2
                 CivilStatus  = row.Cells["Stud_CivilStatus"].Value.ToString();
                 classname  = row.Cells["Class_Name"].Value.ToString();
                 Sem  = row.Cells["Sem"].Value.ToString();
+                Stud_Id = row.Cells["Stud_Id"].Value.ToString();
 
-                int id = Convert.ToInt32(dgvStudents.Rows[e.RowIndex].Cells["Stud_Id"].FormattedValue);
-                OleDbCommand cmd = new OleDbCommand("select [Stud_Image] from[Students] where [Stud_Id]="+id  +"", con);
-                con.Open();
-                string img = cmd.ExecuteScalar().ToString();
-                pictureBox2.Image = Image.FromFile(img);
-
+               
                 con.Close();
 
               
@@ -339,9 +335,11 @@ namespace Student_Information.v._2
             }
             else
             {
+                classname = txtClass_Name.Text;
 
                 Course1 = txtCourse.Text;
                 Department1 = txtDepartment.Text;
+                department = txtDepartment.Text;
                 Section1 = txtSection.Text;
                 Sem = txtSem.Text;
                 MessageBox.Show("Setup Successfully");

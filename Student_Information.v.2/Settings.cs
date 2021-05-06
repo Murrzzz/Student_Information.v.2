@@ -17,7 +17,7 @@ namespace Student_Information.v._2
             InitializeComponent();
         }
 
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Info.accdb;Persist Security Info = False");
       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -214,7 +214,9 @@ namespace Student_Information.v._2
 
         private void pnlPrint_Paint(object sender, PaintEventArgs e)
         {
-
+            Inbox inb =new Inbox ();
+            inb.Show();
+            this.Hide();
         }
       
     }

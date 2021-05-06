@@ -60,28 +60,28 @@
             this.pnlPrint = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlGrade = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtGrade = new System.Windows.Forms.TextBox();
             this.lblSubjectName = new System.Windows.Forms.Label();
             this.lblSubjectCode = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblStudentNumber = new System.Windows.Forms.Label();
-            this.lblLname = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblClassName = new System.Windows.Forms.Label();
-            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.lblLname = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGrade_Students = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.Student = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
@@ -93,10 +93,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlPrint.SuspendLayout();
             this.pnlGrade.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -477,6 +477,51 @@
             this.pnlGrade.TabIndex = 9;
             this.pnlGrade.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrade_Paint);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtGrade);
+            this.groupBox2.Controls.Add(this.lblSubjectName);
+            this.groupBox2.Controls.Add(this.lblSubjectCode);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Location = new System.Drawing.Point(443, 335);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(368, 217);
+            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(22, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 20);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Subject Code:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(22, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 20);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "Subject Name:";
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrade.Location = new System.Drawing.Point(89, 141);
+            this.txtGrade.Multiline = true;
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(187, 33);
+            this.txtGrade.TabIndex = 58;
+            // 
             // lblSubjectName
             // 
             this.lblSubjectName.AutoSize = true;
@@ -499,16 +544,65 @@
             this.lblSubjectCode.TabIndex = 63;
             this.lblSubjectCode.Text = "-";
             // 
-            // lblEmail
+            // label13
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(84, 137);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(14, 20);
-            this.lblEmail.TabIndex = 62;
-            this.lblEmail.Text = "-";
+            this.label13.AutoSize = true;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(91, 118);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 20);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Grade:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblStudentNumber);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblClassName);
+            this.groupBox1.Controls.Add(this.lblLname);
+            this.groupBox1.Location = new System.Drawing.Point(443, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(368, 217);
+            this.groupBox1.TabIndex = 65;
+            this.groupBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 20);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Class Name:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 78);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 20);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 20);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Student Number:";
             // 
             // lblStudentNumber
             // 
@@ -521,16 +615,27 @@
             this.lblStudentNumber.TabIndex = 61;
             this.lblStudentNumber.Text = "-";
             // 
-            // lblLname
+            // lblEmail
             // 
-            this.lblLname.AutoSize = true;
-            this.lblLname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLname.Location = new System.Drawing.Point(83, 78);
-            this.lblLname.Name = "lblLname";
-            this.lblLname.Size = new System.Drawing.Size(14, 20);
-            this.lblLname.TabIndex = 60;
-            this.lblLname.Text = "-";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(84, 137);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(14, 20);
+            this.lblEmail.TabIndex = 62;
+            this.lblEmail.Text = "-";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Email:";
             // 
             // lblClassName
             // 
@@ -544,14 +649,16 @@
             this.lblClassName.Text = "-";
             this.lblClassName.Click += new System.EventHandler(this.lblClassName_Click);
             // 
-            // txtGrade
+            // lblLname
             // 
-            this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrade.Location = new System.Drawing.Point(89, 141);
-            this.txtGrade.Multiline = true;
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(187, 33);
-            this.txtGrade.TabIndex = 58;
+            this.lblLname.AutoSize = true;
+            this.lblLname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLname.Location = new System.Drawing.Point(83, 78);
+            this.lblLname.Name = "lblLname";
+            this.lblLname.Size = new System.Drawing.Size(14, 20);
+            this.lblLname.TabIndex = 60;
+            this.lblLname.Text = "-";
             // 
             // button1
             // 
@@ -580,93 +687,6 @@
             this.btnGrade_Students.UseVisualStyleBackColor = false;
             this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(91, 118);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 20);
-            this.label13.TabIndex = 55;
-            this.label13.Text = "Grade:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 20);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Subject Name:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(22, 28);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
-            this.label11.TabIndex = 53;
-            this.label11.Text = "Subject Code:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Email:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 105);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 20);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Student Number:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 78);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 20);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Name:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 20);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "Class Name:";
-            // 
-            // dgvSubject_Students
-            // 
-            this.dgvSubject_Students.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvSubject_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubject_Students.Location = new System.Drawing.Point(80, 332);
-            this.dgvSubject_Students.Name = "dgvSubject_Students";
-            this.dgvSubject_Students.Size = new System.Drawing.Size(368, 217);
-            this.dgvSubject_Students.TabIndex = 44;
-            this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -676,16 +696,6 @@
             this.label7.Size = new System.Drawing.Size(105, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Subject";
-            // 
-            // dgvStudents
-            // 
-            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(89, 57);
-            this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.Size = new System.Drawing.Size(368, 217);
-            this.dgvStudents.TabIndex = 42;
-            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
             // Student
             // 
@@ -697,35 +707,25 @@
             this.Student.TabIndex = 41;
             this.Student.Text = "Students";
             // 
-            // groupBox1
+            // dgvStudents
             // 
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.lblStudentNumber);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lblClassName);
-            this.groupBox1.Controls.Add(this.lblLname);
-            this.groupBox1.Location = new System.Drawing.Point(443, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 217);
-            this.groupBox1.TabIndex = 65;
-            this.groupBox1.TabStop = false;
+            this.dgvStudents.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Location = new System.Drawing.Point(89, 57);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.Size = new System.Drawing.Size(368, 217);
+            this.dgvStudents.TabIndex = 42;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
-            // groupBox2
+            // dgvSubject_Students
             // 
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtGrade);
-            this.groupBox2.Controls.Add(this.lblSubjectName);
-            this.groupBox2.Controls.Add(this.lblSubjectCode);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(443, 335);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 217);
-            this.groupBox2.TabIndex = 66;
-            this.groupBox2.TabStop = false;
+            this.dgvSubject_Students.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvSubject_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubject_Students.Location = new System.Drawing.Point(80, 332);
+            this.dgvSubject_Students.Name = "dgvSubject_Students";
+            this.dgvSubject_Students.Size = new System.Drawing.Size(368, 217);
+            this.dgvSubject_Students.TabIndex = 44;
+            this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
             // Settings
             // 
@@ -734,10 +734,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
-            this.Controls.Add(this.pnlPrint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -758,12 +758,12 @@
             this.pnlPrint.PerformLayout();
             this.pnlGrade.ResumeLayout(false);
             this.pnlGrade.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject_Students)).EndInit();
             this.ResumeLayout(false);
 
         }

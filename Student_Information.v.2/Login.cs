@@ -13,7 +13,8 @@ namespace Student_Information.v._2
 {
     public partial class frmLogin : Form
     {
-         OleDbConnection con= new OleDbConnection ( "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
+
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Info.accdb;Persist Security Info = False");
       
         public frmLogin()
         {
