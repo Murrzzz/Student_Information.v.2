@@ -63,10 +63,7 @@ namespace Student_Information.v._2
                 this.Hide();
             }
 
-
             con.Close();
-
-
 
         }
 
@@ -79,6 +76,30 @@ namespace Student_Information.v._2
             else
             {
                 txtPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            } 
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            } 
+        }
+
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            using (new Panel())
+            {
+                MessageBox.Show("Success");
             }
         }
         }
