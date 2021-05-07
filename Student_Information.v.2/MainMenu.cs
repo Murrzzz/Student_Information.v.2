@@ -109,23 +109,6 @@ namespace Student_Information.v._2
             pnlAccounts.Show();
         }
 
-   
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            if((Course1 =="")||(Department1 =="")||(Section1 ==""))
-            {
-                MessageBox.Show("Please Setup First the Class !");
-            }
-            else 
-            {
-                Add ad = new Add(this);
-                this.Hide();
-                addUp = 1;
-                ad.Show();
-                addUp = 1;
-            }
-        }
-
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
             
@@ -135,8 +118,6 @@ namespace Student_Information.v._2
             }
             else
             {
-                 
-
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[YearLevel],[SchoolYear],[ClassName],[Sem]) values(?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
@@ -291,15 +272,7 @@ namespace Student_Information.v._2
                 con.Close();
 
               
-                lblFname.Text = Fname;
-                lblLName.Text = Lname;
-                lblMname.Text = Mname;
-                lblYear.Text = Year;
-                lblCourse.Text = course;
-                lblSection.Text = section;
-                lblStatus.Text = Status;
-                lblSex.Text = Sex;
-
+              
             }
         }
 
@@ -354,24 +327,6 @@ namespace Student_Information.v._2
             pan.Show();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            SetupClassName = txtClass_Name.Text;
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == ""))
-            {
-                MessageBox.Show("Setup Failed Please Choose to the table or add ");
-
-            }
-            else
-            {
-                Add ad = new Add(this);
-                this.Hide();
-                ad.Show();
-                addUp = 0;//add to Add form
-            }
-           
-        }
-
         private void MainMenu_Load(object sender, EventArgs e)
         {
             Hide_panels();
@@ -397,22 +352,7 @@ namespace Student_Information.v._2
             }
         }
 
-      
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            DGVPrinter print = new DGVPrinter();
-            print.Title = "Title";
-            print.SubTitle = string .Format("Date:{0}",DateTime.Now.Date);
-            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
-            print.PageNumbers = true;
-            print.PageNumberInHeader = false;
-            print.PorportionalColumns = true;
-            print.HeaderCellAlignment = StringAlignment.Near;
-            print.Footer = "Footer";
-            print.FooterSpacing = 15;
-            print.PrintDataGridView(dgvStudents );
-        }
-
+    
         private void dgvClass_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -458,5 +398,6 @@ namespace Student_Information.v._2
         {
 
         }
+
     }
 }

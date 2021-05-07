@@ -18,8 +18,8 @@ namespace Student_Information.v._2
     {
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Info.accdb;Persist Security Info = False");
       
-        MainMenu main = new MainMenu();
-        public Add(MainMenu f1)
+        PintClass  main = new PintClass ();
+        public Add(PintClass  f1)
         {
             InitializeComponent();
             this.main = f1;
