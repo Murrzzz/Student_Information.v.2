@@ -1,6 +1,6 @@
 ﻿namespace Student_Information.v._2
 {
-    partial class Panel
+    partial class frmPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanel));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -104,7 +104,6 @@
             // btnSettings
             // 
             this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.BackgroundImage = global::Student_Information.v._2.Properties.Resources.admin7;
             this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -121,7 +120,6 @@
             // btnMainMenu
             // 
             this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnMainMenu.BackgroundImage = global::Student_Information.v._2.Properties.Resources.admin12;
             this.btnMainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMainMenu.FlatAppearance.BorderSize = 0;
             this.btnMainMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -167,7 +165,7 @@
             this.lineShape1.Y1 = 339;
             this.lineShape1.Y2 = 339;
             // 
-            // Panel
+            // frmPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +181,7 @@
             this.Font = new System.Drawing.Font("Nunito", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Panel";
+            this.Name = "frmPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Paint);

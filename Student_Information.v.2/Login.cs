@@ -59,7 +59,7 @@ namespace Student_Information.v._2
             if (Count > 0)
             {
                 MessageBox.Show("Success");
-                new Panel().Show();
+                new frmPanel().Show();
                 this.Hide();
             }
 
@@ -97,7 +97,7 @@ namespace Student_Information.v._2
 
         private void btnLogin_KeyDown(object sender, KeyEventArgs e)
         {
-            using (new Panel())
+            using (new frmPanel())
             {
                 MessageBox.Show("Success");
             }

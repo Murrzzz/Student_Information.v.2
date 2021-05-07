@@ -11,9 +11,9 @@ using System.Drawing.Drawing2D;
 
 namespace Student_Information.v._2
 {
-    public partial class Panel : Form
+    public partial class frmPanel : Form
     {
-        public Panel()
+        public frmPanel()
         {
             InitializeComponent();
           

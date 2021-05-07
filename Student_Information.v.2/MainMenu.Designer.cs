@@ -958,6 +958,7 @@
             this.btnEx.TabIndex = 105;
             this.btnEx.Text = "X";
             this.btnEx.UseVisualStyleBackColor = false;
+            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
             // 
             // MainMenu
             // 

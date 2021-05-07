@@ -352,7 +352,7 @@ namespace Student_Information.v._2
 
         private void picexit_Click(object sender, EventArgs e)
         {
-            Panel pan = new Panel();
+            frmPanel pan = new frmPanel();
 
             this.Hide();
             pan.Show();
@@ -379,6 +379,13 @@ namespace Student_Information.v._2
         private void MainMenu_Load(object sender, EventArgs e)
         {
             Hide_panels();
+        }
+
+        private void btnEx_Click(object sender, EventArgs e)
+        {
+            frmPanel fP= new frmPanel();
+            fP.Show();
+            this.Hide();
         }
     }
 }
