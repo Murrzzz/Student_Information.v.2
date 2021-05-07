@@ -39,6 +39,7 @@
             this.pnlSend = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlRecords = new System.Windows.Forms.Panel();
+            this.btnprint = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -77,7 +78,6 @@
             this.Student = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
-            this.btnprint = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
@@ -248,6 +248,20 @@
             this.pnlRecords.Size = new System.Drawing.Size(860, 664);
             this.pnlRecords.TabIndex = 7;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
+            // 
+            // btnprint
+            // 
+            this.btnprint.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprint.ForeColor = System.Drawing.Color.White;
+            this.btnprint.Location = new System.Drawing.Point(652, 229);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(127, 36);
+            this.btnprint.TabIndex = 53;
+            this.btnprint.Text = "Print";
+            this.btnprint.UseVisualStyleBackColor = false;
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // label17
             // 
@@ -676,20 +690,6 @@
             this.dgvSubject_Students.TabIndex = 44;
             this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
-            // btnprint
-            // 
-            this.btnprint.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprint.ForeColor = System.Drawing.Color.White;
-            this.btnprint.Location = new System.Drawing.Point(652, 229);
-            this.btnprint.Name = "btnprint";
-            this.btnprint.Size = new System.Drawing.Size(127, 36);
-            this.btnprint.TabIndex = 53;
-            this.btnprint.Text = "Print";
-            this.btnprint.UseVisualStyleBackColor = false;
-            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -712,10 +712,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
-            this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
+            this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.pnlSend);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

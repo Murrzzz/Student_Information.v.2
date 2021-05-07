@@ -138,13 +138,13 @@ namespace Student_Information.v._2
                  
 
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[Year_Level],[School_Year],[Class_Name],[Sem]) values(?,?,?,?,?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[YearLevel],[SchoolYear],[ClassName],[Sem]) values(?,?,?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
                 cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
                 cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSection.Text;
-                cmd.Parameters.AddWithValue("@Year_Level", OleDbType.VarChar).Value = cmbYearLevel.Text;
-                cmd.Parameters.AddWithValue("@School_Year", OleDbType.VarChar).Value = cmbSchoolYear.Text;
-                cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name.Text;
+                cmd.Parameters.AddWithValue("@YearLevel", OleDbType.VarChar).Value = cmbYearLevel.Text;
+                cmd.Parameters.AddWithValue("@SchoolYear", OleDbType.VarChar).Value = cmbSchoolYear.Text;
+                cmd.Parameters.AddWithValue("@ClassName", OleDbType.VarChar).Value = txtClass_Name.Text;
                 cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = cmbSem.Text;
                 cmd.ExecuteNonQuery();
 
@@ -159,6 +159,7 @@ namespace Student_Information.v._2
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvClass.DataSource = table;
+
 
             dgvClass.AllowUserToAddRows = false;
             dgvClass.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -404,6 +405,39 @@ namespace Student_Information.v._2
             print.Footer = "Footer";
             print.FooterSpacing = 15;
             print.PrintDataGridView(dgvStudents );
+        }
+
+        private void dgvClass_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
+                txtDepartment.Text = row.Cells["Department"].Value.ToString();
+                txtCourse.Text = row.Cells["Course"].Value.ToString();
+                cmbSection.Text = row.Cells["Section"].Value.ToString();
+                cmbYearLevel.Text = row.Cells["YearLevel"].Value.ToString();
+                cmbSchoolYear.Text = row.Cells["SchoolYear"].Value.ToString();
+                txtClass_Name.Text = row.Cells["ClassName"].Value.ToString();
+                cmbSem.Text = row.Cells["Sem"].Value.ToString();
+            }
+        }
+
+        private void dgvClass_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+            txtDepartment.Text = dgvClass.SelectedRows[0].Cells[0].Value.ToString();
+            txtCourse.Text = dgvClass.SelectedRows[0].Cells[1].Value.ToString();
+            cmbSection.Text = dgvClass.SelectedRows[0].Cells[2].Value.ToString();
+            cmbYearLevel.Text = dgvClass.SelectedRows[0].Cells[3].Value.ToString();
+            cmbSchoolYear.Text = dgvClass.SelectedRows[0].Cells[4].Value.ToString();
+            txtClass_Name.Text = dgvClass.SelectedRows[0].Cells[5].Value.ToString();
+            cmbSem.Text = dgvClass.SelectedRows[0].Cells[6].Value.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
