@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.OleDb;
+using DGVPrinterHelper;
 namespace Student_Information.v._2
 {
     public partial class Settings : Form
@@ -224,20 +225,25 @@ namespace Student_Information.v._2
             inb.Show();
         }
 
-        Bitmap btmp;
+     
         private void btnprint_Click(object sender, EventArgs e)
         {
-            int height = dgvStudent.Height;
-            dgvStudent.Height = dgvStudent.RowCount * dgvStudent.RowTemplate.Height * 2;
-            btmp = new Bitmap(dgvStudent.Width, dgvStudent.Height);
-            dgvStudent .DrawToBitmap (btmp , new Rectangle(0,0, dgvStudent.Width , dgvStudent .Height ));
-            dgvStudent .Height =height ;
-            printPreviewDialog1 .ShowDialog ();
+            DGVPrinter print = new DGVPrinter();
+            print.Title = "Title";
+            print.SubTitle = string.Format("Date:{0}", DateTime.Now.Date);
+            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            print.PageNumbers = true;
+            print.PageNumberInHeader = false;
+            print.PorportionalColumns = true;
+            print.HeaderCellAlignment = StringAlignment.Near;
+            print.Footer = "Footer";
+            print.FooterSpacing = 15;
+            print.PrintDataGridView(dgvStudent);
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(btmp, 0, 0);
+         
         }
       
     }

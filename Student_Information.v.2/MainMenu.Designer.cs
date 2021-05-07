@@ -101,6 +101,7 @@
             this.lblFname = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picexit = new System.Windows.Forms.PictureBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -225,6 +226,7 @@
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(821, 664);
             this.pnlAccounts.TabIndex = 1;
+            this.pnlAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAccounts_Paint);
             // 
             // label19
             // 
@@ -905,6 +907,7 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.btnPrint);
             this.pnlRecords.Controls.Add(this.pictureBox2);
             this.pnlRecords.Controls.Add(this.lblMname);
             this.pnlRecords.Controls.Add(this.lblFname);
@@ -983,6 +986,20 @@
             this.picexit.TabIndex = 28;
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(92, 237);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(127, 36);
+            this.btnPrint.TabIndex = 105;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // MainMenu
             // 
@@ -1095,5 +1112,6 @@
         public System.Windows.Forms.ComboBox cmbSem;
         public System.Windows.Forms.ComboBox cmbSchoolYear;
         public System.Windows.Forms.ComboBox cmbYearLevel;
+        public System.Windows.Forms.Button btnPrint;
     }
 }

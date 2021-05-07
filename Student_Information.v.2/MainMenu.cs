@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.OleDb;
 using System.IO;
+using DGVPrinterHelper;
 namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
@@ -383,6 +384,26 @@ namespace Student_Information.v._2
                 txtClass_Name.Text = row.Cells["ClassName"].Value.ToString();
                 cmbSem.Text = row.Cells["Sem"].Value.ToString();
             }
+        }
+
+        private void pnlAccounts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter print = new DGVPrinter();
+            print.Title = "Title";
+            print.SubTitle = string .Format("Date:{0}",DateTime.Now.Date);
+            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            print.PageNumbers = true;
+            print.PageNumberInHeader = false;
+            print.PorportionalColumns = true;
+            print.HeaderCellAlignment = StringAlignment.Near;
+            print.Footer = "Footer";
+            print.FooterSpacing = 15;
+            print.PrintDataGridView(dgvStudents );
         }
     }
 }
