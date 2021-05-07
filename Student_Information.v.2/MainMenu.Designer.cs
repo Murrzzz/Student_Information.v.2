@@ -226,8 +226,7 @@
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(821, 664);
             this.pnlAccounts.TabIndex = 1;
-            this.pnlAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAccounts_Paint);
-            // 
+           
             // label19
             // 
             this.label19.AutoSize = true;

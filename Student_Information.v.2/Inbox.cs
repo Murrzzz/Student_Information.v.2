@@ -132,8 +132,7 @@ namespace Student_Information.v._2
         private void Inbox_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'student_InfoDataSet_ClassName._class' table. You can move, or remove it, as needed.
-            this.classTableAdapter1.Fill(this.student_InfoDataSet_ClassName._class);
-
+           
         }
 
         private void dgvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

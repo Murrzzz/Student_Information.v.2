@@ -177,7 +177,17 @@ namespace Student_Information.v._2
             string Year_Level = cmbYearLevel.Text;
 
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]='" + txtDepartment.Text + "',[Course]='" + txtCourse.Text + "',[Section]='" + cmbSection.Text + "',[Year_Level]='" + cmbYearLevel.Text + "',[School_Year]='" + cmbSchoolYear.Text + "',[Sem]='"+cmbSem .Text +"' WHERE [Course]='" + Course + "' AND [Section]='" + Section  + "' AND [Year_Level]='" + Year_Level +"'" , con);
+            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]=?,[Course]=?,[Section]=?,[YearLevel]=? ,[Sem]=? WHERE [ClassName]=?" , con);
+
+            cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtDepartment.Text;
+            cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = txtCourse .Text ;
+            cmd.Parameters.AddWithValue("@3", OleDbType.VarChar).Value = cmbSection.Text;
+            cmd.Parameters.AddWithValue("@4", OleDbType.VarChar).Value = cmbYearLevel.Text;
+            cmd.Parameters.AddWithValue("@5", OleDbType.VarChar).Value = cmbSchoolYear.Text;
+            cmd.Parameters.AddWithValue("@6", OleDbType.VarChar).Value = txtClass_Name.Text;
+            cmd.Parameters.AddWithValue("@7", OleDbType.VarChar).Value = cmbSem.Text;
+            cmd.Parameters.AddWithValue("@8", OleDbType.VarChar).Value = txtClass_Name .Text ;
+
             cmd.ExecuteNonQuery();
 
             Class_SelectAll();
@@ -387,11 +397,7 @@ namespace Student_Information.v._2
             }
         }
 
-        private void pnlAccounts_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+      
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DGVPrinter print = new DGVPrinter();
@@ -424,8 +430,20 @@ namespace Student_Information.v._2
 
         private void dgvClass_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+
+                txtDepartment.Text = dgvClass.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCourse.Text = dgvClass.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cmbSection.Text = dgvClass.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cmbYearLevel.Text = dgvClass.Rows[e.RowIndex ].Cells[3].Value.ToString();
+                cmbSchoolYear.Text = dgvClass.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtClass_Name.Text = dgvClass.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cmbSem.Text = dgvClass.Rows[e.RowIndex].Cells[6].Value.ToString();
+            }
            
 
+            /*
             txtDepartment.Text = dgvClass.SelectedRows[0].Cells[0].Value.ToString();
             txtCourse.Text = dgvClass.SelectedRows[0].Cells[1].Value.ToString();
             cmbSection.Text = dgvClass.SelectedRows[0].Cells[2].Value.ToString();
@@ -433,6 +451,7 @@ namespace Student_Information.v._2
             cmbSchoolYear.Text = dgvClass.SelectedRows[0].Cells[4].Value.ToString();
             txtClass_Name.Text = dgvClass.SelectedRows[0].Cells[5].Value.ToString();
             cmbSem.Text = dgvClass.SelectedRows[0].Cells[6].Value.ToString();
+             */
         }
 
         private void label2_Click(object sender, EventArgs e)
