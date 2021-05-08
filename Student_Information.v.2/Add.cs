@@ -16,10 +16,10 @@ namespace Student_Information.v._2
 {
     public partial class Add : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
       
-        PintClass  main = new PintClass ();
-        public Add(PintClass  f1)
+        MainMenu  main = new MainMenu  ();
+        public Add(MainMenu   f1)
         {
             InitializeComponent();
             this.main = f1;
@@ -76,47 +76,6 @@ namespace Student_Information.v._2
         {
          
 
-            if ((txtFname.Text == "") || (txtLname.Text == "") || (txtMname.Text == "") || (txtGmail.Text == "") || (txtCourse.Text == "") || (cmbYear.Text == "") || (txtStudentNumber.Text == "") || (txtSection.Text == "") || (txtContactNumber.Text == "") || (TxtDepartment.Text == "") || (txtAddress.Text == "") || (cmbSex.Text == "") || (txtReligion.Text == "") || (dtpBirthdate.Text == "") || (cmbStatus.Text == "") || (cmbSchoolYear.Text == "") || (cmbCivilStatus.Text == ""))
-            {
-                MessageBox.Show("Please fill the blank");
-            }
-
-            else
-            {
-                pnlAddStudent.Hide();
-                con.Open();
-                MainMenu menu = new MainMenu();//from Mainmenu
-
-
-
-
-                OleDbCommand cmd = new OleDbCommand(" insert into[Students]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_ContactNumber],[Stud_Department],[Stud_Address],[Stud_Sex],[Stud_Religion],[Stud_BirthDate],[Stud_Status],[Stud_SchoolYear],[Stud_CivilStatus],[Class_Name],[Sem]) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", con);
-                cmd.Parameters.AddWithValue("@Stud_Id", OleDbType .Integer).Value = txtStudentNumber.Text;
-                cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
-                cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
-                cmd.Parameters.AddWithValue("@Stud_Mname", OleDbType.VarChar).Value = txtMname.Text;
-                cmd.Parameters.AddWithValue("@Stud_Gmail", OleDbType.VarChar).Value = txtGmail.Text;
-                cmd.Parameters.AddWithValue("@Stud_Course", OleDbType.VarChar).Value = txtCourse.Text ;
-                cmd.Parameters.AddWithValue("@Stud_Year", OleDbType.VarChar).Value = cmbYear.Text;
-                cmd.Parameters.AddWithValue("@Stud_Section", OleDbType.VarChar).Value = txtSection.Text ;
-                cmd.Parameters.AddWithValue("@Stud_ContactNumber", OleDbType.VarChar).Value = txtContactNumber.Text;
-                cmd.Parameters.AddWithValue("@Stud_Department", OleDbType.VarChar).Value = TxtDepartment .Text ;
-                cmd.Parameters.AddWithValue("@Stud_Address", OleDbType.VarChar).Value = txtAddress.Text;
-                cmd.Parameters.AddWithValue("@Stud_Sex", OleDbType.VarChar).Value = cmbSex.Text;
-                cmd.Parameters.AddWithValue("@Stud_Religion", OleDbType.VarChar).Value = txtReligion.Text;
-                cmd.Parameters.AddWithValue("@Stud_BirthDate", OleDbType .Date).Value = dtpBirthdate.Text;
-                cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = cmbStatus.Text;
-                cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = cmbSchoolYear.Text;
-                cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = cmbCivilStatus.Text;
-                cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtClass_Name .Text ;
-                cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = MainMenu .Sem ;
-              
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-            }
-
-            pnlAdd_Subject.Show();
 
         }
 
@@ -150,24 +109,10 @@ namespace Student_Information.v._2
             }
         }
 
-        private void btnSet_Click(object sender, EventArgs e)
-        {
-
-
-            con.Open();
-            OleDbCommand cmd = new OleDbCommand(" insert into[Student_Subject]([Stud_Id],[Sub_Code],[Sub_Name],[Sub_Units],[Sem]) values(?,?,?,?,?)", con);
-            cmd.Parameters.AddWithValue("@Department", OleDbType .Integer).Value = txtStudentNumber.Text;
-            cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = lblSubject_Code.Text;
-            cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Name.Text;
-            cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = lblSub_Units.Text;
-            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = cmbSem .Text ;
-
-            cmd.ExecuteNonQuery();
-            select_Student_Subject();
-            con.Close();
-        }
+       
         private void DataImported()
         {
+            /*
             txtStudentNumber.Text = MainMenu.Stud_Id;
             txtFname.Text = MainMenu.Fname;
             txtLname.Text = MainMenu.Lname;
@@ -187,29 +132,13 @@ namespace Student_Information.v._2
             cmbCivilStatus.Text = MainMenu.CivilStatus;
             txtClass_Name.Text = MainMenu.classname;
             cmbSem.Text = MainMenu.Sem;
+             */
             //Update button
         }
 
         private void pnlAddStudent_Paint(object sender, PaintEventArgs e)
         {
-            if (MainMenu.addUp == 1)
-            {
-               
-                TxtDepartment.Text = MainMenu .Department1  ;
-                txtSection.Text = MainMenu .Section1 ;
-                txtCourse.Text = MainMenu .Course1  ;
-                txtClass_Name.Text = MainMenu.classname;
-                cmbSem.Text = MainMenu.Sem;
-
-               
-                MainMenu.addUp = 3;
-            }
-            else if (MainMenu.addUp == 0)
-            {
-                DataImported();
-                MainMenu.addUp = 3;
-            }
-
+           
             //   txtSection.ReadOnly = true;
             //  TxtDepartment.ReadOnly = true;
             //  txtCourse.ReadOnly = true;
@@ -217,21 +146,7 @@ namespace Student_Information.v._2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand(" update[Students] set[Stud_Id]=" + txtStudentNumber.Text + ",[Stud_Fname]='" + txtFname.Text + "',[Stud_Lname]='" + txtLname.Text + "',[Stud_Mname]='" + txtMname.Text + "',[Stud_Gmail]='" + txtGmail.Text + "',[Stud_Year]='" + cmbYear.Text.ToString() + "',[Stud_ContactNumber]='" + txtContactNumber.Text + "',[Stud_Department]='"+TxtDepartment .Text +"',[Stud_Address]='" + txtAddress.Text + "',[Stud_Sex]='" + cmbSex.Text.ToString() + "',[Stud_Religion]='" + txtReligion.Text + "',[Stud_BirthDate]='" + dtpBirthdate.Text + "',[Stud_Status]='" + cmbStatus.Text.ToString() + "',[Stud_SchoolYear]='" + cmbSchoolYear.Text + "',[Stud_CivilStatus]='" + cmbCivilStatus.Text.ToString() + "',[Class_Name]='"+txtClass_Name .Text +"',[Sem]='"+cmbSem .Text +"' where [Stud_Id]=" + txtStudentNumber.Text + "", con);
-
-              
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -282,14 +197,7 @@ namespace Student_Information.v._2
                 ofd.Title = "Choose image....";
                 
 
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    this.pictureBox1.Image = Image.FromFile(ofd.FileName);
-                }
-                else
-                {
-                    return;
-                }
+               
 
 
             }
@@ -378,5 +286,66 @@ namespace Student_Information.v._2
         {
 
         }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Info]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Birthplace],[Stud_Contact],[Stud_Gender],[Stud_Address],"+
+                "[Stud_MaritalStatus],[Stud_Citizenship],[Stud_Religion],[Stud_Birthdate],[Stud_FathersName],[Stud_MothersName],[Stud_FatherOccup],[Stud_MotherOccup],[Stud_ParentsAddress],[Stud_HighSchool],[Stud_HighSchoolYear],[Stud_SeniorHigh],[Stud_SeniorHighYear])"+
+                " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",con);
+            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;
+            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Mname", OleDbType.VarChar).Value = txtMname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Gmail", OleDbType.VarChar).Value = txtGmail.Text;
+            cmd.Parameters.AddWithValue("@Stud_Course", OleDbType.VarChar).Value = txtAge.Text;
+            cmd.Parameters.AddWithValue("@Stud_Year", OleDbType.VarChar).Value = txtBirthPlace.Text;
+            cmd.Parameters.AddWithValue("@Stud_Section", OleDbType.VarChar).Value = txtContact.Text;
+            cmd.Parameters.AddWithValue("@Stud_ContactNumber", OleDbType.VarChar).Value = cmbGender.Text;
+            cmd.Parameters.AddWithValue("@Stud_Department", OleDbType.VarChar).Value = txtAddress.Text;
+            cmd.Parameters.AddWithValue("@Stud_Address", OleDbType.VarChar).Value = cmbMStatus.Text;
+            cmd.Parameters.AddWithValue("@Stud_Sex", OleDbType.VarChar).Value = txtCitizenship.Text;
+            cmd.Parameters.AddWithValue("@Stud_Religion", OleDbType.VarChar).Value = txtReligion.Text;
+            cmd.Parameters.AddWithValue("@Stud_BirthDate", OleDbType.Date).Value = dtpBirthday.Text;
+            cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = txtFathersName.Text;
+            cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtMothersName.Text;
+            cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = txtFathersOccup.Text;
+            cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtMothersOccup.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtParentsAddress.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighSchool.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighYear.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorHigh.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorYear.Text;
+            
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+     
         }     
 }

@@ -121,6 +121,11 @@ namespace Student_Information.v._2
             cmbSub10.Text = "";
             txtGr10.Text = "";
         }
+
+        private void cmbCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
    
     }
 }

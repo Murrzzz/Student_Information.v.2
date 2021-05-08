@@ -14,7 +14,7 @@ namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
       
         Boolean set = false;
         public static string Stud_Id = "";
@@ -77,9 +77,13 @@ namespace Student_Information.v._2
         private void Hide_panels()//Hide all panels
         {
             pnlClass.Hide();
-            pnlRecords.Hide();
+            pnlEnrolledList.Hide();
             pnlSubjects.Hide();
             pnlAccounts.Hide();
+            pnlArchiveList.Hide();
+            pnlEnroll.Hide();
+            pnlMasterList.Hide ();
+            
 
         }
 
@@ -99,96 +103,43 @@ namespace Student_Information.v._2
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlRecords.Show();
+            pnlMasterList.Show();
 
         }
 
         private void btnRecords_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlAccounts.Show();
+            pnlArchiveList.Show();
         }
-
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
-            
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == "") ||(cmbSem.Text  ==""))
-            {
-                MessageBox.Show("Please fill the blank");
-            }
-            else
-            {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[class]([Department],[Course],[Section],[YearLevel],[SchoolYear],[ClassName],[Sem]) values(?,?,?,?,?,?,?)", con);
-                cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtDepartment.Text;
-                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtCourse.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSection.Text;
-                cmd.Parameters.AddWithValue("@YearLevel", OleDbType.VarChar).Value = cmbYearLevel.Text;
-                cmd.Parameters.AddWithValue("@SchoolYear", OleDbType.VarChar).Value = cmbSchoolYear.Text;
-                cmd.Parameters.AddWithValue("@ClassName", OleDbType.VarChar).Value = txtClass_Name.Text;
-                cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = cmbSem.Text;
-                cmd.ExecuteNonQuery();
-
-                Class_SelectAll();
-                con.Close();
-            }
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Section]([Section_Name],[Course],[Year_Level]) values(?,?,?)", con);
+            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtSectionName.Text;
+            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
+            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;                
         }
 
-        private void Class_SelectAll()
-        {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [class]",con);
-            DataTable table = new DataTable();
-            adapt.Fill(table);
-            dgvClass.DataSource = table;
-
-
-            dgvClass.AllowUserToAddRows = false;
-            dgvClass.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-        }
-
-     
         private void btnUpdate_Class_Click(object sender, EventArgs e)
         {
-            string Department = txtDepartment.Text;
-            string Course = txtCourse.Text;
-            string Section = cmbSection.Text;
-            string School_Year = cmbSchoolYear.Text ;
-            string Year_Level = cmbYearLevel.Text;
-
-            con.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE [class] SET [Department]=?,[Course]=?,[Section]=?,[YearLevel]=? ,[Sem]=? WHERE [ClassName]=?" , con);
-
-            cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtDepartment.Text;
-            cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = txtCourse .Text ;
-            cmd.Parameters.AddWithValue("@3", OleDbType.VarChar).Value = cmbSection.Text;
-            cmd.Parameters.AddWithValue("@4", OleDbType.VarChar).Value = cmbYearLevel.Text;
-            cmd.Parameters.AddWithValue("@5", OleDbType.VarChar).Value = cmbSchoolYear.Text;
-            cmd.Parameters.AddWithValue("@6", OleDbType.VarChar).Value = txtClass_Name.Text;
-            cmd.Parameters.AddWithValue("@7", OleDbType.VarChar).Value = cmbSem.Text;
-            cmd.Parameters.AddWithValue("@8", OleDbType.VarChar).Value = txtClass_Name .Text ;
-
-            cmd.ExecuteNonQuery();
-
-            Class_SelectAll();
-            con.Close();
         }
 
         private void btnAdd(object sender, EventArgs e)
         {
-            if ((txtSub_Code.Text == "") || (txtSub_Units.Text == "") || (txtSub_Name.Text == ""))
+            if ((txtSub_Code.Text == "") || (txtUnits.Text == "") || (txtSub_Description.Text == "")||(cmbSubYear .Text =="")||(cmbSubSem.Text ==""))
             {
                 MessageBox.Show("Please fill the blank");
             }
             else
             {
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[Subject]([Sub_Code],[Sub_Name],[Sub_Units]) values(?,?,?)", con);
+                OleDbCommand cmd = new OleDbCommand(" insert into[Subjects]([Sub_Code],[Sub_Name],[Sub_Year],[Sub_Sem],[Sub_Units]) values(?,?,?,?,?)", con);
                 cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
-                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Units.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtSub_Name.Text;
-
+                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Description.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubYear.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubSem.Text;
+                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtUnits.Text;
                 
                 cmd.ExecuteNonQuery();
                 select_Subject();
@@ -199,7 +150,7 @@ namespace Student_Information.v._2
 
         private void select_Subject()
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Subject]", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Subjects]", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvSubject.DataSource = table;
@@ -207,7 +158,6 @@ namespace Student_Information.v._2
             dgvSubject.AllowUserToAddRows = false;
             dgvSubject.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvSubject.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        
         }
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -216,8 +166,10 @@ namespace Student_Information.v._2
             {
                 DataGridViewRow row = this.dgvSubject.Rows[e.RowIndex];
                 txtSub_Code.Text = row.Cells["Sub_Code"].Value.ToString();
-                txtSub_Units.Text = row.Cells["Sub_Name"].Value.ToString();
-                txtSub_Name.Text = row.Cells["Sub_Units"].Value.ToString();
+                txtSub_Description.Text = row.Cells["Sub_Name"].Value.ToString();
+                cmbSubYear.Text = row.Cells["Sub_Year"].Value.ToString();
+                cmbSubSem.Text = row.Cells["Sub_Sem"].Value.ToString();
+                txtUnits .Text  = row.Cells["Sub_Units"].Value.ToString();
                
             }
         }
@@ -234,42 +186,14 @@ namespace Student_Information.v._2
         {
            
         }
-
-        private void pnlClass_Paint(object sender, PaintEventArgs e)
-        {
-            Class_SelectAll();
-
-
-
-        }
         private void VariableImported()
         {
-            classname = txtClass_Name.Text;
-            department = txtDepartment.Text;
-            course = txtCourse.Text;
-            section = cmbSection.Text;
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SetupClassName = txtClass_Name.Text;
-            if ((txtCourse.Text == "") || (txtDepartment.Text == "") || (cmbSchoolYear.Text == "") || (cmbSection.Text == "") || (cmbYearLevel.Text == "") || (txtClass_Name.Text == ""))
-            {
-                MessageBox.Show("Setup Failed Please Choose to the table or add ");
-              
-            }
-            else
-            {
-                classname = txtClass_Name.Text;
-
-                Course1 = txtCourse.Text;
-                Department1 = txtDepartment.Text;
-                department = txtDepartment.Text;
-                Section1 = cmbSection.Text;
-                Sem = cmbSem.Text;
-                MessageBox.Show("Setup Successfully");
-            }
-
+           
             
         }
 
@@ -293,60 +217,16 @@ namespace Student_Information.v._2
 
         private void dgvClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                txtDepartment.Text = row.Cells["Department"].Value.ToString();
-                txtCourse.Text = row.Cells["Course"].Value.ToString();
-                cmbSection .Text  = row.Cells["Section"].Value.ToString();
-                cmbYearLevel.Text  = row.Cells["YearLevel"].Value.ToString();
-                cmbSchoolYear.Text  = row.Cells["SchoolYear"].Value.ToString();
-                txtClass_Name.Text = row.Cells["ClassName"].Value.ToString();
-                cmbSem.Text = row.Cells["Sem"].Value.ToString();
-            }
+          
         }
 
     
         private void dgvClass_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                txtDepartment.Text = row.Cells["Department"].Value.ToString();
-                txtCourse.Text = row.Cells["Course"].Value.ToString();
-                cmbSection.Text = row.Cells["Section"].Value.ToString();
-                cmbYearLevel.Text = row.Cells["YearLevel"].Value.ToString();
-                cmbSchoolYear.Text = row.Cells["SchoolYear"].Value.ToString();
-                txtClass_Name.Text = row.Cells["ClassName"].Value.ToString();
-                cmbSem.Text = row.Cells["Sem"].Value.ToString();
-            }
+        
         }
 
-        private void dgvClass_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-
-                txtDepartment.Text = dgvClass.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtCourse.Text = dgvClass.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cmbSection.Text = dgvClass.Rows[e.RowIndex].Cells[2].Value.ToString();
-                cmbYearLevel.Text = dgvClass.Rows[e.RowIndex ].Cells[3].Value.ToString();
-                cmbSchoolYear.Text = dgvClass.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtClass_Name.Text = dgvClass.Rows[e.RowIndex].Cells[5].Value.ToString();
-                cmbSem.Text = dgvClass.Rows[e.RowIndex].Cells[6].Value.ToString();
-            }
-           
-
-            /*
-            txtDepartment.Text = dgvClass.SelectedRows[0].Cells[0].Value.ToString();
-            txtCourse.Text = dgvClass.SelectedRows[0].Cells[1].Value.ToString();
-            cmbSection.Text = dgvClass.SelectedRows[0].Cells[2].Value.ToString();
-            cmbYearLevel.Text = dgvClass.SelectedRows[0].Cells[3].Value.ToString();
-            cmbSchoolYear.Text = dgvClass.SelectedRows[0].Cells[4].Value.ToString();
-            txtClass_Name.Text = dgvClass.SelectedRows[0].Cells[5].Value.ToString();
-            cmbSem.Text = dgvClass.SelectedRows[0].Cells[6].Value.ToString();
-             */
-        }
+      
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -357,6 +237,97 @@ namespace Student_Information.v._2
         {
             PintClass pClass = new PintClass();
             pClass.Show();
+        }
+
+        private void dgvSection_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnlClass_Paint(object sender, PaintEventArgs e)
+        {
+            Section_Select();
+        }
+        private void Section_Select()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Stud_Section]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvSection.DataSource = table;
+
+            dgvSection.AllowUserToAddRows = false;
+            dgvSection.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvSection.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSubSem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide_panels();
+            pnlEnrolledList.Show ();
+        }
+
+        private void pnlAccounts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddStud_Click(object sender, EventArgs e)
+        {
+            Add ad = new Add(this);
+            this.Hide();
+            addUp = 1;
+            ad.Show();
+            addUp = 1;
+        }
+
+        private void btnUpdateStud_Click(object sender, EventArgs e)
+        {
+            Add ad = new Add(this);
+            this.Hide();
+            ad.Show();
+            addUp = 0;//add to Add form
+        }
+
+        private void pnlMasterList_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void SelectStudents()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Stud_Info]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvStudentList.DataSource = table;
+
+            dgvStudentList.AllowUserToAddRows = false;
+            dgvStudentList.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudentList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Hide_panels();
+            pnlEnroll.Show();
         }
 
     }

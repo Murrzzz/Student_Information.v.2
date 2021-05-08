@@ -70,19 +70,12 @@ namespace Student_Information.v._2
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Add ad = new Add(this);
-            this.Hide();
-            addUp = 1;
-            ad.Show();
-            addUp = 1;
+         
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Add ad = new Add(this);
-            this.Hide();
-            ad.Show();
-            addUp = 0;//add to Add form
+           
         }
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
