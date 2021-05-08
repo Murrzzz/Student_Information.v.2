@@ -119,7 +119,9 @@ namespace Student_Information.v._2
         private void btnGrade_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlGrade.Show();
+            //pnlGrade.Show();
+            Grading grad = new Grading();
+            grad.Show();
         }
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -140,61 +142,18 @@ namespace Student_Information.v._2
             select_students();
         }
 
-        private void pnlGrade_Paint(object sender, PaintEventArgs e)
-        {
-            lblClassName.Text = lblClass_Name.Text;
-            Students();
-            select_subject();
-        }
+      
 
-        private void Students()
-        {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students] where [Class_Name]='"+lblClassName.Text  +"'", con);
-            DataTable table1 = new DataTable();
-            adapt1.Fill(table1);
-            dgvStudents.DataSource = table1;
-
-            dgvStudents.AllowUserToAddRows = false;
-            dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-
-        private void select_subject()
-        {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Student_Subject] where [Stud_Id]='"+lblStudentNumber.Text +"'", con);
-            DataTable table = new DataTable();
-            adapt.Fill(table);
-            dgvSubject_Students.DataSource = table;
-
-            dgvSubject_Students.AllowUserToAddRows = false;
-            dgvSubject_Students.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvSubject_Students.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
-        }
+    
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            select_subject();
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
-                lblLname.Text = row.Cells["Stud_Lname"].Value.ToString();
-                lblEmail.Text = row.Cells["Stud_Gmail"].Value.ToString();
-                lblStudentNumber.Text = row.Cells["Stud_Id"].Value.ToString();
-                
-            }
+          
         }
 
         private void dgvSubject_Students_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvSubject_Students.Rows[e.RowIndex];
-                lblSubjectCode.Text = row.Cells["Sub_Code"].Value.ToString();
-                lblSubjectName.Text = row.Cells["Sub_Name"].Value.ToString();
-                txtGrade.Text = row.Cells["Sub_Grade"].Value.ToString();
-
-            }
+         
         }
 
         private void lblClassName_Click(object sender, EventArgs e)
@@ -204,13 +163,7 @@ namespace Student_Information.v._2
 
         private void btnGrade_Students_Click(object sender, EventArgs e)
         {
-            con.Open();
-            OleDbCommand cmd = new OleDbCommand(" update[Student_Subject] set [Sub_Grade] ='"+txtGrade .Text +"' where Sub_Code='"+lblSubjectCode.Text +"'", con);
-           
-           
-            cmd.ExecuteNonQuery();
-            select_subject();
-            con.Close();
+          
         }
 
         private void pnlPrint_Paint(object sender, PaintEventArgs e)
@@ -244,6 +197,11 @@ namespace Student_Information.v._2
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
       
     }

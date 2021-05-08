@@ -86,12 +86,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.picexit = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -805,6 +805,50 @@
             this.pnlRecords.TabIndex = 8;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.SlateGray;
+            this.label23.Location = new System.Drawing.Point(82, 150);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(77, 31);
+            this.label23.TabIndex = 109;
+            this.label23.Text = "Sem:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.SlateGray;
+            this.label22.Location = new System.Drawing.Point(81, 396);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(169, 31);
+            this.label22.TabIndex = 108;
+            this.label22.Text = "School Year:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.SlateGray;
+            this.label21.Location = new System.Drawing.Point(81, 344);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(151, 31);
+            this.label21.TabIndex = 107;
+            this.label21.Text = "Year Level:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.SlateGray;
+            this.label20.Location = new System.Drawing.Point(80, 297);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(113, 31);
+            this.label20.TabIndex = 106;
+            this.label20.Text = "Section:";
+            // 
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.MediumTurquoise;
@@ -831,62 +875,18 @@
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.SlateGray;
-            this.label20.Location = new System.Drawing.Point(80, 297);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 31);
-            this.label20.TabIndex = 106;
-            this.label20.Text = "Section:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.SlateGray;
-            this.label21.Location = new System.Drawing.Point(81, 344);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(151, 31);
-            this.label21.TabIndex = 107;
-            this.label21.Text = "Year Level:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.SlateGray;
-            this.label22.Location = new System.Drawing.Point(81, 396);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(169, 31);
-            this.label22.TabIndex = 108;
-            this.label22.Text = "School Year:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.SlateGray;
-            this.label23.Location = new System.Drawing.Point(82, 150);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 31);
-            this.label23.TabIndex = 109;
-            this.label23.Text = "Sem:";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
+            this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlClass);
-            this.Controls.Add(this.pnlAccounts);
-            this.Controls.Add(this.pnlSubjects);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
