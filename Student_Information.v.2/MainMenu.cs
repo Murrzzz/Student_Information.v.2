@@ -226,59 +226,13 @@ namespace Student_Information.v._2
         {
             select_Subject();
         }
-        private void select_students()
-        {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students] where [Class_Name]='"+ SetupClassName  +"'", con);
-            DataTable table1 = new DataTable();
-            adapt1.Fill(table1);
-            dgvStudents.DataSource = table1;
+        
 
-            dgvStudents.AllowUserToAddRows = false;
-            dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex >= 0)
-            {
-                
-
-                DataGridViewRow row = this.dgvStudents.Rows[e.RowIndex];
-                Console.WriteLine(row.Cells["Stud_Gmail"]);
-                //Stud_Id = row.Cells["Stud_Id"].Value.ToString();
-                Fname  = row.Cells["Stud_Fname"].Value.ToString();
-                Lname  = row.Cells["Stud_Lname"].Value.ToString();
-                Mname  = row.Cells["Stud_Mname"].Value.ToString();
-                Gmail  = row.Cells["Stud_Gmail"].Value.ToString();
-                course  = row.Cells["Stud_Course"].Value.ToString();
-                Year  = row.Cells["Stud_Year"].Value.ToString();
-                section  = row.Cells["Stud_Section"].Value.ToString();
-                ContactNumber  = row.Cells["Stud_ContactNumber"].Value.ToString();
-                department  = row.Cells["Stud_Department"].Value.ToString();
-                Address  = row.Cells["Stud_Address"].Value.ToString();
-                Sex  = row.Cells["Stud_Sex"].Value.ToString();
-                Religion  = row.Cells["Stud_Religion"].Value.ToString();
-                BirthDate  = row.Cells["Stud_BirthDate"].Value.ToString();
-                Status  = row.Cells["Stud_Status"].Value.ToString();
-                SchoolYear  = row.Cells["Stud_SchoolYear"].Value.ToString();
-                CivilStatus  = row.Cells["Stud_CivilStatus"].Value.ToString();
-                classname  = row.Cells["Class_Name"].Value.ToString();
-                Sem  = row.Cells["Sem"].Value.ToString();
-                Stud_Id = row.Cells["Stud_Id"].Value.ToString();
-
-               
-                con.Close();
-
-              
-              
-            }
-        }
+       
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-            select_students();
+           
         }
 
         private void pnlClass_Paint(object sender, PaintEventArgs e)
@@ -397,6 +351,12 @@ namespace Student_Information.v._2
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PintClass pClass = new PintClass();
+            pClass.Show();
         }
 
     }

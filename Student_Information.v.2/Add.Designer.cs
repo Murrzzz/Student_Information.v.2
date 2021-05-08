@@ -53,6 +53,9 @@
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.cmbSem = new System.Windows.Forms.ComboBox();
+            this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
+            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtClass_Name = new System.Windows.Forms.TextBox();
@@ -94,9 +97,6 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.txtMname = new System.Windows.Forms.TextBox();
             this.txtLname = new System.Windows.Forms.TextBox();
-            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
-            this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
-            this.cmbSem = new System.Windows.Forms.ComboBox();
             this.pnlAdd_Subject.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -443,6 +443,48 @@
             this.pnlAddStudent.Size = new System.Drawing.Size(943, 780);
             this.pnlAddStudent.TabIndex = 2;
             this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddStudent_Paint);
+            // 
+            // cmbSem
+            // 
+            this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSem.FormattingEnabled = true;
+            this.cmbSem.Items.AddRange(new object[] {
+            "1st Sem",
+            "2nd Sem",
+            "3rd Sem"});
+            this.cmbSem.Location = new System.Drawing.Point(59, 495);
+            this.cmbSem.Name = "cmbSem";
+            this.cmbSem.Size = new System.Drawing.Size(227, 28);
+            this.cmbSem.TabIndex = 146;
+            // 
+            // cmbSchoolYear
+            // 
+            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSchoolYear.FormattingEnabled = true;
+            this.cmbSchoolYear.Items.AddRange(new object[] {
+            "2020-2021",
+            "2021-2022",
+            "2022-2023",
+            "2023-2024",
+            "2024-2025",
+            "2025-2026",
+            "2026-2027",
+            "2027-2028",
+            "2028-2029",
+            "2029-2030"});
+            this.cmbSchoolYear.Location = new System.Drawing.Point(344, 616);
+            this.cmbSchoolYear.Name = "cmbSchoolYear";
+            this.cmbSchoolYear.Size = new System.Drawing.Size(167, 28);
+            this.cmbSchoolYear.TabIndex = 145;
+            this.cmbSchoolYear.SelectedIndexChanged += new System.EventHandler(this.cmbSchoolYear_SelectedIndexChanged);
+            // 
+            // dtpBirthdate
+            // 
+            this.dtpBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthdate.Location = new System.Drawing.Point(344, 547);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(200, 26);
+            this.dtpBirthdate.TabIndex = 129;
             // 
             // label13
             // 
@@ -878,48 +920,6 @@
             this.txtLname.TabIndex = 84;
             this.txtLname.MouseEnter += new System.EventHandler(this.txtFname_MouseEnter);
             this.txtLname.MouseLeave += new System.EventHandler(this.txtFname_MouseLeave);
-            // 
-            // dtpBirthdate
-            // 
-            this.dtpBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthdate.Location = new System.Drawing.Point(344, 547);
-            this.dtpBirthdate.Name = "dtpBirthdate";
-            this.dtpBirthdate.Size = new System.Drawing.Size(200, 26);
-            this.dtpBirthdate.TabIndex = 129;
-            // 
-            // cmbSchoolYear
-            // 
-            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSchoolYear.FormattingEnabled = true;
-            this.cmbSchoolYear.Items.AddRange(new object[] {
-            "2020-2021",
-            "2021-2022",
-            "2022-2023",
-            "2023-2024",
-            "2024-2025",
-            "2025-2026",
-            "2026-2027",
-            "2027-2028",
-            "2028-2029",
-            "2029-2030"});
-            this.cmbSchoolYear.Location = new System.Drawing.Point(344, 616);
-            this.cmbSchoolYear.Name = "cmbSchoolYear";
-            this.cmbSchoolYear.Size = new System.Drawing.Size(167, 28);
-            this.cmbSchoolYear.TabIndex = 145;
-            this.cmbSchoolYear.SelectedIndexChanged += new System.EventHandler(this.cmbSchoolYear_SelectedIndexChanged);
-            // 
-            // cmbSem
-            // 
-            this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSem.FormattingEnabled = true;
-            this.cmbSem.Items.AddRange(new object[] {
-            "1st Sem",
-            "2nd Sem",
-            "3rd Sem"});
-            this.cmbSem.Location = new System.Drawing.Point(59, 495);
-            this.cmbSem.Name = "cmbSem";
-            this.cmbSem.Size = new System.Drawing.Size(227, 28);
-            this.cmbSem.TabIndex = 146;
             // 
             // Add
             // 

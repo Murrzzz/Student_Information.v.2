@@ -88,3 +88,4 @@ C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\o
 C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\bin\Debug\Student_Information.v.2.exe.config
 C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.Inbox.resources
 C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v._2.PintClass.resources
+C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\obj\x86\Debug\Student_Information.v.2.csprojResolveAssemblyReference.cache

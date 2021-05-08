@@ -712,10 +712,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
+            this.Controls.Add(this.pnlGrade);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
