@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbSub1 = new System.Windows.Forms.ComboBox();
+            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+           
             this.txtCourse = new System.Windows.Forms.TextBox();
             this.cmbSub2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -51,21 +53,15 @@
             this.cmbSub10 = new System.Windows.Forms.ComboBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.sub_Name_DataSet1 = new Student_Information.v._2.Sub_Name_DataSet1();
-            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.subjectTableAdapter = new Student_Information.v._2.Sub_Name_DataSet1TableAdapters.SubjectTableAdapter();
+          
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdd_Class = new System.Windows.Forms.Button();
@@ -79,8 +75,17 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sub_Name_DataSet1)).BeginInit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+           
+            this.subjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+          
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
+          
+          
+            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,16 +98,22 @@
             // 
             // cmbSub1
             // 
-            this.cmbSub1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectBindingSource, "Sub_Name", true));
-            this.cmbSub1.DataSource = this.subjectBindingSource;
-            this.cmbSub1.DisplayMember = "Sub_Name";
+            this.cmbSub1.DataSource = this.subjectBindingSource1;
             this.cmbSub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub1.FormattingEnabled = true;
             this.cmbSub1.Location = new System.Drawing.Point(495, 340);
             this.cmbSub1.Name = "cmbSub1";
             this.cmbSub1.Size = new System.Drawing.Size(179, 28);
             this.cmbSub1.TabIndex = 150;
-            this.cmbSub1.ValueMember = "Sub_Name";
+            // 
+            // subjectBindingSource
+            // 
+            this.subjectBindingSource.DataMember = "Subject";
+           
+            // 
+            // sub_Name_DataSet1
+            // 
+          
             // 
             // txtCourse
             // 
@@ -325,24 +336,6 @@
             this.shapeContainer1.TabIndex = 169;
             this.shapeContainer1.TabStop = false;
             // 
-            // rectangleShape1
-            // 
-            this.rectangleShape1.Location = new System.Drawing.Point(462, 263);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(242, 565);
-            // 
-            // rectangleShape2
-            // 
-            this.rectangleShape2.Location = new System.Drawing.Point(705, 263);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(162, 565);
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.Location = new System.Drawing.Point(868, 263);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.Size = new System.Drawing.Size(101, 565);
-            // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
@@ -351,32 +344,23 @@
             this.lineShape1.Y1 = 311;
             this.lineShape1.Y2 = 312;
             // 
-            // textBox10
+            // rectangleShape3
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(125, 417);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(217, 29);
-            this.textBox10.TabIndex = 170;
+            this.rectangleShape3.Location = new System.Drawing.Point(868, 263);
+            this.rectangleShape3.Name = "rectangleShape3";
+            this.rectangleShape3.Size = new System.Drawing.Size(101, 565);
             // 
-            // textBox11
+            // rectangleShape2
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(125, 507);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(217, 29);
-            this.textBox11.TabIndex = 171;
+            this.rectangleShape2.Location = new System.Drawing.Point(705, 263);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(162, 565);
             // 
-            // textBox12
+            // rectangleShape1
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(125, 321);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(217, 29);
-            this.textBox12.TabIndex = 172;
+            this.rectangleShape1.Location = new System.Drawing.Point(462, 263);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(242, 565);
             // 
             // label9
             // 
@@ -422,28 +406,9 @@
             this.label3.TabIndex = 176;
             this.label3.Text = "Course:";
             // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(125, 604);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(217, 29);
-            this.textBox13.TabIndex = 177;
-            // 
-            // sub_Name_DataSet1
-            // 
-            this.sub_Name_DataSet1.DataSetName = "Sub_Name_DataSet1";
-            this.sub_Name_DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataMember = "Subject";
-            this.subjectBindingSource.DataSource = this.sub_Name_DataSet1;
-            // 
             // subjectTableAdapter
             // 
-            this.subjectTableAdapter.ClearBeforeFill = true;
+       
             // 
             // label4
             // 
@@ -608,12 +573,81 @@
             this.label6.TabIndex = 190;
             this.label6.Text = "Course:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectBindingSource, "Sub_Name", true));
+            this.comboBox1.DataSource = this.subjectBindingSource;
+            this.comboBox1.DisplayMember = "Sub_Name";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(144, 321);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 28);
+            this.comboBox1.TabIndex = 191;
+            this.comboBox1.ValueMember = "Sub_Name";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectBindingSource, "Sub_Name", true));
+            this.comboBox2.DataSource = this.subjectBindingSource;
+            this.comboBox2.DisplayMember = "Sub_Name";
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(144, 418);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(179, 28);
+            this.comboBox2.TabIndex = 192;
+            this.comboBox2.ValueMember = "Sub_Name";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectBindingSource, "Sub_Name", true));
+            this.comboBox3.DataSource = this.subjectBindingSource;
+            this.comboBox3.DisplayMember = "Sub_Name";
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(144, 507);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(179, 28);
+            this.comboBox3.TabIndex = 193;
+            this.comboBox3.ValueMember = "Sub_Name";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectBindingSource, "Sub_Name", true));
+            this.comboBox4.DataSource = this.subjectBindingSource;
+            this.comboBox4.DisplayMember = "Sub_Name";
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(144, 604);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(179, 28);
+            this.comboBox4.TabIndex = 194;
+            this.comboBox4.ValueMember = "Sub_Name";
+            // 
+            // sub_Name
+            // 
+           
+            // 
+            // subjectBindingSource1
+            // 
+            this.subjectBindingSource1.DataMember = "Subject";
+      
+            // 
+            // subjectTableAdapter1
+            // 
+            
+            // 
             // Grading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1247, 938);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -627,14 +661,10 @@
             this.Controls.Add(this.btnAdd_Class);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.cmbSub10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.cmbSub9);
@@ -661,8 +691,10 @@
             this.Name = "Grading";
             this.Text = "Grading";
             this.Load += new System.EventHandler(this.Grading_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sub_Name_DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
+
+        
+            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,17 +728,13 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        public System.Windows.Forms.TextBox textBox10;
-        public System.Windows.Forms.TextBox textBox11;
-        public System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox textBox13;
-        private Sub_Name_DataSet1 sub_Name_DataSet1;
+     
         private System.Windows.Forms.BindingSource subjectBindingSource;
-        private Sub_Name_DataSet1TableAdapters.SubjectTableAdapter subjectTableAdapter;
+        
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd_Class;
@@ -720,5 +748,12 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox comboBox3;
+        public System.Windows.Forms.ComboBox comboBox4;
+     
+        private System.Windows.Forms.BindingSource subjectBindingSource1;
+       
     }
 }
