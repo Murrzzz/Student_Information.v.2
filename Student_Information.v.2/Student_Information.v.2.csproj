@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_InfoDataSet_ClassName.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Sub_NameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sub_NameDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +220,17 @@
     <None Include="Student_InfoDataSet_ClassName.xss">
       <DependentUpon>Student_InfoDataSet_ClassName.xsd</DependentUpon>
     </None>
+    <None Include="Sub_NameDataSet.xsc">
+      <DependentUpon>Sub_NameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sub_NameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sub_NameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sub_NameDataSet.xss">
+      <DependentUpon>Sub_NameDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
@@ -245,6 +261,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Student_Info.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
