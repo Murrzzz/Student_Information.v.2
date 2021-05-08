@@ -357,7 +357,6 @@
             this.btnSet.TabIndex = 128;
             this.btnSet.Text = "Set";
             this.btnSet.UseVisualStyleBackColor = false;
- 
             // 
             // label11
             // 
@@ -495,7 +494,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1097, 780);
             this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+           
             // 
             // groupBox3
             // 
@@ -527,6 +526,8 @@
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(280, 29);
             this.txtStudentNumber.TabIndex = 178;
+            this.txtStudentNumber.TextChanged += new System.EventHandler(this.txtStudentNumber_TextChanged);
+            this.txtStudentNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentNumber_KeyPress_1);
             // 
             // txtGmail
             // 
@@ -591,7 +592,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "STUDENTS INFORMATION";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+
             // 
             // label18
             // 
@@ -611,6 +612,7 @@
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(247, 29);
             this.txtContact.TabIndex = 182;
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
             // label14
             // 
@@ -789,7 +791,7 @@
             this.txtCitizenship.Name = "txtCitizenship";
             this.txtCitizenship.Size = new System.Drawing.Size(247, 29);
             this.txtCitizenship.TabIndex = 152;
-            this.txtCitizenship.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+          
             // 
             // txtAge
             // 
@@ -904,7 +906,7 @@
             this.txtParentsAddress.Name = "txtParentsAddress";
             this.txtParentsAddress.Size = new System.Drawing.Size(818, 29);
             this.txtParentsAddress.TabIndex = 188;
-            this.txtParentsAddress.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            
             // 
             // label22
             // 
@@ -1071,8 +1073,7 @@
             this.button5.Size = new System.Drawing.Size(127, 36);
             this.button5.TabIndex = 124;
             this.button5.Text = "Subject";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click_2);
+
             // 
             // button6
             // 

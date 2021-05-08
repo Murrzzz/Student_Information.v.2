@@ -330,5 +330,41 @@ namespace Student_Information.v._2
             pnlEnroll.Show();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnlEnroll_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Comboboxes()
+        {
+            con.Open();
+
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Year],[Sub_Sum] from [Subjects]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+
+            foreach (DataRow dr1 in table.Rows)
+            {
+                cmbYear.Items.Add(dr1["Sub_Year"].ToString());
+                cmbSem.Items.Add(dr1["Sub_Sem"].ToString());
+            }
+
+          
+            con.Close();
+        }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

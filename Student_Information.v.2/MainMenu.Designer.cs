@@ -72,11 +72,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEnrolled = new System.Windows.Forms.DataGridView();
             this.pnlEnroll = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchEnroll = new System.Windows.Forms.TextBox();
             this.cmbSem = new System.Windows.Forms.ComboBox();
             this.cmbSectionName = new System.Windows.Forms.ComboBox();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -113,7 +113,7 @@
             this.pnlSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.pnlEnrolledList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).BeginInit();
             this.pnlEnroll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErolledSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
@@ -135,7 +135,7 @@
             this.panel1.Controls.Add(this.btnAddClass);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 916);
+            this.panel1.Size = new System.Drawing.Size(191, 928);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -594,7 +594,7 @@
             this.pnlEnrolledList.Controls.Add(this.textBox4);
             this.pnlEnrolledList.Controls.Add(this.label17);
             this.pnlEnrolledList.Controls.Add(this.label11);
-            this.pnlEnrolledList.Controls.Add(this.dataGridView1);
+            this.pnlEnrolledList.Controls.Add(this.dgvEnrolled);
             this.pnlEnrolledList.Location = new System.Drawing.Point(189, 0);
             this.pnlEnrolledList.Name = "pnlEnrolledList";
             this.pnlEnrolledList.Size = new System.Drawing.Size(1027, 928);
@@ -671,21 +671,22 @@
             this.label11.TabIndex = 151;
             this.label11.Text = "Student Enrolled Masterlist ";
             // 
-            // dataGridView1
+            // dgvEnrolled
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(958, 785);
-            this.dataGridView1.TabIndex = 149;
+            this.dgvEnrolled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEnrolled.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvEnrolled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnrolled.Location = new System.Drawing.Point(38, 107);
+            this.dgvEnrolled.Name = "dgvEnrolled";
+            this.dgvEnrolled.Size = new System.Drawing.Size(958, 785);
+            this.dgvEnrolled.TabIndex = 149;
+            this.dgvEnrolled.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pnlEnroll
             // 
-            this.pnlEnroll.Controls.Add(this.button1);
+            this.pnlEnroll.Controls.Add(this.btnSearch);
             this.pnlEnroll.Controls.Add(this.label3);
-            this.pnlEnroll.Controls.Add(this.textBox1);
+            this.pnlEnroll.Controls.Add(this.txtSearchEnroll);
             this.pnlEnroll.Controls.Add(this.cmbSem);
             this.pnlEnroll.Controls.Add(this.cmbSectionName);
             this.pnlEnroll.Controls.Add(this.cmbYear);
@@ -703,19 +704,21 @@
             this.pnlEnroll.Name = "pnlEnroll";
             this.pnlEnroll.Size = new System.Drawing.Size(1027, 928);
             this.pnlEnroll.TabIndex = 29;
+            this.pnlEnroll.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnroll_Paint);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(924, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 170;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(924, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 36);
+            this.btnSearch.TabIndex = 170;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // label3
             // 
@@ -727,14 +730,14 @@
             this.label3.TabIndex = 169;
             this.label3.Text = "Student ID:";
             // 
-            // textBox1
+            // txtSearchEnroll
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(537, 20);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(379, 29);
-            this.textBox1.TabIndex = 168;
+            this.txtSearchEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEnroll.Location = new System.Drawing.Point(537, 20);
+            this.txtSearchEnroll.Multiline = true;
+            this.txtSearchEnroll.Name = "txtSearchEnroll";
+            this.txtSearchEnroll.Size = new System.Drawing.Size(379, 29);
+            this.txtSearchEnroll.TabIndex = 168;
             // 
             // cmbSem
             // 
@@ -752,14 +755,6 @@
             // 
             this.cmbSectionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSectionName.FormattingEnabled = true;
-            this.cmbSectionName.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
             this.cmbSectionName.Location = new System.Drawing.Point(467, 147);
             this.cmbSectionName.Name = "cmbSectionName";
             this.cmbSectionName.Size = new System.Drawing.Size(355, 28);
@@ -769,31 +764,16 @@
             // 
             this.cmbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
             this.cmbYear.Location = new System.Drawing.Point(467, 109);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(355, 28);
             this.cmbYear.TabIndex = 165;
+            this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // cmbCourse
             // 
             this.cmbCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
             this.cmbCourse.Location = new System.Drawing.Point(467, 68);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(355, 28);
@@ -1106,7 +1086,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
             this.pnlEnrolledList.ResumeLayout(false);
             this.pnlEnrolledList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).EndInit();
             this.pnlEnroll.ResumeLayout(false);
             this.pnlEnroll.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErolledSub)).EndInit();
@@ -1153,7 +1133,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUnits;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEnrolled;
         private System.Windows.Forms.Panel pnlEnroll;
         private System.Windows.Forms.DataGridView dgvErolledSub;
         public System.Windows.Forms.ComboBox cmbYearLevel;
@@ -1175,9 +1155,9 @@
         private System.Windows.Forms.ComboBox cmbSubSem;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtSearchEnroll;
         private System.Windows.Forms.Panel pnlArchiveList;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView2;

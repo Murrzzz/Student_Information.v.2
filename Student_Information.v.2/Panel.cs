@@ -47,6 +47,12 @@ namespace Student_Information.v._2
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Minatenance().Show();
+            this.Hide();
+        }
+
         
     }
 }
