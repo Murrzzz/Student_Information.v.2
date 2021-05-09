@@ -593,6 +593,40 @@ namespace Student_Information.v._2
             MessageBox.Show("Setup Success");
         }
 
+        private void btnEnroll_Click(object sender, EventArgs e)
+        {
+            //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subject]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+
+            
+            foreach (DataRow dr1 in table.Rows)
+            {
+                OleDbCommand cmd = new OleDbCommand("inert into [Enrollment]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Sub_Code],[Sub_Name],[Sub_Units]) "+
+                    "values(?,?,?,?,?,?,?,?,?,?)",con );
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYear.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectCode .Text ;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectUnits.Text;
+                
+
+                cmbSubjectName.Items.Add(dr1["Sub_Name"].ToString());
+                cmbSubjectCode.Items.Add(dr1["Sub_Code"].ToString());
+                
+               
+            }
+
+
+
+        }
+
 
     }
 }
