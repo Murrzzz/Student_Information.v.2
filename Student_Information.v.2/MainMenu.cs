@@ -20,6 +20,8 @@ namespace Student_Information.v._2
         public static string stud_id;//update
         public static string stud_id_Archive;//to archive
         public static string stud_id_restore;
+        public static string SchoolYear;
+
         public static string stud_fname;
         public static string stud_lname;
         public static string stud_mname;
@@ -118,16 +120,25 @@ namespace Student_Information.v._2
         }
         private void btnAdd_Class_Click(object sender, EventArgs e)
         {
-            con.Open();
-            OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Section]([Section_Name],[Course],[Year_Level]) values(?,?,?)", con);
-            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtSectionName.Text;
-            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
-            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;
-            con.Close();
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Section]([Section_Name],[Course],[YearLevel]) values(?,?,?)", con);
+                cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtSectionName.Text;
+                cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
+                cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+            }
         }
 
         private void btnUpdate_Class_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btnAdd(object sender, EventArgs e)
@@ -208,7 +219,8 @@ namespace Student_Information.v._2
         private void MainMenu_Load(object sender, EventArgs e)
         {
             Hide_panels();
-           
+            Comboboxes();
+            Comboboxes1();
         }
 
         private void txtClass_Name_TextChanged(object sender, EventArgs e)
@@ -289,7 +301,18 @@ namespace Student_Information.v._2
 
         private void pnlAccounts_Paint(object sender, PaintEventArgs e)
         {
+            SelectYear();
+        }
+        private void SelectYear()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [SchoolYear]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvYear.DataSource = table;
 
+            dgvYear.AllowUserToAddRows = false;
+            dgvYear.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvYear.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void btnAddStud_Click(object sender, EventArgs e)
@@ -340,15 +363,26 @@ namespace Student_Information.v._2
 
         private void pnlEnroll_Paint(object sender, PaintEventArgs e)
         {
+          
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_code],[Sub_Name],[Sub_Units] from [Subjects] where [Sub_Year]='"+cmbYear .Text +"' and [Sub_Sem]='"+cmbSem .Text +"' ", con);
+            
 
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvEnrolledSub.DataSource = table;
+
+            dgvEnrolledSub.AllowUserToAddRows = false;
+            dgvEnrolledSub.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvEnrolledSub.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private void Comboboxes()
         {
             con.Open();
 
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Year],[Sub_Sum] from [Subjects]", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Year],[Sub_Sem] from [Subjects]", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
+           
 
             foreach (DataRow dr1 in table.Rows)
             {
@@ -357,6 +391,24 @@ namespace Student_Information.v._2
             }
 
           
+          
+            con.Close();
+        }
+        private void Comboboxes1()
+        {
+            con.Open();
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [YearLevel],[Section_Name],[Course] from [Stud_Section]", con);
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+
+
+            foreach (DataRow dr11 in table1.Rows)
+            {
+                cmbYear.Items.Add(dr11["YearLevel"].ToString());
+                cmbSectionName.Items.Add(dr11["Section_Name"].ToString());
+                cmbCourse.Items.Add(dr11["Course"].ToString());
+
+            }
             con.Close();
         }
 
@@ -507,7 +559,40 @@ namespace Student_Information.v._2
             pnlAccounts.Show();
         }
 
-       
+        private void btnAddYear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string year = "" + txtYear.Text + " -" + txtYear1.Text + "";
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("insert into [SchoolYear]([SchoolYear]) values(?)", con);
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = year;
+                cmd.ExecuteNonQuery();
+                SelectYear();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show (ex.Message );
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvYear_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            setYear.Text = dgvYear.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void btnSetYear_Click(object sender, EventArgs e)
+        {
+            SchoolYear = setYear.Text;
+            MessageBox.Show("Setup Success");
+        }
+
 
     }
 }

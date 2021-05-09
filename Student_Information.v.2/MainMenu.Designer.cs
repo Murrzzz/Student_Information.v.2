@@ -39,10 +39,18 @@
             this.btnClass = new System.Windows.Forms.Button();
             this.btnAddClass = new System.Windows.Forms.Button();
             this.pnlAccounts = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtYear1 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.setYear = new System.Windows.Forms.Label();
+            this.btnSetYear = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dgvYear = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddYear = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtYear1 = new System.Windows.Forms.TextBox();
             this.pnlClass = new System.Windows.Forms.Panel();
             this.txtSectionName = new System.Windows.Forms.TextBox();
             this.dgvSection = new System.Windows.Forms.DataGridView();
@@ -93,7 +101,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtStudentId = new System.Windows.Forms.TextBox();
-            this.dgvErolledSub = new System.Windows.Forms.DataGridView();
+            this.dgvEnrolledSub = new System.Windows.Forms.DataGridView();
             this.picexit = new System.Windows.Forms.PictureBox();
             this.pnlArchiveList = new System.Windows.Forms.Panel();
             this.btnRestore = new System.Windows.Forms.Button();
@@ -114,6 +122,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYear)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSection)).BeginInit();
             this.pnlSubjects.SuspendLayout();
@@ -121,7 +132,7 @@
             this.pnlEnrolledList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).BeginInit();
             this.pnlEnroll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvErolledSub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
             this.pnlArchiveList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchive)).BeginInit();
@@ -276,54 +287,147 @@
             // 
             // pnlAccounts
             // 
-            this.pnlAccounts.Controls.Add(this.label22);
-            this.pnlAccounts.Controls.Add(this.txtYear1);
-            this.pnlAccounts.Controls.Add(this.label21);
-            this.pnlAccounts.Controls.Add(this.txtYear);
+            this.pnlAccounts.Controls.Add(this.groupBox2);
+            this.pnlAccounts.Controls.Add(this.groupBox1);
             this.pnlAccounts.Location = new System.Drawing.Point(188, 0);
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(1027, 928);
             this.pnlAccounts.TabIndex = 1;
             this.pnlAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAccounts_Paint);
             // 
-            // label22
+            // groupBox2
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(214, 284);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 20);
-            this.label22.TabIndex = 18;
-            this.label22.Text = "Course";
+            this.groupBox2.Controls.Add(this.setYear);
+            this.groupBox2.Controls.Add(this.btnSetYear);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.dgvYear);
+            this.groupBox2.Location = new System.Drawing.Point(65, 452);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(952, 342);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
             // 
-            // txtYear1
+            // setYear
             // 
-            this.txtYear1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear1.Location = new System.Drawing.Point(299, 283);
-            this.txtYear1.Multiline = true;
-            this.txtYear1.Name = "txtYear1";
-            this.txtYear1.Size = new System.Drawing.Size(318, 29);
-            this.txtYear1.TabIndex = 17;
+            this.setYear.AutoSize = true;
+            this.setYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setYear.Location = new System.Drawing.Point(611, 122);
+            this.setYear.Name = "setYear";
+            this.setYear.Size = new System.Drawing.Size(19, 20);
+            this.setYear.TabIndex = 43;
+            this.setYear.Text = "--";
             // 
-            // label21
+            // btnSetYear
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(214, 205);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 20);
-            this.label21.TabIndex = 16;
-            this.label21.Text = "Course";
+            this.btnSetYear.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnSetYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetYear.ForeColor = System.Drawing.Color.White;
+            this.btnSetYear.Location = new System.Drawing.Point(584, 252);
+            this.btnSetYear.Name = "btnSetYear";
+            this.btnSetYear.Size = new System.Drawing.Size(127, 36);
+            this.btnSetYear.TabIndex = 42;
+            this.btnSetYear.Text = "Set";
+            this.btnSetYear.UseVisualStyleBackColor = false;
+            this.btnSetYear.Click += new System.EventHandler(this.btnSetYear_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(580, 80);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 20);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "School Year:";
+            // 
+            // dgvYear
+            // 
+            this.dgvYear.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvYear.Location = new System.Drawing.Point(56, 61);
+            this.dgvYear.Name = "dgvYear";
+            this.dgvYear.Size = new System.Drawing.Size(440, 227);
+            this.dgvYear.TabIndex = 40;
+            this.dgvYear.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvYear_CellContentClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAddYear);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.txtYear);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.txtYear1);
+            this.groupBox1.Location = new System.Drawing.Point(65, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(952, 335);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnAddYear
+            // 
+            this.btnAddYear.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnAddYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddYear.ForeColor = System.Drawing.Color.White;
+            this.btnAddYear.Location = new System.Drawing.Point(369, 269);
+            this.btnAddYear.Name = "btnAddYear";
+            this.btnAddYear.Size = new System.Drawing.Size(127, 36);
+            this.btnAddYear.TabIndex = 33;
+            this.btnAddYear.Text = "Add";
+            this.btnAddYear.UseVisualStyleBackColor = false;
+            this.btnAddYear.Click += new System.EventHandler(this.btnAddYear_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(365, 74);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(100, 20);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "School Year:";
             // 
             // txtYear
             // 
             this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(299, 204);
+            this.txtYear.Location = new System.Drawing.Point(272, 129);
             this.txtYear.Multiline = true;
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(318, 29);
             this.txtYear.TabIndex = 15;
             this.txtYear.TextChanged += new System.EventHandler(this.txtYear_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(213, 211);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(47, 20);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "Year:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(213, 132);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 20);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Year:";
+            // 
+            // txtYear1
+            // 
+            this.txtYear1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear1.Location = new System.Drawing.Point(272, 208);
+            this.txtYear1.Multiline = true;
+            this.txtYear1.Name = "txtYear1";
+            this.txtYear1.Size = new System.Drawing.Size(318, 29);
+            this.txtYear1.TabIndex = 17;
             // 
             // pnlClass
             // 
@@ -749,7 +853,7 @@
             this.pnlEnroll.Controls.Add(this.txtName);
             this.pnlEnroll.Controls.Add(this.label9);
             this.pnlEnroll.Controls.Add(this.txtStudentId);
-            this.pnlEnroll.Controls.Add(this.dgvErolledSub);
+            this.pnlEnroll.Controls.Add(this.dgvEnrolledSub);
             this.pnlEnroll.Location = new System.Drawing.Point(188, 0);
             this.pnlEnroll.Name = "pnlEnroll";
             this.pnlEnroll.Size = new System.Drawing.Size(1027, 928);
@@ -907,15 +1011,16 @@
             this.txtStudentId.Size = new System.Drawing.Size(187, 29);
             this.txtStudentId.TabIndex = 150;
             // 
-            // dgvErolledSub
+            // dgvEnrolledSub
             // 
-            this.dgvErolledSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvErolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvErolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvErolledSub.Location = new System.Drawing.Point(23, 244);
-            this.dgvErolledSub.Name = "dgvErolledSub";
-            this.dgvErolledSub.Size = new System.Drawing.Size(958, 609);
-            this.dgvErolledSub.TabIndex = 149;
+            this.dgvEnrolledSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEnrolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvEnrolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnrolledSub.Location = new System.Drawing.Point(23, 244);
+            this.dgvEnrolledSub.Name = "dgvEnrolledSub";
+            this.dgvEnrolledSub.RowHeadersVisible = false;
+            this.dgvEnrolledSub.Size = new System.Drawing.Size(958, 609);
+            this.dgvEnrolledSub.TabIndex = 149;
             // 
             // picexit
             // 
@@ -1135,13 +1240,13 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAccounts);
-            this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
+            this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlEnroll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1150,7 +1255,11 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAccounts.ResumeLayout(false);
-            this.pnlAccounts.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYear)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSection)).EndInit();
@@ -1162,7 +1271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).EndInit();
             this.pnlEnroll.ResumeLayout(false);
             this.pnlEnroll.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvErolledSub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledSub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
             this.pnlArchiveList.ResumeLayout(false);
             this.pnlArchiveList.PerformLayout();
@@ -1208,7 +1317,7 @@
         private System.Windows.Forms.TextBox txtUnits;
         private System.Windows.Forms.DataGridView dgvEnrolled;
         private System.Windows.Forms.Panel pnlEnroll;
-        private System.Windows.Forms.DataGridView dgvErolledSub;
+        private System.Windows.Forms.DataGridView dgvEnrolledSub;
         public System.Windows.Forms.ComboBox cmbYearLevel;
         public System.Windows.Forms.ComboBox cmbSem;
         public System.Windows.Forms.ComboBox cmbSectionName;
@@ -1258,5 +1367,13 @@
         public System.Windows.Forms.TextBox txtYear1;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.DataGridView dgvYear;
+        private System.Windows.Forms.Button btnAddYear;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnSetYear;
+        private System.Windows.Forms.Label setYear;
     }
 }

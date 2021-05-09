@@ -286,8 +286,8 @@ namespace Student_Information.v._2
         {
             con.Open();
             OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Info]([Stud_Id],[Stud_Fname],[Stud_Lname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Birthplace],[Stud_Contact],[Stud_Gender],[Stud_Address],"+
-                "[Stud_MaritalStatus],[Stud_Citizenship],[Stud_Religion],[Stud_Birthdate],[Stud_FathersName],[Stud_MothersName],[Stud_FatherOccup],[Stud_MotherOccup],[Stud_ParentsAddress],[Stud_HighSchool],[Stud_HighSchoolYear],[Stud_SeniorHigh],[Stud_SeniorHighYear])"+
-                " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",con);
+                "[Stud_MaritalStatus],[Stud_Citizenship],[Stud_Religion],[Stud_Birthdate],[Stud_FathersName],[Stud_MothersName],[Stud_FatherOccup],[Stud_MotherOccup],[Stud_ParentsAddress],[Stud_HighSchool],[Stud_HighSchoolYear],[Stud_SeniorHigh],[Stud_SeniorHighYear],[Stud_FullName])"+
+                " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",con);
             cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;
             cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
             cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
@@ -311,7 +311,10 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighYear.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorHigh.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorYear.Text;
-            
+            string fullname = ""+txtFname .Text.ToString () +" "+txtMname .Text.ToString () +" "+txtLname .Text.ToString () +"";
+            Console.WriteLine(fullname);
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = fullname ;
+
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -409,7 +412,7 @@ namespace Student_Information.v._2
             con.Open();
             OleDbCommand cmd = new OleDbCommand("update [Stud_Info] set [Stud_Id]=?,[Stud_Fname]=?,[Stud_Lname]=?,[Stud_Mname]=?,[Stud_Gmail]=?,[Stud_Age]=?,[Stud_Birthplace]=?,[Stud_Contact]=?,[Stud_Gender]=?,"+
                 "[Stud_Address]=?,[Stud_MaritalStatus]=?,[Stud_Citizenship]=?,[Stud_Religion]=?,[Stud_BirthDate]=?,[Stud_FathersName]=?,[Stud_MothersName]=?,[Stud_FatherOccup]=?,[Stud_MotherOccup]=?,[Stud_ParentsAddress]=?,"+
-            "[Stud_HighSchool]=?,[Stud_HighSchoolYear]=?,[Stud_SeniorHigh]=?,[Stud_SeniorHIghYear]=? where [Stud_Id]="+txtStudentNumber .Text +"",con );
+            "[Stud_HighSchool]=?,[Stud_HighSchoolYear]=?,[Stud_SeniorHigh]=?,[Stud_SeniorHIghYear]=?,[Stud_FullName]=? where [Stud_Id]="+txtStudentNumber .Text +"",con );
 
             cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Numeric ).Value = txtStudentNumber.Text;
             cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
@@ -434,7 +437,8 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighYear.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorHigh.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorYear.Text;
-     
+            string fullname = "" + txtFname.Text + " " + txtMname.Text + " " + txtLname.Text + "";
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = fullname;
               cmd.ExecuteNonQuery();
             con.Close();
         }
