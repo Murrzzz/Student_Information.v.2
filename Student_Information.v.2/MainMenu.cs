@@ -195,7 +195,7 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-           
+            lblSchoolYear.Text = SchoolYear;
         }
         private void VariableImported()
         {

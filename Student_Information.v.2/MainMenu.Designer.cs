@@ -86,6 +86,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dgvEnrolled = new System.Windows.Forms.DataGridView();
             this.pnlEnroll = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnEnroll = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearchEnroll = new System.Windows.Forms.TextBox();
@@ -119,6 +121,7 @@
             this.txtSearchMasterList = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
+            this.lblSchoolYear = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -742,6 +745,7 @@
             // 
             // pnlEnrolledList
             // 
+            this.pnlEnrolledList.Controls.Add(this.lblSchoolYear);
             this.pnlEnrolledList.Controls.Add(this.button12);
             this.pnlEnrolledList.Controls.Add(this.button11);
             this.pnlEnrolledList.Controls.Add(this.label20);
@@ -838,6 +842,8 @@
             // 
             // pnlEnroll
             // 
+            this.pnlEnroll.Controls.Add(this.btnPrint);
+            this.pnlEnroll.Controls.Add(this.btnEnroll);
             this.pnlEnroll.Controls.Add(this.btnSearch);
             this.pnlEnroll.Controls.Add(this.label3);
             this.pnlEnroll.Controls.Add(this.txtSearchEnroll);
@@ -859,6 +865,32 @@
             this.pnlEnroll.Size = new System.Drawing.Size(1027, 928);
             this.pnlEnroll.TabIndex = 29;
             this.pnlEnroll.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnroll_Paint);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(203, 872);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(93, 36);
+            this.btnPrint.TabIndex = 176;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // btnEnroll
+            // 
+            this.btnEnroll.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnroll.ForeColor = System.Drawing.Color.White;
+            this.btnEnroll.Location = new System.Drawing.Point(85, 872);
+            this.btnEnroll.Name = "btnEnroll";
+            this.btnEnroll.Size = new System.Drawing.Size(93, 36);
+            this.btnEnroll.TabIndex = 175;
+            this.btnEnroll.Text = "Enroll Now";
+            this.btnEnroll.UseVisualStyleBackColor = false;
             // 
             // btnSearch
             // 
@@ -1153,7 +1185,7 @@
             this.btnUpdateStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStud.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStud.Location = new System.Drawing.Point(770, 55);
+            this.btnUpdateStud.Location = new System.Drawing.Point(762, 55);
             this.btnUpdateStud.Name = "btnUpdateStud";
             this.btnUpdateStud.Size = new System.Drawing.Size(93, 36);
             this.btnUpdateStud.TabIndex = 175;
@@ -1232,6 +1264,16 @@
             this.dgvStudentList.TabIndex = 149;
             this.dgvStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentClick);
             // 
+            // lblSchoolYear
+            // 
+            this.lblSchoolYear.AutoSize = true;
+            this.lblSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSchoolYear.Location = new System.Drawing.Point(135, 57);
+            this.lblSchoolYear.Name = "lblSchoolYear";
+            this.lblSchoolYear.Size = new System.Drawing.Size(19, 20);
+            this.lblSchoolYear.TabIndex = 176;
+            this.lblSchoolYear.Text = "--";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1240,13 +1282,13 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlMasterList);
-            this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
+            this.Controls.Add(this.pnlMasterList);
+            this.Controls.Add(this.pnlArchiveList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1375,5 +1417,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSetYear;
         private System.Windows.Forms.Label setYear;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnEnroll;
+        private System.Windows.Forms.Label lblSchoolYear;
     }
 }
