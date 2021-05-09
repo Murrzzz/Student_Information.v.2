@@ -71,12 +71,6 @@
     <Compile Include="Inbox.Designer.cs">
       <DependentUpon>Inbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Minatenance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Minatenance.Designer.cs">
-      <DependentUpon>Minatenance.cs</DependentUpon>
-    </Compile>
     <Compile Include="PintClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inbox.resx">
       <DependentUpon>Inbox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Minatenance.resx">
-      <DependentUpon>Minatenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PintClass.resx">
       <DependentUpon>PintClass.cs</DependentUpon>

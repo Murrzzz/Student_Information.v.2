@@ -39,6 +39,10 @@
             this.btnClass = new System.Windows.Forms.Button();
             this.btnAddClass = new System.Windows.Forms.Button();
             this.pnlAccounts = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtYear1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
             this.pnlClass = new System.Windows.Forms.Panel();
             this.txtSectionName = new System.Windows.Forms.TextBox();
             this.dgvSection = new System.Windows.Forms.DataGridView();
@@ -92,22 +96,24 @@
             this.dgvErolledSub = new System.Windows.Forms.DataGridView();
             this.picexit = new System.Windows.Forms.PictureBox();
             this.pnlArchiveList = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvArchive = new System.Windows.Forms.DataGridView();
             this.pnlMasterList = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnUpdateStud = new System.Windows.Forms.Button();
             this.btnAddStud = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSeaerchMasterList = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSearchMasterList = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlAccounts.SuspendLayout();
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSection)).BeginInit();
             this.pnlSubjects.SuspendLayout();
@@ -118,7 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvErolledSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
             this.pnlArchiveList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArchive)).BeginInit();
             this.pnlMasterList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
             this.SuspendLayout();
@@ -170,6 +176,7 @@
             this.button3.TabIndex = 31;
             this.button3.Text = "Accounts";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -269,11 +276,54 @@
             // 
             // pnlAccounts
             // 
+            this.pnlAccounts.Controls.Add(this.label22);
+            this.pnlAccounts.Controls.Add(this.txtYear1);
+            this.pnlAccounts.Controls.Add(this.label21);
+            this.pnlAccounts.Controls.Add(this.txtYear);
             this.pnlAccounts.Location = new System.Drawing.Point(188, 0);
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(1027, 928);
             this.pnlAccounts.TabIndex = 1;
             this.pnlAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAccounts_Paint);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(214, 284);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 20);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "Course";
+            // 
+            // txtYear1
+            // 
+            this.txtYear1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear1.Location = new System.Drawing.Point(299, 283);
+            this.txtYear1.Multiline = true;
+            this.txtYear1.Name = "txtYear1";
+            this.txtYear1.Size = new System.Drawing.Size(318, 29);
+            this.txtYear1.TabIndex = 17;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(214, 205);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(60, 20);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Course";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.Location = new System.Drawing.Point(299, 204);
+            this.txtYear.Multiline = true;
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(318, 29);
+            this.txtYear.TabIndex = 15;
+            this.txtYear.TextChanged += new System.EventHandler(this.txtYear_TextChanged);
             // 
             // pnlClass
             // 
@@ -881,29 +931,31 @@
             // 
             // pnlArchiveList
             // 
-            this.pnlArchiveList.Controls.Add(this.button10);
+            this.pnlArchiveList.Controls.Add(this.btnRestore);
             this.pnlArchiveList.Controls.Add(this.button9);
             this.pnlArchiveList.Controls.Add(this.label19);
             this.pnlArchiveList.Controls.Add(this.textBox3);
             this.pnlArchiveList.Controls.Add(this.label8);
-            this.pnlArchiveList.Controls.Add(this.dataGridView2);
+            this.pnlArchiveList.Controls.Add(this.dgvArchive);
             this.pnlArchiveList.Location = new System.Drawing.Point(188, 0);
             this.pnlArchiveList.Name = "pnlArchiveList";
             this.pnlArchiveList.Size = new System.Drawing.Size(1027, 928);
             this.pnlArchiveList.TabIndex = 30;
+            this.pnlArchiveList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchiveList_Paint);
             // 
-            // button10
+            // btnRestore
             // 
-            this.button10.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(869, 35);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(93, 36);
-            this.button10.TabIndex = 174;
-            this.button10.Text = "Restore";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnRestore.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestore.ForeColor = System.Drawing.Color.White;
+            this.btnRestore.Location = new System.Drawing.Point(869, 35);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(93, 36);
+            this.btnRestore.TabIndex = 174;
+            this.btnRestore.Text = "Restore";
+            this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // button9
             // 
@@ -949,23 +1001,25 @@
             this.label8.TabIndex = 151;
             this.label8.Text = "Archive List (Students)";
             // 
-            // dataGridView2
+            // dgvArchive
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(38, 107);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(958, 785);
-            this.dataGridView2.TabIndex = 149;
+            this.dgvArchive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvArchive.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvArchive.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArchive.Location = new System.Drawing.Point(38, 107);
+            this.dgvArchive.Name = "dgvArchive";
+            this.dgvArchive.Size = new System.Drawing.Size(958, 785);
+            this.dgvArchive.TabIndex = 149;
+            this.dgvArchive.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArchive_CellContentClick);
             // 
             // pnlMasterList
             // 
+            this.pnlMasterList.Controls.Add(this.button1);
             this.pnlMasterList.Controls.Add(this.btnUpdateStud);
             this.pnlMasterList.Controls.Add(this.btnAddStud);
-            this.pnlMasterList.Controls.Add(this.button5);
+            this.pnlMasterList.Controls.Add(this.btnSeaerchMasterList);
             this.pnlMasterList.Controls.Add(this.label18);
-            this.pnlMasterList.Controls.Add(this.textBox2);
+            this.pnlMasterList.Controls.Add(this.txtSearchMasterList);
             this.pnlMasterList.Controls.Add(this.label7);
             this.pnlMasterList.Controls.Add(this.dgvStudentList);
             this.pnlMasterList.Location = new System.Drawing.Point(188, 0);
@@ -974,13 +1028,27 @@
             this.pnlMasterList.TabIndex = 31;
             this.pnlMasterList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMasterList_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(887, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 36);
+            this.button1.TabIndex = 176;
+            this.button1.Text = "Archive";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnUpdateStud
             // 
             this.btnUpdateStud.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnUpdateStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStud.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStud.Location = new System.Drawing.Point(837, 48);
+            this.btnUpdateStud.Location = new System.Drawing.Point(770, 55);
             this.btnUpdateStud.Name = "btnUpdateStud";
             this.btnUpdateStud.Size = new System.Drawing.Size(93, 36);
             this.btnUpdateStud.TabIndex = 175;
@@ -994,7 +1062,7 @@
             this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStud.ForeColor = System.Drawing.Color.White;
-            this.btnAddStud.Location = new System.Drawing.Point(729, 48);
+            this.btnAddStud.Location = new System.Drawing.Point(662, 55);
             this.btnAddStud.Name = "btnAddStud";
             this.btnAddStud.Size = new System.Drawing.Size(93, 36);
             this.btnAddStud.TabIndex = 174;
@@ -1002,37 +1070,38 @@
             this.btnAddStud.UseVisualStyleBackColor = false;
             this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
             // 
-            // button5
+            // btnSeaerchMasterList
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(603, 48);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 36);
-            this.button5.TabIndex = 173;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSeaerchMasterList.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSeaerchMasterList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeaerchMasterList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeaerchMasterList.ForeColor = System.Drawing.Color.White;
+            this.btnSeaerchMasterList.Location = new System.Drawing.Point(545, 56);
+            this.btnSeaerchMasterList.Name = "btnSeaerchMasterList";
+            this.btnSeaerchMasterList.Size = new System.Drawing.Size(93, 36);
+            this.btnSeaerchMasterList.TabIndex = 173;
+            this.btnSeaerchMasterList.Text = "Search";
+            this.btnSeaerchMasterList.UseVisualStyleBackColor = false;
+            this.btnSeaerchMasterList.Click += new System.EventHandler(this.btnSeaerchMasterList_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(122, 56);
+            this.label18.Location = new System.Drawing.Point(64, 64);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(91, 20);
             this.label18.TabIndex = 172;
             this.label18.Text = "Student ID:";
             // 
-            // textBox2
+            // txtSearchMasterList
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 52);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(379, 29);
-            this.textBox2.TabIndex = 171;
+            this.txtSearchMasterList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchMasterList.Location = new System.Drawing.Point(158, 60);
+            this.txtSearchMasterList.Multiline = true;
+            this.txtSearchMasterList.Name = "txtSearchMasterList";
+            this.txtSearchMasterList.Size = new System.Drawing.Size(379, 29);
+            this.txtSearchMasterList.TabIndex = 171;
             // 
             // label7
             // 
@@ -1053,6 +1122,7 @@
             this.dgvStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentList.Location = new System.Drawing.Point(49, 107);
             this.dgvStudentList.Name = "dgvStudentList";
+            this.dgvStudentList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStudentList.Size = new System.Drawing.Size(958, 785);
             this.dgvStudentList.TabIndex = 149;
             this.dgvStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentClick);
@@ -1065,13 +1135,13 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
-            this.Controls.Add(this.pnlAccounts);
-            this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlEnroll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1079,6 +1149,8 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlAccounts.ResumeLayout(false);
+            this.pnlAccounts.PerformLayout();
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSection)).EndInit();
@@ -1094,7 +1166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
             this.pnlArchiveList.ResumeLayout(false);
             this.pnlArchiveList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArchive)).EndInit();
             this.pnlMasterList.ResumeLayout(false);
             this.pnlMasterList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).EndInit();
@@ -1161,7 +1233,7 @@
         public System.Windows.Forms.TextBox txtSearchEnroll;
         private System.Windows.Forms.Panel pnlArchiveList;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvArchive;
         private System.Windows.Forms.Panel pnlMasterList;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvStudentList;
@@ -1170,10 +1242,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnUpdateStud;
         private System.Windows.Forms.Button btnAddStud;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSeaerchMasterList;
         private System.Windows.Forms.Label label18;
-        public System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button10;
+        public System.Windows.Forms.TextBox txtSearchMasterList;
+        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label19;
         public System.Windows.Forms.TextBox textBox3;
@@ -1181,5 +1253,10 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox txtYear1;
+        private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox txtYear;
     }
 }

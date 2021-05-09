@@ -17,7 +17,9 @@ namespace Student_Information.v._2
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
       
         Boolean set = false;
-        public static string stud_id;
+        public static string stud_id;//update
+        public static string stud_id_Archive;//to archive
+        public static string stud_id_restore;
         public static string stud_fname;
         public static string stud_lname;
         public static string stud_mname;
@@ -164,17 +166,12 @@ namespace Student_Information.v._2
         }
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvSubject.Rows[e.RowIndex];
-                txtSub_Code.Text = row.Cells["Sub_Code"].Value.ToString();
-                txtSub_Description.Text = row.Cells["Sub_Name"].Value.ToString();
-                cmbSubYear.Text = row.Cells["Sub_Year"].Value.ToString();
-                cmbSubSem.Text = row.Cells["Sub_Sem"].Value.ToString();
-                txtUnits .Text  = row.Cells["Sub_Units"].Value.ToString();
-               
-            }
+        {    
+                txtSub_Code.Text = dgvSubject.Rows[e.RowIndex ].Cells["Sub_Code"].Value.ToString();
+                txtSub_Description.Text = dgvSubject.Rows [e.RowIndex ].Cells["Sub_Name"].Value.ToString();
+                cmbSubYear.Text = dgvSubject.Rows[e.RowIndex].Cells["Sub_Year"].Value.ToString();
+                cmbSubSem.Text = dgvSubject.Rows[e.RowIndex].Cells["Sub_Sem"].Value.ToString();
+                txtUnits.Text = dgvSubject.Rows[e.RowIndex].Cells["Sub_Units"].Value.ToString();   
         }
 
         private void pnlSubjects_Paint(object sender, PaintEventArgs e)
@@ -211,6 +208,7 @@ namespace Student_Information.v._2
         private void MainMenu_Load(object sender, EventArgs e)
         {
             Hide_panels();
+           
         }
 
         private void txtClass_Name_TextChanged(object sender, EventArgs e)
@@ -319,7 +317,7 @@ namespace Student_Information.v._2
         }
         private void SelectStudents()
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info]", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info]", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvStudentList.DataSource = table;
@@ -377,8 +375,139 @@ namespace Student_Information.v._2
             if (e.RowIndex >= 0)
             {
                 stud_id = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
+                stud_id_Archive = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
                 Console.WriteLine(stud_id);
             }
         }
+
+        private void pnlArchiveList_Paint(object sender, PaintEventArgs e)
+        {
+            SelectArchiveStudents();
+        }
+        private void SelectArchiveStudents()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info_Archive]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvArchive.DataSource = table;
+
+            dgvArchive.AllowUserToAddRows = false;
+            dgvArchive.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvArchive.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (stud_id_Archive != "")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info_Archive] select * from [Stud_Info] where [Stud_Id]=?", con);
+                    cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = stud_id_Archive;
+                    cmd.ExecuteNonQuery();
+                   
+
+                    OleDbCommand del = new OleDbCommand("delete from [Stud_Info] where [Stud_Id]=?", con);
+                    del.Parameters.AddWithValue("@2", OleDbType.Numeric).Value = stud_id_Archive;
+                    Console.WriteLine(stud_id_Archive);
+                    del.ExecuteNonQuery();
+                    SelectStudents();
+                    stud_id_Archive = "";
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex .Message );
+                }
+            }
+            else
+            {
+                MessageBox.Show("please click the data properly to archive");
+            }
+            
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            if (stud_id_restore != "")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info] select * from [Stud_Info_Archive] where [Stud_Id]=?", con);
+                    cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = stud_id_restore;
+                    cmd.ExecuteNonQuery();
+
+
+                    OleDbCommand del = new OleDbCommand("delete from [Stud_Info_Archive] where [Stud_Id]=?", con);
+                    del.Parameters.AddWithValue("@2", OleDbType.Numeric).Value = stud_id_restore;
+                    Console.WriteLine(stud_id_Archive);
+                    del.ExecuteNonQuery();
+                    SelectArchiveStudents();
+                    stud_id_restore = "";
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("please click the data properly to archive");
+            }
+            
+        }
+
+        private void dgvArchive_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                stud_id_restore = dgvArchive.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Console.WriteLine(stud_id);
+            }
+        }
+
+        private void btnSeaerchMasterList_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            OleDbDataAdapter  search = new OleDbDataAdapter ("Select * from [Stud_Info] where [Stud_Lname]='"+txtSearchMasterList .Text +"'",con );
+            //search.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtSearchMasterList.Text;
+
+            DataTable table = new DataTable();
+            search.Fill(table);
+            dgvStudentList.DataSource = table;
+
+            dgvStudentList.AllowUserToAddRows = false;
+            dgvStudentList.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudentList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            con.Close();
+        }
+
+        private void txtYear_TextChanged(object sender, EventArgs e)
+        {
+            int txt1 = 0;
+            if (txtYear.Text == "")
+            {
+                txtYear.Text = "0";
+            }
+             txt1 = int.Parse(txtYear.Text.ToString());
+            //int txt2 = int.Parse(txtYear1.Text.ToString());
+            int txt2;
+            txt2 = txt1 + 1;
+
+            txtYear1.Text = txt2.ToString ();
+          //  int.Parse (txtYear1.Text.ToString()) = int.Parse(txtYear.Text.ToString()) + 1;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide_panels();
+            pnlAccounts.Show();
+        }
+
+       
+
     }
 }

@@ -17,7 +17,8 @@ namespace Student_Information.v._2
     public partial class Add : Form
     {
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
-      
+       
+
         MainMenu  main = new MainMenu  ();
         public Add(MainMenu   f1)
         {
@@ -353,11 +354,9 @@ namespace Student_Information.v._2
         }
         private void StudentData_Import()
         {
-            OleDbDataReader rd;
-            if (MainMenu.addUp == 2)
-            {
 
                 con.Open();
+                OleDbDataReader rd;
                 OleDbCommand cmd = new OleDbCommand("select * from[Stud_Info] where[Stud_Id]=? ", con);
                 cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = MainMenu.stud_id;
                 rd = cmd.ExecuteReader();
@@ -387,21 +386,20 @@ namespace Student_Information.v._2
                     txtHighYear.Text = rd.GetValue(20).ToString();
                     txtSeniorHigh.Text = rd.GetValue(21).ToString();
                     txtSeniorYear.Text = rd.GetValue(22).ToString();
-                    
                 }
-                Console.WriteLine("aaaaaaaaaaaaaaaaaa");
+                    MainMenu.addUp = 1;
+                    Console.WriteLine("aaaaaaaaaaaaaaaaaa");
 
                 cmd.Dispose();
                 con.Close();
-            }
+            
         }
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
-            int i = 0;
-            if (i == 0)
+            if (MainMenu.addUp == 2)
             {
                 StudentData_Import();
-                i = 1;
+                MainMenu.addUp = 1;
             }
 
         }
@@ -409,11 +407,11 @@ namespace Student_Information.v._2
         private void btnUpdateStudents_Click(object sender, EventArgs e)
         {
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("update [Stud_info] set [Stud_id]=?,[Stud_Fname]=?,[Stud_Lname]=?,[Stud_Mname]=?,[Stud_Gmail]=?,[Stud_Age]=?,[Stud_Birthplace]=?,[Stud_Contact]=?,[Stud_Gender]=?,"+
-                "[Stud_Address]=?,[Stud_MaritalStatus]=?,[Stud_Citizenship]=?,[Stud_Religion]=?,[Stud_BirthDate]=?,[Stud_FathersName]=?,[Stud_MothersName]=?,[Stud_FatherOccup]=?,[Stud_MotherOccup]=?,[Stud_ParentsAdress]=?,"+
-            "[Stud_HighSchool]=?,[Stud_HighSchoolYear]=?,[Stud_SeniorHigh]=?,[Stud_SeniorHIghYear]=? where [Stud_Id]=?",con );
+            OleDbCommand cmd = new OleDbCommand("update [Stud_Info] set [Stud_Id]=?,[Stud_Fname]=?,[Stud_Lname]=?,[Stud_Mname]=?,[Stud_Gmail]=?,[Stud_Age]=?,[Stud_Birthplace]=?,[Stud_Contact]=?,[Stud_Gender]=?,"+
+                "[Stud_Address]=?,[Stud_MaritalStatus]=?,[Stud_Citizenship]=?,[Stud_Religion]=?,[Stud_BirthDate]=?,[Stud_FathersName]=?,[Stud_MothersName]=?,[Stud_FatherOccup]=?,[Stud_MotherOccup]=?,[Stud_ParentsAddress]=?,"+
+            "[Stud_HighSchool]=?,[Stud_HighSchoolYear]=?,[Stud_SeniorHigh]=?,[Stud_SeniorHIghYear]=? where [Stud_Id]="+txtStudentNumber .Text +"",con );
 
-            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;
+            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Numeric ).Value = txtStudentNumber.Text;
             cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
             cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
             cmd.Parameters.AddWithValue("@Stud_Mname", OleDbType.VarChar).Value = txtMname.Text;
@@ -436,8 +434,8 @@ namespace Student_Information.v._2
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighYear.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorHigh.Text;
             cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorYear.Text;
-            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;//for where
-            cmd.ExecuteNonQuery();
+     
+              cmd.ExecuteNonQuery();
             con.Close();
         }
 
