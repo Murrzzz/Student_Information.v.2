@@ -112,7 +112,7 @@
             this.label48 = new System.Windows.Forms.Label();
             this.txtHighSchool = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlAdd_Subject.SuspendLayout();
@@ -487,7 +487,7 @@
             this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnUpdateStudents);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Location = new System.Drawing.Point(2, 54);
@@ -592,7 +592,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "STUDENTS INFORMATION";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label18
             // 
@@ -848,7 +847,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PARENTS INFORMATION";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label42
             // 
@@ -1074,18 +1072,19 @@
             this.button5.Text = "Subject";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnUpdateStudents
             // 
-            this.button6.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(770, 621);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 36);
-            this.button6.TabIndex = 123;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnUpdateStudents.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnUpdateStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStudents.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateStudents.Location = new System.Drawing.Point(770, 621);
+            this.btnUpdateStudents.Name = "btnUpdateStudents";
+            this.btnUpdateStudents.Size = new System.Drawing.Size(127, 36);
+            this.btnUpdateStudents.TabIndex = 123;
+            this.btnUpdateStudents.Text = "Update";
+            this.btnUpdateStudents.UseVisualStyleBackColor = false;
+            this.btnUpdateStudents.Click += new System.EventHandler(this.btnUpdateStudents_Click);
             // 
             // button8
             // 
@@ -1188,7 +1187,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnUpdateStudents;
         private System.Windows.Forms.Button button8;
         public System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label14;

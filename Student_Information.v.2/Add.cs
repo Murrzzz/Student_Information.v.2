@@ -351,60 +351,96 @@ namespace Student_Information.v._2
             }
 
         }
-
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        private void StudentData_Import()
         {
-
             OleDbDataReader rd;
             if (MainMenu.addUp == 2)
             {
-               
+
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand("select * from[Stud_Info] where[Stud_Id]=? ", con);
-                cmd.Parameters .AddWithValue ("@1", OleDbType.Numeric).Value =MainMenu .stud_id ;
+                cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = MainMenu.stud_id;
                 rd = cmd.ExecuteReader();
-
+                int i = 0;
                 while (rd.Read())
                 {
                     txtStudentNumber.Text = rd.GetValue(0).ToString();
                     txtFname.Text = rd.GetValue(1).ToString();
                     txtLname.Text = rd.GetValue(2).ToString();
                     txtMname.Text = rd.GetValue(3).ToString();
-                    txtGmail .Text  = rd.GetValue(4).ToString();
-                    txtAge .Text  = rd.GetValue(5).ToString();
-                    txtBirthPlace .Text   = rd.GetValue(6).ToString();
-                    txtContact .Text  = rd.GetValue(7).ToString();
-                    cmbGender .Text  = rd.GetValue(8).ToString();
-                    txtAddress .Text  = rd.GetValue(9).ToString();
-                    cmbMStatus .Text  = rd.GetValue(10).ToString();
-                    txtCitizenship .Text  = rd.GetValue(11).ToString();
-                    txtReligion .Text  = rd.GetValue(12).ToString();
+                    txtGmail.Text = rd.GetValue(4).ToString();
+                    txtAge.Text = rd.GetValue(5).ToString();
+                    txtBirthPlace.Text = rd.GetValue(6).ToString();
+                    txtContact.Text = rd.GetValue(7).ToString();
+                    cmbGender.Text = rd.GetValue(8).ToString();
+                    txtAddress.Text = rd.GetValue(9).ToString();
+                    cmbMStatus.Text = rd.GetValue(10).ToString();
+                    txtCitizenship.Text = rd.GetValue(11).ToString();
+                    txtReligion.Text = rd.GetValue(12).ToString();
                     dtpBirthday.Text = rd.GetValue(13).ToString();
-                    txtFathersName .Text  = rd.GetValue(14).ToString();
-                    txtMothersName .Text  = rd.GetValue(15).ToString();
-                    txtFathersOccup .Text  = rd.GetValue(16).ToString();
-                    txtMothersOccup .Text  = rd.GetValue(17).ToString();
-                    txtParentsAddress .Text  = rd.GetValue(18).ToString();
-                    txtHighSchool .Text  = rd.GetValue(19).ToString();
-                    txtHighYear .Text  = rd.GetValue(20).ToString();
-                    txtSeniorHigh .Text  = rd.GetValue(21).ToString();
-                    txtSeniorYear .Text  = rd.GetValue(22).ToString();
+                    txtFathersName.Text = rd.GetValue(14).ToString();
+                    txtMothersName.Text = rd.GetValue(15).ToString();
+                    txtFathersOccup.Text = rd.GetValue(16).ToString();
+                    txtMothersOccup.Text = rd.GetValue(17).ToString();
+                    txtParentsAddress.Text = rd.GetValue(18).ToString();
+                    txtHighSchool.Text = rd.GetValue(19).ToString();
+                    txtHighYear.Text = rd.GetValue(20).ToString();
+                    txtSeniorHigh.Text = rd.GetValue(21).ToString();
+                    txtSeniorYear.Text = rd.GetValue(22).ToString();
+                    
                 }
+                Console.WriteLine("aaaaaaaaaaaaaaaaaa");
 
                 cmd.Dispose();
                 con.Close();
             }
         }
-
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
+            int i = 0;
+            if (i == 0)
+            {
+                StudentData_Import();
+                i = 1;
+            }
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void btnUpdateStudents_Click(object sender, EventArgs e)
         {
-          
-          
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("update [Stud_info] set [Stud_id]=?,[Stud_Fname]=?,[Stud_Lname]=?,[Stud_Mname]=?,[Stud_Gmail]=?,[Stud_Age]=?,[Stud_Birthplace]=?,[Stud_Contact]=?,[Stud_Gender]=?,"+
+                "[Stud_Address]=?,[Stud_MaritalStatus]=?,[Stud_Citizenship]=?,[Stud_Religion]=?,[Stud_BirthDate]=?,[Stud_FathersName]=?,[Stud_MothersName]=?,[Stud_FatherOccup]=?,[Stud_MotherOccup]=?,[Stud_ParentsAdress]=?,"+
+            "[Stud_HighSchool]=?,[Stud_HighSchoolYear]=?,[Stud_SeniorHigh]=?,[Stud_SeniorHIghYear]=? where [Stud_Id]=?",con );
+
+            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;
+            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtFname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Lname", OleDbType.VarChar).Value = txtLname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Mname", OleDbType.VarChar).Value = txtMname.Text;
+            cmd.Parameters.AddWithValue("@Stud_Gmail", OleDbType.VarChar).Value = txtGmail.Text;
+            cmd.Parameters.AddWithValue("@Stud_Course", OleDbType.VarChar).Value = txtAge.Text;
+            cmd.Parameters.AddWithValue("@Stud_Year", OleDbType.VarChar).Value = txtBirthPlace.Text;
+            cmd.Parameters.AddWithValue("@Stud_Section", OleDbType.VarChar).Value = txtContact.Text;
+            cmd.Parameters.AddWithValue("@Stud_ContactNumber", OleDbType.VarChar).Value = cmbGender.Text;
+            cmd.Parameters.AddWithValue("@Stud_Department", OleDbType.VarChar).Value = txtAddress.Text;
+            cmd.Parameters.AddWithValue("@Stud_Address", OleDbType.VarChar).Value = cmbMStatus.Text;
+            cmd.Parameters.AddWithValue("@Stud_Sex", OleDbType.VarChar).Value = txtCitizenship.Text;
+            cmd.Parameters.AddWithValue("@Stud_Religion", OleDbType.VarChar).Value = txtReligion.Text;
+            cmd.Parameters.AddWithValue("@Stud_BirthDate", OleDbType.Date).Value = dtpBirthday.Text;
+            cmd.Parameters.AddWithValue("@Stud_Status", OleDbType.VarChar).Value = txtFathersName.Text;
+            cmd.Parameters.AddWithValue("@Stud_SchoolYear", OleDbType.VarChar).Value = txtMothersName.Text;
+            cmd.Parameters.AddWithValue("@Stud_CivilStatus", OleDbType.VarChar).Value = txtFathersOccup.Text;
+            cmd.Parameters.AddWithValue("@Class_Name", OleDbType.VarChar).Value = txtMothersOccup.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtParentsAddress.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighSchool.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtHighYear.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorHigh.Text;
+            cmd.Parameters.AddWithValue("@Sem", OleDbType.VarChar).Value = txtSeniorYear.Text;
+            cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtStudentNumber.Text;//for where
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
+
+      
     }     
 }

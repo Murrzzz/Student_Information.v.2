@@ -374,7 +374,6 @@ namespace Student_Information.v._2
 
         private void dgvStudentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine("aaaaaaaaaaa");
             if (e.RowIndex >= 0)
             {
                 stud_id = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
