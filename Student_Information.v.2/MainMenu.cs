@@ -17,29 +17,31 @@ namespace Student_Information.v._2
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
       
         Boolean set = false;
-        public static string Stud_Id = "";
-        public static string classname = "";
-        public static string department = "";
-        public static string course = "";
-        public static string section = "";
-        public static string Fname = "";
-        public static string Lname = "";
-        public static string Mname = "";
-        public static string Gmail = "";
-        public static string Year = "";
-        public static string ContactNumber = "";
-        public static string Address = "";
-        public static string Sex = "";
-        public static string Religion = "";
-        public static string BirthDate = "";
-        public static string Status = "";
-        public static string SchoolYear = "";
-        public static string CivilStatus = "";
-        public static string Sem = "";
-        //for ADD
-        public static string Department1 = "";
-        public static string Section1 = "";
-        public static string Course1 = "";
+        public static string stud_id;
+        public static string stud_fname;
+        public static string stud_lname;
+        public static string stud_mname;
+        public static string stud_gmail;
+        public static string stud_age;
+        public static string stud_birthplace;
+        public static string stud_contact;
+        public static string stud_gender;
+        public static string stud_address;
+        public static string stud_maritalstatus;
+        public static string stud_citizenship;
+        public static string stud_religion;
+        public static string stud_birthdate;
+        public static string stud_fathersname;
+        public static string stud_mothersname;
+        public static string stud_fatheroccup;
+        public static string stud_motheroccup;
+        public static string stud_parentsaddress;
+        public static string stud_highschool;
+        public static string stud_highschoolyear;
+        public static string stud_seniorhigh;
+        public static string stud_seniorhighyear;
+        
+
 
 
         public static int  addUp = 1;
@@ -118,7 +120,8 @@ namespace Student_Information.v._2
             OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Section]([Section_Name],[Course],[Year_Level]) values(?,?,?)", con);
             cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtSectionName.Text;
             cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
-            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;                
+            cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;
+            con.Close();
         }
 
         private void btnUpdate_Class_Click(object sender, EventArgs e)
@@ -297,24 +300,26 @@ namespace Student_Information.v._2
             this.Hide();
             addUp = 1;
             ad.Show();
-            addUp = 1;
+            addUp = 0;
         }
 
         private void btnUpdateStud_Click(object sender, EventArgs e)
         {
+            addUp = 2;
             Add ad = new Add(this);
             this.Hide();
+        
             ad.Show();
-            addUp = 0;//add to Add form
+           //add to Add form
         }
-
+    
         private void pnlMasterList_Paint(object sender, PaintEventArgs e)
         {
-
+            SelectStudents();
         }
         private void SelectStudents()
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [Stud_Info]", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info]", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvStudentList.DataSource = table;
@@ -365,6 +370,16 @@ namespace Student_Information.v._2
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvStudentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.WriteLine("aaaaaaaaaaa");
+            if (e.RowIndex >= 0)
+            {
+                stud_id = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Console.WriteLine(stud_id);
+            }
         }
     }
 }

@@ -352,6 +352,59 @@ namespace Student_Information.v._2
 
         }
 
-     
-        }     
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+            OleDbDataReader rd;
+            if (MainMenu.addUp == 2)
+            {
+               
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("select * from[Stud_Info] where[Stud_Id]=? ", con);
+                cmd.Parameters .AddWithValue ("@1", OleDbType.Numeric).Value =MainMenu .stud_id ;
+                rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    txtStudentNumber.Text = rd.GetValue(0).ToString();
+                    txtFname.Text = rd.GetValue(1).ToString();
+                    txtLname.Text = rd.GetValue(2).ToString();
+                    txtMname.Text = rd.GetValue(3).ToString();
+                    txtGmail .Text  = rd.GetValue(4).ToString();
+                    txtAge .Text  = rd.GetValue(5).ToString();
+                    txtBirthPlace .Text   = rd.GetValue(6).ToString();
+                    txtContact .Text  = rd.GetValue(7).ToString();
+                    cmbGender .Text  = rd.GetValue(8).ToString();
+                    txtAddress .Text  = rd.GetValue(9).ToString();
+                    cmbMStatus .Text  = rd.GetValue(10).ToString();
+                    txtCitizenship .Text  = rd.GetValue(11).ToString();
+                    txtReligion .Text  = rd.GetValue(12).ToString();
+                    dtpBirthday.Text = rd.GetValue(13).ToString();
+                    txtFathersName .Text  = rd.GetValue(14).ToString();
+                    txtMothersName .Text  = rd.GetValue(15).ToString();
+                    txtFathersOccup .Text  = rd.GetValue(16).ToString();
+                    txtMothersOccup .Text  = rd.GetValue(17).ToString();
+                    txtParentsAddress .Text  = rd.GetValue(18).ToString();
+                    txtHighSchool .Text  = rd.GetValue(19).ToString();
+                    txtHighYear .Text  = rd.GetValue(20).ToString();
+                    txtSeniorHigh .Text  = rd.GetValue(21).ToString();
+                    txtSeniorYear .Text  = rd.GetValue(22).ToString();
+                }
+
+                cmd.Dispose();
+                con.Close();
+            }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+          
+          
+        }
+    }     
 }

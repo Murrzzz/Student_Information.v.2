@@ -494,7 +494,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1097, 780);
             this.panel2.TabIndex = 3;
-           
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // groupBox3
             // 
@@ -592,7 +592,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "STUDENTS INFORMATION";
             this.tabPage1.UseVisualStyleBackColor = true;
-
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label18
             // 
@@ -791,7 +791,6 @@
             this.txtCitizenship.Name = "txtCitizenship";
             this.txtCitizenship.Size = new System.Drawing.Size(247, 29);
             this.txtCitizenship.TabIndex = 152;
-          
             // 
             // txtAge
             // 
@@ -849,6 +848,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PARENTS INFORMATION";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label42
             // 
@@ -906,7 +906,6 @@
             this.txtParentsAddress.Name = "txtParentsAddress";
             this.txtParentsAddress.Size = new System.Drawing.Size(818, 29);
             this.txtParentsAddress.TabIndex = 188;
-            
             // 
             // label22
             // 
@@ -1073,7 +1072,7 @@
             this.button5.Size = new System.Drawing.Size(127, 36);
             this.button5.TabIndex = 124;
             this.button5.Text = "Subject";
-
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
