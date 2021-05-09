@@ -44,9 +44,9 @@ namespace Student_Information.v._2
         public static string stud_highschoolyear;
         public static string stud_seniorhigh;
         public static string stud_seniorhighyear;
+
+
         
-
-
 
         public static int  addUp = 1;
 
@@ -221,6 +221,25 @@ namespace Student_Information.v._2
             Hide_panels();
             Comboboxes();
             Comboboxes1();
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            txtSearchEnroll.AutoCompleteCustomSource = compl;
+
+            con.Close();
+           
         }
 
         private void txtClass_Name_TextChanged(object sender, EventArgs e)
@@ -363,7 +382,8 @@ namespace Student_Information.v._2
 
         private void pnlEnroll_Paint(object sender, PaintEventArgs e)
         {
-          
+            
+            lblSchoolYearEnroll.Text = SchoolYear; 
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_code],[Sub_Name],[Sub_Units] from [Subjects] where [Sub_Year]='"+cmbYear .Text +"' and [Sub_Sem]='"+cmbSem .Text +"' ", con);
             
 
@@ -374,6 +394,11 @@ namespace Student_Information.v._2
             dgvEnrolledSub.AllowUserToAddRows = false;
             dgvEnrolledSub.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvEnrolledSub.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+             
+            //-----------------------------------------------------------------------------------
+           
+        
+        
         }
         private void Comboboxes()
         {
@@ -419,6 +444,16 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName] from [Stud_Info] where [Stud_FullName]='"+txtSearchEnroll .Text +"'", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+
+
+            foreach (DataRow dr1 in table.Rows)
+            {
+                txtStudentId.Text = (dr1["Stud_Id"]).ToString();
+                txtName.Text = (dr1["Stud_FullName"]).ToString();
+            }
 
         }
 
@@ -595,36 +630,67 @@ namespace Student_Information.v._2
 
         private void btnEnroll_Click(object sender, EventArgs e)
         {
-            //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subject]", con);
-            DataTable table = new DataTable();
-            adapt.Fill(table);
-
-            
-            foreach (DataRow dr1 in table.Rows)
+            if (lblSchoolYearEnroll.Text == "")
             {
-                OleDbCommand cmd = new OleDbCommand("inert into [Enrollment]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Sub_Code],[Sub_Name],[Sub_Units]) "+
-                    "values(?,?,?,?,?,?,?,?,?,?)",con );
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYear.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectCode .Text ;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectName.Text;
-                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSubjectUnits.Text;
-                
-
-                cmbSubjectName.Items.Add(dr1["Sub_Name"].ToString());
-                cmbSubjectCode.Items.Add(dr1["Sub_Code"].ToString());
-                
-               
+                MessageBox.Show("Set the School Year First!");
             }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
+                    OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+                    DataTable table = new DataTable();
+                    adapt.Fill(table);
+
+                    int count = 0;
+
+                    OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
 
 
 
+                    count = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+                    Console.WriteLine("aaaaaaaaa");
+                    Console.WriteLine(count);
+                    int i = 0;
+                    string subName, subCode, subUnits;
+                    while (i < count)
+                    {
+                        subName = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();
+                        subCode = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                        subUnits = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+
+                        OleDbCommand cmd = new OleDbCommand("insert into [Erollment]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Sub_Code],[Sub_Name],[Sub_Units]) " +
+                            "values(?,?,?,?,?,?,?,?,?,?)", con);
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYearEnroll.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subCode;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subName;
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subUnits;
+
+
+                        cmd.ExecuteNonQuery();
+                        i++;
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void txtSearchEnroll_TextChanged(object sender, EventArgs e)
+        {
+           
         }
 
 

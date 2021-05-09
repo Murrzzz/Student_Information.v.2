@@ -51,6 +51,7 @@ namespace Student_Information.v._2
                 cmbSub8.Items.Add(dr1["Sub_Name"].ToString());
                 cmbSub9.Items.Add(dr1["Sub_Name"].ToString());
                 cmbSub10.Items.Add(dr1["Sub_Name"].ToString());
+               
             }
 
         
