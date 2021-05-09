@@ -59,7 +59,6 @@
             this.lblClass = new System.Windows.Forms.Label();
             this.txtClass_Name = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.dgvClass = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.btnUpdate_Class = new System.Windows.Forms.Button();
             this.btnAdd_Class = new System.Windows.Forms.Button();
@@ -96,23 +95,25 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblSex = new System.Windows.Forms.Label();
             this.pnlRecords = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblMname = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picexit = new System.Windows.Forms.PictureBox();
+            this.dgvClass = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlClass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.pnlSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -225,7 +226,7 @@
             this.pnlAccounts.Name = "pnlAccounts";
             this.pnlAccounts.Size = new System.Drawing.Size(821, 664);
             this.pnlAccounts.TabIndex = 1;
-            // 
+           
             // label19
             // 
             this.label19.AutoSize = true;
@@ -348,6 +349,7 @@
             // 
             // pnlClass
             // 
+            this.pnlClass.Controls.Add(this.dgvClass);
             this.pnlClass.Controls.Add(this.cmbYearLevel);
             this.pnlClass.Controls.Add(this.cmbSection);
             this.pnlClass.Controls.Add(this.cmbSem);
@@ -358,7 +360,6 @@
             this.pnlClass.Controls.Add(this.lblClass);
             this.pnlClass.Controls.Add(this.txtClass_Name);
             this.pnlClass.Controls.Add(this.button6);
-            this.pnlClass.Controls.Add(this.dgvClass);
             this.pnlClass.Controls.Add(this.label7);
             this.pnlClass.Controls.Add(this.btnUpdate_Class);
             this.pnlClass.Controls.Add(this.btnAdd_Class);
@@ -379,10 +380,10 @@
             this.cmbYearLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbYearLevel.FormattingEnabled = true;
             this.cmbYearLevel.Items.AddRange(new object[] {
-            "1st Year",
-            "2nd Year",
-            "3rd Year",
-            "4th Year"});
+            "FirstYear",
+            "SecondYear",
+            "ThirdYear",
+            "FourthYear"});
             this.cmbYearLevel.Location = new System.Drawing.Point(635, 113);
             this.cmbYearLevel.Name = "cmbYearLevel";
             this.cmbYearLevel.Size = new System.Drawing.Size(186, 28);
@@ -410,9 +411,9 @@
             this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSem.FormattingEnabled = true;
             this.cmbSem.Items.AddRange(new object[] {
-            "1st Sem",
-            "2nd Sem",
-            "3rd Sem"});
+            "First Sem",
+            "Second Sem",
+            "Third Sem"});
             this.cmbSem.Location = new System.Drawing.Point(496, 190);
             this.cmbSem.Name = "cmbSem";
             this.cmbSem.Size = new System.Drawing.Size(186, 28);
@@ -463,6 +464,7 @@
             this.label2.TabIndex = 142;
             this.label2.Text = "Note: Use the Add button to add the Class and fill\r\n          up the data needed." +
                 " And Click Update if you\r\n          need to update the propeties of Class";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label8
             // 
@@ -507,16 +509,6 @@
             this.button6.Text = "Set";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // dgvClass
-            // 
-            this.dgvClass.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClass.Location = new System.Drawing.Point(70, 332);
-            this.dgvClass.Name = "dgvClass";
-            this.dgvClass.Size = new System.Drawing.Size(729, 241);
-            this.dgvClass.TabIndex = 23;
-            this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick);
             // 
             // label7
             // 
@@ -905,6 +897,7 @@
             // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.btnPrint);
             this.pnlRecords.Controls.Add(this.pictureBox2);
             this.pnlRecords.Controls.Add(this.lblMname);
             this.pnlRecords.Controls.Add(this.lblFname);
@@ -928,6 +921,20 @@
             this.pnlRecords.Size = new System.Drawing.Size(821, 664);
             this.pnlRecords.TabIndex = 8;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(92, 237);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(127, 36);
+            this.btnPrint.TabIndex = 105;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // pictureBox2
             // 
@@ -984,6 +991,17 @@
             this.picexit.TabStop = false;
             this.picexit.Click += new System.EventHandler(this.picexit_Click);
             // 
+            // dgvClass
+            // 
+            this.dgvClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvClass.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClass.Location = new System.Drawing.Point(48, 308);
+            this.dgvClass.Name = "dgvClass";
+            this.dgvClass.Size = new System.Drawing.Size(729, 277);
+            this.dgvClass.TabIndex = 148;
+            this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick_2);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,7 +1026,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.pnlSubjects.ResumeLayout(false);
             this.pnlSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
@@ -1017,6 +1034,7 @@
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1043,7 +1061,6 @@
         private System.Windows.Forms.Panel pnlSubjects;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dgvClass;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.Button button7;
@@ -1091,9 +1108,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cmbSection;
-        private System.Windows.Forms.ComboBox cmbSem;
-        private System.Windows.Forms.ComboBox cmbSchoolYear;
-        private System.Windows.Forms.ComboBox cmbYearLevel;
+        public System.Windows.Forms.ComboBox cmbSection;
+        public System.Windows.Forms.ComboBox cmbSem;
+        public System.Windows.Forms.ComboBox cmbSchoolYear;
+        public System.Windows.Forms.ComboBox cmbYearLevel;
+        public System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.DataGridView dgvClass;
     }
 }

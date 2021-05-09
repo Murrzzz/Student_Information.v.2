@@ -37,7 +37,9 @@
             this.btnUserUpdate = new System.Windows.Forms.Button();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.pnlSend = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlRecords = new System.Windows.Forms.Panel();
+            this.btnprint = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -71,12 +73,13 @@
             this.lblClassName = new System.Windows.Forms.Label();
             this.lblLname = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnGrade_Students = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Student = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.dgvSubject_Students = new System.Windows.Forms.DataGridView();
-            this.btnGrade_Students = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
@@ -210,8 +213,23 @@
             this.pnlSend.TabIndex = 1;
             this.pnlSend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSaveData_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(89, 298);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Send";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // pnlRecords
             // 
+            this.pnlRecords.Controls.Add(this.btnprint);
             this.pnlRecords.Controls.Add(this.label17);
             this.pnlRecords.Controls.Add(this.label16);
             this.pnlRecords.Controls.Add(this.label15);
@@ -230,6 +248,20 @@
             this.pnlRecords.Size = new System.Drawing.Size(860, 664);
             this.pnlRecords.TabIndex = 7;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
+            // 
+            // btnprint
+            // 
+            this.btnprint.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprint.ForeColor = System.Drawing.Color.White;
+            this.btnprint.Location = new System.Drawing.Point(652, 229);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(127, 36);
+            this.btnprint.TabIndex = 53;
+            this.btnprint.Text = "Print";
+            this.btnprint.UseVisualStyleBackColor = false;
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // label17
             // 
@@ -325,7 +357,7 @@
             this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrade.ForeColor = System.Drawing.Color.White;
-            this.btnGrade.Location = new System.Drawing.Point(560, 229);
+            this.btnGrade.Location = new System.Drawing.Point(500, 229);
             this.btnGrade.Name = "btnGrade";
             this.btnGrade.Size = new System.Drawing.Size(127, 36);
             this.btnGrade.TabIndex = 43;
@@ -335,6 +367,7 @@
             // 
             // dgvStudent
             // 
+            this.dgvStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStudent.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Location = new System.Drawing.Point(78, 335);
@@ -603,6 +636,20 @@
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnGrade_Students
+            // 
+            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
+            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
+            this.btnGrade_Students.Name = "btnGrade_Students";
+            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
+            this.btnGrade_Students.TabIndex = 56;
+            this.btnGrade_Students.Text = "Grade";
+            this.btnGrade_Students.UseVisualStyleBackColor = false;
+            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -643,33 +690,20 @@
             this.dgvSubject_Students.TabIndex = 44;
             this.dgvSubject_Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_Students_CellContentClick);
             // 
-            // btnGrade_Students
+            // printDocument1
             // 
-            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
-            this.btnGrade_Students.Name = "btnGrade_Students";
-            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
-            this.btnGrade_Students.TabIndex = 56;
-            this.btnGrade_Students.Text = "Grade";
-            this.btnGrade_Students.UseVisualStyleBackColor = false;
-            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // button2
+            // printPreviewDialog1
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(89, 298);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 36);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Send";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Settings
             // 
@@ -678,10 +712,10 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1051, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.pnlSend);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -758,5 +792,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnGrade_Students;
+        private System.Windows.Forms.Button btnprint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
