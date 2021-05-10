@@ -18,7 +18,7 @@ namespace Student_Information.v._2
             InitializeComponent();
         }
 
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -69,6 +69,9 @@ namespace Student_Information.v._2
         {
             Hide_panels();
             pnlSend.Show();
+            Inbox inb = new Inbox();
+
+            inb.Show();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -90,56 +93,56 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-            
+            Comboboxes();
         }
-        private void select_students()
+        private void Comboboxes()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select * from [Students] where[Class_Name]='"+lblClass_Name.Text  +"'", con);
-            DataTable table1 = new DataTable();
-            adapt1.Fill(table1);
-            dgvStudent.DataSource = table1;
+            con.Open();
 
-            dgvStudent.AllowUserToAddRows = false;
-            dgvStudent.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvStudent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-
-        private void select_class()
-        {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [class]", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [SchoolYear] from [SchoolYear]", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
-            dgvClass.DataSource = table;
 
-            dgvClass.AllowUserToAddRows = false;
-            dgvClass.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            foreach (DataRow dr1 in table.Rows)
+            {
+                cmbSchoolYear.Items.Add(dr1["SchoolYear"].ToString());
+               
+            }
+
+
+            con.Close();
         }
-
         private void btnGrade_Click(object sender, EventArgs e)
         {
-            Hide_panels();
-            //pnlGrade.Show();
-            Grading grad = new Grading();
-            grad.Show();
+           
         }
 
         private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvClass.Rows[e.RowIndex];
-                lblClass_Name.Text = row.Cells["ClassName"].Value.ToString();
-               
-            }
-            select_students();
+                     
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            select_class();
-            select_students();
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            txtSearchRecords.AutoCompleteCustomSource = compl;
+
+            con.Close();
         }
 
       
@@ -191,7 +194,7 @@ namespace Student_Information.v._2
             print.HeaderCellAlignment = StringAlignment.Near;
             print.Footer = "Footer";
             print.FooterSpacing = 15;
-            print.PrintDataGridView(dgvStudent);
+            //print.PrintDataGridView(dgvStudent);
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -203,6 +206,129 @@ namespace Student_Information.v._2
         {
 
         }
-      
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gender],[Stud_BirthDate],[Stud_Address] from [Stud_Info] where [Stud_FullName]='" + txtSearchRecords.Text + "'", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+
+
+            foreach (DataRow dr1 in table.Rows)
+            {
+                txtStudentNumber .Text  = (dr1["Stud_Id"]).ToString();
+                txtName.Text = (dr1["Stud_FullName"]).ToString();
+                txtGender.Text = (dr1["Stud_Gender"]).ToString();
+                dtpBirthday.Text = (dr1["Stud_BirthDate"]).ToString();
+                txtAddress.Text = (dr1["Stud_Address"]).ToString();
+            }
+
+        }
+
+        private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Grade_Sem1();
+            Grade_Sem2();
+        }
+
+        private void Grade_Sem1()//First Sem
+        {
+            try
+            {
+                con.Open();
+
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Sem],[Stud_Course],[Stud_Year],[Stud_Section] from [Erollment] where [SchoolYear]='"+cmbSchoolYear .Text +"' and [Stud_Id]='"+txtStudentNumber .Text +"' and [Stud_Name]='"+txtName .Text +"' and [Stud_Sem]='1st Sem'", con);
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+
+                foreach (DataRow dr1 in table.Rows)
+                {
+                    txtSem .Text =(dr1["Stud_Sem"].ToString());
+                    txtCourse .Text =(dr1["Stud_Course"].ToString());
+                    txtYear .Text  = (dr1["Stud_Year"].ToString());
+                    txtSection .Text  = (dr1["Stud_Section"].ToString());
+                   
+                }
+
+                Section_FirstSem();//Table Subject
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex .Message );
+            }
+        }
+
+        private void Section_FirstSem()//Grades and subjects in First sem
+        {
+            try
+            {
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units],[Sub_Grades] from [Erollment] where [SchoolYear]='" + cmbSchoolYear.Text + "' and [Stud_Id]='" + txtStudentNumber.Text + "' and [Stud_Name]='" + txtName.Text + "' and [Stud_Sem]='1st Sem'", con);
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+                dgvFirstSem.DataSource = table;
+
+                dgvFirstSem.AllowUserToAddRows = false;
+                dgvFirstSem.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvFirstSem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+            }
+        }
+
+        private void Grade_Sem2()//Second Sem
+        {
+            try
+            {
+                con.Open();
+
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Sem],[Stud_Course],[Stud_Year],[Stud_Section] from [Erollment] where [SchoolYear]='" + cmbSchoolYear.Text + "' and [Stud_Id]='" + txtStudentNumber.Text + "' and [Stud_Name]='" + txtName.Text + "' and [Stud_Sem]='2nd Sem'", con);
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+
+                foreach (DataRow dr1 in table.Rows)
+                {
+                    txtSem2.Text = (dr1["Stud_Sem"].ToString());
+                    txtCourse2.Text = (dr1["Stud_Course"].ToString());
+                    txtYear2.Text = (dr1["Stud_Year"].ToString());
+                    txtSection2.Text = (dr1["Stud_Section"].ToString());
+
+                }
+
+                Section_Second();//Table Subject
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void Section_Second()//Grades and subjects in First sem
+        {
+            try
+            {
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units],[Sub_Grades] from [Erollment] where [SchoolYear]='" + cmbSchoolYear.Text + "' and [Stud_Id]='" + txtStudentNumber.Text + "' and [Stud_Name]='" + txtName.Text + "' and [Stud_Sem]='2nd Sem'", con);
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+                dgvSecondSem.DataSource = table;
+
+                dgvSecondSem.AllowUserToAddRows = false;
+                dgvSecondSem.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvSecondSem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pnlGrade_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

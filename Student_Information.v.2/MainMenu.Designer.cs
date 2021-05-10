@@ -109,6 +109,7 @@
             this.dgvEnrolledSub = new System.Windows.Forms.DataGridView();
             this.picexit = new System.Windows.Forms.PictureBox();
             this.pnlArchiveList = new System.Windows.Forms.Panel();
+            this.btnMessageArchive = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvArchive = new System.Windows.Forms.DataGridView();
             this.pnlMasterList = new System.Windows.Forms.Panel();
+            this.btnMessageMasterList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUpdateStud = new System.Windows.Forms.Button();
             this.btnAddStud = new System.Windows.Forms.Button();
@@ -124,6 +126,8 @@
             this.txtSearchMasterList = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -777,7 +781,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(893, 48);
+            this.button12.Location = new System.Drawing.Point(787, 46);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(93, 36);
             this.button12.TabIndex = 174;
@@ -791,7 +795,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(794, 48);
+            this.button11.Location = new System.Drawing.Point(688, 46);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(93, 36);
             this.button11.TabIndex = 173;
@@ -802,7 +806,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(313, 56);
+            this.label20.Location = new System.Drawing.Point(207, 54);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 20);
             this.label20.TabIndex = 172;
@@ -811,7 +815,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(407, 52);
+            this.textBox4.Location = new System.Drawing.Point(301, 50);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(379, 29);
@@ -854,6 +858,8 @@
             // 
             // pnlEnroll
             // 
+            this.pnlEnroll.Controls.Add(this.label25);
+            this.pnlEnroll.Controls.Add(this.txtEmail);
             this.pnlEnroll.Controls.Add(this.lblSchoolYearEnroll);
             this.pnlEnroll.Controls.Add(this.label26);
             this.pnlEnroll.Controls.Add(this.btnPrint);
@@ -1048,7 +1054,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(134, 156);
+            this.label10.Location = new System.Drawing.Point(134, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 153;
@@ -1057,7 +1063,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(192, 153);
+            this.txtName.Location = new System.Drawing.Point(192, 139);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(187, 29);
@@ -1067,7 +1073,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(98, 102);
+            this.label9.Location = new System.Drawing.Point(98, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 20);
             this.label9.TabIndex = 151;
@@ -1076,7 +1082,7 @@
             // txtStudentId
             // 
             this.txtStudentId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentId.Location = new System.Drawing.Point(192, 98);
+            this.txtStudentId.Location = new System.Drawing.Point(192, 84);
             this.txtStudentId.Multiline = true;
             this.txtStudentId.Name = "txtStudentId";
             this.txtStudentId.Size = new System.Drawing.Size(187, 29);
@@ -1107,6 +1113,7 @@
             // 
             // pnlArchiveList
             // 
+            this.pnlArchiveList.Controls.Add(this.btnMessageArchive);
             this.pnlArchiveList.Controls.Add(this.btnRestore);
             this.pnlArchiveList.Controls.Add(this.button9);
             this.pnlArchiveList.Controls.Add(this.label19);
@@ -1119,13 +1126,27 @@
             this.pnlArchiveList.TabIndex = 30;
             this.pnlArchiveList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchiveList_Paint);
             // 
+            // btnMessageArchive
+            // 
+            this.btnMessageArchive.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnMessageArchive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMessageArchive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessageArchive.ForeColor = System.Drawing.Color.White;
+            this.btnMessageArchive.Location = new System.Drawing.Point(911, 35);
+            this.btnMessageArchive.Name = "btnMessageArchive";
+            this.btnMessageArchive.Size = new System.Drawing.Size(93, 36);
+            this.btnMessageArchive.TabIndex = 175;
+            this.btnMessageArchive.Text = "Message";
+            this.btnMessageArchive.UseVisualStyleBackColor = false;
+            this.btnMessageArchive.Click += new System.EventHandler(this.btnMessageArchive_Click);
+            // 
             // btnRestore
             // 
             this.btnRestore.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestore.ForeColor = System.Drawing.Color.White;
-            this.btnRestore.Location = new System.Drawing.Point(869, 35);
+            this.btnRestore.Location = new System.Drawing.Point(812, 35);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(93, 36);
             this.btnRestore.TabIndex = 174;
@@ -1139,7 +1160,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(753, 34);
+            this.button9.Location = new System.Drawing.Point(714, 34);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 36);
             this.button9.TabIndex = 173;
@@ -1150,7 +1171,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(272, 42);
+            this.label19.Location = new System.Drawing.Point(233, 42);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(91, 20);
             this.label19.TabIndex = 172;
@@ -1159,7 +1180,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(366, 38);
+            this.textBox3.Location = new System.Drawing.Point(327, 38);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(379, 29);
@@ -1190,6 +1211,7 @@
             // 
             // pnlMasterList
             // 
+            this.pnlMasterList.Controls.Add(this.btnMessageMasterList);
             this.pnlMasterList.Controls.Add(this.button1);
             this.pnlMasterList.Controls.Add(this.btnUpdateStud);
             this.pnlMasterList.Controls.Add(this.btnAddStud);
@@ -1204,13 +1226,27 @@
             this.pnlMasterList.TabIndex = 31;
             this.pnlMasterList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMasterList_Paint);
             // 
+            // btnMessageMasterList
+            // 
+            this.btnMessageMasterList.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnMessageMasterList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMessageMasterList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessageMasterList.ForeColor = System.Drawing.Color.White;
+            this.btnMessageMasterList.Location = new System.Drawing.Point(775, 64);
+            this.btnMessageMasterList.Name = "btnMessageMasterList";
+            this.btnMessageMasterList.Size = new System.Drawing.Size(93, 36);
+            this.btnMessageMasterList.TabIndex = 177;
+            this.btnMessageMasterList.Text = "Message";
+            this.btnMessageMasterList.UseVisualStyleBackColor = false;
+            this.btnMessageMasterList.Click += new System.EventHandler(this.btnMessageMasterList_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(887, 56);
+            this.button1.Location = new System.Drawing.Point(675, 64);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
             this.button1.TabIndex = 176;
@@ -1224,7 +1260,7 @@
             this.btnUpdateStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStud.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStud.Location = new System.Drawing.Point(762, 55);
+            this.btnUpdateStud.Location = new System.Drawing.Point(775, 15);
             this.btnUpdateStud.Name = "btnUpdateStud";
             this.btnUpdateStud.Size = new System.Drawing.Size(93, 36);
             this.btnUpdateStud.TabIndex = 175;
@@ -1238,7 +1274,7 @@
             this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStud.ForeColor = System.Drawing.Color.White;
-            this.btnAddStud.Location = new System.Drawing.Point(662, 55);
+            this.btnAddStud.Location = new System.Drawing.Point(675, 15);
             this.btnAddStud.Name = "btnAddStud";
             this.btnAddStud.Size = new System.Drawing.Size(93, 36);
             this.btnAddStud.TabIndex = 174;
@@ -1303,6 +1339,25 @@
             this.dgvStudentList.TabIndex = 149;
             this.dgvStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentClick);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(133, 186);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 20);
+            this.label25.TabIndex = 180;
+            this.label25.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(191, 183);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(187, 29);
+            this.txtEmail.TabIndex = 179;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1311,13 +1366,13 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlEnroll);
-            this.Controls.Add(this.pnlMasterList);
-            this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlEnroll);
+            this.Controls.Add(this.pnlMasterList);
+            this.Controls.Add(this.pnlArchiveList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1451,5 +1506,9 @@
         private System.Windows.Forms.Label lblSchoolYear;
         private System.Windows.Forms.Label lblSchoolYearEnroll;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btnMessageArchive;
+        private System.Windows.Forms.Button btnMessageMasterList;
+        private System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox txtEmail;
     }
 }

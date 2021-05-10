@@ -13,7 +13,8 @@ namespace Student_Information.v._2
 {
     public partial class Inbox : Form
     {
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Student_Info.accdb;Persist Security Info = True");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
+      
         NetworkCredential login;
         SmtpClient client;
         MailMessage msg;
@@ -39,17 +40,39 @@ namespace Student_Information.v._2
         private void pnlAnnouncements_Paint(object sender, PaintEventArgs e)
         {
             //cmbClass.Refresh();
-            string message = "Hello this is template";
-            txtMessage.Text = message;
-
-
-            Students();
+            chkSSL.Checked = true;
+            //Students();
             txtReciepients.ReadOnly = true;
             txtReciepients.BackColor = System.Drawing.SystemColors.Window;
+            if (rdPersonal.Checked == true)
+            {
+                if (MainMenu.masterAndArchiveChoose == 1)
+                {
+                    txtReciepients.Text = MainMenu.messageMasterlist;
+                    rdPersonal.Checked = true;
+                }
+                else if (MainMenu.masterAndArchiveChoose == 2)
+                {
+                    txtReciepients.Text = MainMenu.messageArchive;
+                    rdPersonal.Checked = true;
+                }
+            }
+            else if (rdGroup.Checked == true)
+            {
+                if (cmbGroups.Text == "All Students")
+                {
+                    All_Students();
+                }
+                else if (cmbGroups.Text == "Enrolled Students")
+                {
+                    Enrolled_Students();
+                }
+            }
+
         }
-        private void Students()
+        private void All_Students()
         {
-            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Lname],[Stud_Gmail],[Stud_Id] from [Students] where [Class_Name]='" + cmbClass.Text + "'", con);
+            OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_FullName],[Stud_Gmail] from [Stud_Info]", con);
 
 
 
@@ -64,7 +87,30 @@ namespace Student_Information.v._2
             dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        private void Enrolled_Students()
+        {
+            try
+            {
+                   OleDbDataAdapter adapt1 = new OleDbDataAdapter("Select [Stud_Name],[Stud_Gmail] from [EnrollmentDetails] where [SchoolYear]='"+MainMenu .SchoolYear +"'", con);
 
+
+
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            dgvStudents.DataSource = table1;
+
+            num = table1.Rows.Count;
+            Console.WriteLine(num);
+
+            dgvStudents.AllowUserToAddRows = false;
+            dgvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
             if (txtMessage.Text == "Write Message!")
@@ -104,7 +150,7 @@ namespace Student_Information.v._2
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
-            Students();
+            
         }
 
         private void btnGrade_Students_Click(object sender, EventArgs e)
@@ -211,7 +257,6 @@ namespace Student_Information.v._2
                             Console.WriteLine(email);
                         }
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -266,6 +311,26 @@ namespace Student_Information.v._2
                 }
 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMessage_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
       

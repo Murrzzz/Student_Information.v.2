@@ -22,31 +22,12 @@ namespace Student_Information.v._2
         public static string stud_id_restore;
         public static string SchoolYear;
 
-        public static string stud_fname;
-        public static string stud_lname;
-        public static string stud_mname;
-        public static string stud_gmail;
-        public static string stud_age;
-        public static string stud_birthplace;
-        public static string stud_contact;
-        public static string stud_gender;
-        public static string stud_address;
-        public static string stud_maritalstatus;
-        public static string stud_citizenship;
-        public static string stud_religion;
-        public static string stud_birthdate;
-        public static string stud_fathersname;
-        public static string stud_mothersname;
-        public static string stud_fatheroccup;
-        public static string stud_motheroccup;
-        public static string stud_parentsaddress;
-        public static string stud_highschool;
-        public static string stud_highschoolyear;
-        public static string stud_seniorhigh;
-        public static string stud_seniorhighyear;
+        public static string messageMasterlist;
+        public static string messageArchive;
+        public static string messageEnrolled;
 
 
-        
+        public static int masterAndArchiveChoose = 0;
 
         public static int  addUp = 1;
 
@@ -189,13 +170,22 @@ namespace Student_Information.v._2
         {
             select_Subject();
         }
-        
-
-       
-
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
             lblSchoolYear.Text = SchoolYear;
+            Select_Enrolee();
+        }
+        private void Select_Enrolee()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Course],[Stud_Section],[Stud_Sem] from [EnrollmentDetails] where [SchoolYear]='"+lblSchoolYear .Text +"'", con);
+
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvEnrolled.DataSource = table;
+
+            dgvEnrolled.AllowUserToAddRows = false;
+            dgvEnrolled.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvEnrolled.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private void VariableImported()
         {
@@ -377,7 +367,10 @@ namespace Student_Information.v._2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                messageEnrolled = dgvEnrolled.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
 
         private void pnlEnroll_Paint(object sender, PaintEventArgs e)
@@ -444,7 +437,7 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName] from [Stud_Info] where [Stud_FullName]='"+txtSearchEnroll .Text +"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_FullName]='"+txtSearchEnroll .Text +"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
 
@@ -453,6 +446,7 @@ namespace Student_Information.v._2
             {
                 txtStudentId.Text = (dr1["Stud_Id"]).ToString();
                 txtName.Text = (dr1["Stud_FullName"]).ToString();
+                txtEmail .Text  = (dr1["Stud_Gmail"]).ToString();
             }
 
         }
@@ -463,6 +457,7 @@ namespace Student_Information.v._2
             {
                 stud_id = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
                 stud_id_Archive = dgvStudentList.Rows[e.RowIndex].Cells[0].Value.ToString();
+                messageMasterlist = dgvStudentList.Rows[e.RowIndex].Cells[4].Value.ToString();
                 Console.WriteLine(stud_id);
             }
         }
@@ -552,7 +547,8 @@ namespace Student_Information.v._2
             if (e.RowIndex >= 0)
             {
                 stud_id_restore = dgvArchive.Rows[e.RowIndex].Cells[0].Value.ToString();
-                Console.WriteLine(stud_id);
+                messageArchive = dgvArchive.Rows[e.RowIndex].Cells[4].Value.ToString();
+               
             }
         }
 
@@ -598,6 +594,7 @@ namespace Student_Information.v._2
         {
             try
             {
+
                 string year = "" + txtYear.Text + " -" + txtYear1.Text + "";
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand("insert into [SchoolYear]([SchoolYear]) values(?)", con);
@@ -605,6 +602,7 @@ namespace Student_Information.v._2
                 cmd.ExecuteNonQuery();
                 SelectYear();
                 con.Close();
+
             }
             catch (Exception ex)
             {
@@ -636,61 +634,111 @@ namespace Student_Information.v._2
             }
             else
             {
-                try
-                {
-                    con.Open();
-                    //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
-                    OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
-                    DataTable table = new DataTable();
-                    adapt.Fill(table);
-
-                    int count = 0;
-
-                    OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
-
-
-
-                    count = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
-
-                    Console.WriteLine("aaaaaaaaa");
-                    Console.WriteLine(count);
-                    int i = 0;
-                    string subName, subCode, subUnits;
-                    while (i < count)
-                    {
-                        subName = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();
-                        subCode = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
-                        subUnits = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
-
-                        OleDbCommand cmd = new OleDbCommand("insert into [Erollment]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Sub_Code],[Sub_Name],[Sub_Units]) " +
-                            "values(?,?,?,?,?,?,?,?,?,?)", con);
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYearEnroll.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subCode;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subName;
-                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subUnits;
-
-
-                        cmd.ExecuteNonQuery();
-                        i++;
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                insertSubjects_Students();
+                insertEnrolled_Details();
             }
         }
+        private void insertSubjects_Students()
+        {
+            try
+            {
+                con.Open();
+                //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+                DataTable table = new DataTable();
+                adapt.Fill(table);
 
+                int count = 0;
+
+                OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+
+
+
+                count = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+                Console.WriteLine("aaaaaaaaa");
+                Console.WriteLine(count);
+                int i = 0;
+                string subName, subCode, subUnits;
+                while (i < count)
+                {
+                    subName = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();
+                    subCode = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                    subUnits = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+
+                    OleDbCommand cmd = new OleDbCommand("insert into [Erollment]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Sub_Code],[Sub_Name],[Sub_Units],[Stud_Gmail]) " +
+                        "values(?,?,?,?,?,?,?,?,?,?,?)", con);
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYearEnroll.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subCode;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subName;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = subUnits;
+                    cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtEmail.Text;
+
+
+                    cmd.ExecuteNonQuery();
+                    i++;
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void insertEnrolled_Details()
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("insert into [EnrollmentDetails]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Stud_Gmail]) " +
+                       "values(?,?,?,?,?,?,?,?)", con);
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYearEnroll.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
+               
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtEmail.Text;
+
+                
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void txtSearchEnroll_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnMessageEnrolled_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMessageMasterList_Click(object sender, EventArgs e)
+        {
+            Inbox inb = new Inbox();
+            masterAndArchiveChoose = 1;   
+            inb.Show();
+        }
+
+        private void btnMessageArchive_Click(object sender, EventArgs e)
+        {
+            Inbox inb = new Inbox();
+            masterAndArchiveChoose = 2;
+            inb.Show();
         }
 
 
