@@ -37,6 +37,11 @@
     <StartupObject>Student_Information.v._2.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -77,6 +82,12 @@
     <Compile Include="PintClass.Designer.cs">
       <DependentUpon>PintClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSubjects.Designer.cs">
+      <DependentUpon>PrintSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prof_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,18 +105,6 @@
     </Compile>
     <Compile Include="CreateAcc.Designer.cs">
       <DependentUpon>CreateAcc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -154,6 +153,9 @@
     <EmbeddedResource Include="PintClass.resx">
       <DependentUpon>PintClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintSubjects.resx">
+      <DependentUpon>PrintSubjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prof_Login.resx">
       <DependentUpon>Prof_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,12 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -266,6 +262,25 @@
     <Content Include="Student_Info.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

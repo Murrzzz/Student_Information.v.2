@@ -26,12 +26,25 @@ namespace Student_Information.v._2
         public static string messageArchive;
         public static string messageEnrolled;
 
+        public static string[] SubName= new string[30];
+        public static string[] SubCode=new string [30];
+        public static string[] SubUnits=new string[30];
+
+        public static int count_sub = 0;//Count subjects into the print form
 
         public static int masterAndArchiveChoose = 0;
 
         public static int  addUp = 1;
 
         public static string SetupClassName = "";
+
+        public static string StudentId;//data that will imported to print form
+        public static string Name;
+        public static string Course;
+        public static string Year;
+        public static string Section;
+        public static string Sem;
+        public static string SchoolYear_Print;
 
         public MainMenu()
         {
@@ -662,6 +675,10 @@ namespace Student_Information.v._2
                 string subName, subCode, subUnits;
                 while (i < count)
                 {
+                    SubName [i] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                    SubCode [i]= dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                    SubUnits [i] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+
                     subName = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();
                     subCode = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
                     subUnits = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
@@ -741,6 +758,47 @@ namespace Student_Information.v._2
             inb.Show();
         }
 
+        private void btnPrint_Click_1(object sender, EventArgs e)
+        {
+            con.Open();
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+
+            int i = 0;
+            int a = 2;
+            count_sub  = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+            while (i < count_sub )
+            {
+                if (i == 0)
+                {
+                    SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                    SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                    SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+                    Console.WriteLine(a);
+                    i++;
+                    a++;
+                }
+                
+                
+                    SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                    SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                    SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+                    Console.WriteLine(a);
+                    i++;
+                    a++;
+            }
+            StudentId = txtStudentId.Text;
+            Name = txtName.Text ;
+            Course = cmbCourse.Text;
+            Section = cmbSectionName.Text;
+            Sem = cmbSem.Text;
+            Year = cmbYear.Text;
+            SchoolYear_Print  = lblSchoolYear.Text;
+            PrintSubjects sub=new PrintSubjects(this );
+            sub.Show();
+            con.Close();
+        }
+        
 
     }
 }

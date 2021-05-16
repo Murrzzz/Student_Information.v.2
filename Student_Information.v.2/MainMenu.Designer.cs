@@ -939,6 +939,7 @@
             this.btnPrint.TabIndex = 176;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
             // 
             // btnEnroll
             // 
@@ -1366,15 +1367,15 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlEnroll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainMenu";
+           
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -1443,7 +1444,6 @@
         private System.Windows.Forms.TextBox txtUnits;
         private System.Windows.Forms.DataGridView dgvEnrolled;
         private System.Windows.Forms.Panel pnlEnroll;
-        private System.Windows.Forms.DataGridView dgvEnrolledSub;
         public System.Windows.Forms.ComboBox cmbYearLevel;
         public System.Windows.Forms.ComboBox cmbSem;
         public System.Windows.Forms.ComboBox cmbSectionName;
@@ -1510,5 +1510,6 @@
         private System.Windows.Forms.Button btnMessageMasterList;
         private System.Windows.Forms.Label label25;
         public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.DataGridView dgvEnrolledSub;
     }
 }
