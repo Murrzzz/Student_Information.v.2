@@ -87,6 +87,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dgvEnrolled = new System.Windows.Forms.DataGridView();
             this.pnlEnroll = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblSchoolYearEnroll = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -126,8 +128,6 @@
             this.txtSearchMasterList = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -886,6 +886,25 @@
             this.pnlEnroll.TabIndex = 29;
             this.pnlEnroll.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnroll_Paint);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(133, 186);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 20);
+            this.label25.TabIndex = 180;
+            this.label25.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(191, 183);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(187, 29);
+            this.txtEmail.TabIndex = 179;
+            // 
             // lblSchoolYearEnroll
             // 
             this.lblSchoolYearEnroll.AutoSize = true;
@@ -1339,25 +1358,6 @@
             this.dgvStudentList.TabIndex = 149;
             this.dgvStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentClick);
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(133, 186);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(52, 20);
-            this.label25.TabIndex = 180;
-            this.label25.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(191, 183);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(187, 29);
-            this.txtEmail.TabIndex = 179;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1366,13 +1366,13 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlEnroll);
+            this.Controls.Add(this.pnlMasterList);
+            this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlEnroll);
-            this.Controls.Add(this.pnlMasterList);
-            this.Controls.Add(this.pnlArchiveList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
