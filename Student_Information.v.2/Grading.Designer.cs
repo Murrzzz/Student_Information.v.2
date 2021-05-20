@@ -60,7 +60,7 @@
             this.bntC9 = new System.Windows.Forms.Button();
             this.btnC10 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbCourse = new System.Windows.Forms.ComboBox();
+            this.cmbStudentNumber = new System.Windows.Forms.ComboBox();
             this.cmbSection = new System.Windows.Forms.ComboBox();
             this.cmbSem = new System.Windows.Forms.ComboBox();
             this.cmbSub10 = new System.Windows.Forms.ComboBox();
@@ -76,7 +76,12 @@
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmbGr1 = new System.Windows.Forms.ComboBox();
+            this.txtGr1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtSearchRecords = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -247,11 +252,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateGray;
-            this.label3.Location = new System.Drawing.Point(199, 294);
+            this.label3.Location = new System.Drawing.Point(157, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 24);
+            this.label3.Size = new System.Drawing.Size(153, 24);
             this.label3.TabIndex = 176;
-            this.label3.Text = "Course:";
+            this.label3.Text = "Student Number:";
             // 
             // label4
             // 
@@ -426,15 +431,15 @@
             this.label6.TabIndex = 190;
             this.label6.Text = "Total:";
             // 
-            // cmbCourse
+            // cmbStudentNumber
             // 
-            this.cmbCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(144, 321);
-            this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(179, 28);
-            this.cmbCourse.TabIndex = 191;
-            this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
+            this.cmbStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStudentNumber.FormattingEnabled = true;
+            this.cmbStudentNumber.Location = new System.Drawing.Point(144, 232);
+            this.cmbStudentNumber.Name = "cmbStudentNumber";
+            this.cmbStudentNumber.Size = new System.Drawing.Size(179, 28);
+            this.cmbStudentNumber.TabIndex = 191;
+            this.cmbStudentNumber.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
             // 
             // cmbSection
             // 
@@ -558,11 +563,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
-            this.label7.Location = new System.Drawing.Point(97, 147);
+            this.label7.Location = new System.Drawing.Point(33, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 24);
+            this.label7.Size = new System.Drawing.Size(118, 24);
             this.label7.TabIndex = 205;
-            this.label7.Text = "Course:";
+            this.label7.Text = "School Year:";
             // 
             // button1
             // 
@@ -570,21 +575,76 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(932, 123);
+            this.button1.Location = new System.Drawing.Point(171, 755);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 206;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cmbGr1
+            // txtGr1
             // 
-            this.cmbGr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGr1.FormattingEnabled = true;
-            this.cmbGr1.Location = new System.Drawing.Point(729, 336);
-            this.cmbGr1.Name = "cmbGr1";
-            this.cmbGr1.Size = new System.Drawing.Size(110, 28);
-            this.cmbGr1.TabIndex = 207;
+            this.txtGr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGr1.Location = new System.Drawing.Point(729, 337);
+            this.txtGr1.Multiline = true;
+            this.txtGr1.Name = "txtGr1";
+            this.txtGr1.Size = new System.Drawing.Size(110, 29);
+            this.txtGr1.TabIndex = 207;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(1079, 84);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 36);
+            this.btnSearch.TabIndex = 210;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(598, 92);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(91, 20);
+            this.label14.TabIndex = 209;
+            this.label14.Text = "Student ID:";
+            // 
+            // txtSearchRecords
+            // 
+            this.txtSearchRecords.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSearchRecords.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRecords.Location = new System.Drawing.Point(692, 88);
+            this.txtSearchRecords.Name = "txtSearchRecords";
+            this.txtSearchRecords.Size = new System.Drawing.Size(379, 26);
+            this.txtSearchRecords.TabIndex = 208;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.FormattingEnabled = true;
+            this.txtName.Location = new System.Drawing.Point(144, 328);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(179, 28);
+            this.txtName.TabIndex = 212;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SlateGray;
+            this.label8.Location = new System.Drawing.Point(205, 301);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 24);
+            this.label8.TabIndex = 211;
+            this.label8.Text = "Name";
             // 
             // Grading
             // 
@@ -592,7 +652,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1247, 938);
-            this.Controls.Add(this.cmbGr1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtSearchRecords);
+            this.Controls.Add(this.txtGr1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbSub10);
@@ -608,7 +673,7 @@
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbSem);
             this.Controls.Add(this.cmbSection);
-            this.Controls.Add(this.cmbCourse);
+            this.Controls.Add(this.cmbStudentNumber);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnC10);
             this.Controls.Add(this.bntC9);
@@ -639,7 +704,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Grading";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grading";
             this.Load += new System.EventHandler(this.Grading_Load);
             this.ResumeLayout(false);
@@ -682,7 +747,7 @@
         private System.Windows.Forms.Button bntC9;
         private System.Windows.Forms.Button btnC10;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.ComboBox cmbCourse;
+        public System.Windows.Forms.ComboBox cmbStudentNumber;
         public System.Windows.Forms.ComboBox cmbSection;
         public System.Windows.Forms.ComboBox cmbSem;
         public System.Windows.Forms.ComboBox cmbSub10;
@@ -698,7 +763,12 @@
         public System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.ComboBox cmbGr1;
+        public System.Windows.Forms.TextBox txtGr1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox txtSearchRecords;
+        public System.Windows.Forms.ComboBox txtName;
+        private System.Windows.Forms.Label label8;
        
     }
 }

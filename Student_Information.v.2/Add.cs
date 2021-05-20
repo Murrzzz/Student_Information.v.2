@@ -443,6 +443,13 @@ namespace Student_Information.v._2
             con.Close();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+        }
+
       
     }     
 }

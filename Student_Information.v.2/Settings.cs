@@ -19,7 +19,26 @@ namespace Student_Information.v._2
         }
 
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
-      
+        public static string []SubName =new string[30];
+        public static string[] SubCode = new string[30];
+        public static string[] SubUnits = new string[30];
+        public static string[] SubGrades = new string[30];
+
+        public static string[] SubName1 = new string[30];
+        public static string[] SubCode1 = new string[30];
+        public static string[] SubUnits1 = new string[30];
+        public static string[] SubGrades1 = new string[30];
+
+        public static string StudentId;//data that will imported to print form
+        public static string Name;
+        public static string Course;
+        public static string Year;
+        public static string Section;
+        public static string Sem;
+        public static string SchoolYear_Print;
+
+        public static int count_sub;
+        public static int count_sub1;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -83,7 +102,9 @@ namespace Student_Information.v._2
         private void btnRecycle_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlPrint.Show();
+            //pnlPrint.Show();
+            Grading grad = new Grading();
+            grad.Show();
         }
 
         private void pnlSaveData_Paint(object sender, PaintEventArgs e)
@@ -184,6 +205,7 @@ namespace Student_Information.v._2
      
         private void btnprint_Click(object sender, EventArgs e)
         {
+            /*
             DGVPrinter print = new DGVPrinter();
             print.Title = "Title";
             print.SubTitle = string.Format("Date:{0}", DateTime.Now.Date);
@@ -193,8 +215,93 @@ namespace Student_Information.v._2
             print.PorportionalColumns = true;
             print.HeaderCellAlignment = StringAlignment.Near;
             print.Footer = "Footer";
-            print.FooterSpacing = 15;
+            print.FooterSpacing = 15;*/
             //print.PrintDataGridView(dgvStudent);
+          
+       
+
+
+            FirstSem();
+           // SecondSem();
+
+
+            PrintSem sem = new PrintSem(this);
+            sem.Show();
+
+        }
+        private void FirstSem()
+        {
+            con.Open();
+            Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaa");
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [SchoolYear]='" + cmbSchoolYear.Text + "' and [Stud_Id]='" + txtStudentNumber.Text + "' and [Stud_Name]='" + txtName.Text + "' and [Stud_Sem]='1st Sem'", con);
+
+            int i = 0;
+            int a = 2;
+            count_sub = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+            Console.WriteLine(count_sub);
+
+            while (i < count_sub)
+            {
+                Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaa");
+                if (i == 0)
+                {
+                    SubName[a] = dgvFirstSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                    SubCode[a] = dgvFirstSem.Rows[i].Cells[1].Value.ToString();
+                    SubUnits[a] = dgvFirstSem.Rows[i].Cells[2].Value.ToString();
+                    SubGrades[a] = dgvFirstSem.Rows[i].Cells[3].Value.ToString();
+                    Console.WriteLine(a);
+                    i++;
+                    a++;
+                }
+
+
+                SubName[a] = dgvFirstSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                SubCode[a] = dgvFirstSem.Rows[i].Cells[1].Value.ToString();
+                SubUnits[a] = dgvFirstSem.Rows[i].Cells[2].Value.ToString();
+                SubGrades[a] = dgvFirstSem.Rows[i].Cells[3].Value.ToString();
+
+                Console.WriteLine(a);
+                i++;
+                a++;
+            }
+          
+            con.Close();
+
+        }
+        private void SecondSem()
+        {
+            con.Open();
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbSchoolYear.Text + "' and [Sub_Sem]='" + txtSem.Text + "' ", con);
+
+            int i = 0;
+            int a = 2;
+            count_sub1 = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+            while (i < count_sub1)
+            {
+                if (i == 0)
+                {
+                    SubName1[a] = dgvSecondSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                    SubCode1[a] = dgvSecondSem.Rows[i].Cells[1].Value.ToString();
+                    SubUnits1[a] = dgvSecondSem.Rows[i].Cells[2].Value.ToString();
+                    SubGrades1[a] = dgvSecondSem.Rows[i].Cells[3].Value.ToString();
+                    Console.WriteLine(a);
+                    i++;
+                    a++;
+                }
+
+
+                SubName1[a] = dgvSecondSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                SubCode1[a] = dgvSecondSem.Rows[i].Cells[1].Value.ToString();
+                SubUnits1[a] = dgvSecondSem.Rows[i].Cells[2].Value.ToString();
+                SubGrades1[a] = dgvSecondSem.Rows[i].Cells[3].Value.ToString();
+
+                Console.WriteLine(a);
+                i++;
+                a++;
+            }
+          
+            con.Close();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -327,6 +434,16 @@ namespace Student_Information.v._2
         }
 
         private void pnlGrade_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtSearchRecords_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

@@ -340,7 +340,7 @@ namespace Student_Information.v._2
         private void btnAddStud_Click(object sender, EventArgs e)
         {
             Add ad = new Add(this);
-            this.Hide();
+            //this.Hide();
             addUp = 1;
             ad.Show();
             addUp = 0;
@@ -386,12 +386,12 @@ namespace Student_Information.v._2
             }
         }
 
-        private void pnlEnroll_Paint(object sender, PaintEventArgs e)
+        private void SelectStudentsEnroll()// hindi ko pa nilagay kasi i will add  something in the search button
         {
-            
-            lblSchoolYearEnroll.Text = SchoolYear; 
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_code],[Sub_Name],[Sub_Units] from [Subjects] where [Sub_Year]='"+cmbYear .Text +"' and [Sub_Sem]='"+cmbSem .Text +"' ", con);
-            
+
+            lblSchoolYearEnroll.Text = SchoolYear;
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_code],[Sub_Name],[Sub_Units] from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+
 
             DataTable table = new DataTable();
             adapt.Fill(table);
@@ -400,6 +400,17 @@ namespace Student_Information.v._2
             dgvEnrolledSub.AllowUserToAddRows = false;
             dgvEnrolledSub.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvEnrolledSub.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+        private void pnlEnroll_Paint(object sender, PaintEventArgs e)
+        {
+            lblSchoolYearEnroll.Text = SchoolYear;
+            if ((cmbSem.Text == "") && (cmbYear.Text == ""))
+            { 
+
+            }
+            else 
+            SelectStudentsEnroll();
+           
              
             //-----------------------------------------------------------------------------------
            
@@ -447,13 +458,25 @@ namespace Student_Information.v._2
         {
 
         }
+        private void SelectStudents_Search()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Erollment] where[Stud_Name]='" + txtSearchEnroll.Text + "' and [SchoolYear]='"+lblSchoolYearEnroll .Text +"'", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvEnrolledSub.DataSource = table;
+
+            dgvEnrolled.AllowUserToAddRows = false;
+            dgvEnrolled.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvEnrolled.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_FullName]='"+txtSearchEnroll .Text +"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
-
+            
+            SelectStudents_Search();
 
             foreach (DataRow dr1 in table.Rows)
             {
@@ -649,6 +672,7 @@ namespace Student_Information.v._2
             {
                 insertSubjects_Students();
                 insertEnrolled_Details();
+                MessageBox.Show("Successfully Enrolled");
             }
         }
         private void insertSubjects_Students()
@@ -760,17 +784,28 @@ namespace Student_Information.v._2
 
         private void btnPrint_Click_1(object sender, EventArgs e)
         {
-            con.Open();
-            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
-
-            int i = 0;
-            int a = 2;
-            count_sub  = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
-
-            while (i < count_sub )
+            try
             {
-                if (i == 0)
+                con.Open();
+                OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
+
+                int i = 0;
+                int a = 2;
+                count_sub = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+                while (i < count_sub)
                 {
+                    if (i == 0)
+                    {
+                        SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
+                        SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
+                        SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+                        Console.WriteLine(a);
+                        i++;
+                        a++;
+                    }
+
+
                     SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
                     SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
                     SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
@@ -778,25 +813,21 @@ namespace Student_Information.v._2
                     i++;
                     a++;
                 }
-                
-                
-                    SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
-                    SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
-                    SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
-                    Console.WriteLine(a);
-                    i++;
-                    a++;
+                StudentId = txtStudentId.Text;
+                Name = txtName.Text;
+                Course = cmbCourse.Text;
+                Section = cmbSectionName.Text;
+                Sem = cmbSem.Text;
+                Year = cmbYear.Text;
+                SchoolYear_Print = lblSchoolYear.Text;
+                PrintSubjects sub = new PrintSubjects(this);
+                sub.Show();
+                con.Close();
             }
-            StudentId = txtStudentId.Text;
-            Name = txtName.Text ;
-            Course = cmbCourse.Text;
-            Section = cmbSectionName.Text;
-            Sem = cmbSem.Text;
-            Year = cmbYear.Text;
-            SchoolYear_Print  = lblSchoolYear.Text;
-            PrintSubjects sub=new PrintSubjects(this );
-            sub.Show();
-            con.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         
 

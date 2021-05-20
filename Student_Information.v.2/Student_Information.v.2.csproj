@@ -82,6 +82,12 @@
     <Compile Include="PintClass.Designer.cs">
       <DependentUpon>PintClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintSem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSem.Designer.cs">
+      <DependentUpon>PrintSem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintSubjects.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PintClass.resx">
       <DependentUpon>PintClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSem.resx">
+      <DependentUpon>PrintSem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintSubjects.resx">
       <DependentUpon>PrintSubjects.cs</DependentUpon>

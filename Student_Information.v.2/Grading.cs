@@ -12,8 +12,11 @@ namespace Student_Information.v._2
 {
     public partial class Grading : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
-      
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
+        public static string[] SubCode = new string[30];
+        public static string[] SubName = new string[30];
+        public static string[] SubGrade = new string[30];
+
         public Grading()
         {
             InitializeComponent();
@@ -26,12 +29,31 @@ namespace Student_Information.v._2
 
         private void Grading_Load(object sender, EventArgs e)
         {
-            Comboboxes();    
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            txtSearchRecords.AutoCompleteCustomSource = compl;
+
+            con.Close();
+          //  Comboboxes();    
         }
         
 
         private void Comboboxes()
         {
+            /*
             con.Open();
          
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subject]", con);
@@ -56,6 +78,7 @@ namespace Student_Information.v._2
 
         
             con.Close();
+             * */
         }
 
         private void rectangleShape3_Click(object sender, EventArgs e)
@@ -126,6 +149,34 @@ namespace Student_Information.v._2
         private void cmbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Sem],[Stud_Section],[Stud_Year],[Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Name]='" + txtSearchRecords.Text + "'", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+
+            int i = 0;
+            foreach (DataRow dr1 in table.Rows)
+            {
+                cmbStudentNumber .Text  = (dr1["Stud_Id"]).ToString();
+                txtName.Text = (dr1["Stud_Name"]).ToString();
+                cmbSection.Text = (dr1["Stud_Section"]).ToString();
+                cmbSem.Text = (dr1["Stud_Sem"]).ToString();
+                cmbYear.Text = (dr1["Stud_Year"]).ToString();
+                SubCode[i]= (dr1["Sub_Code"]).ToString();
+                SubName [i]= (dr1["Sub_Name"]).ToString();
+                SubGrade[i]= (dr1["Sub_Grades"]).ToString();
+
+                Console.WriteLine(SubName [i]);
+                i++;
+            }
         }
    
     }

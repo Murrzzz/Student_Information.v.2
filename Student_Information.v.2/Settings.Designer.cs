@@ -302,6 +302,7 @@
             this.txtSearchRecords.Name = "txtSearchRecords";
             this.txtSearchRecords.Size = new System.Drawing.Size(379, 26);
             this.txtSearchRecords.TabIndex = 179;
+            this.txtSearchRecords.TextChanged += new System.EventHandler(this.txtSearchRecords_TextChanged);
             // 
             // tabControl1
             // 
@@ -341,6 +342,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Students Grades";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // cmbSchoolYear
             // 
@@ -770,12 +772,12 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
-            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Settings";
+          //  this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.Settings_Load);

@@ -6,42 +6,40 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Reflection;
 using Microsoft.Office.Interop.Word;
+using System.Reflection;
 
 namespace Student_Information.v._2
 {
-    public partial class PrintSubjects : Form
+    public partial class PrintSem : Form
     {
-        MainMenu main = new MainMenu();
-        public PrintSubjects(MainMenu f1)
+        Settings set = new Settings();
+        public PrintSem(Settings f1)
         {
             InitializeComponent();
-            this.main = f1;
+            this.set = f1;
         }
         Microsoft.Office.Interop.Word.Application app;
         Microsoft.Office.Interop.Word.Document doc;
         object objMiss = Missing.Value;
         object TmpFile = System.IO.Path.GetTempPath() + "INVOICE.pdf";
-        object FileLocation = @"C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Subjects.docx";
+        object FileLocation = @"C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Registration.docx";
 
 
-  
-
-        private void PrintSubjects_Load(object sender, EventArgs e)
+        private void PrintSem_Load(object sender, EventArgs e)
         {
- 
+              
          try
             {
                 app=new Microsoft.Office.Interop.Word.Application ();
                 doc =app.Documents .Open (ref FileLocation ,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss,ref objMiss);
 
-                FindAndReplace ("[StudentNumber]",""+MainMenu.StudentId +"");
-                FindAndReplace ("[SchoolYear]",""+MainMenu .SchoolYear_Print +"");
-                FindAndReplace ("[Name]",""+MainMenu .Name +"");
-                FindAndReplace("[Sem]", ""+MainMenu .Sem +"");//test
-                FindAndReplace ("[Year]",""+MainMenu .Year +"");//test
-                FindAndReplace("[Section]", ""+MainMenu.Section +"");//test
+                FindAndReplace ("[StudentNumber]",""+Settings.StudentId +"");
+                FindAndReplace("[SchoolYear]", "" + Settings.SchoolYear_Print + "");
+                FindAndReplace("[Name]", "" + Settings.Name + "");
+                FindAndReplace("[Sem]", "" + Settings.Sem + "");//test
+                FindAndReplace("[Year]", "" + Settings.Year + "");//test
+                FindAndReplace("[Section]", "" + Settings.Section + "");//test
             
                 //Pas value to word in Table
                 Microsoft .Office .Interop .Word .Table tab= doc.Tables [1];
@@ -49,10 +47,21 @@ namespace Student_Information.v._2
                 for(i=2; i<10; i++)
                 {
                     tab .Rows .Add (ref objMiss );
-                    tab .Cell (i,1).Range .Text =""+MainMenu.SubCode [i]+"";
-                    tab .Cell (i,2).Range .Text =""+MainMenu .SubName [i]+"";
-                    tab .Cell (i,3).Range .Text =""+MainMenu .SubUnits [i]+"";
+                    tab.Cell(i, 1).Range.Text = "" + Settings.SubCode[i] + "";
+                    tab.Cell(i, 2).Range.Text = "" + Settings.SubName[i] + "";
+                    tab.Cell(i, 3).Range.Text = "" + Settings.SubUnits[i] + "";
+
                  
+                }
+
+                Microsoft.Office.Interop.Word.Table tabi = doc.Tables[2];
+                int ii = 2;
+                for (ii = 2; ii < 10; ii++)
+                {
+                    tabi.Rows.Add(ref objMiss);
+                    tabi.Cell(ii, 1).Range.Text = "" + Settings.SubCode1[ii] + "";
+                    tabi.Cell(ii, 2).Range.Text = "" + Settings.SubName1[ii] + "";
+                    tabi.Cell(ii, 3).Range.Text = "" + Settings.SubUnits1[ii] + "";
                 }
 
             
