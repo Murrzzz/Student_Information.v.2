@@ -43,5 +43,16 @@ namespace Student_Information.v._2.Properties {
                 return ((string)(this["Student_InfoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\database\\Stud_Info_" +
+            "Update.accdb")]
+        public string Stud_Info_UpdateConnectionString {
+            get {
+                return ((string)(this["Stud_Info_UpdateConnectionString"]));
+            }
+        }
     }
 }

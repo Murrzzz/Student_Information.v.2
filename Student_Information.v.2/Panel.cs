@@ -49,7 +49,8 @@ namespace Student_Information.v._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Grading grad = new Grading();
+            grad.Show();
 
           
             this.Hide();

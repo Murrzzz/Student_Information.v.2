@@ -194,7 +194,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 55);
             this.button3.TabIndex = 31;
-            this.button3.Text = "Accounts";
+            this.button3.Text = "School Year";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -352,6 +352,7 @@
             // 
             // dgvYear
             // 
+            this.dgvYear.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvYear.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvYear.Location = new System.Drawing.Point(56, 61);
@@ -468,10 +469,13 @@
             // dgvSection
             // 
             this.dgvSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSection.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSection.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.dgvSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSection.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.dgvSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSection.Location = new System.Drawing.Point(38, 283);
             this.dgvSection.Name = "dgvSection";
+            this.dgvSection.ReadOnly = true;
             this.dgvSection.Size = new System.Drawing.Size(958, 604);
             this.dgvSection.TabIndex = 148;
             this.dgvSection.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSection_CellContentClick);
@@ -611,10 +615,8 @@
             this.cmbSubSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubSem.FormattingEnabled = true;
             this.cmbSubSem.Items.AddRange(new object[] {
-            "1st Year",
-            "2nd Year",
-            "3rd Year",
-            "4th Year"});
+            "1st Sem",
+            "2nd Sem"});
             this.cmbSubSem.Location = new System.Drawing.Point(631, 102);
             this.cmbSubSem.Name = "cmbSubSem";
             this.cmbSubSem.Size = new System.Drawing.Size(273, 28);
@@ -652,6 +654,7 @@
             // 
             // dgvSubject
             // 
+            this.dgvSubject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSubject.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubject.Location = new System.Drawing.Point(4, 328);
@@ -848,6 +851,7 @@
             // dgvEnrolled
             // 
             this.dgvEnrolled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEnrolled.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEnrolled.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnrolled.Location = new System.Drawing.Point(38, 107);
@@ -1111,6 +1115,7 @@
             // dgvEnrolledSub
             // 
             this.dgvEnrolledSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEnrolledSub.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEnrolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnrolledSub.Location = new System.Drawing.Point(23, 244);
@@ -1221,6 +1226,7 @@
             // dgvArchive
             // 
             this.dgvArchive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvArchive.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArchive.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvArchive.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchive.Location = new System.Drawing.Point(38, 107);
@@ -1350,6 +1356,7 @@
             // dgvStudentList
             // 
             this.dgvStudentList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentList.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentList.Location = new System.Drawing.Point(49, 107);
@@ -1367,15 +1374,15 @@
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.picexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlClass);
+            this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
-            this.Controls.Add(this.pnlClass);
-            this.Controls.Add(this.pnlAccounts);
-            this.Controls.Add(this.pnlSubjects);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           // this.Name = "MainMenu";
+            //this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);

@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_InfoDataSet_ClassName.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Stud_Info_UpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stud_Info_UpdateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Sub_NameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,6 +229,17 @@
     </None>
     <None Include="Student_InfoDataSet_ClassName.xss">
       <DependentUpon>Student_InfoDataSet_ClassName.xsd</DependentUpon>
+    </None>
+    <None Include="Stud_Info_UpdateDataSet.xsc">
+      <DependentUpon>Stud_Info_UpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Stud_Info_UpdateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stud_Info_UpdateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stud_Info_UpdateDataSet.xss">
+      <DependentUpon>Stud_Info_UpdateDataSet.xsd</DependentUpon>
     </None>
     <None Include="Sub_NameDataSet.xsc">
       <DependentUpon>Sub_NameDataSet.xsd</DependentUpon>

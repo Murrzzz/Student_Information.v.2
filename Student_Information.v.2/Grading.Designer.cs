@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtGr2 = new System.Windows.Forms.TextBox();
             this.txtGr3 = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.txtGr8 = new System.Windows.Forms.TextBox();
             this.txtGr9 = new System.Windows.Forms.TextBox();
             this.txtGr10 = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -82,6 +82,16 @@
             this.txtSearchRecords = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.stud_Info_UpdateDataSet = new Student_Information.v._2.Stud_Info_UpdateDataSet();
+            this.erollmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.erollmentTableAdapter = new Student_Information.v._2.Stud_Info_UpdateDataSetTableAdapters.ErollmentTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.dgvGrades = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.stud_Info_UpdateDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erollmentBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,7 +105,7 @@
             // txtGr2
             // 
             this.txtGr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr2.Location = new System.Drawing.Point(729, 388);
+            this.txtGr2.Location = new System.Drawing.Point(386, 178);
             this.txtGr2.Multiline = true;
             this.txtGr2.Name = "txtGr2";
             this.txtGr2.Size = new System.Drawing.Size(110, 29);
@@ -104,7 +114,7 @@
             // txtGr3
             // 
             this.txtGr3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr3.Location = new System.Drawing.Point(729, 438);
+            this.txtGr3.Location = new System.Drawing.Point(386, 228);
             this.txtGr3.Multiline = true;
             this.txtGr3.Name = "txtGr3";
             this.txtGr3.Size = new System.Drawing.Size(110, 29);
@@ -113,7 +123,7 @@
             // txtGr4
             // 
             this.txtGr4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr4.Location = new System.Drawing.Point(729, 490);
+            this.txtGr4.Location = new System.Drawing.Point(386, 280);
             this.txtGr4.Multiline = true;
             this.txtGr4.Name = "txtGr4";
             this.txtGr4.Size = new System.Drawing.Size(110, 29);
@@ -122,7 +132,7 @@
             // txtGr5
             // 
             this.txtGr5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr5.Location = new System.Drawing.Point(729, 540);
+            this.txtGr5.Location = new System.Drawing.Point(386, 330);
             this.txtGr5.Multiline = true;
             this.txtGr5.Name = "txtGr5";
             this.txtGr5.Size = new System.Drawing.Size(110, 29);
@@ -131,7 +141,7 @@
             // txtGr6
             // 
             this.txtGr6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr6.Location = new System.Drawing.Point(729, 588);
+            this.txtGr6.Location = new System.Drawing.Point(386, 378);
             this.txtGr6.Multiline = true;
             this.txtGr6.Name = "txtGr6";
             this.txtGr6.Size = new System.Drawing.Size(110, 29);
@@ -140,7 +150,7 @@
             // txtGr7
             // 
             this.txtGr7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr7.Location = new System.Drawing.Point(729, 640);
+            this.txtGr7.Location = new System.Drawing.Point(386, 430);
             this.txtGr7.Multiline = true;
             this.txtGr7.Name = "txtGr7";
             this.txtGr7.Size = new System.Drawing.Size(110, 29);
@@ -149,7 +159,7 @@
             // txtGr8
             // 
             this.txtGr8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr8.Location = new System.Drawing.Point(729, 688);
+            this.txtGr8.Location = new System.Drawing.Point(386, 478);
             this.txtGr8.Multiline = true;
             this.txtGr8.Name = "txtGr8";
             this.txtGr8.Size = new System.Drawing.Size(110, 29);
@@ -158,7 +168,7 @@
             // txtGr9
             // 
             this.txtGr9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr9.Location = new System.Drawing.Point(729, 732);
+            this.txtGr9.Location = new System.Drawing.Point(386, 522);
             this.txtGr9.Multiline = true;
             this.txtGr9.Name = "txtGr9";
             this.txtGr9.Size = new System.Drawing.Size(110, 29);
@@ -167,50 +177,36 @@
             // txtGr10
             // 
             this.txtGr10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr10.Location = new System.Drawing.Point(729, 779);
+            this.txtGr10.Location = new System.Drawing.Point(386, 569);
             this.txtGr10.Multiline = true;
             this.txtGr10.Name = "txtGr10";
             this.txtGr10.Size = new System.Drawing.Size(110, 29);
             this.txtGr10.TabIndex = 167;
             // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1,
-            this.rectangleShape3,
-            this.rectangleShape2,
-            this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1247, 938);
-            this.shapeContainer1.TabIndex = 169;
-            this.shapeContainer1.TabStop = false;
-            // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 461;
-            this.lineShape1.X2 = 966;
-            this.lineShape1.Y1 = 311;
-            this.lineShape1.Y2 = 312;
+            this.lineShape1.X1 = 107;
+            this.lineShape1.X2 = 612;
+            this.lineShape1.Y1 = 93;
+            this.lineShape1.Y2 = 94;
             // 
             // rectangleShape3
             // 
-            this.rectangleShape3.Location = new System.Drawing.Point(868, 263);
+            this.rectangleShape3.Location = new System.Drawing.Point(514, 45);
             this.rectangleShape3.Name = "rectangleShape3";
             this.rectangleShape3.Size = new System.Drawing.Size(101, 565);
             this.rectangleShape3.Click += new System.EventHandler(this.rectangleShape3_Click);
             // 
             // rectangleShape2
             // 
-            this.rectangleShape2.Location = new System.Drawing.Point(705, 263);
+            this.rectangleShape2.Location = new System.Drawing.Point(351, 45);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(162, 565);
             // 
             // rectangleShape1
             // 
-            this.rectangleShape1.Location = new System.Drawing.Point(462, 263);
+            this.rectangleShape1.Location = new System.Drawing.Point(108, 45);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(242, 565);
             // 
@@ -263,7 +259,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SlateGray;
-            this.label4.Location = new System.Drawing.Point(529, 279);
+            this.label4.Location = new System.Drawing.Point(181, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 24);
             this.label4.TabIndex = 178;
@@ -274,7 +270,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SlateGray;
-            this.label5.Location = new System.Drawing.Point(750, 279);
+            this.label5.Location = new System.Drawing.Point(402, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 24);
             this.label5.TabIndex = 179;
@@ -286,7 +282,7 @@
             this.btnC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC1.ForeColor = System.Drawing.Color.White;
-            this.btnC1.Location = new System.Drawing.Point(990, 332);
+            this.btnC1.Location = new System.Drawing.Point(635, 118);
             this.btnC1.Name = "btnC1";
             this.btnC1.Size = new System.Drawing.Size(127, 36);
             this.btnC1.TabIndex = 180;
@@ -300,7 +296,7 @@
             this.btnC4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC4.ForeColor = System.Drawing.Color.White;
-            this.btnC4.Location = new System.Drawing.Point(990, 483);
+            this.btnC4.Location = new System.Drawing.Point(635, 269);
             this.btnC4.Name = "btnC4";
             this.btnC4.Size = new System.Drawing.Size(127, 36);
             this.btnC4.TabIndex = 181;
@@ -314,7 +310,7 @@
             this.btnC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC3.ForeColor = System.Drawing.Color.White;
-            this.btnC3.Location = new System.Drawing.Point(990, 432);
+            this.btnC3.Location = new System.Drawing.Point(635, 218);
             this.btnC3.Name = "btnC3";
             this.btnC3.Size = new System.Drawing.Size(127, 36);
             this.btnC3.TabIndex = 182;
@@ -328,7 +324,7 @@
             this.btnC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC2.ForeColor = System.Drawing.Color.White;
-            this.btnC2.Location = new System.Drawing.Point(990, 379);
+            this.btnC2.Location = new System.Drawing.Point(635, 165);
             this.btnC2.Name = "btnC2";
             this.btnC2.Size = new System.Drawing.Size(127, 36);
             this.btnC2.TabIndex = 183;
@@ -342,7 +338,7 @@
             this.btnC5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC5.ForeColor = System.Drawing.Color.White;
-            this.btnC5.Location = new System.Drawing.Point(990, 532);
+            this.btnC5.Location = new System.Drawing.Point(635, 318);
             this.btnC5.Name = "btnC5";
             this.btnC5.Size = new System.Drawing.Size(127, 36);
             this.btnC5.TabIndex = 184;
@@ -356,7 +352,7 @@
             this.btnC6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC6.ForeColor = System.Drawing.Color.White;
-            this.btnC6.Location = new System.Drawing.Point(990, 580);
+            this.btnC6.Location = new System.Drawing.Point(635, 366);
             this.btnC6.Name = "btnC6";
             this.btnC6.Size = new System.Drawing.Size(127, 36);
             this.btnC6.TabIndex = 185;
@@ -370,7 +366,7 @@
             this.btnC7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC7.ForeColor = System.Drawing.Color.White;
-            this.btnC7.Location = new System.Drawing.Point(990, 633);
+            this.btnC7.Location = new System.Drawing.Point(635, 419);
             this.btnC7.Name = "btnC7";
             this.btnC7.Size = new System.Drawing.Size(127, 36);
             this.btnC7.TabIndex = 186;
@@ -384,7 +380,7 @@
             this.bntC8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntC8.ForeColor = System.Drawing.Color.White;
-            this.bntC8.Location = new System.Drawing.Point(990, 681);
+            this.bntC8.Location = new System.Drawing.Point(635, 467);
             this.bntC8.Name = "bntC8";
             this.bntC8.Size = new System.Drawing.Size(127, 36);
             this.bntC8.TabIndex = 187;
@@ -398,7 +394,7 @@
             this.bntC9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntC9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntC9.ForeColor = System.Drawing.Color.White;
-            this.bntC9.Location = new System.Drawing.Point(990, 729);
+            this.bntC9.Location = new System.Drawing.Point(635, 515);
             this.bntC9.Name = "bntC9";
             this.bntC9.Size = new System.Drawing.Size(127, 36);
             this.bntC9.TabIndex = 188;
@@ -412,7 +408,7 @@
             this.btnC10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC10.ForeColor = System.Drawing.Color.White;
-            this.btnC10.Location = new System.Drawing.Point(990, 775);
+            this.btnC10.Location = new System.Drawing.Point(635, 561);
             this.btnC10.Name = "btnC10";
             this.btnC10.Size = new System.Drawing.Size(127, 36);
             this.btnC10.TabIndex = 189;
@@ -425,7 +421,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SlateGray;
-            this.label6.Location = new System.Drawing.Point(629, 837);
+            this.label6.Location = new System.Drawing.Point(327, 630);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 24);
             this.label6.TabIndex = 190;
@@ -439,7 +435,7 @@
             this.cmbStudentNumber.Name = "cmbStudentNumber";
             this.cmbStudentNumber.Size = new System.Drawing.Size(179, 28);
             this.cmbStudentNumber.TabIndex = 191;
-            this.cmbStudentNumber.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
+            this.cmbStudentNumber.SelectedIndexChanged += new System.EventHandler(this.cmbStudentNumber_SelectedIndexChanged);
             // 
             // cmbSection
             // 
@@ -463,7 +459,7 @@
             // 
             this.cmbSub10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub10.FormattingEnabled = true;
-            this.cmbSub10.Location = new System.Drawing.Point(494, 780);
+            this.cmbSub10.Location = new System.Drawing.Point(136, 569);
             this.cmbSub10.Name = "cmbSub10";
             this.cmbSub10.Size = new System.Drawing.Size(179, 28);
             this.cmbSub10.TabIndex = 204;
@@ -472,7 +468,7 @@
             // 
             this.cmbSub9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub9.FormattingEnabled = true;
-            this.cmbSub9.Location = new System.Drawing.Point(494, 733);
+            this.cmbSub9.Location = new System.Drawing.Point(136, 522);
             this.cmbSub9.Name = "cmbSub9";
             this.cmbSub9.Size = new System.Drawing.Size(179, 28);
             this.cmbSub9.TabIndex = 203;
@@ -481,7 +477,7 @@
             // 
             this.cmbSub8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub8.FormattingEnabled = true;
-            this.cmbSub8.Location = new System.Drawing.Point(494, 689);
+            this.cmbSub8.Location = new System.Drawing.Point(136, 478);
             this.cmbSub8.Name = "cmbSub8";
             this.cmbSub8.Size = new System.Drawing.Size(179, 28);
             this.cmbSub8.TabIndex = 202;
@@ -490,7 +486,7 @@
             // 
             this.cmbSub7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub7.FormattingEnabled = true;
-            this.cmbSub7.Location = new System.Drawing.Point(494, 641);
+            this.cmbSub7.Location = new System.Drawing.Point(136, 430);
             this.cmbSub7.Name = "cmbSub7";
             this.cmbSub7.Size = new System.Drawing.Size(179, 28);
             this.cmbSub7.TabIndex = 201;
@@ -499,7 +495,7 @@
             // 
             this.cmbSub6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub6.FormattingEnabled = true;
-            this.cmbSub6.Location = new System.Drawing.Point(494, 589);
+            this.cmbSub6.Location = new System.Drawing.Point(136, 378);
             this.cmbSub6.Name = "cmbSub6";
             this.cmbSub6.Size = new System.Drawing.Size(179, 28);
             this.cmbSub6.TabIndex = 200;
@@ -508,7 +504,7 @@
             // 
             this.cmbSub5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub5.FormattingEnabled = true;
-            this.cmbSub5.Location = new System.Drawing.Point(494, 541);
+            this.cmbSub5.Location = new System.Drawing.Point(136, 330);
             this.cmbSub5.Name = "cmbSub5";
             this.cmbSub5.Size = new System.Drawing.Size(179, 28);
             this.cmbSub5.TabIndex = 199;
@@ -517,7 +513,7 @@
             // 
             this.cmbSub4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub4.FormattingEnabled = true;
-            this.cmbSub4.Location = new System.Drawing.Point(494, 491);
+            this.cmbSub4.Location = new System.Drawing.Point(136, 280);
             this.cmbSub4.Name = "cmbSub4";
             this.cmbSub4.Size = new System.Drawing.Size(179, 28);
             this.cmbSub4.TabIndex = 198;
@@ -526,7 +522,7 @@
             // 
             this.cmbSub3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub3.FormattingEnabled = true;
-            this.cmbSub3.Location = new System.Drawing.Point(494, 439);
+            this.cmbSub3.Location = new System.Drawing.Point(136, 228);
             this.cmbSub3.Name = "cmbSub3";
             this.cmbSub3.Size = new System.Drawing.Size(179, 28);
             this.cmbSub3.TabIndex = 197;
@@ -535,7 +531,7 @@
             // 
             this.cmbSub2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub2.FormattingEnabled = true;
-            this.cmbSub2.Location = new System.Drawing.Point(494, 389);
+            this.cmbSub2.Location = new System.Drawing.Point(136, 178);
             this.cmbSub2.Name = "cmbSub2";
             this.cmbSub2.Size = new System.Drawing.Size(179, 28);
             this.cmbSub2.TabIndex = 196;
@@ -544,7 +540,7 @@
             // 
             this.cmbSub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSub1.FormattingEnabled = true;
-            this.cmbSub1.Location = new System.Drawing.Point(494, 338);
+            this.cmbSub1.Location = new System.Drawing.Point(136, 127);
             this.cmbSub1.Name = "cmbSub1";
             this.cmbSub1.Size = new System.Drawing.Size(179, 28);
             this.cmbSub1.TabIndex = 195;
@@ -586,7 +582,7 @@
             // txtGr1
             // 
             this.txtGr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGr1.Location = new System.Drawing.Point(729, 337);
+            this.txtGr1.Location = new System.Drawing.Point(386, 127);
             this.txtGr1.Multiline = true;
             this.txtGr1.Name = "txtGr1";
             this.txtGr1.Size = new System.Drawing.Size(110, 29);
@@ -646,67 +642,117 @@
             this.label8.TabIndex = 211;
             this.label8.Text = "Name";
             // 
+            // stud_Info_UpdateDataSet
+            // 
+            this.stud_Info_UpdateDataSet.DataSetName = "Stud_Info_UpdateDataSet";
+            this.stud_Info_UpdateDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // erollmentBindingSource
+            // 
+            this.erollmentBindingSource.DataMember = "Erollment";
+            this.erollmentBindingSource.DataSource = this.stud_Info_UpdateDataSet;
+            // 
+            // erollmentTableAdapter
+            // 
+            this.erollmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtGr2);
+            this.panel2.Controls.Add(this.txtGr3);
+            this.panel2.Controls.Add(this.txtGr4);
+            this.panel2.Controls.Add(this.txtGr5);
+            this.panel2.Controls.Add(this.txtGr6);
+            this.panel2.Controls.Add(this.txtGr1);
+            this.panel2.Controls.Add(this.txtGr7);
+            this.panel2.Controls.Add(this.txtGr8);
+            this.panel2.Controls.Add(this.txtGr9);
+            this.panel2.Controls.Add(this.cmbSub10);
+            this.panel2.Controls.Add(this.txtGr10);
+            this.panel2.Controls.Add(this.cmbSub9);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.cmbSub8);
+            this.panel2.Controls.Add(this.cmbSub1);
+            this.panel2.Controls.Add(this.cmbSub7);
+            this.panel2.Controls.Add(this.cmbSub2);
+            this.panel2.Controls.Add(this.cmbSub6);
+            this.panel2.Controls.Add(this.cmbSub3);
+            this.panel2.Controls.Add(this.cmbSub5);
+            this.panel2.Controls.Add(this.cmbSub4);
+            this.panel2.Controls.Add(this.btnC1);
+            this.panel2.Controls.Add(this.btnC4);
+            this.panel2.Controls.Add(this.btnC3);
+            this.panel2.Controls.Add(this.btnC2);
+            this.panel2.Controls.Add(this.btnC5);
+            this.panel2.Controls.Add(this.btnC6);
+            this.panel2.Controls.Add(this.btnC7);
+            this.panel2.Controls.Add(this.bntC8);
+            this.panel2.Controls.Add(this.bntC9);
+            this.panel2.Controls.Add(this.btnC10);
+            this.panel2.Controls.Add(this.shapeContainer2);
+            this.panel2.Location = new System.Drawing.Point(338, 154);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(783, 674);
+            this.panel2.TabIndex = 213;
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1,
+            this.rectangleShape3,
+            this.rectangleShape2,
+            this.rectangleShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(783, 674);
+            this.shapeContainer2.TabIndex = 0;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // dgvGrades
+            // 
+            this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrades.Location = new System.Drawing.Point(523, 205);
+            this.dgvGrades.Name = "dgvGrades";
+            this.dgvGrades.Size = new System.Drawing.Size(369, 407);
+            this.dgvGrades.TabIndex = 214;
+            // 
             // Grading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1247, 938);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtSearchRecords);
-            this.Controls.Add(this.txtGr1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbSub10);
-            this.Controls.Add(this.cmbSub9);
-            this.Controls.Add(this.cmbSub8);
-            this.Controls.Add(this.cmbSub7);
-            this.Controls.Add(this.cmbSub6);
-            this.Controls.Add(this.cmbSub5);
-            this.Controls.Add(this.cmbSub4);
-            this.Controls.Add(this.cmbSub3);
-            this.Controls.Add(this.cmbSub2);
-            this.Controls.Add(this.cmbSub1);
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbSem);
             this.Controls.Add(this.cmbSection);
             this.Controls.Add(this.cmbStudentNumber);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnC10);
-            this.Controls.Add(this.bntC9);
-            this.Controls.Add(this.bntC8);
-            this.Controls.Add(this.btnC7);
-            this.Controls.Add(this.btnC6);
-            this.Controls.Add(this.btnC5);
-            this.Controls.Add(this.btnC2);
-            this.Controls.Add(this.btnC3);
-            this.Controls.Add(this.btnC4);
-            this.Controls.Add(this.btnC1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtGr10);
-            this.Controls.Add(this.txtGr9);
-            this.Controls.Add(this.txtGr8);
-            this.Controls.Add(this.txtGr7);
-            this.Controls.Add(this.txtGr6);
-            this.Controls.Add(this.txtGr5);
-            this.Controls.Add(this.txtGr4);
-            this.Controls.Add(this.txtGr3);
-            this.Controls.Add(this.txtGr2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.shapeContainer1);
+            this.Controls.Add(this.dgvGrades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Grading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grading";
             this.Load += new System.EventHandler(this.Grading_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.stud_Info_UpdateDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erollmentBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,7 +770,6 @@
         public System.Windows.Forms.TextBox txtGr8;
         public System.Windows.Forms.TextBox txtGr9;
         public System.Windows.Forms.TextBox txtGr10;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
@@ -769,6 +814,12 @@
         public System.Windows.Forms.TextBox txtSearchRecords;
         public System.Windows.Forms.ComboBox txtName;
         private System.Windows.Forms.Label label8;
+        private Stud_Info_UpdateDataSet stud_Info_UpdateDataSet;
+        private System.Windows.Forms.BindingSource erollmentBindingSource;
+        private Stud_Info_UpdateDataSetTableAdapters.ErollmentTableAdapter erollmentTableAdapter;
+        private System.Windows.Forms.Panel panel2;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private System.Windows.Forms.DataGridView dgvGrades;
        
     }
 }

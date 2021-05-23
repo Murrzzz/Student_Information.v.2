@@ -221,6 +221,9 @@ namespace Student_Information.v._2
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            //dgvSubject.Columns[0].Width=200;
+            
+
             Hide_panels();
             Comboboxes();
             Comboboxes1();
@@ -430,10 +433,10 @@ namespace Student_Information.v._2
             {
                 cmbYear.Items.Add(dr1["Sub_Year"].ToString());
                 cmbSem.Items.Add(dr1["Sub_Sem"].ToString());
+                Console.WriteLine("Dr1");
+                Console.WriteLine(dr1);
             }
 
-          
-          
             con.Close();
         }
         private void Comboboxes1()
