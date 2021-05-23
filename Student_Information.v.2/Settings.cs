@@ -222,7 +222,11 @@ namespace Student_Information.v._2
 
 
             FirstSem();
-           // SecondSem();
+            SecondSem();
+
+            StudentId = txtStudentNumber.Text;
+            Name = txtName.Text;
+
 
 
             PrintSem sem = new PrintSem(this);
@@ -242,6 +246,7 @@ namespace Student_Information.v._2
 
             while (i < count_sub)
             {
+                /*
                 Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaa");
                 if (i == 0)
                 {
@@ -253,7 +258,7 @@ namespace Student_Information.v._2
                     i++;
                     a++;
                 }
-
+                */
 
                 SubName[a] = dgvFirstSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
                 SubCode[a] = dgvFirstSem.Rows[i].Cells[1].Value.ToString();
@@ -279,6 +284,7 @@ namespace Student_Information.v._2
 
             while (i < count_sub1)
             {
+                /*
                 if (i == 0)
                 {
                     SubName1[a] = dgvSecondSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
@@ -289,7 +295,7 @@ namespace Student_Information.v._2
                     i++;
                     a++;
                 }
-
+                */
 
                 SubName1[a] = dgvSecondSem.Rows[i].Cells[0].Value.ToString();//Subjects to print
                 SubCode1[a] = dgvSecondSem.Rows[i].Cells[1].Value.ToString();

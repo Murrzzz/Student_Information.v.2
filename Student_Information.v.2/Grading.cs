@@ -378,89 +378,89 @@ namespace Student_Information.v._2
                     case 2:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
                             break;
                         }
                     case 3:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
                             break;
                         }
                     case 4:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
                             break;
                         }
                     case 5:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
                             break;
                         }
                     case 6:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
+                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[5].Cells[2].Value.ToString();
                             break;
                         }
                     case 7:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
+                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[5].Cells[2].Value.ToString();
+                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[6].Cells[2].Value.ToString();
                             break;
                         }
                     case 8:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
+                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[5].Cells[2].Value.ToString();
+                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[6].Cells[2].Value.ToString();
                             break;
                         }
                     case 9:
                         {
                             cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub8.Text = dgvGrades.Rows[7].Cells[1].Value.ToString(); txtGr8.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
+                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[5].Cells[2].Value.ToString();
+                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[6].Cells[2].Value.ToString();
+                            cmbSub8.Text = dgvGrades.Rows[7].Cells[1].Value.ToString(); txtGr8.Text = dgvGrades.Rows[7].Cells[2].Value.ToString();
                             break;
                         }
                     case 10:
                         {
-                            cmbSub1.Text = dgvGrades.Rows[0].Cells[0].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString(); txtGr3.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub4.Text = dgvGrades.Rows[3].Cells[3].Value.ToString(); txtGr4.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub5.Text = dgvGrades.Rows[4].Cells[4].Value.ToString(); txtGr5.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub6.Text = dgvGrades.Rows[5].Cells[5].Value.ToString(); txtGr6.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub7.Text = dgvGrades.Rows[6].Cells[6].Value.ToString(); txtGr7.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub8.Text = dgvGrades.Rows[7].Cells[8].Value.ToString(); txtGr8.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub9.Text = dgvGrades.Rows[9].Cells[9].Value.ToString(); txtGr9.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
-                            cmbSub10.Text = dgvGrades.Rows[10].Cells[10].Value.ToString(); txtGr10.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub1.Text = dgvGrades.Rows[0].Cells[1].Value.ToString(); txtGr1.Text = dgvGrades.Rows[0].Cells[2].Value.ToString();
+                            cmbSub2.Text = dgvGrades.Rows[1].Cells[1].Value.ToString(); txtGr2.Text = dgvGrades.Rows[1].Cells[2].Value.ToString();
+                            cmbSub3.Text = dgvGrades.Rows[2].Cells[1].Value.ToString(); txtGr3.Text = dgvGrades.Rows[2].Cells[2].Value.ToString();
+                            cmbSub4.Text = dgvGrades.Rows[3].Cells[1].Value.ToString(); txtGr4.Text = dgvGrades.Rows[3].Cells[2].Value.ToString();
+                            cmbSub5.Text = dgvGrades.Rows[4].Cells[1].Value.ToString(); txtGr5.Text = dgvGrades.Rows[4].Cells[2].Value.ToString();
+                            cmbSub6.Text = dgvGrades.Rows[5].Cells[1].Value.ToString(); txtGr6.Text = dgvGrades.Rows[5].Cells[2].Value.ToString();
+                            cmbSub7.Text = dgvGrades.Rows[6].Cells[1].Value.ToString(); txtGr7.Text = dgvGrades.Rows[6].Cells[2].Value.ToString();
+                            cmbSub8.Text = dgvGrades.Rows[7].Cells[1].Value.ToString(); txtGr8.Text = dgvGrades.Rows[7].Cells[2].Value.ToString();
+                            cmbSub9.Text = dgvGrades.Rows[8].Cells[1].Value.ToString(); txtGr9.Text = dgvGrades.Rows[8].Cells[2].Value.ToString();
+                            cmbSub10.Text = dgvGrades.Rows[9].Cells[1].Value.ToString(); txtGr10.Text = dgvGrades.Rows[9].Cells[2].Value.ToString();
                             break;
                         }
                 }

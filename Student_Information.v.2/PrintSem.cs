@@ -42,7 +42,7 @@ namespace Student_Information.v._2
                 FindAndReplace("[Section]", "" + Settings.Section + "");//test
             
                 //Pas value to word in Table
-                Microsoft .Office .Interop .Word .Table tab= doc.Tables [1];
+                Microsoft .Office .Interop .Word .Table tab= doc.Tables [2];
                 int i=2;
                 for(i=2; i<10; i++)
                 {
@@ -50,11 +50,10 @@ namespace Student_Information.v._2
                     tab.Cell(i, 1).Range.Text = "" + Settings.SubCode[i] + "";
                     tab.Cell(i, 2).Range.Text = "" + Settings.SubName[i] + "";
                     tab.Cell(i, 3).Range.Text = "" + Settings.SubUnits[i] + "";
-
-                 
+                    tab.Cell(i, 4).Range.Text = "" + Settings.SubGrades[i] + "";
                 }
 
-                Microsoft.Office.Interop.Word.Table tabi = doc.Tables[2];
+                Microsoft.Office.Interop.Word.Table tabi = doc.Tables[1];
                 int ii = 2;
                 for (ii = 2; ii < 10; ii++)
                 {
@@ -62,10 +61,8 @@ namespace Student_Information.v._2
                     tabi.Cell(ii, 1).Range.Text = "" + Settings.SubCode1[ii] + "";
                     tabi.Cell(ii, 2).Range.Text = "" + Settings.SubName1[ii] + "";
                     tabi.Cell(ii, 3).Range.Text = "" + Settings.SubUnits1[ii] + "";
+                    tab.Cell(i, 4).Range.Text = "" + Settings.SubGrades1[ii] + "";
                 }
-
-            
-
                 //Totals
             //     FindAndReplace ("[Total]","0000001");//not sum
                 doc.ExportAsFixedFormat (TmpFile .ToString (), Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);

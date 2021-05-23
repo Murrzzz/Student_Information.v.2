@@ -798,21 +798,23 @@ namespace Student_Information.v._2
 
                 while (i < count_sub)
                 {
+                    /*
                     if (i == 0)
                     {
                         SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
                         SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
                         SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
+                        Console.WriteLine("Hello Print");
                         Console.WriteLine(a);
                         i++;
                         a++;
                     }
-
+                    */
 
                     SubName[a] = dgvEnrolledSub.Rows[i].Cells[0].Value.ToString();//Subjects to print
                     SubCode[a] = dgvEnrolledSub.Rows[i].Cells[1].Value.ToString();
                     SubUnits[a] = dgvEnrolledSub.Rows[i].Cells[2].Value.ToString();
-                    Console.WriteLine(a);
+                    Console.WriteLine(count_sub);
                     i++;
                     a++;
                 }
@@ -829,7 +831,7 @@ namespace Student_Information.v._2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("aaaaaaaa");
             }
         }
         
