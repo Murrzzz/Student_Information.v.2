@@ -673,15 +673,40 @@ namespace Student_Information.v._2
             }
             else
             {
-                insertSubjects_Students();
-                insertEnrolled_Details();
-                MessageBox.Show("Successfully Enrolled");
+
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("select [SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem] from [EnrollmentDetails] where [SchoolYear]=? and [Stud_Id]=? and [Stud_Name]=? and [Stud_Course]=? and [Stud_Year]=? and [Stud_Section]=? and [Stud_Sem]=?", con);
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = lblSchoolYearEnroll.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtStudentId.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbCourse.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbYear.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSectionName.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbSem.Text;
+
+                OleDbDataReader Olereader = cmd.ExecuteReader();
+     
+
+                if (Olereader.Read())
+                {
+                    MessageBox.Show("You are already enrolled");
+                }
+                else
+                {
+                    Console.WriteLine("Not Exist");
+                    insertSubjects_Students();
+                    insertEnrolled_Details();
+                    MessageBox.Show("Successfully Enrolled");
+                }
+                con.Close();
+             
             }
         }
         private void insertSubjects_Students()
         {
             try
             {
+                con.Close();
                 con.Open();
                 //OleDbCommand cmd = new OleDbCommand("insert into[Enrollment]([]) ",con );
                 OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Name],[Sub_Code] from [Subjects] where [Sub_Year]='" + cmbYear.Text + "' and [Sub_Sem]='" + cmbSem.Text + "' ", con);
@@ -739,6 +764,7 @@ namespace Student_Information.v._2
         {
             try
             {
+                con.Close();
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand("insert into [EnrollmentDetails]([SchoolYear],[Stud_Id],[Stud_Name],[Stud_Course],[Stud_Year],[Stud_Section],[Stud_Sem],[Stud_Gmail]) " +
                        "values(?,?,?,?,?,?,?,?)", con);

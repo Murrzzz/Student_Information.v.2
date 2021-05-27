@@ -66,8 +66,8 @@ namespace Student_Information.v._2
                 //Totals
             //     FindAndReplace ("[Total]","0000001");//not sum
                 doc.ExportAsFixedFormat (TmpFile .ToString (), Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
-                this.PDFreader.src=TmpFile .ToString ();
-                this .PDFreader .Show ();
+                this.axAcroPDF1.src = TmpFile.ToString();
+                this.axAcroPDF1.Show();
 
             }
             catch (Exception ex) { MessageBox .Show (ex.Message ); }
@@ -81,6 +81,11 @@ namespace Student_Information.v._2
         { 
             this .app.Selection.Find.Execute(ref FindText ,true ,true,false ,false, false,true,false,1
                 ,ref ReplaceText ,2,false,false,false, false);
+        }
+
+        private void Pdfread_OnError(object sender, EventArgs e)
+        {
+
         }
     }
 }
