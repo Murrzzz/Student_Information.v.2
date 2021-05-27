@@ -76,7 +76,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.btnGrade = new System.Windows.Forms.Button();
             this.Class = new System.Windows.Forms.Label();
             this.pnlPrint = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -261,7 +260,6 @@
             this.pnlRecords.Controls.Add(this.label5);
             this.pnlRecords.Controls.Add(this.label2);
             this.pnlRecords.Controls.Add(this.label30);
-            this.pnlRecords.Controls.Add(this.btnGrade);
             this.pnlRecords.Controls.Add(this.Class);
             this.pnlRecords.Location = new System.Drawing.Point(189, 0);
             this.pnlRecords.Name = "pnlRecords";
@@ -658,20 +656,6 @@
             this.label30.TabIndex = 45;
             this.label30.Text = "Student No:";
             // 
-            // btnGrade
-            // 
-            this.btnGrade.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade.ForeColor = System.Drawing.Color.White;
-            this.btnGrade.Location = new System.Drawing.Point(635, 109);
-            this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(127, 36);
-            this.btnGrade.TabIndex = 43;
-            this.btnGrade.Text = "Grade";
-            this.btnGrade.UseVisualStyleBackColor = false;
-            this.btnGrade.Click += new System.EventHandler(this.btnGrade_Click);
-            // 
             // Class
             // 
             this.Class.AutoSize = true;
@@ -772,12 +756,12 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnlGrade);
             this.Controls.Add(this.pnlPrint);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-          //  this.Name = "Settings";
+            //this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.Settings_Load);
@@ -815,7 +799,6 @@
         private System.Windows.Forms.Panel pnlGrade;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnGrade;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

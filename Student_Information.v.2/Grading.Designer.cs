@@ -88,6 +88,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.dgvGrades = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stud_Info_UpdateDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erollmentBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -450,6 +451,10 @@
             // 
             this.cmbSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSem.FormattingEnabled = true;
+            this.cmbSem.Items.AddRange(new object[] {
+            "1st Sem",
+            "2nd Sem",
+            "3rd Sem"});
             this.cmbSem.Location = new System.Drawing.Point(144, 507);
             this.cmbSem.Name = "cmbSem";
             this.cmbSem.Size = new System.Drawing.Size(179, 28);
@@ -549,6 +554,11 @@
             // 
             this.cmbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Items.AddRange(new object[] {
+            "1st Year",
+            "2nd Year",
+            "3rd Year",
+            "4th Year"});
             this.cmbYear.Location = new System.Drawing.Point(144, 604);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(179, 28);
@@ -594,7 +604,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1079, 84);
+            this.btnSearch.Location = new System.Drawing.Point(956, 76);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 36);
             this.btnSearch.TabIndex = 210;
@@ -606,7 +616,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(598, 92);
+            this.label14.Location = new System.Drawing.Point(475, 84);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 20);
             this.label14.TabIndex = 209;
@@ -617,7 +627,7 @@
             this.txtSearchRecords.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtSearchRecords.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearchRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchRecords.Location = new System.Drawing.Point(692, 88);
+            this.txtSearchRecords.Location = new System.Drawing.Point(569, 80);
             this.txtSearchRecords.Name = "txtSearchRecords";
             this.txtSearchRecords.Size = new System.Drawing.Size(379, 26);
             this.txtSearchRecords.TabIndex = 208;
@@ -692,7 +702,7 @@
             this.panel2.Controls.Add(this.bntC9);
             this.panel2.Controls.Add(this.btnC10);
             this.panel2.Controls.Add(this.shapeContainer2);
-            this.panel2.Location = new System.Drawing.Point(338, 154);
+            this.panel2.Location = new System.Drawing.Point(389, 126);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(783, 674);
             this.panel2.TabIndex = 213;
@@ -719,12 +729,27 @@
             this.dgvGrades.Size = new System.Drawing.Size(369, 407);
             this.dgvGrades.TabIndex = 214;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(1055, 76);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(93, 36);
+            this.btnRefresh.TabIndex = 215;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Grading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1247, 938);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
@@ -820,6 +845,7 @@
         private System.Windows.Forms.Panel panel2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.DataGridView dgvGrades;
+        private System.Windows.Forms.Button btnRefresh;
        
     }
 }

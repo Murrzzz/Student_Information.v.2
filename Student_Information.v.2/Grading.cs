@@ -64,11 +64,11 @@ namespace Student_Information.v._2
             con.Close();
         }
         */
-        private void SelectGrades()// hindi ko pa nilagay kasi i will add  something in the search button
+        private void SelectGrades() 
         {
 
             //lblSchoolYearEnroll.Text = SchoolYear;
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Id]='"+cmbStudentNumber.Text+"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Id]='" + cmbStudentNumber.Text + "' and  [Stud_Year]='" + cmbYear.Text + "' and [Stud_Sem]='" + cmbSem.Text + "' ", con);
 
 
             DataTable table = new DataTable();
@@ -83,12 +83,34 @@ namespace Student_Information.v._2
             dgvGrades.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvGrades.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
+        private void Students_gradesSem()// automatic change the database
+        {
+
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Year]='" + cmbYear.Text + "' and [Stud_Sem]='" + cmbSem.Text + "' ", con);
+
+
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvGrades.DataSource = table;
+
+            dgvGrades.AllowUserToAddRows = false;
+            dgvGrades.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvGrades.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
         private void Grading_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stud_Info_UpdateDataSet.Erollment' table. You can move, or remove it, as needed.
-          
-            
 
+
+            if ((cmbSem.Text == "") && (cmbYear.Text == ""))
+            {
+
+            }
+            else
+            {
+                SelectGrades();
+            }
      
             
             OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
@@ -109,7 +131,9 @@ namespace Student_Information.v._2
             txtSearchRecords.AutoCompleteCustomSource = compl;
 
             con.Close();
-          
+
+
+
         }
         
 
@@ -189,7 +213,7 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SelectGrades();
+          
 
 
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Sem],[Stud_Section],[Stud_Year],[Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Name]='" + txtSearchRecords.Text + "'", con);
@@ -202,10 +226,10 @@ namespace Student_Information.v._2
                 cmbStudentNumber .Text  = (dr1["Stud_Id"]).ToString();
                 txtName.Text = (dr1["Stud_Name"]).ToString();
                 cmbSection.Text = (dr1["Stud_Section"]).ToString();
-                cmbSem.Text = (dr1["Stud_Sem"]).ToString();
-                cmbYear.Text = (dr1["Stud_Year"]).ToString();
+                //cmbSem.Text = (dr1["Stud_Sem"]).ToString();
+                //cmbYear.Text = (dr1["Stud_Year"]).ToString();
                 SubCode[i]= (dr1["Sub_Code"]).ToString();
-                SubName [i]= (dr1["Sub_Name"]).ToString();
+                SubName[i]= (dr1["Sub_Name"]).ToString();
                 SubGrade[i]= (dr1["Sub_Grades"]).ToString();
 
                 Console.WriteLine(SubName [i]);
@@ -221,7 +245,7 @@ namespace Student_Information.v._2
             
             int count = 0;
 
-            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [Stud_Id]='" + cmbStudentNumber.Text + "'", con);
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [Stud_Id]='" + cmbStudentNumber.Text + "' and  [Stud_Year]='" + cmbYear.Text + "' and [Stud_Sem]='" + cmbSem.Text + "' ", con);
 
             count = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
             con.Close();
@@ -353,13 +377,13 @@ namespace Student_Information.v._2
                 MessageBox.Show(ex.Message);
             }
         }
-        private void dataToCombo()
+        private void dataToCombo()// Displaying Data of subjects to comboboxes and textbox
         {
             con.Close();
             con.Open();
             int count = 0;
 
-            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [Stud_Id]='" + cmbStudentNumber.Text + "'", con);
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [Stud_Id]='" + cmbStudentNumber.Text + "' and  [Stud_Year]='" + cmbYear.Text + "' and [Stud_Sem]='" + cmbSem.Text + "' ", con);
 
 
 
@@ -474,11 +498,12 @@ namespace Student_Information.v._2
 
         private void cmbStudentNumber_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             SelectGrades();
             con.Open();
             if (cmbStudentNumber.Text != "")
             {
-                OleDbCommand cmd = new OleDbCommand("Select [Sub_Name] from [Erollment] where [Stud_Id]=?", con);
+                OleDbCommand cmd = new OleDbCommand("Select [Sub_Name] from [Erollment] where [Stud_Id]=? ", con);
                 cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = cmbStudentNumber.Text;
                 OleDbDataReader da = cmd.ExecuteReader();
 
@@ -489,18 +514,16 @@ namespace Student_Information.v._2
                 }
             }
             con.Close();
+             */
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            SelectGrades();
+            dataToCombo();
         }
 
     
-
-        private void CmbLock()
-        { 
-           if(cmbSub1.Text =="")
-           {
-               
-           }
-        }
-
       
     }
 }

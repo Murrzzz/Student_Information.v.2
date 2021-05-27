@@ -657,7 +657,7 @@
             this.dgvSubject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSubject.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubject.Location = new System.Drawing.Point(4, 328);
+            this.dgvSubject.Location = new System.Drawing.Point(12, 328);
             this.dgvSubject.Name = "dgvSubject";
             this.dgvSubject.Size = new System.Drawing.Size(975, 538);
             this.dgvSubject.TabIndex = 39;
@@ -1382,7 +1382,7 @@
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-          //  this.Name = "MainMenu";
+            //this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);

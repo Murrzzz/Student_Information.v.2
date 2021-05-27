@@ -276,7 +276,7 @@ namespace Student_Information.v._2
         private void SecondSem()
         {
             con.Open();
-            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Subjects] where [Sub_Year]='" + cmbSchoolYear.Text + "' and [Sub_Sem]='" + txtSem.Text + "' ", con);
+            OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Erollment] where [SchoolYear]='" + cmbSchoolYear.Text + "' and [Stud_Id]='" + txtStudentNumber.Text + "' and [Stud_Name]='" + txtName.Text + "' and [Stud_Sem]='2nd Sem'", con);
 
             int i = 0;
             int a = 2;

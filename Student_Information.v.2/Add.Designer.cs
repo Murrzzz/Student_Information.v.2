@@ -111,7 +111,6 @@
             this.txtSeniorHigh = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.txtHighSchool = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -486,7 +485,6 @@
             // 
             this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.btnUpdateStudents);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.btnAdd);
@@ -1059,19 +1057,6 @@
             this.txtHighSchool.Size = new System.Drawing.Size(342, 29);
             this.txtHighSchool.TabIndex = 186;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Crimson;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(614, 621);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 36);
-            this.button5.TabIndex = 124;
-            this.button5.Text = "Subject";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // btnUpdateStudents
             // 
             this.btnUpdateStudents.BackColor = System.Drawing.Color.MediumTurquoise;
@@ -1092,7 +1077,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(456, 621);
+            this.button8.Location = new System.Drawing.Point(619, 624);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(127, 36);
             this.button8.TabIndex = 120;
@@ -1187,7 +1172,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnUpdateStudents;
         private System.Windows.Forms.Button button8;
         public System.Windows.Forms.Button btnAdd;
