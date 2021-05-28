@@ -79,10 +79,22 @@
             this.Class = new System.Windows.Forms.Label();
             this.pnlPrint = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pnlGrade = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGrade_Students = new System.Windows.Forms.Button();
-            this.Student = new System.Windows.Forms.Label();
+            this.pnldAccounts = new System.Windows.Forms.Panel();
+            this.btnUpdate_Admin = new System.Windows.Forms.Button();
+            this.btnAdd_Admin = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvAdmin = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblError = new System.Windows.Forms.Label();
+            this.txtPassword_Admin = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtRepassword_Admin = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtEmail_Admin = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtUsername_Admin = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
@@ -95,7 +107,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFirstSem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecondSem)).BeginInit();
             this.pnlPrint.SuspendLayout();
-            this.pnlGrade.SuspendLayout();
+            this.pnldAccounts.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -170,7 +185,7 @@
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(189, 55);
             this.btnHelp.TabIndex = 2;
-            this.btnHelp.Text = "Print";
+            this.btnHelp.Text = "Input Grades";
             this.btnHelp.UseVisualStyleBackColor = false;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -685,54 +700,181 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Print";
             // 
-            // pnlGrade
+            // pnldAccounts
             // 
-            this.pnlGrade.Controls.Add(this.button1);
-            this.pnlGrade.Controls.Add(this.btnGrade_Students);
-            this.pnlGrade.Controls.Add(this.Student);
-            this.pnlGrade.Location = new System.Drawing.Point(189, 0);
-            this.pnlGrade.Name = "pnlGrade";
-            this.pnlGrade.Size = new System.Drawing.Size(1024, 925);
-            this.pnlGrade.TabIndex = 9;
-            this.pnlGrade.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrade_Paint);
+            this.pnldAccounts.Controls.Add(this.btnUpdate_Admin);
+            this.pnldAccounts.Controls.Add(this.btnAdd_Admin);
+            this.pnldAccounts.Controls.Add(this.groupBox3);
+            this.pnldAccounts.Controls.Add(this.groupBox4);
+            this.pnldAccounts.Location = new System.Drawing.Point(189, 0);
+            this.pnldAccounts.Name = "pnldAccounts";
+            this.pnldAccounts.Size = new System.Drawing.Size(1024, 925);
+            this.pnldAccounts.TabIndex = 9;
+            this.pnldAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrade_Paint);
             // 
-            // button1
+            // btnUpdate_Admin
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(635, 585);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 36);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdate_Admin.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnUpdate_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate_Admin.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate_Admin.Location = new System.Drawing.Point(615, 612);
+            this.btnUpdate_Admin.Name = "btnUpdate_Admin";
+            this.btnUpdate_Admin.Size = new System.Drawing.Size(127, 36);
+            this.btnUpdate_Admin.TabIndex = 38;
+            this.btnUpdate_Admin.Text = "Update";
+            this.btnUpdate_Admin.UseVisualStyleBackColor = false;
             // 
-            // btnGrade_Students
+            // btnAdd_Admin
             // 
-            this.btnGrade_Students.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(487, 585);
-            this.btnGrade_Students.Name = "btnGrade_Students";
-            this.btnGrade_Students.Size = new System.Drawing.Size(127, 36);
-            this.btnGrade_Students.TabIndex = 56;
-            this.btnGrade_Students.Text = "Grade";
-            this.btnGrade_Students.UseVisualStyleBackColor = false;
-            this.btnGrade_Students.Click += new System.EventHandler(this.btnGrade_Students_Click);
+            this.btnAdd_Admin.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnAdd_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_Admin.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_Admin.Location = new System.Drawing.Point(471, 612);
+            this.btnAdd_Admin.Name = "btnAdd_Admin";
+            this.btnAdd_Admin.Size = new System.Drawing.Size(127, 36);
+            this.btnAdd_Admin.TabIndex = 37;
+            this.btnAdd_Admin.Text = "Add";
+            this.btnAdd_Admin.UseVisualStyleBackColor = false;
+            this.btnAdd_Admin.Click += new System.EventHandler(this.btnAdd_Admin_Click);
             // 
-            // Student
+            // groupBox3
             // 
-            this.Student.AutoSize = true;
-            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Student.Location = new System.Drawing.Point(37, 20);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(122, 31);
-            this.Student.TabIndex = 41;
-            this.Student.Text = "Students";
+            this.groupBox3.Controls.Add(this.dgvAdmin);
+            this.groupBox3.Location = new System.Drawing.Point(471, 235);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(504, 342);
+            this.groupBox3.TabIndex = 36;
+            this.groupBox3.TabStop = false;
+            // 
+            // dgvAdmin
+            // 
+            this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdmin.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdmin.Location = new System.Drawing.Point(28, 82);
+            this.dgvAdmin.Name = "dgvAdmin";
+            this.dgvAdmin.Size = new System.Drawing.Size(440, 227);
+            this.dgvAdmin.TabIndex = 40;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lblError);
+            this.groupBox4.Controls.Add(this.txtPassword_Admin);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.label31);
+            this.groupBox4.Controls.Add(this.txtRepassword_Admin);
+            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Controls.Add(this.txtEmail_Admin);
+            this.groupBox4.Controls.Add(this.label33);
+            this.groupBox4.Controls.Add(this.label34);
+            this.groupBox4.Controls.Add(this.txtUsername_Admin);
+            this.groupBox4.Location = new System.Drawing.Point(50, 225);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(380, 474);
+            this.groupBox4.TabIndex = 35;
+            this.groupBox4.TabStop = false;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(347, 378);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(15, 20);
+            this.lblError.TabIndex = 25;
+            this.lblError.Text = "*";
+            // 
+            // txtPassword_Admin
+            // 
+            this.txtPassword_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword_Admin.Location = new System.Drawing.Point(82, 306);
+            this.txtPassword_Admin.Multiline = true;
+            this.txtPassword_Admin.Name = "txtPassword_Admin";
+            this.txtPassword_Admin.PasswordChar = '*';
+            this.txtPassword_Admin.Size = new System.Drawing.Size(259, 29);
+            this.txtPassword_Admin.TabIndex = 20;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(48, 351);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(146, 20);
+            this.label27.TabIndex = 23;
+            this.label27.Text = "Re-Type Password:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(45, 276);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(82, 20);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "Password:";
+            // 
+            // txtRepassword_Admin
+            // 
+            this.txtRepassword_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepassword_Admin.Location = new System.Drawing.Point(82, 378);
+            this.txtRepassword_Admin.Multiline = true;
+            this.txtRepassword_Admin.Name = "txtRepassword_Admin";
+            this.txtRepassword_Admin.PasswordChar = '*';
+            this.txtRepassword_Admin.Size = new System.Drawing.Size(259, 29);
+            this.txtRepassword_Admin.TabIndex = 22;
+            this.txtRepassword_Admin.TextChanged += new System.EventHandler(this.txtRepassword_Admin_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(159, 26);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(76, 20);
+            this.label32.TabIndex = 19;
+            this.label32.Text = "Accounts";
+            // 
+            // txtEmail_Admin
+            // 
+            this.txtEmail_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail_Admin.Location = new System.Drawing.Point(82, 161);
+            this.txtEmail_Admin.Multiline = true;
+            this.txtEmail_Admin.Name = "txtEmail_Admin";
+            this.txtEmail_Admin.Size = new System.Drawing.Size(259, 29);
+            this.txtEmail_Admin.TabIndex = 15;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(45, 202);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 20);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Username:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(49, 139);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(52, 20);
+            this.label34.TabIndex = 16;
+            this.label34.Text = "Email:";
+            // 
+            // txtUsername_Admin
+            // 
+            this.txtUsername_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername_Admin.Location = new System.Drawing.Point(82, 234);
+            this.txtUsername_Admin.Multiline = true;
+            this.txtUsername_Admin.Name = "txtUsername_Admin";
+            this.txtUsername_Admin.Size = new System.Drawing.Size(259, 29);
+            this.txtUsername_Admin.TabIndex = 17;
             // 
             // printDocument1
             // 
@@ -756,12 +898,12 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1250, 928);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlSend);
-            this.Controls.Add(this.pnlGrade);
-            this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.pnlSend);
+            this.Controls.Add(this.pnldAccounts);
+            this.Controls.Add(this.pnlPrint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = "Settings";
+           // this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.Settings_Load);
@@ -778,8 +920,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecondSem)).EndInit();
             this.pnlPrint.ResumeLayout(false);
             this.pnlPrint.PerformLayout();
-            this.pnlGrade.ResumeLayout(false);
-            this.pnlGrade.PerformLayout();
+            this.pnldAccounts.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -796,17 +941,14 @@
         private System.Windows.Forms.Panel pnlRecords;
         private System.Windows.Forms.Label Class;
         private System.Windows.Forms.Panel pnlPrint;
-        private System.Windows.Forms.Panel pnlGrade;
+        private System.Windows.Forms.Panel pnldAccounts;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label Student;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnGrade_Students;
         private System.Windows.Forms.Button btnprint;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
@@ -842,5 +984,20 @@
         public System.Windows.Forms.ComboBox cmbSchoolYear;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgvEnrolledSub;
+        private System.Windows.Forms.Button btnUpdate_Admin;
+        private System.Windows.Forms.Button btnAdd_Admin;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvAdmin;
+        private System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.TextBox txtPassword_Admin;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label31;
+        public System.Windows.Forms.TextBox txtRepassword_Admin;
+        private System.Windows.Forms.Label label32;
+        public System.Windows.Forms.TextBox txtEmail_Admin;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        public System.Windows.Forms.TextBox txtUsername_Admin;
+        private System.Windows.Forms.Label lblError;
     }
 }

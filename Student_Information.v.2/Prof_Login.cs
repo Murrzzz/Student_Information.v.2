@@ -13,8 +13,9 @@ namespace Student_Information.v._2
 {
     public partial class Prof_Login : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
-      
+        int limit = 0;
+
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
         public Prof_Login()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace Student_Information.v._2
 
             }
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("select count(*) from[Prof_account] where [username]=? and [password]=?", con);
+            OleDbCommand cmd = new OleDbCommand("select count(*) from[Prof_Acc] where [Username]=? and [Password]=?", con);
             cmd.Parameters.AddWithValue("@Username", OleDbType.VarChar).Value = txtUsername.Text;
             cmd.Parameters.AddWithValue("@Password", OleDbType.VarChar).Value = txtPassword.Text;
 
@@ -44,10 +45,27 @@ namespace Student_Information.v._2
                 new Settings().Show();
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Account didnt Recognize ");
+                limit++;
+                ClearText();
+                Console.WriteLine(limit);
+                if (limit == 4)
+                {
+                    MessageBox.Show("The System Authomatically Close!");
+                    this.Close();
+                }
+            }
 
 
             con.Close();
 
+        }
+        private void ClearText()
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
         }
 
         private void Prof_Login_Paint(object sender, PaintEventArgs e)

@@ -74,7 +74,6 @@
             this.cmbSub2 = new System.Windows.Forms.ComboBox();
             this.cmbSub1 = new System.Windows.Forms.ComboBox();
             this.cmbYear = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtGr1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -89,6 +88,7 @@
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.dgvGrades = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stud_Info_UpdateDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erollmentBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -564,17 +564,6 @@
             this.cmbYear.Size = new System.Drawing.Size(179, 28);
             this.cmbYear.TabIndex = 194;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SlateGray;
-            this.label7.Location = new System.Drawing.Point(33, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 24);
-            this.label7.TabIndex = 205;
-            this.label7.Text = "School Year:";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SpringGreen;
@@ -743,12 +732,27 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1021, 851);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.TabIndex = 216;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Grading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1247, 938);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtName);
@@ -757,7 +761,6 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtSearchRecords);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbSem);
             this.Controls.Add(this.cmbSection);
@@ -831,7 +834,6 @@
         public System.Windows.Forms.ComboBox cmbSub2;
         public System.Windows.Forms.ComboBox cmbSub1;
         public System.Windows.Forms.ComboBox cmbYear;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txtGr1;
         private System.Windows.Forms.Button btnSearch;
@@ -846,6 +848,7 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.DataGridView dgvGrades;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button button2;
        
     }
 }

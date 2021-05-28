@@ -83,7 +83,7 @@ namespace Student_Information.v._2
             pnlArchiveList.Hide();
             pnlEnroll.Hide();
             pnlMasterList.Hide ();
-            
+            pnlAcc.Hide();
 
         }
 
@@ -222,7 +222,7 @@ namespace Student_Information.v._2
         private void MainMenu_Load(object sender, EventArgs e)
         {
             //dgvSubject.Columns[0].Width=200;
-            
+         
 
             Hide_panels();
             Comboboxes();
@@ -860,7 +860,104 @@ namespace Student_Information.v._2
                 MessageBox.Show("aaaaaaaa");
             }
         }
-        
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Hide_panels();
+            pnlAcc.Show();
+        }
+
+        private void pnlAcc_Paint(object sender, PaintEventArgs e)
+        {
+            Admin_Acc();
+            if ((txtPassword_Admin.Text == "") || (txtRepassword_Admin.Text == ""))
+            {
+                lblError.Visible = false;
+            }
+        }
+        private void Admin_Acc()
+        {
+            con.Open();
+            OleDbDataAdapter search = new OleDbDataAdapter("Select [Username],[Email] from [Admin_Acc]", con);
+            //search.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtSearchMasterList.Text;
+
+            DataTable table = new DataTable();
+            search.Fill(table);
+            dgvAdmin.DataSource = table;
+
+            dgvAdmin.AllowUserToAddRows = false;
+            dgvAdmin.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvAdmin.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            con.Close();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            if ((txtEmail_Admin.Text == "") || (txtUsername_Admin.Text == "") || (txtPassword_Admin.Text == ""))
+            {
+                MessageBox.Show("Please input date in the textbox");
+            }
+            else
+            {
+                if (txtPassword_Admin.Text != txtRepassword_Admin.Text)
+                {
+                    MessageBox.Show("Double check your password ");
+                }
+                else
+                {
+                    lblError.Visible = false;
+                    insertAdminAcc();
+
+                }
+            }
+        }
+
+        private void txtRepassword_Admin_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword_Admin.Text != txtRepassword_Admin.Text)
+            {
+                lblError.Visible = true;
+            }
+            else
+            {
+                lblError.Visible = false;
+            }
+        }
+
+        private void insertAdminAcc()
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("insert into [Admin_Acc]([Username],[Email],[Password]) " +
+                       "values(?,?,?)", con);
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtUsername_Admin.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtEmail_Admin.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtPassword_Admin.Text;
+       
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvEnrolled_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            string studid;
+
+            foreach (DataGridViewRow row in dgvEnrolled.Rows)
+            {
+                studid = (row.Cells[0].Value).ToString();
+                Console.WriteLine(studid);
+                if (stud_id == "123")
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
+        }
     }
 }

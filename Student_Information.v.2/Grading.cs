@@ -519,10 +519,44 @@ namespace Student_Information.v._2
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            Clear_allboxes();
             SelectGrades();
             dataToCombo();
         }
 
+        private void Clear_allboxes()
+        {
+            cmbSub1.Text = "";
+            cmbSub2.Text = "";
+            cmbSub3.Text = "";
+            cmbSub4.Text = "";
+            cmbSub5.Text = "";
+            cmbSub6.Text = "";
+            cmbSub7.Text = "";
+            cmbSub8.Text = "";
+            cmbSub9.Text = "";
+            cmbSub10.Text = "";
+
+            txtGr1.Text = "";
+            txtGr2.Text = "";
+            txtGr3.Text = "";
+            txtGr4.Text = "";
+            txtGr5.Text = "";
+            txtGr6.Text = "";
+            txtGr7.Text = "";
+            txtGr8.Text = "";
+            txtGr9.Text = "";
+            txtGr10.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Grading grad = new Grading();
+
+            grad.Close();
+
+            this.Hide();
+        }
     
       
     }

@@ -65,7 +65,7 @@ namespace Student_Information.v._2
         }
         private void Hide_panels()//Hide all panels
         {
-            pnlGrade.Hide();
+            pnldAccounts.Hide();
             pnlPrint.Hide();
             pnlRecords.Hide();
             pnlSend.Hide();
@@ -96,15 +96,15 @@ namespace Student_Information.v._2
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            pnlPrint.Show();
+            //pnlPrint.Show();
+            Grading grad = new Grading();
+            grad.Show();
         }
 
         private void btnRecycle_Click(object sender, EventArgs e)
         {
             Hide_panels();
-            //pnlPrint.Show();
-            Grading grad = new Grading();
-            grad.Show();
+            pnldAccounts.Show();
         }
 
         private void pnlSaveData_Paint(object sender, PaintEventArgs e)
@@ -114,7 +114,7 @@ namespace Student_Information.v._2
 
         private void pnlRecords_Paint(object sender, PaintEventArgs e)
         {
-            Comboboxes();
+          
         }
         private void Comboboxes()
         {
@@ -146,6 +146,8 @@ namespace Student_Information.v._2
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            Comboboxes();
+
             OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
 
 
@@ -441,9 +443,27 @@ namespace Student_Information.v._2
 
         private void pnlGrade_Paint(object sender, PaintEventArgs e)
         {
-
+            Prof_Acc();
+            if ((txtPassword_Admin.Text == "") || (txtRepassword_Admin.Text == ""))
+            {
+                lblError.Visible = false;
+            }
         }
+        private void Prof_Acc()
+        {
+            con.Open();
+            OleDbDataAdapter search = new OleDbDataAdapter("Select [Username],[Email] from [Admin_Acc]", con);
+            //search.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtSearchMasterList.Text;
 
+            DataTable table = new DataTable();
+            search.Fill(table);
+            dgvAdmin.DataSource = table;
+
+            dgvAdmin.AllowUserToAddRows = false;
+            dgvAdmin.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvAdmin.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            con.Close();
+        }
         private void txtSearchRecords_TextChanged(object sender, EventArgs e)
         {
 
@@ -452,6 +472,59 @@ namespace Student_Information.v._2
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Admin_Click(object sender, EventArgs e)
+        {
+            if ((txtEmail_Admin.Text == "") || (txtUsername_Admin.Text == "") || (txtPassword_Admin.Text == ""))
+            {
+                MessageBox.Show("Please input date in the textbox");
+            }
+            else
+            {
+                if (txtPassword_Admin.Text != txtRepassword_Admin.Text)
+                {
+                    MessageBox.Show("Double check your password ");
+                }
+                else
+                {
+                    lblError.Visible = false;
+                    insertProfAcc();
+
+                }
+            }
+        }
+        private void insertProfAcc()
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("insert into [Admin_Acc]([Username],[Email],[Password]) " +
+                       "values(?,?,?)", con);
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtUsername_Admin.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtEmail_Admin.Text;
+                cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtPassword_Admin.Text;
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtRepassword_Admin_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword_Admin.Text != txtRepassword_Admin.Text)
+            {
+                lblError.Visible = true;
+            }
+            else
+            {
+                lblError.Visible = false;
+            }
         }
     }
 }

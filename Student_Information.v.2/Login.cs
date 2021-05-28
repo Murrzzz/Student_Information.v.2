@@ -14,8 +14,9 @@ namespace Student_Information.v._2
     public partial class frmLogin : Form
     {
 
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Student_Info.accdb;Persist Security Info = False");
-      
+        int limit = 0;
+
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
         public frmLogin()
         {
 
@@ -45,6 +46,7 @@ namespace Student_Information.v._2
             //new Panel().Show();
             //this.Hide();
          
+           
 
             if ((txtPassword.Text == "") || (txtUsername.Text == ""))
             {
@@ -52,7 +54,7 @@ namespace Student_Information.v._2
             
             }
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("select count(*) from[Account] where [Username]=? and [Password]=?",con );
+            OleDbCommand cmd = new OleDbCommand("select count(*) from[Admin_Acc] where [Username]=? and [Password]=?",con );
             cmd.Parameters.AddWithValue("@Username", OleDbType.VarChar).Value = txtUsername.Text;
             cmd.Parameters.AddWithValue("@Password", OleDbType.VarChar).Value = txtPassword.Text;
 
@@ -63,6 +65,18 @@ namespace Student_Information.v._2
                 new Panel().Show();
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Account didnt Recognize ");
+                limit ++;
+                ClearText();
+                Console.WriteLine(limit);
+                if (limit == 4)
+                {
+                    MessageBox.Show("The System Authomatically Close!");
+                    this.Close();
+                }
+            }
 
 
             con.Close();
@@ -71,7 +85,18 @@ namespace Student_Information.v._2
 
         }
 
+        private void ClearText()
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
