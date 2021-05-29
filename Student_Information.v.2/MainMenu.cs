@@ -966,5 +966,49 @@ namespace Student_Information.v._2
                 }
             }
         }
+
+        private void btnExit1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtCourse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShow.Checked)
+            {
+                txtPassword_Admin.UseSystemPasswordChar = true;
+                txtRepassword_Admin.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword_Admin.UseSystemPasswordChar = false;
+                txtRepassword_Admin.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
