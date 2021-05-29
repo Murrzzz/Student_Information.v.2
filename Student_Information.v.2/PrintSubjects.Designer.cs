@@ -36,12 +36,12 @@
             // PDFreader
             // 
             this.PDFreader.Enabled = true;
-            this.PDFreader.Location = new System.Drawing.Point(3, 0);
+            this.PDFreader.Location = new System.Drawing.Point(1, 0);
             this.PDFreader.Name = "PDFreader";
             this.PDFreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("PDFreader.OcxState")));
-            this.PDFreader.Size = new System.Drawing.Size(1203, 887);
+            this.PDFreader.Size = new System.Drawing.Size(1207, 896);
             this.PDFreader.TabIndex = 0;
-         //   this.PDFreader.OnError += new System.EventHandler(this.axAcroPDF1_OnError);
+            this.PDFreader.OnError += new System.EventHandler(this.axAcroPDF1_OnError);
             // 
             // PrintSubjects
             // 
@@ -60,5 +60,6 @@
         #endregion
 
         private AxAcroPDFLib.AxAcroPDF PDFreader;
+
     }
 }

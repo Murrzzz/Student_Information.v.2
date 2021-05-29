@@ -14,7 +14,7 @@ namespace Student_Information.v._2
 {
     public partial class MainMenu : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb;Persist Security Info = False");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\i5PC\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb");
       
         Boolean set = false;
         public static string stud_id;//update
@@ -609,18 +609,25 @@ namespace Student_Information.v._2
 
         private void txtYear_TextChanged(object sender, EventArgs e)
         {
-            int txt1 = 0;
-            if (txtYear.Text == "")
+            try
             {
-                txtYear.Text = "0";
-            }
-             txt1 = int.Parse(txtYear.Text.ToString());
-            //int txt2 = int.Parse(txtYear1.Text.ToString());
-            int txt2;
-            txt2 = txt1 + 1;
+                int txt1 = 0;
+                if (txtYear.Text == "")
+                {
+                    txtYear.Text = "0";
+                }
+                txt1 = int.Parse(txtYear.Text.ToString());
+                //int txt2 = int.Parse(txtYear1.Text.ToString());
+                int txt2;
+                txt2 = txt1 + 1;
 
-            txtYear1.Text = txt2.ToString ();
-          //  int.Parse (txtYear1.Text.ToString()) = int.Parse(txtYear.Text.ToString()) + 1;
+                txtYear1.Text = txt2.ToString();
+                //  int.Parse (txtYear1.Text.ToString()) = int.Parse(txtYear.Text.ToString()) + 1;
+            }
+            catch (Exception tx)
+            {
+                MessageBox.Show(tx.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

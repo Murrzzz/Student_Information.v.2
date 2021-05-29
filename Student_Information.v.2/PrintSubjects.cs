@@ -23,7 +23,7 @@ namespace Student_Information.v._2
         Microsoft.Office.Interop.Word.Document doc;
         object objMiss = Missing.Value;
         object TmpFile = System.IO.Path.GetTempPath() + "INVOICE.pdf";
-        object FileLocation = @"C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Subjects.docx";
+        object FileLocation = @"C:\Users\i5PC\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Subjects.docx";
 
 
   
@@ -75,6 +75,11 @@ namespace Student_Information.v._2
         { 
             this .app.Selection.Find.Execute(ref FindText ,true ,true,false ,false, false,true,false,1
                 ,ref ReplaceText ,2,false,false,false, false);
+        }
+
+        private void axAcroPDF1_OnError(object sender, EventArgs e)
+        {
+
         }
     }
 }

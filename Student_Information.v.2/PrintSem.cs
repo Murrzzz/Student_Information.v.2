@@ -24,7 +24,7 @@ namespace Student_Information.v._2
         object objMiss = Missing.Value;
         object objMiss1 = Missing.Value;
         object TmpFile = System.IO.Path.GetTempPath() + "INVOICE.pdf";
-        object FileLocation = @"C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Registration.docx";
+        object FileLocation = @"C:\Users\i5PC\Desktop\Student_Information.v.2\Student_Information.v.2\Properties\Registration.docx";
 
 
         private void PrintSem_Load(object sender, EventArgs e)
