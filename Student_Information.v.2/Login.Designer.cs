@@ -33,6 +33,7 @@
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.labSis = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labLog = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.PasswordTextField = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labLog = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,16 @@
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // labLog
+            // 
+            this.labLog.AutoSize = true;
+            this.labLog.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLog.Location = new System.Drawing.Point(167, 102);
+            this.labLog.Name = "labLog";
+            this.labLog.Size = new System.Drawing.Size(102, 32);
+            this.labLog.TabIndex = 26;
+            this.labLog.Text = "LOGIN";
+            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
@@ -112,6 +122,7 @@
             this.txtPassword.Size = new System.Drawing.Size(259, 21);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 
@@ -125,6 +136,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(256, 24);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
             // PasswordTextField
             // 
@@ -227,16 +239,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
-            // 
-            // labLog
-            // 
-            this.labLog.AutoSize = true;
-            this.labLog.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLog.Location = new System.Drawing.Point(167, 102);
-            this.labLog.Name = "labLog";
-            this.labLog.Size = new System.Drawing.Size(102, 32);
-            this.labLog.TabIndex = 26;
-            this.labLog.Text = "LOGIN";
             // 
             // frmLogin
             // 
