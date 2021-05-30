@@ -567,13 +567,15 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SpringGreen;
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(171, 755);
+            this.button1.Location = new System.Drawing.Point(201, 705);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 36);
+            this.button1.Size = new System.Drawing.Size(99, 36);
             this.button1.TabIndex = 206;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
@@ -696,7 +698,7 @@
             this.panel2.Controls.Add(this.shapeContainer2);
             this.panel2.Location = new System.Drawing.Point(400, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(772, 684);
+            this.panel2.Size = new System.Drawing.Size(772, 625);
             this.panel2.TabIndex = 213;
             // 
             // shapeContainer2
@@ -709,7 +711,7 @@
             this.rectangleShape3,
             this.rectangleShape2,
             this.rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(772, 684);
+            this.shapeContainer2.Size = new System.Drawing.Size(772, 625);
             this.shapeContainer2.TabIndex = 0;
             this.shapeContainer2.TabStop = false;
             // 
@@ -739,13 +741,15 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1021, 851);
+            this.button2.Location = new System.Drawing.Point(1071, 755);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 36);
+            this.button2.Size = new System.Drawing.Size(101, 36);
             this.button2.TabIndex = 216;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = false;
@@ -756,7 +760,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1247, 938);
+            this.ClientSize = new System.Drawing.Size(1237, 816);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panel2);
