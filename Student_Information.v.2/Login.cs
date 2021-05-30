@@ -36,11 +36,6 @@ namespace Student_Information.v._2
             mgraphics.DrawRectangle(pen, area);
 
         }
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             //new Panel().Show();
@@ -61,13 +56,13 @@ namespace Student_Information.v._2
             var Count = Convert.ToInt32(cmd.ExecuteScalar());
             if (Count > 0)
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Success!");
                 new Panel().Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Account didnt Recognize ");
+                MessageBox.Show("Account didn't Recognize");
                 limit ++;
                 ClearText();
                 Console.WriteLine(limit);
@@ -90,17 +85,6 @@ namespace Student_Information.v._2
             txtPassword.Text = "";
             txtUsername.Text = "";
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkShow_CheckedChanged(object sender, EventArgs e)
         {
             if (checkShow.Checked)
@@ -127,6 +111,16 @@ namespace Student_Information.v._2
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
         }
 

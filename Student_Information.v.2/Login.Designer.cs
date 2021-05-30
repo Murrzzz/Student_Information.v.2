@@ -63,10 +63,10 @@
             // 
             this.lineShape3.BorderColor = System.Drawing.Color.White;
             this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 79;
-            this.lineShape3.X2 = 267;
-            this.lineShape3.Y1 = 289;
-            this.lineShape3.Y2 = 289;
+            this.lineShape3.X1 = 76;
+            this.lineShape3.X2 = 264;
+            this.lineShape3.Y1 = 299;
+            this.lineShape3.Y2 = 299;
             // 
             // labSis
             // 
@@ -75,7 +75,7 @@
             this.labSis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labSis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSis.ForeColor = System.Drawing.Color.White;
-            this.labSis.Location = new System.Drawing.Point(58, 261);
+            this.labSis.Location = new System.Drawing.Point(58, 276);
             this.labSis.Name = "labSis";
             this.labSis.Size = new System.Drawing.Size(234, 20);
             this.labSis.TabIndex = 29;
@@ -101,10 +101,10 @@
             // labLog
             // 
             this.labLog.AutoSize = true;
-            this.labLog.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLog.Location = new System.Drawing.Point(167, 102);
+            this.labLog.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLog.Location = new System.Drawing.Point(149, 82);
             this.labLog.Name = "labLog";
-            this.labLog.Size = new System.Drawing.Size(102, 32);
+            this.labLog.Size = new System.Drawing.Size(151, 46);
             this.labLog.TabIndex = 26;
             this.labLog.Text = "LOGIN";
             // 
@@ -121,7 +121,6 @@
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(259, 21);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
@@ -131,10 +130,10 @@
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.Location = new System.Drawing.Point(92, 211);
+            this.txtUsername.Location = new System.Drawing.Point(92, 214);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(256, 24);
+            this.txtUsername.Size = new System.Drawing.Size(259, 21);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
@@ -184,14 +183,14 @@
             this.btnLogin.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(146, 362);
+            this.btnLogin.Location = new System.Drawing.Point(173, 372);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(141, 40);
+            this.btnLogin.Size = new System.Drawing.Size(92, 31);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -225,7 +224,7 @@
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 92;
-            this.lineShape1.X2 = 347;
+            this.lineShape1.X2 = 349;
             this.lineShape1.Y1 = 234;
             this.lineShape1.Y2 = 234;
             // 
@@ -233,9 +232,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(102, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 179);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;

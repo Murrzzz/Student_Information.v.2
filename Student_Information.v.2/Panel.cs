@@ -16,23 +16,7 @@ namespace Student_Information.v._2
         public Panel()
         {
             InitializeComponent();
-          
         }
-      
-  
-      
-
-        private void btnMainMenu_Click(object sender, EventArgs e)
-        {
-            new MainMenu().Show();
-            this.Hide();
-        }
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            new Prof_Login().Show();
-            this.Hide();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Grading grad = new Grading();
@@ -59,17 +43,26 @@ namespace Student_Information.v._2
             new MainMenu().Show();
             this.Hide();
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            new MainMenu().Show();
+            this.Hide();
+        }
+        private void btnSettings_Click(object sender, EventArgs e)
         {
             new Prof_Login().Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnteach_Click(object sender, EventArgs e)
         {
-           
-           Application.Exit();
+            new Prof_Login().Show();
+            this.Hide();
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -51,18 +51,6 @@ namespace Student_Information.v._2
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics mgraphics = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
-
-            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
-            mgraphics.DrawRectangle(pen, area);
-            mgraphics.FillRectangle(lgb, area);
-            mgraphics.DrawRectangle(pen, area);
-        }
-
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {   
             Graphics mgraphics = e.Graphics;
@@ -183,7 +171,7 @@ namespace Student_Information.v._2
         {
             select_Subject();
         }
-        private void pnlRecords_Paint(object sender, PaintEventArgs e)
+        private void pnlEnrolledlist(object sender, PaintEventArgs e)
         {
             lblSchoolYear.Text = SchoolYear;
             Select_Enrolee();
@@ -966,22 +954,10 @@ namespace Student_Information.v._2
                 }
             }
         }
-
-        private void btnExit1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtCourse_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void checkShow_CheckedChanged(object sender, EventArgs e)
         {
             if (checkShow.Checked)
@@ -995,20 +971,16 @@ namespace Student_Information.v._2
                 txtRepassword_Admin.UseSystemPasswordChar = false;
             }
         }
-
-        private void button6_Click_2(object sender, EventArgs e)
+        private void MainMenu_Paint(object sender, PaintEventArgs e)
         {
-            this.Close();
-        }
+            Graphics mgraphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
+            mgraphics.DrawRectangle(pen, area);
+            mgraphics.FillRectangle(lgb, area);
+            mgraphics.DrawRectangle(pen, area);
         }
     }
 }

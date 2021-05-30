@@ -40,18 +40,6 @@ namespace Student_Information.v._2
         public static int count_sub;
         public static int count_sub1;
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics mgraphics = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
-
-            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
-            mgraphics.DrawRectangle(pen, area);
-            mgraphics.FillRectangle(lgb, area);
-            mgraphics.DrawRectangle(pen, area);
-        }
-
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
             Graphics mgraphics = e.Graphics;
@@ -525,6 +513,43 @@ namespace Student_Information.v._2
             {
                 lblError.Visible = false;
             }
+        }
+
+        private void Settings_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics mgraphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(40, 188, 178), 1);
+
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(40, 188, 178), Color.FromArgb(37, 137, 202), LinearGradientMode.Vertical);
+            mgraphics.DrawRectangle(pen, area);
+            mgraphics.FillRectangle(lgb, area);
+            mgraphics.DrawRectangle(pen, area);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkPass.Checked)
+            {
+                txtPassword_Admin.UseSystemPasswordChar = true;
+                txtRepassword_Admin.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword_Admin.UseSystemPasswordChar = false;
+                txtRepassword_Admin.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Panel().Show();
         }
     }
 }

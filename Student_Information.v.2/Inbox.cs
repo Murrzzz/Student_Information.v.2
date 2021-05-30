@@ -215,7 +215,7 @@ namespace Student_Information.v._2
 
                     msg = new MailMessage { From = new MailAddress(Username, "Master", Encoding.UTF8) };
                     msg.To.Add(new MailAddress(To));
-                    if (!string.IsNullOrEmpty(To)) ;
+                    if (!string.IsNullOrEmpty(To)) 
                     msg.Subject = Subject;
                     msg.Body = txtMessage.Text;
                     msg.BodyEncoding = Encoding.UTF8;
