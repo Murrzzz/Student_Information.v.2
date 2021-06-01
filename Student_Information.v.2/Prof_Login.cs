@@ -118,6 +118,12 @@ namespace Student_Information.v._2
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            new Panel().Show();
+            this.Close();
+        }
+
 
     }
 }
