@@ -183,7 +183,7 @@
             this.panel1.Controls.Add(this.btnAddClass);
             this.panel1.Location = new System.Drawing.Point(12, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 687);
+            this.panel1.Size = new System.Drawing.Size(182, 687);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -260,7 +260,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(179, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -293,7 +293,7 @@
             this.btnClass.ForeColor = System.Drawing.Color.White;
             this.btnClass.Location = new System.Drawing.Point(2, 215);
             this.btnClass.Name = "btnClass";
-            this.btnClass.Size = new System.Drawing.Size(189, 55);
+            this.btnClass.Size = new System.Drawing.Size(186, 55);
             this.btnClass.TabIndex = 0;
             this.btnClass.Text = "Class";
             this.btnClass.UseVisualStyleBackColor = false;
@@ -490,10 +490,10 @@
             // txtSectionName
             // 
             this.txtSectionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSectionName.Location = new System.Drawing.Point(194, 137);
+            this.txtSectionName.Location = new System.Drawing.Point(437, 107);
             this.txtSectionName.Multiline = true;
             this.txtSectionName.Name = "txtSectionName";
-            this.txtSectionName.Size = new System.Drawing.Size(225, 26);
+            this.txtSectionName.Size = new System.Drawing.Size(102, 28);
             this.txtSectionName.TabIndex = 149;
             // 
             // dgvSection
@@ -519,9 +519,9 @@
             "2nd",
             "3rd",
             "4th"});
-            this.cmbYearLevel.Location = new System.Drawing.Point(194, 177);
+            this.cmbYearLevel.Location = new System.Drawing.Point(194, 107);
             this.cmbYearLevel.Name = "cmbYearLevel";
-            this.cmbYearLevel.Size = new System.Drawing.Size(225, 28);
+            this.cmbYearLevel.Size = new System.Drawing.Size(112, 28);
             this.cmbYearLevel.TabIndex = 146;
             // 
             // label13
@@ -543,11 +543,11 @@
             this.btnUpdate_Class.FlatAppearance.BorderSize = 0;
             this.btnUpdate_Class.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnUpdate_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate_Class.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate_Class.Location = new System.Drawing.Point(858, 632);
+            this.btnUpdate_Class.Location = new System.Drawing.Point(879, 628);
             this.btnUpdate_Class.Name = "btnUpdate_Class";
-            this.btnUpdate_Class.Size = new System.Drawing.Size(93, 39);
+            this.btnUpdate_Class.Size = new System.Drawing.Size(78, 30);
             this.btnUpdate_Class.TabIndex = 7;
             this.btnUpdate_Class.Text = "Update";
             this.btnUpdate_Class.UseVisualStyleBackColor = false;
@@ -559,11 +559,11 @@
             this.btnAdd_Class.FlatAppearance.BorderSize = 0;
             this.btnAdd_Class.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.btnAdd_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd_Class.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Class.Location = new System.Drawing.Point(736, 632);
+            this.btnAdd_Class.Location = new System.Drawing.Point(781, 628);
             this.btnAdd_Class.Name = "btnAdd_Class";
-            this.btnAdd_Class.Size = new System.Drawing.Size(100, 39);
+            this.btnAdd_Class.Size = new System.Drawing.Size(73, 30);
             this.btnAdd_Class.TabIndex = 6;
             this.btnAdd_Class.Text = "Add";
             this.btnAdd_Class.UseVisualStyleBackColor = false;
@@ -573,7 +573,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 143);
+            this.label6.Location = new System.Drawing.Point(318, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 15;
@@ -583,7 +583,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(101, 106);
+            this.label5.Location = new System.Drawing.Point(109, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 14;
@@ -593,7 +593,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 185);
+            this.label4.Location = new System.Drawing.Point(85, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 13;
@@ -602,10 +602,10 @@
             // txtCourse
             // 
             this.txtCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCourse.Location = new System.Drawing.Point(194, 100);
+            this.txtCourse.Location = new System.Drawing.Point(194, 151);
             this.txtCourse.Multiline = true;
             this.txtCourse.Name = "txtCourse";
-            this.txtCourse.Size = new System.Drawing.Size(225, 26);
+            this.txtCourse.Size = new System.Drawing.Size(345, 26);
             this.txtCourse.TabIndex = 1;
             this.txtCourse.TextChanged += new System.EventHandler(this.txtCourse_TextChanged);
             // 
@@ -828,7 +828,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(841, 613);
+            this.button12.Location = new System.Drawing.Point(853, 612);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(98, 30);
             this.button12.TabIndex = 174;
@@ -842,11 +842,11 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(864, 156);
+            this.button11.Location = new System.Drawing.Point(858, 150);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(82, 23);
+            this.button11.Size = new System.Drawing.Size(88, 29);
             this.button11.TabIndex = 173;
             this.button11.Text = "Search";
             this.button11.UseVisualStyleBackColor = false;
@@ -855,7 +855,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(340, 159);
+            this.label20.Location = new System.Drawing.Point(340, 153);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 20);
             this.label20.TabIndex = 172;
@@ -864,10 +864,10 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(454, 156);
+            this.textBox4.Location = new System.Drawing.Point(454, 150);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(391, 23);
+            this.textBox4.Size = new System.Drawing.Size(398, 29);
             this.textBox4.TabIndex = 171;
             // 
             // label17
@@ -1536,7 +1536,7 @@
             this.txtPassword_Admin.Location = new System.Drawing.Point(53, 306);
             this.txtPassword_Admin.Multiline = true;
             this.txtPassword_Admin.Name = "txtPassword_Admin";
-            this.txtPassword_Admin.PasswordChar = '*';
+            this.txtPassword_Admin.PasswordChar = '•';
             this.txtPassword_Admin.Size = new System.Drawing.Size(288, 29);
             this.txtPassword_Admin.TabIndex = 20;
             // 
@@ -1566,7 +1566,7 @@
             this.txtRepassword_Admin.Location = new System.Drawing.Point(53, 378);
             this.txtRepassword_Admin.Multiline = true;
             this.txtRepassword_Admin.Name = "txtRepassword_Admin";
-            this.txtRepassword_Admin.PasswordChar = '*';
+            this.txtRepassword_Admin.PasswordChar = '•';
             this.txtRepassword_Admin.Size = new System.Drawing.Size(288, 29);
             this.txtRepassword_Admin.TabIndex = 22;
             this.txtRepassword_Admin.TextChanged += new System.EventHandler(this.txtRepassword_Admin_TextChanged);
@@ -1643,6 +1643,7 @@
             this.btnexit.Size = new System.Drawing.Size(21, 20);
             this.btnexit.TabIndex = 34;
             this.btnexit.UseVisualStyleBackColor = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // MainMenu
             // 
@@ -1653,14 +1654,14 @@
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlEnrolledList);
-            this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAcc);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
+            this.Controls.Add(this.pnlEnrolledList);
+            this.Controls.Add(this.pnlClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

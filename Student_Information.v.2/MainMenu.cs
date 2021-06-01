@@ -982,5 +982,11 @@ namespace Student_Information.v._2
             mgraphics.FillRectangle(lgb, area);
             mgraphics.DrawRectangle(pen, area);
         }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Panel().Show();
+        }
     }
 }
