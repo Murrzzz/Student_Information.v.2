@@ -41,7 +41,7 @@ namespace Student_Information.v._2
             var Count = Convert.ToInt32(cmd.ExecuteScalar());
             if (Count > 0)
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Success!");
                 new Settings().Show();
                 this.Hide();
             }
