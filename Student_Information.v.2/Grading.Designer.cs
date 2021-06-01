@@ -100,7 +100,7 @@
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 51);
+            this.panel1.Size = new System.Drawing.Size(954, 51);
             this.panel1.TabIndex = 148;
             // 
             // txtGr2
