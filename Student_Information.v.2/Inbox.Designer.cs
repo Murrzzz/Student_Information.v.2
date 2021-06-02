@@ -52,6 +52,8 @@
             this.rdGroup = new System.Windows.Forms.RadioButton();
             this.rdPersonal = new System.Windows.Forms.RadioButton();
             this.pnlAnnouncements = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -59,18 +61,16 @@
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.cmbGroups = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtTitle = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.pnlAnnouncements.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -82,7 +82,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(806, 669);
+            this.panel3.Size = new System.Drawing.Size(750, 564);
             this.panel3.TabIndex = 1;
             // 
             // button2
@@ -93,7 +93,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(610, 621);
+            this.button2.Location = new System.Drawing.Point(565, 500);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 34);
             this.button2.TabIndex = 63;
@@ -108,7 +108,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(715, 621);
+            this.button3.Location = new System.Drawing.Point(648, 500);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 34);
             this.button3.TabIndex = 62;
@@ -118,10 +118,10 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(340, 80);
+            this.textBox4.Location = new System.Drawing.Point(340, 59);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(452, 522);
+            this.textBox4.Size = new System.Drawing.Size(385, 432);
             this.textBox4.TabIndex = 60;
             // 
             // panel4
@@ -216,7 +216,7 @@
             this.panel5.Controls.Add(this.label6);
             this.panel5.Location = new System.Drawing.Point(340, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(452, 66);
+            this.panel5.Size = new System.Drawing.Size(143, 43);
             this.panel5.TabIndex = 59;
             // 
             // label6
@@ -224,7 +224,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 10);
+            this.label6.Location = new System.Drawing.Point(3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 32);
             this.label6.TabIndex = 4;
@@ -234,9 +234,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(389, 130);
+            this.panel1.Location = new System.Drawing.Point(409, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 59);
+            this.panel1.Size = new System.Drawing.Size(142, 53);
             this.panel1.TabIndex = 59;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -254,10 +254,10 @@
             // txtMessage
             // 
             this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMessage.Location = new System.Drawing.Point(392, 218);
+            this.txtMessage.Location = new System.Drawing.Point(409, 99);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(370, 300);
+            this.txtMessage.Size = new System.Drawing.Size(315, 331);
             this.txtMessage.TabIndex = 60;
             this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
             // 
@@ -269,7 +269,7 @@
             this.btnGrade_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrade_Students.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrade_Students.ForeColor = System.Drawing.Color.White;
-            this.btnGrade_Students.Location = new System.Drawing.Point(585, 621);
+            this.btnGrade_Students.Location = new System.Drawing.Point(566, 517);
             this.btnGrade_Students.Name = "btnGrade_Students";
             this.btnGrade_Students.Size = new System.Drawing.Size(76, 25);
             this.btnGrade_Students.TabIndex = 62;
@@ -285,7 +285,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(686, 621);
+            this.button1.Location = new System.Drawing.Point(648, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 25);
             this.button1.TabIndex = 63;
@@ -297,9 +297,9 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.chkSSL);
-            this.panel8.Location = new System.Drawing.Point(392, 531);
+            this.panel8.Location = new System.Drawing.Point(409, 436);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(370, 59);
+            this.panel8.Size = new System.Drawing.Size(315, 58);
             this.panel8.TabIndex = 66;
             // 
             // chkSSL
@@ -307,7 +307,7 @@
             this.chkSSL.AutoSize = true;
             this.chkSSL.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSSL.ForeColor = System.Drawing.Color.Black;
-            this.chkSSL.Location = new System.Drawing.Point(264, 3);
+            this.chkSSL.Location = new System.Drawing.Point(219, 12);
             this.chkSSL.Name = "chkSSL";
             this.chkSSL.Size = new System.Drawing.Size(87, 36);
             this.chkSSL.TabIndex = 7;
@@ -353,9 +353,30 @@
             this.pnlAnnouncements.Controls.Add(this.tabControl1);
             this.pnlAnnouncements.Location = new System.Drawing.Point(3, 2);
             this.pnlAnnouncements.Name = "pnlAnnouncements";
-            this.pnlAnnouncements.Size = new System.Drawing.Size(805, 669);
+            this.pnlAnnouncements.Size = new System.Drawing.Size(749, 564);
             this.pnlAnnouncements.TabIndex = 0;
             this.pnlAnnouncements.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAnnouncements_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtTitle);
+            this.panel2.Location = new System.Drawing.Point(567, 32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(157, 53);
+            this.panel2.TabIndex = 66;
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.BackColor = System.Drawing.Color.LightGray;
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(5, 7);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(143, 37);
+            this.txtTitle.TabIndex = 0;
+            this.txtTitle.Text = "Contact";
             // 
             // tabControl1
             // 
@@ -363,7 +384,7 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(362, 580);
+            this.tabControl1.Size = new System.Drawing.Size(355, 546);
             this.tabControl1.TabIndex = 67;
             // 
             // tabPage1
@@ -378,7 +399,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(354, 554);
+            this.tabPage1.Size = new System.Drawing.Size(347, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -404,7 +425,7 @@
             this.dgvStudents.BackgroundColor = System.Drawing.Color.White;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.GridColor = System.Drawing.Color.White;
-            this.dgvStudents.Location = new System.Drawing.Point(15, 252);
+            this.dgvStudents.Location = new System.Drawing.Point(15, 239);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.Size = new System.Drawing.Size(329, 273);
             this.dgvStudents.TabIndex = 0;
@@ -434,31 +455,11 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Reciepients:";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtTitle);
-            this.panel2.Location = new System.Drawing.Point(389, 32);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 92);
-            this.panel2.TabIndex = 66;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.BackColor = System.Drawing.Color.LightGray;
-            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(27, 14);
-            this.txtTitle.Multiline = true;
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(292, 50);
-            this.txtTitle.TabIndex = 0;
-            // 
             // Inbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 671);
+            this.ClientSize = new System.Drawing.Size(749, 565);
             this.Controls.Add(this.pnlAnnouncements);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -478,12 +479,12 @@
             this.panel8.PerformLayout();
             this.pnlAnnouncements.ResumeLayout(false);
             this.pnlAnnouncements.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
