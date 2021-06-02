@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prof_Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,22 @@
             this.panel1.Size = new System.Drawing.Size(433, 572);
             this.panel1.TabIndex = 31;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.IndianRed;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(173, 408);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(92, 31);
+            this.btnBack.TabIndex = 27;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label1
             // 
@@ -215,9 +231,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 179);
+            this.pictureBox1.Size = new System.Drawing.Size(311, 232);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -241,22 +257,6 @@
             this.shapeContainer1.Size = new System.Drawing.Size(800, 593);
             this.shapeContainer1.TabIndex = 34;
             this.shapeContainer1.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.IndianRed;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(173, 408);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(92, 31);
-            this.btnBack.TabIndex = 27;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Prof_Login
             // 
