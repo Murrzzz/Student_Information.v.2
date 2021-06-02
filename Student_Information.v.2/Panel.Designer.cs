@@ -94,7 +94,7 @@
             this.btnSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.BackgroundImage")));
             this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSettings.Location = new System.Drawing.Point(478, 119);
@@ -109,7 +109,7 @@
             this.btnteach.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnteach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnteach.FlatAppearance.BorderSize = 0;
-            this.btnteach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnteach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnteach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnteach.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnteach.ForeColor = System.Drawing.Color.White;

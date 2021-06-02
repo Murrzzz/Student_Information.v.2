@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -173,6 +180,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.button15);
+            this.panel1.Controls.Add(this.button14);
+            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -186,6 +200,104 @@
             this.panel1.Size = new System.Drawing.Size(182, 687);
             this.panel1.TabIndex = 0;
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Location = new System.Drawing.Point(7, 305);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(34, 38);
+            this.button15.TabIndex = 45;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(7, 490);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(34, 40);
+            this.button14.TabIndex = 44;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(7, 443);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(34, 40);
+            this.button13.TabIndex = 43;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(7, 397);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(34, 40);
+            this.button10.TabIndex = 42;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(7, 351);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(34, 40);
+            this.button8.TabIndex = 41;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(7, 261);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(34, 38);
+            this.button6.TabIndex = 40;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(7, 217);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(34, 38);
+            this.button5.TabIndex = 25;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
@@ -193,11 +305,11 @@
             this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(-1, 558);
+            this.button4.Location = new System.Drawing.Point(2, 490);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 55);
+            this.button4.Size = new System.Drawing.Size(180, 40);
             this.button4.TabIndex = 32;
             this.button4.Text = "Accounts";
             this.button4.UseVisualStyleBackColor = false;
@@ -210,11 +322,11 @@
             this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 497);
+            this.button3.Location = new System.Drawing.Point(3, 443);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 55);
+            this.button3.Size = new System.Drawing.Size(179, 40);
             this.button3.TabIndex = 31;
             this.button3.Text = "School Year";
             this.button3.UseVisualStyleBackColor = false;
@@ -227,11 +339,11 @@
             this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1, 441);
+            this.button2.Location = new System.Drawing.Point(1, 397);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 55);
+            this.button2.Size = new System.Drawing.Size(181, 40);
             this.button2.TabIndex = 30;
             this.button2.Text = "Enroll";
             this.button2.UseVisualStyleBackColor = false;
@@ -244,11 +356,11 @@
             this.btnRecords.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnRecords.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecords.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecords.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecords.ForeColor = System.Drawing.Color.White;
-            this.btnRecords.Location = new System.Drawing.Point(2, 384);
+            this.btnRecords.Location = new System.Drawing.Point(2, 351);
             this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Size = new System.Drawing.Size(189, 55);
+            this.btnRecords.Size = new System.Drawing.Size(180, 40);
             this.btnRecords.TabIndex = 3;
             this.btnRecords.Text = "Archive List";
             this.btnRecords.UseVisualStyleBackColor = false;
@@ -258,9 +370,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -272,11 +384,11 @@
             this.btnAddStudents.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnAddStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnAddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStudents.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudents.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudents.ForeColor = System.Drawing.Color.White;
-            this.btnAddStudents.Location = new System.Drawing.Point(2, 328);
+            this.btnAddStudents.Location = new System.Drawing.Point(2, 305);
             this.btnAddStudents.Name = "btnAddStudents";
-            this.btnAddStudents.Size = new System.Drawing.Size(189, 55);
+            this.btnAddStudents.Size = new System.Drawing.Size(180, 40);
             this.btnAddStudents.TabIndex = 2;
             this.btnAddStudents.Text = "Master List";
             this.btnAddStudents.UseVisualStyleBackColor = false;
@@ -284,16 +396,16 @@
             // 
             // btnClass
             // 
-            this.btnClass.BackColor = System.Drawing.Color.Transparent;
+            this.btnClass.BackColor = System.Drawing.Color.Teal;
             this.btnClass.FlatAppearance.BorderSize = 0;
             this.btnClass.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnClass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClass.ForeColor = System.Drawing.Color.White;
             this.btnClass.Location = new System.Drawing.Point(2, 215);
             this.btnClass.Name = "btnClass";
-            this.btnClass.Size = new System.Drawing.Size(186, 55);
+            this.btnClass.Size = new System.Drawing.Size(180, 40);
             this.btnClass.TabIndex = 0;
             this.btnClass.Text = "Class";
             this.btnClass.UseVisualStyleBackColor = false;
@@ -306,11 +418,11 @@
             this.btnAddClass.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnAddClass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnAddClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClass.ForeColor = System.Drawing.Color.White;
-            this.btnAddClass.Location = new System.Drawing.Point(2, 272);
+            this.btnAddClass.Location = new System.Drawing.Point(2, 261);
             this.btnAddClass.Name = "btnAddClass";
-            this.btnAddClass.Size = new System.Drawing.Size(189, 55);
+            this.btnAddClass.Size = new System.Drawing.Size(180, 38);
             this.btnAddClass.TabIndex = 1;
             this.btnAddClass.Text = "Subjects";
             this.btnAddClass.UseVisualStyleBackColor = false;
@@ -321,9 +433,9 @@
             this.pnlAccounts.BackColor = System.Drawing.Color.White;
             this.pnlAccounts.Controls.Add(this.groupBox2);
             this.pnlAccounts.Controls.Add(this.groupBox1);
-            this.pnlAccounts.Location = new System.Drawing.Point(214, 24);
+            this.pnlAccounts.Location = new System.Drawing.Point(214, 33);
             this.pnlAccounts.Name = "pnlAccounts";
-            this.pnlAccounts.Size = new System.Drawing.Size(971, 674);
+            this.pnlAccounts.Size = new System.Drawing.Size(965, 665);
             this.pnlAccounts.TabIndex = 1;
             this.pnlAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAccounts_Paint);
             // 
@@ -481,9 +593,9 @@
             this.pnlClass.Controls.Add(this.label5);
             this.pnlClass.Controls.Add(this.label4);
             this.pnlClass.Controls.Add(this.txtCourse);
-            this.pnlClass.Location = new System.Drawing.Point(214, 24);
+            this.pnlClass.Location = new System.Drawing.Point(214, 33);
             this.pnlClass.Name = "pnlClass";
-            this.pnlClass.Size = new System.Drawing.Size(971, 674);
+            this.pnlClass.Size = new System.Drawing.Size(965, 665);
             this.pnlClass.TabIndex = 7;
             this.pnlClass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClass_Paint);
             // 
@@ -503,7 +615,7 @@
             this.dgvSection.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvSection.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvSection.Location = new System.Drawing.Point(22, 207);
+            this.dgvSection.Location = new System.Drawing.Point(16, 198);
             this.dgvSection.Name = "dgvSection";
             this.dgvSection.ReadOnly = true;
             this.dgvSection.Size = new System.Drawing.Size(935, 398);
@@ -626,9 +738,9 @@
             this.pnlSubjects.Controls.Add(this.label30);
             this.pnlSubjects.Controls.Add(this.txtSub_Description);
             this.pnlSubjects.Controls.Add(this.txtSub_Code);
-            this.pnlSubjects.Location = new System.Drawing.Point(214, 24);
+            this.pnlSubjects.Location = new System.Drawing.Point(214, 33);
             this.pnlSubjects.Name = "pnlSubjects";
-            this.pnlSubjects.Size = new System.Drawing.Size(971, 674);
+            this.pnlSubjects.Size = new System.Drawing.Size(965, 665);
             this.pnlSubjects.TabIndex = 9;
             this.pnlSubjects.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSubjects_Paint);
             // 
@@ -805,9 +917,9 @@
             this.pnlEnrolledList.Controls.Add(this.label17);
             this.pnlEnrolledList.Controls.Add(this.label11);
             this.pnlEnrolledList.Controls.Add(this.dgvEnrolled);
-            this.pnlEnrolledList.Location = new System.Drawing.Point(214, 24);
+            this.pnlEnrolledList.Location = new System.Drawing.Point(214, 33);
             this.pnlEnrolledList.Name = "pnlEnrolledList";
-            this.pnlEnrolledList.Size = new System.Drawing.Size(971, 674);
+            this.pnlEnrolledList.Size = new System.Drawing.Size(965, 665);
             this.pnlEnrolledList.TabIndex = 8;
             // 
             // lblSchoolYear
@@ -900,7 +1012,7 @@
             this.dgvEnrolled.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEnrolled.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolled.Location = new System.Drawing.Point(19, 194);
+            this.dgvEnrolled.Location = new System.Drawing.Point(13, 185);
             this.dgvEnrolled.Name = "dgvEnrolled";
             this.dgvEnrolled.Size = new System.Drawing.Size(932, 398);
             this.dgvEnrolled.TabIndex = 149;
@@ -932,9 +1044,9 @@
             this.pnlEnroll.Controls.Add(this.label9);
             this.pnlEnroll.Controls.Add(this.txtStudentId);
             this.pnlEnroll.Controls.Add(this.dgvEnrolledSub);
-            this.pnlEnroll.Location = new System.Drawing.Point(214, 24);
+            this.pnlEnroll.Location = new System.Drawing.Point(214, 33);
             this.pnlEnroll.Name = "pnlEnroll";
-            this.pnlEnroll.Size = new System.Drawing.Size(971, 674);
+            this.pnlEnroll.Size = new System.Drawing.Size(965, 665);
             this.pnlEnroll.TabIndex = 29;
             this.pnlEnroll.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnroll_Paint);
             // 
@@ -1171,7 +1283,7 @@
             this.dgvEnrolledSub.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEnrolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolledSub.Location = new System.Drawing.Point(33, 243);
+            this.dgvEnrolledSub.Location = new System.Drawing.Point(27, 234);
             this.dgvEnrolledSub.Name = "dgvEnrolledSub";
             this.dgvEnrolledSub.RowHeadersVisible = false;
             this.dgvEnrolledSub.Size = new System.Drawing.Size(922, 349);
@@ -1187,9 +1299,9 @@
             this.pnlArchiveList.Controls.Add(this.textBox3);
             this.pnlArchiveList.Controls.Add(this.label8);
             this.pnlArchiveList.Controls.Add(this.dgvArchive);
-            this.pnlArchiveList.Location = new System.Drawing.Point(214, 24);
+            this.pnlArchiveList.Location = new System.Drawing.Point(214, 33);
             this.pnlArchiveList.Name = "pnlArchiveList";
-            this.pnlArchiveList.Size = new System.Drawing.Size(971, 674);
+            this.pnlArchiveList.Size = new System.Drawing.Size(965, 665);
             this.pnlArchiveList.TabIndex = 30;
             this.pnlArchiveList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchiveList_Paint);
             // 
@@ -1277,7 +1389,7 @@
             this.dgvArchive.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArchive.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvArchive.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArchive.Location = new System.Drawing.Point(19, 204);
+            this.dgvArchive.Location = new System.Drawing.Point(13, 195);
             this.dgvArchive.Name = "dgvArchive";
             this.dgvArchive.Size = new System.Drawing.Size(932, 388);
             this.dgvArchive.TabIndex = 149;
@@ -1295,9 +1407,9 @@
             this.pnlMasterList.Controls.Add(this.txtSearchMasterList);
             this.pnlMasterList.Controls.Add(this.label7);
             this.pnlMasterList.Controls.Add(this.dgvStudentList);
-            this.pnlMasterList.Location = new System.Drawing.Point(214, 24);
+            this.pnlMasterList.Location = new System.Drawing.Point(214, 33);
             this.pnlMasterList.Name = "pnlMasterList";
-            this.pnlMasterList.Size = new System.Drawing.Size(971, 674);
+            this.pnlMasterList.Size = new System.Drawing.Size(965, 665);
             this.pnlMasterList.TabIndex = 31;
             this.pnlMasterList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMasterList_Paint);
             // 
@@ -1417,7 +1529,7 @@
             this.dgvStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentList.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudentList.Location = new System.Drawing.Point(20, 173);
+            this.dgvStudentList.Location = new System.Drawing.Point(14, 164);
             this.dgvStudentList.Name = "dgvStudentList";
             this.dgvStudentList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStudentList.Size = new System.Drawing.Size(931, 434);
@@ -1430,9 +1542,9 @@
             this.pnlAcc.Controls.Add(this.lblError);
             this.pnlAcc.Controls.Add(this.groupBox3);
             this.pnlAcc.Controls.Add(this.groupBox4);
-            this.pnlAcc.Location = new System.Drawing.Point(214, 24);
+            this.pnlAcc.Location = new System.Drawing.Point(214, 33);
             this.pnlAcc.Name = "pnlAcc";
-            this.pnlAcc.Size = new System.Drawing.Size(971, 674);
+            this.pnlAcc.Size = new System.Drawing.Size(965, 665);
             this.pnlAcc.TabIndex = 32;
             this.pnlAcc.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAcc_Paint);
             // 
@@ -1638,9 +1750,9 @@
             this.btnexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnexit.FlatAppearance.BorderSize = 0;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexit.Location = new System.Drawing.Point(1175, 2);
+            this.btnexit.Location = new System.Drawing.Point(1171, 4);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(21, 20);
+            this.btnexit.Size = new System.Drawing.Size(23, 23);
             this.btnexit.TabIndex = 34;
             this.btnexit.UseVisualStyleBackColor = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
@@ -1653,8 +1765,8 @@
             this.ClientSize = new System.Drawing.Size(1198, 720);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlAcc);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
@@ -1663,6 +1775,7 @@
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -1823,5 +1936,12 @@
         private System.Windows.Forms.CheckBox checkShow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
