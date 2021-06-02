@@ -232,9 +232,9 @@
             this.pnlSend.BackColor = System.Drawing.Color.White;
             this.pnlSend.Controls.Add(this.dgvEnrolledSub);
             this.pnlSend.Controls.Add(this.button2);
-            this.pnlSend.Location = new System.Drawing.Point(221, 27);
+            this.pnlSend.Location = new System.Drawing.Point(221, 30);
             this.pnlSend.Name = "pnlSend";
-            this.pnlSend.Size = new System.Drawing.Size(1037, 650);
+            this.pnlSend.Size = new System.Drawing.Size(1034, 647);
             this.pnlSend.TabIndex = 1;
             this.pnlSend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSaveData_Paint);
             // 
@@ -243,7 +243,7 @@
             this.dgvEnrolledSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEnrolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolledSub.Location = new System.Drawing.Point(31, 66);
+            this.dgvEnrolledSub.Location = new System.Drawing.Point(28, 63);
             this.dgvEnrolledSub.Name = "dgvEnrolledSub";
             this.dgvEnrolledSub.RowHeadersVisible = false;
             this.dgvEnrolledSub.Size = new System.Drawing.Size(977, 530);
@@ -283,9 +283,9 @@
             this.pnlRecords.Controls.Add(this.label2);
             this.pnlRecords.Controls.Add(this.label30);
             this.pnlRecords.Controls.Add(this.Class);
-            this.pnlRecords.Location = new System.Drawing.Point(221, 27);
+            this.pnlRecords.Location = new System.Drawing.Point(221, 30);
             this.pnlRecords.Name = "pnlRecords";
-            this.pnlRecords.Size = new System.Drawing.Size(1037, 651);
+            this.pnlRecords.Size = new System.Drawing.Size(1034, 648);
             this.pnlRecords.TabIndex = 7;
             this.pnlRecords.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecords_Paint);
             // 
@@ -697,9 +697,9 @@
             // 
             this.pnlPrint.BackColor = System.Drawing.Color.White;
             this.pnlPrint.Controls.Add(this.label4);
-            this.pnlPrint.Location = new System.Drawing.Point(221, 27);
+            this.pnlPrint.Location = new System.Drawing.Point(221, 30);
             this.pnlPrint.Name = "pnlPrint";
-            this.pnlPrint.Size = new System.Drawing.Size(1037, 651);
+            this.pnlPrint.Size = new System.Drawing.Size(1034, 648);
             this.pnlPrint.TabIndex = 8;
             this.pnlPrint.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPrint_Paint);
             // 
@@ -720,9 +720,9 @@
             this.pnldAccounts.Controls.Add(this.btnAdd_Admin);
             this.pnldAccounts.Controls.Add(this.groupBox3);
             this.pnldAccounts.Controls.Add(this.groupBox4);
-            this.pnldAccounts.Location = new System.Drawing.Point(221, 27);
+            this.pnldAccounts.Location = new System.Drawing.Point(221, 30);
             this.pnldAccounts.Name = "pnldAccounts";
-            this.pnldAccounts.Size = new System.Drawing.Size(1037, 651);
+            this.pnldAccounts.Size = new System.Drawing.Size(1034, 648);
             this.pnldAccounts.TabIndex = 9;
             this.pnldAccounts.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrade_Paint);
             // 
@@ -928,9 +928,9 @@
             this.btnexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnexit.FlatAppearance.BorderSize = 0;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexit.Location = new System.Drawing.Point(1243, 1);
+            this.btnexit.Location = new System.Drawing.Point(1242, 4);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(21, 20);
+            this.btnexit.Size = new System.Drawing.Size(23, 23);
             this.btnexit.TabIndex = 151;
             this.btnexit.UseVisualStyleBackColor = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);

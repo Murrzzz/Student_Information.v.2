@@ -64,5 +64,17 @@ namespace Student_Information.v._2
         {
             Application.Exit();
         }
+
+        private void btnprof1_Click(object sender, EventArgs e)
+        {
+            new Prof_Login().Show();
+            this.Hide();
+        }
+
+        private void btnadmin1_Click(object sender, EventArgs e)
+        {
+            new MainMenu().Show();
+            this.Hide();
+        }
     }
 }
