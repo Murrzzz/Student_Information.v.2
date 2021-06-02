@@ -252,7 +252,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Location = new System.Drawing.Point(7, 397);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(34, 40);
+            this.button10.Size = new System.Drawing.Size(34, 45);
             this.button10.TabIndex = 42;
             this.button10.UseVisualStyleBackColor = false;
             // 
@@ -286,7 +286,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackColor = System.Drawing.Color.Teal;
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatAppearance.BorderSize = 0;
@@ -295,7 +295,7 @@
             this.button5.Location = new System.Drawing.Point(7, 217);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(34, 38);
-            this.button5.TabIndex = 25;
+            this.button5.TabIndex = 3;
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -1775,7 +1775,7 @@
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
+            this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
