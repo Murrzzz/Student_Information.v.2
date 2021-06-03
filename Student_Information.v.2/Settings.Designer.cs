@@ -318,10 +318,10 @@
             this.dgvEnrolledSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEnrolledSub.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvEnrolledSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolledSub.Location = new System.Drawing.Point(28, 63);
+            this.dgvEnrolledSub.Location = new System.Drawing.Point(28, 45);
             this.dgvEnrolledSub.Name = "dgvEnrolledSub";
             this.dgvEnrolledSub.RowHeadersVisible = false;
-            this.dgvEnrolledSub.Size = new System.Drawing.Size(977, 530);
+            this.dgvEnrolledSub.Size = new System.Drawing.Size(977, 548);
             this.dgvEnrolledSub.TabIndex = 150;
             // 
             // button2
@@ -332,7 +332,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(928, 611);
+            this.button2.Location = new System.Drawing.Point(925, 602);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 27);
             this.button2.TabIndex = 57;
@@ -1031,10 +1031,10 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnldAccounts);
-            this.Controls.Add(this.pnlPrint);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
