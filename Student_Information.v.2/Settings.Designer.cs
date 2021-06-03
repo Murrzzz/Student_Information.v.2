@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnRecycle = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -100,11 +105,6 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.btnexit = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
@@ -139,6 +139,71 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(193, 666);
             this.panel1.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(9, 458);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(33, 33);
+            this.button6.TabIndex = 155;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(9, 396);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(33, 33);
+            this.button5.TabIndex = 154;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(9, 342);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(33, 33);
+            this.button4.TabIndex = 153;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(9, 286);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 152;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(9, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 33);
+            this.button1.TabIndex = 151;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnLogout
             // 
@@ -307,7 +372,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(947, 26);
+            this.btnSearch.Location = new System.Drawing.Point(934, 25);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(77, 26);
             this.btnSearch.TabIndex = 181;
@@ -339,10 +404,10 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(14, 191);
+            this.tabControl1.Location = new System.Drawing.Point(28, 214);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1014, 460);
+            this.tabControl1.Size = new System.Drawing.Size(996, 437);
             this.tabControl1.TabIndex = 178;
             // 
             // tabPage1
@@ -371,7 +436,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1006, 434);
+            this.tabPage1.Size = new System.Drawing.Size(988, 411);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Students Grades";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -402,10 +467,10 @@
             this.dgvFirstSem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFirstSem.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvFirstSem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFirstSem.Location = new System.Drawing.Point(38, 125);
+            this.dgvFirstSem.Location = new System.Drawing.Point(20, 129);
             this.dgvFirstSem.Name = "dgvFirstSem";
             this.dgvFirstSem.RowHeadersVisible = false;
-            this.dgvFirstSem.Size = new System.Drawing.Size(422, 258);
+            this.dgvFirstSem.Size = new System.Drawing.Size(413, 231);
             this.dgvFirstSem.TabIndex = 193;
             // 
             // dgvSecondSem
@@ -413,10 +478,10 @@
             this.dgvSecondSem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSecondSem.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dgvSecondSem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSecondSem.Location = new System.Drawing.Point(532, 125);
+            this.dgvSecondSem.Location = new System.Drawing.Point(564, 129);
             this.dgvSecondSem.Name = "dgvSecondSem";
             this.dgvSecondSem.RowHeadersVisible = false;
-            this.dgvSecondSem.Size = new System.Drawing.Size(458, 258);
+            this.dgvSecondSem.Size = new System.Drawing.Size(413, 231);
             this.dgvSecondSem.TabIndex = 192;
             // 
             // txtYear2
@@ -485,7 +550,7 @@
             this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnprint.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprint.ForeColor = System.Drawing.Color.White;
-            this.btnprint.Location = new System.Drawing.Point(910, 389);
+            this.btnprint.Location = new System.Drawing.Point(897, 366);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(80, 30);
             this.btnprint.TabIndex = 53;
@@ -597,7 +662,7 @@
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(350, 139);
+            this.dtpBirthday.Location = new System.Drawing.Point(350, 156);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(222, 20);
             this.dtpBirthday.TabIndex = 177;
@@ -607,7 +672,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 139);
+            this.label1.Location = new System.Drawing.Point(266, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 176;
@@ -616,37 +681,37 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(178, 165);
+            this.txtAddress.Location = new System.Drawing.Point(178, 182);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(394, 20);
+            this.txtAddress.Size = new System.Drawing.Size(394, 23);
             this.txtAddress.TabIndex = 175;
             // 
             // txtGender
             // 
             this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(178, 139);
+            this.txtGender.Location = new System.Drawing.Point(178, 153);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(74, 20);
+            this.txtGender.Size = new System.Drawing.Size(74, 23);
             this.txtGender.TabIndex = 174;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(178, 113);
+            this.txtName.Location = new System.Drawing.Point(178, 124);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(394, 20);
+            this.txtName.Size = new System.Drawing.Size(394, 23);
             this.txtName.TabIndex = 173;
             // 
             // txtStudentNumber
             // 
             this.txtStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentNumber.Location = new System.Drawing.Point(178, 87);
+            this.txtStudentNumber.Location = new System.Drawing.Point(178, 95);
             this.txtStudentNumber.Multiline = true;
             this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.Size = new System.Drawing.Size(394, 20);
+            this.txtStudentNumber.Size = new System.Drawing.Size(394, 23);
             this.txtStudentNumber.TabIndex = 172;
             // 
             // label6
@@ -654,7 +719,7 @@
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(79, 165);
+            this.label6.Location = new System.Drawing.Point(79, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 48;
@@ -665,7 +730,7 @@
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(84, 140);
+            this.label5.Location = new System.Drawing.Point(84, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 47;
@@ -676,7 +741,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(95, 113);
+            this.label2.Location = new System.Drawing.Point(96, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 46;
@@ -687,7 +752,7 @@
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(56, 87);
+            this.label30.Location = new System.Drawing.Point(57, 98);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(94, 20);
             this.label30.TabIndex = 45;
@@ -957,71 +1022,6 @@
             this.label16.TabIndex = 152;
             this.label16.Text = "Student Information System";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(9, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 33);
-            this.button1.TabIndex = 151;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 286);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 152;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(9, 342);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 33);
-            this.button4.TabIndex = 153;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(9, 396);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(33, 33);
-            this.button5.TabIndex = 154;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(9, 458);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(33, 33);
-            this.button6.TabIndex = 155;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1031,10 +1031,10 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnldAccounts);
             this.Controls.Add(this.pnlPrint);
-            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
