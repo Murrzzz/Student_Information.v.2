@@ -100,6 +100,11 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.btnexit = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSend.SuspendLayout();
@@ -119,6 +124,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnRecycle);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -137,7 +147,7 @@
             this.btnLogout.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(3, 444);
             this.btnLogout.Name = "btnLogout";
@@ -160,7 +170,7 @@
             this.btnRecycle.Name = "btnRecycle";
             this.btnRecycle.Size = new System.Drawing.Size(189, 55);
             this.btnRecycle.TabIndex = 3;
-            this.btnRecycle.Text = "Manage Accounts";
+            this.btnRecycle.Text = "Manage Acc";
             this.btnRecycle.UseVisualStyleBackColor = false;
             this.btnRecycle.Click += new System.EventHandler(this.btnRecycle_Click);
             // 
@@ -168,9 +178,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -183,7 +193,7 @@
             this.btnHelp.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.White;
             this.btnHelp.Location = new System.Drawing.Point(2, 328);
             this.btnHelp.Name = "btnHelp";
@@ -200,7 +210,7 @@
             this.btnUserUpdate.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnUserUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnUserUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUserUpdate.Location = new System.Drawing.Point(2, 215);
             this.btnUserUpdate.Name = "btnUserUpdate";
@@ -217,7 +227,7 @@
             this.btnSaveData.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnSaveData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveData.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveData.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveData.ForeColor = System.Drawing.Color.White;
             this.btnSaveData.Location = new System.Drawing.Point(2, 272);
             this.btnSaveData.Name = "btnSaveData";
@@ -947,6 +957,71 @@
             this.label16.TabIndex = 152;
             this.label16.Text = "Student Information System";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(9, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 33);
+            this.button1.TabIndex = 151;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(9, 286);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 152;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(9, 342);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(33, 33);
+            this.button4.TabIndex = 153;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(9, 396);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(33, 33);
+            this.button5.TabIndex = 154;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(9, 458);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(33, 33);
+            this.button6.TabIndex = 155;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1062,5 +1137,10 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkPass;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }
