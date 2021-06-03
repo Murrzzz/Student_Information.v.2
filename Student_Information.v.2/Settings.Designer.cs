@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnRecycle = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -124,11 +119,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnRecycle);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -140,71 +130,6 @@
             this.panel1.Size = new System.Drawing.Size(193, 666);
             this.panel1.TabIndex = 0;
             // 
-            // button6
-            // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(9, 458);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(33, 33);
-            this.button6.TabIndex = 155;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(9, 396);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(33, 33);
-            this.button5.TabIndex = 154;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(9, 342);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 33);
-            this.button4.TabIndex = 153;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 286);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 152;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(9, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 33);
-            this.button1.TabIndex = 151;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
@@ -214,11 +139,15 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(3, 444);
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 403);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(186, 55);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(190, 39);
             this.btnLogout.TabIndex = 30;
             this.btnLogout.Text = "Logout";
+            this.btnLogout.UseCompatibleTextRendering = true;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -231,12 +160,16 @@
             this.btnRecycle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecycle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecycle.ForeColor = System.Drawing.Color.White;
-            this.btnRecycle.Location = new System.Drawing.Point(2, 384);
+            this.btnRecycle.Image = ((System.Drawing.Image)(resources.GetObject("btnRecycle.Image")));
+            this.btnRecycle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecycle.Location = new System.Drawing.Point(0, 359);
             this.btnRecycle.Name = "btnRecycle";
-            this.btnRecycle.Size = new System.Drawing.Size(189, 55);
+            this.btnRecycle.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnRecycle.Size = new System.Drawing.Size(190, 39);
             this.btnRecycle.TabIndex = 3;
             this.btnRecycle.Text = "Manage Acc";
-            this.btnRecycle.UseVisualStyleBackColor = false;
+            this.btnRecycle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRecycle.UseVisualStyleBackColor = true;
             this.btnRecycle.Click += new System.EventHandler(this.btnRecycle_Click);
             // 
             // pictureBox1
@@ -260,29 +193,38 @@
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.White;
-            this.btnHelp.Location = new System.Drawing.Point(2, 328);
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Location = new System.Drawing.Point(0, 315);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(189, 55);
-            this.btnHelp.TabIndex = 2;
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(190, 39);
+            this.btnHelp.TabIndex = 3;
             this.btnHelp.Text = "Input Grades";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHelp.UseCompatibleTextRendering = true;
             this.btnHelp.UseVisualStyleBackColor = false;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnUserUpdate
             // 
             this.btnUserUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUserUpdate.FlatAppearance.BorderSize = 0;
             this.btnUserUpdate.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnUserUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnUserUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUserUpdate.Location = new System.Drawing.Point(2, 215);
+            this.btnUserUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUserUpdate.Image")));
+            this.btnUserUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserUpdate.Location = new System.Drawing.Point(0, 227);
             this.btnUserUpdate.Name = "btnUserUpdate";
-            this.btnUserUpdate.Size = new System.Drawing.Size(189, 55);
-            this.btnUserUpdate.TabIndex = 0;
+            this.btnUserUpdate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUserUpdate.Size = new System.Drawing.Size(190, 39);
+            this.btnUserUpdate.TabIndex = 3;
             this.btnUserUpdate.Text = "Records";
-            this.btnUserUpdate.UseVisualStyleBackColor = false;
+            this.btnUserUpdate.UseVisualStyleBackColor = true;
             this.btnUserUpdate.Click += new System.EventHandler(this.btnUserUpdate_Click);
             // 
             // btnSaveData
@@ -294,12 +236,15 @@
             this.btnSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveData.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveData.ForeColor = System.Drawing.Color.White;
-            this.btnSaveData.Location = new System.Drawing.Point(2, 272);
+            this.btnSaveData.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveData.Image")));
+            this.btnSaveData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveData.Location = new System.Drawing.Point(0, 271);
             this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(189, 55);
-            this.btnSaveData.TabIndex = 1;
+            this.btnSaveData.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSaveData.Size = new System.Drawing.Size(190, 39);
+            this.btnSaveData.TabIndex = 3;
             this.btnSaveData.Text = "Send";
-            this.btnSaveData.UseVisualStyleBackColor = false;
+            this.btnSaveData.UseVisualStyleBackColor = true;
             this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // pnlSend
@@ -1036,7 +981,7 @@
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnldAccounts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Settings";
+     
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.Settings_Load);
@@ -1137,10 +1082,5 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkPass;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
     }
 }
