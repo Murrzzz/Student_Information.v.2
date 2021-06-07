@@ -18,7 +18,7 @@ namespace Student_Information.v._2
             InitializeComponent();
         }
 
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\i5PC\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb");
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Administrator\Desktop\Student_Information.v.2\Student_Information.v.2\database\Stud_Info_Update.accdb");
         public static string []SubName =new string[30];
         public static string[] SubCode = new string[30];
         public static string[] SubUnits = new string[30];
