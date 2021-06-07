@@ -136,7 +136,7 @@ namespace Student_Information.v._2
         {
             Comboboxes();
 
-            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [Stud_Info]", con);
 
 
             con.Close();
@@ -312,7 +312,7 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gender],[Stud_BirthDate],[Stud_Address] from [Stud_Info] where [Stud_FullName]='" + txtSearchRecords.Text + "'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gender],[Stud_BirthDate],[Stud_Address] from [Stud_Info] where [Stud_Id]='" + txtSearchRecords.Text + "'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
 

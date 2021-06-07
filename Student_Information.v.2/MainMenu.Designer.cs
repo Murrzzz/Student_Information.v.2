@@ -110,14 +110,16 @@
             this.txtStudentId = new System.Windows.Forms.TextBox();
             this.dgvEnrolledSub = new System.Windows.Forms.DataGridView();
             this.pnlArchiveList = new System.Windows.Forms.Panel();
+            this.btnRefreshArchive = new System.Windows.Forms.Button();
             this.btnMessageArchive = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtArchiveSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvArchive = new System.Windows.Forms.DataGridView();
             this.pnlMasterList = new System.Windows.Forms.Panel();
+            this.btnRefreshMasterlist = new System.Windows.Forms.Button();
             this.btnMessageMasterList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUpdateStud = new System.Windows.Forms.Button();
@@ -831,6 +833,7 @@
             this.pnlEnrolledList.Name = "pnlEnrolledList";
             this.pnlEnrolledList.Size = new System.Drawing.Size(965, 665);
             this.pnlEnrolledList.TabIndex = 8;
+            this.pnlEnrolledList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnrolledList_Paint);
             // 
             // lblSchoolYear
             // 
@@ -866,18 +869,19 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(858, 150);
+            this.button11.Location = new System.Drawing.Point(708, 146);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(88, 29);
             this.button11.TabIndex = 173;
             this.button11.Text = "Search";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(340, 153);
+            this.label20.Location = new System.Drawing.Point(190, 149);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 20);
             this.label20.TabIndex = 172;
@@ -886,7 +890,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(454, 150);
+            this.textBox4.Location = new System.Drawing.Point(304, 146);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(398, 29);
@@ -1040,7 +1044,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(866, 207);
+            this.btnSearch.Location = new System.Drawing.Point(866, 200);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(78, 26);
             this.btnSearch.TabIndex = 170;
@@ -1052,7 +1056,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(448, 213);
+            this.label3.Location = new System.Drawing.Point(448, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 169;
@@ -1063,7 +1067,7 @@
             this.txtSearchEnroll.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtSearchEnroll.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearchEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchEnroll.Location = new System.Drawing.Point(545, 207);
+            this.txtSearchEnroll.Location = new System.Drawing.Point(545, 200);
             this.txtSearchEnroll.Name = "txtSearchEnroll";
             this.txtSearchEnroll.Size = new System.Drawing.Size(309, 26);
             this.txtSearchEnroll.TabIndex = 168;
@@ -1202,11 +1206,12 @@
             // pnlArchiveList
             // 
             this.pnlArchiveList.BackColor = System.Drawing.Color.White;
+            this.pnlArchiveList.Controls.Add(this.btnRefreshArchive);
             this.pnlArchiveList.Controls.Add(this.btnMessageArchive);
             this.pnlArchiveList.Controls.Add(this.btnRestore);
             this.pnlArchiveList.Controls.Add(this.button9);
             this.pnlArchiveList.Controls.Add(this.label19);
-            this.pnlArchiveList.Controls.Add(this.textBox3);
+            this.pnlArchiveList.Controls.Add(this.txtArchiveSearch);
             this.pnlArchiveList.Controls.Add(this.label8);
             this.pnlArchiveList.Controls.Add(this.dgvArchive);
             this.pnlArchiveList.Location = new System.Drawing.Point(214, 33);
@@ -1214,6 +1219,22 @@
             this.pnlArchiveList.Size = new System.Drawing.Size(965, 665);
             this.pnlArchiveList.TabIndex = 30;
             this.pnlArchiveList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlArchiveList_Paint);
+            // 
+            // btnRefreshArchive
+            // 
+            this.btnRefreshArchive.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefreshArchive.FlatAppearance.BorderSize = 0;
+            this.btnRefreshArchive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnRefreshArchive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshArchive.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshArchive.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshArchive.Location = new System.Drawing.Point(802, 157);
+            this.btnRefreshArchive.Name = "btnRefreshArchive";
+            this.btnRefreshArchive.Size = new System.Drawing.Size(102, 27);
+            this.btnRefreshArchive.TabIndex = 176;
+            this.btnRefreshArchive.Text = "Refresh";
+            this.btnRefreshArchive.UseVisualStyleBackColor = false;
+            this.btnRefreshArchive.Click += new System.EventHandler(this.btnRefreshArchive_Click);
             // 
             // btnMessageArchive
             // 
@@ -1255,31 +1276,33 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(849, 160);
+            this.button9.Location = new System.Drawing.Point(696, 157);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(102, 27);
             this.button9.TabIndex = 173;
             this.button9.Text = "Search";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(302, 167);
+            this.label19.Location = new System.Drawing.Point(165, 160);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(91, 20);
             this.label19.TabIndex = 172;
             this.label19.Text = "Student ID:";
             // 
-            // textBox3
+            // txtArchiveSearch
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(411, 160);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(429, 27);
-            this.textBox3.TabIndex = 171;
+            this.txtArchiveSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtArchiveSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtArchiveSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArchiveSearch.Location = new System.Drawing.Point(258, 157);
+            this.txtArchiveSearch.Name = "txtArchiveSearch";
+            this.txtArchiveSearch.Size = new System.Drawing.Size(429, 26);
+            this.txtArchiveSearch.TabIndex = 171;
             // 
             // label8
             // 
@@ -1308,6 +1331,7 @@
             // pnlMasterList
             // 
             this.pnlMasterList.BackColor = System.Drawing.Color.White;
+            this.pnlMasterList.Controls.Add(this.btnRefreshMasterlist);
             this.pnlMasterList.Controls.Add(this.btnMessageMasterList);
             this.pnlMasterList.Controls.Add(this.button1);
             this.pnlMasterList.Controls.Add(this.btnUpdateStud);
@@ -1322,6 +1346,22 @@
             this.pnlMasterList.Size = new System.Drawing.Size(965, 665);
             this.pnlMasterList.TabIndex = 31;
             this.pnlMasterList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMasterList_Paint);
+            // 
+            // btnRefreshMasterlist
+            // 
+            this.btnRefreshMasterlist.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefreshMasterlist.FlatAppearance.BorderSize = 0;
+            this.btnRefreshMasterlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnRefreshMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshMasterlist.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshMasterlist.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshMasterlist.Location = new System.Drawing.Point(842, 19);
+            this.btnRefreshMasterlist.Name = "btnRefreshMasterlist";
+            this.btnRefreshMasterlist.Size = new System.Drawing.Size(88, 29);
+            this.btnRefreshMasterlist.TabIndex = 178;
+            this.btnRefreshMasterlist.Text = "Refresh";
+            this.btnRefreshMasterlist.UseVisualStyleBackColor = false;
+            this.btnRefreshMasterlist.Click += new System.EventHandler(this.btnRefreshMasterlist_Click);
             // 
             // btnMessageMasterList
             // 
@@ -1394,7 +1434,7 @@
             this.btnSeaerchMasterList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeaerchMasterList.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeaerchMasterList.ForeColor = System.Drawing.Color.White;
-            this.btnSeaerchMasterList.Location = new System.Drawing.Point(802, 20);
+            this.btnSeaerchMasterList.Location = new System.Drawing.Point(743, 20);
             this.btnSeaerchMasterList.Name = "btnSeaerchMasterList";
             this.btnSeaerchMasterList.Size = new System.Drawing.Size(93, 26);
             this.btnSeaerchMasterList.TabIndex = 173;
@@ -1406,7 +1446,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(287, 26);
+            this.label18.Location = new System.Drawing.Point(228, 26);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(91, 20);
             this.label18.TabIndex = 172;
@@ -1414,9 +1454,10 @@
             // 
             // txtSearchMasterList
             // 
+            this.txtSearchMasterList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSearchMasterList.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearchMasterList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchMasterList.Location = new System.Drawing.Point(384, 20);
-            this.txtSearchMasterList.Multiline = true;
+            this.txtSearchMasterList.Location = new System.Drawing.Point(325, 20);
             this.txtSearchMasterList.Name = "txtSearchMasterList";
             this.txtSearchMasterList.Size = new System.Drawing.Size(412, 26);
             this.txtSearchMasterList.TabIndex = 171;
@@ -1675,17 +1716,17 @@
             this.ClientSize = new System.Drawing.Size(1198, 720);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pnlAcc);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAccounts);
-            this.Controls.Add(this.pnlSubjects);
-            this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
+            this.Controls.Add(this.pnlAcc);
+            this.Controls.Add(this.pnlAccounts);
+            this.Controls.Add(this.pnlSubjects);
+            this.Controls.Add(this.pnlEnroll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = "MainMenu";
+           // this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -1799,7 +1840,7 @@
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label19;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtArchiveSearch;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label20;
@@ -1846,5 +1887,7 @@
         private System.Windows.Forms.CheckBox checkShow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.Button btnRefreshMasterlist;
+        private System.Windows.Forms.Button btnRefreshArchive;
     }
 }

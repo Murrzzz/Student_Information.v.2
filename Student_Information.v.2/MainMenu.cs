@@ -103,13 +103,15 @@ namespace Student_Information.v._2
         {
             try
             {
+                con.Close();
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand(" insert into[Stud_Section]([Section_Name],[Course],[YearLevel]) values(?,?,?)", con);
-                cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.Integer).Value = txtSectionName.Text;
+                cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.VarChar).Value = txtSectionName.Text;
                 cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
                 cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;
                 cmd.ExecuteNonQuery();
                 con.Close();
+                Section_Select();
             }
             catch (Exception ex)
             {
@@ -119,7 +121,22 @@ namespace Student_Information.v._2
 
         private void btnUpdate_Class_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                con.Close();
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand(" update[Stud_Section] set[Section_Name]=?,[Course]=?,[YearLevel]=? where", con);
+                cmd.Parameters.AddWithValue("@Stud_Id", OleDbType.VarChar).Value = txtSectionName.Text;
+                cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = txtCourse.Text;
+                cmd.Parameters.AddWithValue("@Stud_Fname", OleDbType.VarChar).Value = cmbYearLevel.Text;
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Section_Select();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAdd(object sender, EventArgs e)
@@ -205,16 +222,9 @@ namespace Student_Information.v._2
             this.Hide();
             pan.Show();
         }
-
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void AutoComplete_Enroll()
         {
-            //dgvSubject.Columns[0].Width=200;
-         
-
-            Hide_panels();
-            Comboboxes();
-            Comboboxes1();
-            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [Stud_Info]", con);
 
 
             con.Close();
@@ -233,6 +243,71 @@ namespace Student_Information.v._2
 
             con.Close();
            
+            
+        }
+        private void AutoComplete_MasterList()
+        {
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [Stud_Info]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            //txtSearchEnroll.AutoCompleteCustomSource = compl;
+            txtSearchMasterList.AutoCompleteCustomSource = compl;
+            con.Close();
+
+
+        }
+
+        private void AutoComplete_Archive()
+        {
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [Stud_Info_Archive]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            //txtSearchEnroll.AutoCompleteCustomSource = compl;
+            txtArchiveSearch.AutoCompleteCustomSource = compl;
+            con.Close();
+
+
+        }
+
+
+
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            //dgvSubject.Columns[0].Width=200;
+            SelectArchiveStudents();// Archive List
+            SelectStudents();//Master List
+            Hide_panels();
+            Comboboxes();
+            Comboboxes1();
+            AutoComplete_Enroll();
+            AutoComplete_Archive();
+            AutoComplete_MasterList();
+
         }
 
         private void txtClass_Name_TextChanged(object sender, EventArgs e)
@@ -266,7 +341,9 @@ namespace Student_Information.v._2
 
         private void dgvSection_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtSectionName.Text = dgvSection.Rows[e.RowIndex].Cells["Section_Name"].Value.ToString();
+            txtCourse.Text = dgvSection.Rows[e.RowIndex].Cells["Course"].Value.ToString();
+            cmbYearLevel.Text = dgvSection.Rows[e.RowIndex].Cells["YearLevel"].Value.ToString();
         }
 
         private void pnlClass_Paint(object sender, PaintEventArgs e)
@@ -348,7 +425,7 @@ namespace Student_Information.v._2
     
         private void pnlMasterList_Paint(object sender, PaintEventArgs e)
         {
-            SelectStudents();
+            
         }
         private void SelectStudents()
         {
@@ -450,7 +527,7 @@ namespace Student_Information.v._2
         }
         private void SelectStudents_Search()
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Erollment] where[Stud_Name]='" + txtSearchEnroll.Text + "' and [SchoolYear]='"+lblSchoolYearEnroll .Text +"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Erollment] where[Stud_Id]='" + txtSearchEnroll.Text + "' and [SchoolYear]='"+lblSchoolYearEnroll .Text +"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvEnrolledSub.DataSource = table;
@@ -462,7 +539,7 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_FullName]='"+txtSearchEnroll .Text +"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_Id]='"+txtSearchEnroll .Text +"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             
@@ -490,11 +567,24 @@ namespace Student_Information.v._2
 
         private void pnlArchiveList_Paint(object sender, PaintEventArgs e)
         {
-            SelectArchiveStudents();
+           
         }
         private void SelectArchiveStudents()
         {
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info_Archive]", con);
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvArchive.DataSource = table;
+
+            dgvArchive.AllowUserToAddRows = false;
+            dgvArchive.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvArchive.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+
+        private void SearchArchiveStudents()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info_Archive] where [Stud_Id]='"+txtArchiveSearch.Text+"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvArchive.DataSource = table;
@@ -581,7 +671,7 @@ namespace Student_Information.v._2
         private void btnSeaerchMasterList_Click(object sender, EventArgs e)
         {
             con.Open();
-            OleDbDataAdapter  search = new OleDbDataAdapter ("Select * from [Stud_Info] where [Stud_Lname]='"+txtSearchMasterList .Text +"'",con );
+            OleDbDataAdapter search = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info] where [Stud_Id]='" + txtSearchMasterList.Text + "'", con);
             //search.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtSearchMasterList.Text;
 
             DataTable table = new DataTable();
@@ -986,6 +1076,32 @@ namespace Student_Information.v._2
         {
             this.Close();
             new Panel().Show();
+        }
+
+        private void pnlEnrolledList_Paint(object sender, PaintEventArgs e)
+        {
+            lblSchoolYear.Text = SchoolYear;
+            Select_Enrolee();
+        }
+
+        private void btnRefreshArchive_Click(object sender, EventArgs e)
+        {
+            SelectArchiveStudents();// Archive List
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SearchArchiveStudents();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefreshMasterlist_Click(object sender, EventArgs e)
+        {
+            SelectStudents();//Master List
         }
     }
 }
