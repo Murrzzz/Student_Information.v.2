@@ -78,11 +78,12 @@
             this.txtSub_Description = new System.Windows.Forms.TextBox();
             this.txtSub_Code = new System.Windows.Forms.TextBox();
             this.pnlEnrolledList = new System.Windows.Forms.Panel();
+            this.btnRefreshEnrolled = new System.Windows.Forms.Button();
             this.lblSchoolYear = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtEnrolledMasterlist = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvEnrolled = new System.Windows.Forms.DataGridView();
@@ -737,6 +738,7 @@
             this.button7.TabIndex = 34;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnSub_Upt
             // 
@@ -752,6 +754,7 @@
             this.btnSub_Upt.TabIndex = 33;
             this.btnSub_Upt.Text = "Update";
             this.btnSub_Upt.UseVisualStyleBackColor = false;
+            this.btnSub_Upt.Click += new System.EventHandler(this.btnSub_Upt_Click);
             // 
             // btnSub_Add
             // 
@@ -821,11 +824,12 @@
             // pnlEnrolledList
             // 
             this.pnlEnrolledList.BackColor = System.Drawing.Color.White;
+            this.pnlEnrolledList.Controls.Add(this.btnRefreshEnrolled);
             this.pnlEnrolledList.Controls.Add(this.lblSchoolYear);
             this.pnlEnrolledList.Controls.Add(this.button12);
             this.pnlEnrolledList.Controls.Add(this.button11);
             this.pnlEnrolledList.Controls.Add(this.label20);
-            this.pnlEnrolledList.Controls.Add(this.textBox4);
+            this.pnlEnrolledList.Controls.Add(this.txtEnrolledMasterlist);
             this.pnlEnrolledList.Controls.Add(this.label17);
             this.pnlEnrolledList.Controls.Add(this.label11);
             this.pnlEnrolledList.Controls.Add(this.dgvEnrolled);
@@ -834,6 +838,22 @@
             this.pnlEnrolledList.Size = new System.Drawing.Size(965, 665);
             this.pnlEnrolledList.TabIndex = 8;
             this.pnlEnrolledList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEnrolledList_Paint);
+            // 
+            // btnRefreshEnrolled
+            // 
+            this.btnRefreshEnrolled.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefreshEnrolled.FlatAppearance.BorderSize = 0;
+            this.btnRefreshEnrolled.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnRefreshEnrolled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshEnrolled.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshEnrolled.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshEnrolled.Location = new System.Drawing.Point(800, 146);
+            this.btnRefreshEnrolled.Name = "btnRefreshEnrolled";
+            this.btnRefreshEnrolled.Size = new System.Drawing.Size(88, 29);
+            this.btnRefreshEnrolled.TabIndex = 177;
+            this.btnRefreshEnrolled.Text = "Refresh";
+            this.btnRefreshEnrolled.UseVisualStyleBackColor = false;
+            this.btnRefreshEnrolled.Click += new System.EventHandler(this.btnRefreshEnrolled_Click);
             // 
             // lblSchoolYear
             // 
@@ -887,14 +907,15 @@
             this.label20.TabIndex = 172;
             this.label20.Text = "Student ID:";
             // 
-            // textBox4
+            // txtEnrolledMasterlist
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(304, 146);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(398, 29);
-            this.textBox4.TabIndex = 171;
+            this.txtEnrolledMasterlist.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtEnrolledMasterlist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtEnrolledMasterlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnrolledMasterlist.Location = new System.Drawing.Point(304, 146);
+            this.txtEnrolledMasterlist.Name = "txtEnrolledMasterlist";
+            this.txtEnrolledMasterlist.Size = new System.Drawing.Size(398, 26);
+            this.txtEnrolledMasterlist.TabIndex = 171;
             // 
             // label17
             // 
@@ -1713,11 +1734,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(1198, 720);
+            this.ClientSize = new System.Drawing.Size(1198, 719);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlMasterList);
             this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
@@ -1725,8 +1745,9 @@
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
+            this.Controls.Add(this.pnlMasterList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           // this.Name = "MainMenu";
+            //this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -1844,7 +1865,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox txtEnrolledMasterlist;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label22;
         public System.Windows.Forms.TextBox txtYear1;
@@ -1889,5 +1910,6 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btnRefreshMasterlist;
         private System.Windows.Forms.Button btnRefreshArchive;
+        private System.Windows.Forms.Button btnRefreshEnrolled;
     }
 }

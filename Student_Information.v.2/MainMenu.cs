@@ -141,23 +141,30 @@ namespace Student_Information.v._2
 
         private void btnAdd(object sender, EventArgs e)
         {
-            if ((txtSub_Code.Text == "") || (txtUnits.Text == "") || (txtSub_Description.Text == "")||(cmbSubYear .Text =="")||(cmbSubSem.Text ==""))
+            try
             {
-                MessageBox.Show("Please fill the blank");
+                if ((txtSub_Code.Text == "") || (txtUnits.Text == "") || (txtSub_Description.Text == "") || (cmbSubYear.Text == "") || (cmbSubSem.Text == ""))
+                {
+                    MessageBox.Show("Please fill the blank");
+                }
+                else
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand(" insert into[Subjects]([Sub_Code],[Sub_Name],[Sub_Year],[Sub_Sem],[Sub_Units]) values(?,?,?,?,?)", con);
+                    cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
+                    cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Description.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubYear.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubSem.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtUnits.Text;
+
+                    cmd.ExecuteNonQuery();
+                    select_Subject();
+                    con.Close();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand(" insert into[Subjects]([Sub_Code],[Sub_Name],[Sub_Year],[Sub_Sem],[Sub_Units]) values(?,?,?,?,?)", con);
-                cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
-                cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Description.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubYear.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubSem.Text;
-                cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtUnits.Text;
-                
-                cmd.ExecuteNonQuery();
-                select_Subject();
-                con.Close();
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -294,6 +301,29 @@ namespace Student_Information.v._2
         }
 
 
+        private void AutoComplete_EnrolledMasterlist()
+        {
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [EnrollmentDetails]", con);
+
+
+            con.Close();
+            con.Open();
+            AutoCompleteStringCollection compl = new AutoCompleteStringCollection();//auto complete in search
+
+
+            OleDbDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                compl.Add(rdr.GetString(0));//auto complete in search
+
+            }
+
+            //txtSearchEnroll.AutoCompleteCustomSource = compl;
+            txtEnrolledMasterlist.AutoCompleteCustomSource = compl;
+            con.Close();
+
+
+        }
 
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -307,6 +337,7 @@ namespace Student_Information.v._2
             AutoComplete_Enroll();
             AutoComplete_Archive();
             AutoComplete_MasterList();
+            AutoComplete_EnrolledMasterlist();
 
         }
 
@@ -406,6 +437,7 @@ namespace Student_Information.v._2
 
         private void btnAddStud_Click(object sender, EventArgs e)
         {
+            AutoComplete_MasterList();
             Add ad = new Add(this);
             //this.Hide();
             addUp = 1;
@@ -596,6 +628,50 @@ namespace Student_Information.v._2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //ArchiveLits();   
+            foreach (DataGridViewRow row in dgvStudentList.SelectedRows)
+            {
+                String studentNumber;
+                if (!row.IsNewRow)
+                {
+                    string indextoString = row.Index.ToString();//Convert the row in to string
+                    Console.WriteLine("to string" + indextoString);
+                    int toNumeber = int.Parse(indextoString); //convert the row into int
+                    Console.WriteLine("to number"+toNumeber);
+
+
+                     studentNumber =dgvStudentList.Rows[toNumeber].Cells[0].Value.ToString();//get the student number of the multi selected rows
+                     try
+                     {
+                         con.Close();
+                         con.Open();
+                         OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info_Archive] select * from [Stud_Info] where [Stud_Id]=?", con);
+                         cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = studentNumber;
+                         cmd.ExecuteNonQuery();
+
+
+                         OleDbCommand del = new OleDbCommand("delete from [Stud_Info] where [Stud_Id]=?", con);
+                         del.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = studentNumber;
+                         Console.WriteLine(stud_id_Archive);
+                         del.ExecuteNonQuery();
+
+                         stud_id_Archive = "";
+                         con.Close();
+                     }
+                     catch (Exception ex)
+                     {
+                         MessageBox.Show(ex.Message);
+                     }
+                }
+            }
+            SelectStudents();
+            AutoComplete_MasterList();
+        }
+
+     
+
+        private void ArchiveLits()
+        {
             if (stud_id_Archive != "")
             {
                 try
@@ -604,7 +680,7 @@ namespace Student_Information.v._2
                     OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info_Archive] select * from [Stud_Info] where [Stud_Id]=?", con);
                     cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = stud_id_Archive;
                     cmd.ExecuteNonQuery();
-                   
+
 
                     OleDbCommand del = new OleDbCommand("delete from [Stud_Info] where [Stud_Id]=?", con);
                     del.Parameters.AddWithValue("@2", OleDbType.Numeric).Value = stud_id_Archive;
@@ -616,38 +692,6 @@ namespace Student_Information.v._2
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex .Message );
-                }
-            }
-            else
-            {
-                MessageBox.Show("please click the data properly to archive");
-            }
-            
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            if (stud_id_restore != "")
-            {
-                try
-                {
-                    con.Open();
-                    OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info] select * from [Stud_Info_Archive] where [Stud_Id]=?", con);
-                    cmd.Parameters.AddWithValue("@1", OleDbType.Numeric).Value = stud_id_restore;
-                    cmd.ExecuteNonQuery();
-
-
-                    OleDbCommand del = new OleDbCommand("delete from [Stud_Info_Archive] where [Stud_Id]=?", con);
-                    del.Parameters.AddWithValue("@2", OleDbType.Numeric).Value = stud_id_restore;
-                    Console.WriteLine(stud_id_Archive);
-                    del.ExecuteNonQuery();
-                    SelectArchiveStudents();
-                    stud_id_restore = "";
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
                     MessageBox.Show(ex.Message);
                 }
             }
@@ -655,7 +699,47 @@ namespace Student_Information.v._2
             {
                 MessageBox.Show("please click the data properly to archive");
             }
-            
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvArchive.SelectedRows)
+            {
+                String studentNumber;
+                if (!row.IsNewRow)
+                {
+                    string indextoString = row.Index.ToString();//Convert the row in to string
+                    Console.WriteLine("to string" + indextoString);
+                    int toNumeber = int.Parse(indextoString); //convert the row into int
+                    Console.WriteLine("to number" + toNumeber);
+
+
+                    studentNumber = dgvArchive.Rows[toNumeber].Cells[0].Value.ToString();//get the student number of the multi selected rows
+                    try
+                    {
+                        con.Close();
+                        con.Open();
+                        OleDbCommand cmd = new OleDbCommand("insert into [Stud_Info] select * from [Stud_Info_Archive] where [Stud_Id]=?", con);
+                        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = studentNumber;
+                        cmd.ExecuteNonQuery();
+
+
+                        OleDbCommand del = new OleDbCommand("delete from [Stud_Info_Archive] where [Stud_Id]=?", con);
+                        del.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = studentNumber;
+                        Console.WriteLine(stud_id_Archive);
+                        del.ExecuteNonQuery();
+                        
+                        stud_id_restore = "";
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            SelectArchiveStudents();
+            AutoComplete_Archive();
         }
 
         private void dgvArchive_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1087,6 +1171,7 @@ namespace Student_Information.v._2
         private void btnRefreshArchive_Click(object sender, EventArgs e)
         {
             SelectArchiveStudents();// Archive List
+            AutoComplete_Archive();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -1096,12 +1181,83 @@ namespace Student_Information.v._2
 
         private void button11_Click(object sender, EventArgs e)
         {
+            Select_Enrolee_Search();
+        }
+        private void Select_Enrolee_Search()
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Course],[Stud_Section],[Stud_Sem] from [EnrollmentDetails] where [Stud_Id]='"+txtEnrolledMasterlist.Text+"' and [SchoolYear]='" + lblSchoolYear.Text + "'", con);
 
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dgvEnrolled.DataSource = table;
+
+            dgvEnrolled.AllowUserToAddRows = false;
+            dgvEnrolled.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvEnrolled.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void btnRefreshMasterlist_Click(object sender, EventArgs e)
         {
             SelectStudents();//Master List
+            AutoComplete_MasterList();
+        }
+
+        private void btnSub_Upt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((txtSub_Code.Text == "") || (txtUnits.Text == "") || (txtSub_Description.Text == "") || (cmbSubYear.Text == "") || (cmbSubSem.Text == ""))
+                {
+                    MessageBox.Show("Please fill the blank");
+                }
+                else
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand(" update[Subjects] set[Sub_Code]=?,[Sub_Name]=?,[Sub_Year]=?,[Sub_Sem]=?,[Sub_Units]=? where[Sub_Code]='"+txtSub_Code.Text+"'", con);
+                    cmd.Parameters.AddWithValue("@Department", OleDbType.VarChar).Value = txtSub_Code.Text;
+                    cmd.Parameters.AddWithValue("@Course", OleDbType.VarChar).Value = txtSub_Description.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubYear.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = cmbSubSem.Text;
+                    cmd.Parameters.AddWithValue("@Section", OleDbType.VarChar).Value = txtUnits.Text;
+
+                    cmd.ExecuteNonQuery();
+                    select_Subject();
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((txtSub_Code.Text == "") || (txtUnits.Text == "") || (txtSub_Description.Text == "") || (cmbSubYear.Text == "") || (cmbSubSem.Text == ""))
+                {
+                    MessageBox.Show("Please fill the blank");
+                }
+                else
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand(" delete from[Subjects] where [Sub_Code]='"+txtSub_Code.Text+"'", con);
+                 
+                    cmd.ExecuteNonQuery();
+                    select_Subject();
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnRefreshEnrolled_Click(object sender, EventArgs e)
+        {
+            Select_Enrolee();
         }
     }
 }
