@@ -473,6 +473,7 @@ namespace Student_Information.v._2
 
         private void button12_Click(object sender, EventArgs e)
         {
+            AutoComplete_Enroll();
             Hide_panels();
             pnlEnroll.Show();
         }
@@ -559,7 +560,7 @@ namespace Student_Information.v._2
         }
         private void SelectStudents_Search()
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Erollment] where[Stud_Id]='" + txtSearchEnroll.Text + "' and [SchoolYear]='"+lblSchoolYearEnroll .Text +"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Sub_Code],[Sub_Name],[Sub_Units] from [Erollment] where[Stud_Id]='" + txtSearchEnroll.Text + "' and [SchoolYear]='"+lblSchoolYearEnroll.Text +"'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             dgvEnrolledSub.DataSource = table;
@@ -571,7 +572,7 @@ namespace Student_Information.v._2
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_Id]='"+txtSearchEnroll .Text +"'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_FullName],[Stud_Gmail] from [Stud_Info] where [Stud_Id]='" + txtSearchEnroll.Text + "'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
             
@@ -1045,6 +1046,7 @@ namespace Student_Information.v._2
         }
         private void Admin_Acc()
         {
+            con.Close();
             con.Open();
             OleDbDataAdapter search = new OleDbDataAdapter("Select [Username],[Email] from [Admin_Acc]", con);
             //search.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtSearchMasterList.Text;

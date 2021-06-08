@@ -1738,7 +1738,6 @@
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAcc);
@@ -1746,6 +1745,7 @@
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
             this.Controls.Add(this.pnlMasterList);
+            this.Controls.Add(this.pnlArchiveList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             //this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
