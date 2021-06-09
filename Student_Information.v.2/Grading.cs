@@ -113,7 +113,7 @@ namespace Student_Information.v._2
             }
      
             
-            OleDbCommand cmd = new OleDbCommand("Select [Stud_FullName] from [Stud_Info]", con);
+            OleDbCommand cmd = new OleDbCommand("Select [Stud_Id] from [Erollment]", con);
 
 
             con.Close();
@@ -208,7 +208,12 @@ namespace Student_Information.v._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InputGrade();
+            if (txtGr1.Text != "")
+            {
+                InputGrade();
+                MessageBox.Show("Grade Updated");
+            }
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -216,7 +221,7 @@ namespace Student_Information.v._2
           
 
 
-            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Sem],[Stud_Section],[Stud_Year],[Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Name]='" + txtSearchRecords.Text + "'", con);
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Name],[Stud_Sem],[Stud_Section],[Stud_Year],[Sub_Code],[Sub_Name],[Sub_Grades] from [Erollment] where [Stud_Id]='" + txtSearchRecords.Text + "'", con);
             DataTable table = new DataTable();
             adapt.Fill(table);
 
@@ -561,6 +566,55 @@ namespace Student_Information.v._2
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGr1_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr1.Text == ""))
+            {
+                lbl1.Text = "-";
+            }  
+            else if ((txtGr1.Text == "1") || (txtGr1.Text == "1.00"))
+            {
+                lbl1.Text = "98-100";
+            }
+            else if (txtGr1.Text == "1.25")
+            {
+                lbl1.Text = "95-97";
+            }
+            else if ((txtGr1.Text == "1.5") || (txtGr1.Text == "1.50"))
+            {
+                lbl1.Text = "92-94";
+            }
+            else if ((txtGr1.Text == "1.7") || (txtGr1.Text == "1.75"))
+            {
+                lbl1.Text = "89-91";
+            }
+            else if ((txtGr1.Text == "2") || (txtGr1.Text == "2.00"))
+            {
+                lbl1.Text = "86-88";
+            }
+            else if (txtGr1.Text == "2.25")
+            {
+                lbl1.Text = "83-85";
+            }
+            else if ((txtGr1.Text == "2.5") || (txtGr1.Text == "2.50"))
+            {
+                lbl1.Text = "80-82";
+            }
+            else if ((txtGr1.Text == "2.75") || (txtGr1.Text == "2.7"))
+            {
+                lbl1.Text = "77-79";
+            }
+            else if ((txtGr1.Text == "5") || (txtGr1.Text == "5.00"))
+            {
+                lbl1.Text = "75";
+            }  
         }
     
       

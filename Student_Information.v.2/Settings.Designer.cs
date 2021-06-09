@@ -976,10 +976,10 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlSend);
             this.Controls.Add(this.pnldAccounts);
             this.Controls.Add(this.pnlPrint);
+            this.Controls.Add(this.pnlRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             //this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
