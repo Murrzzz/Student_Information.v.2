@@ -85,20 +85,20 @@
             this.erollmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.erollmentTableAdapter = new Student_Information.v._2.Stud_Info_UpdateDataSetTableAdapters.ErollmentTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.dgvGrades = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl10 = new System.Windows.Forms.Label();
-            this.lbl9 = new System.Windows.Forms.Label();
-            this.lbl8 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.dgvGrades = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stud_Info_UpdateDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erollmentBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -121,6 +121,7 @@
             this.txtGr2.Name = "txtGr2";
             this.txtGr2.Size = new System.Drawing.Size(110, 28);
             this.txtGr2.TabIndex = 151;
+            this.txtGr2.TextChanged += new System.EventHandler(this.txtGr2_TextChanged);
             // 
             // txtGr3
             // 
@@ -130,6 +131,7 @@
             this.txtGr3.Name = "txtGr3";
             this.txtGr3.Size = new System.Drawing.Size(110, 28);
             this.txtGr3.TabIndex = 153;
+            this.txtGr3.TextChanged += new System.EventHandler(this.txtGr3_TextChanged);
             // 
             // txtGr4
             // 
@@ -139,6 +141,7 @@
             this.txtGr4.Name = "txtGr4";
             this.txtGr4.Size = new System.Drawing.Size(110, 28);
             this.txtGr4.TabIndex = 155;
+            this.txtGr4.TextChanged += new System.EventHandler(this.txtGr4_TextChanged);
             // 
             // txtGr5
             // 
@@ -148,6 +151,7 @@
             this.txtGr5.Name = "txtGr5";
             this.txtGr5.Size = new System.Drawing.Size(110, 28);
             this.txtGr5.TabIndex = 157;
+            this.txtGr5.TextChanged += new System.EventHandler(this.txtGr5_TextChanged);
             // 
             // txtGr6
             // 
@@ -157,6 +161,7 @@
             this.txtGr6.Name = "txtGr6";
             this.txtGr6.Size = new System.Drawing.Size(110, 28);
             this.txtGr6.TabIndex = 159;
+            this.txtGr6.TextChanged += new System.EventHandler(this.txtGr6_TextChanged);
             // 
             // txtGr7
             // 
@@ -166,6 +171,7 @@
             this.txtGr7.Name = "txtGr7";
             this.txtGr7.Size = new System.Drawing.Size(110, 28);
             this.txtGr7.TabIndex = 161;
+            this.txtGr7.TextChanged += new System.EventHandler(this.txtGr7_TextChanged);
             // 
             // txtGr8
             // 
@@ -175,6 +181,7 @@
             this.txtGr8.Name = "txtGr8";
             this.txtGr8.Size = new System.Drawing.Size(110, 28);
             this.txtGr8.TabIndex = 163;
+            this.txtGr8.TextChanged += new System.EventHandler(this.txtGr8_TextChanged);
             // 
             // txtGr9
             // 
@@ -184,6 +191,7 @@
             this.txtGr9.Name = "txtGr9";
             this.txtGr9.Size = new System.Drawing.Size(110, 28);
             this.txtGr9.TabIndex = 165;
+            this.txtGr9.TextChanged += new System.EventHandler(this.txtGr9_TextChanged);
             // 
             // txtGr10
             // 
@@ -193,6 +201,7 @@
             this.txtGr10.Name = "txtGr10";
             this.txtGr10.Size = new System.Drawing.Size(110, 28);
             this.txtGr10.TabIndex = 167;
+            this.txtGr10.TextChanged += new System.EventHandler(this.txtGr10_TextChanged);
             // 
             // lineShape1
             // 
@@ -214,6 +223,7 @@
             this.rectangleShape2.Location = new System.Drawing.Point(255, 12);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(149, 505);
+            this.rectangleShape2.Click += new System.EventHandler(this.rectangleShape2_Click);
             // 
             // rectangleShape1
             // 
@@ -724,70 +734,38 @@
             this.panel2.Size = new System.Drawing.Size(631, 566);
             this.panel2.TabIndex = 213;
             // 
-            // shapeContainer2
+            // lbl10
             // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1,
-            this.rectangleShape3,
-            this.rectangleShape2,
-            this.rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(631, 566);
-            this.shapeContainer2.TabIndex = 0;
-            this.shapeContainer2.TabStop = false;
+            this.lbl10.AutoSize = true;
+            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl10.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbl10.Location = new System.Drawing.Point(432, 474);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(16, 24);
+            this.lbl10.TabIndex = 218;
+            this.lbl10.Text = "-";
             // 
-            // dgvGrades
+            // lbl9
             // 
-            this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrades.Location = new System.Drawing.Point(523, 205);
-            this.dgvGrades.Name = "dgvGrades";
-            this.dgvGrades.Size = new System.Drawing.Size(349, 407);
-            this.dgvGrades.TabIndex = 214;
+            this.lbl9.AutoSize = true;
+            this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl9.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbl9.Location = new System.Drawing.Point(432, 429);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(16, 24);
+            this.lbl9.TabIndex = 219;
+            this.lbl9.Text = "-";
             // 
-            // btnRefresh
+            // lbl8
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(797, 61);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(87, 26);
-            this.btnRefresh.TabIndex = 215;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(797, 677);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 216;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl1.Location = new System.Drawing.Point(432, 69);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(16, 24);
-            this.lbl1.TabIndex = 217;
-            this.lbl1.Text = "-";
+            this.lbl8.AutoSize = true;
+            this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl8.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbl8.Location = new System.Drawing.Point(432, 384);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(16, 24);
+            this.lbl8.TabIndex = 220;
+            this.lbl8.Text = "-";
             // 
             // lbl7
             // 
@@ -856,38 +834,70 @@
             this.lbl2.TabIndex = 223;
             this.lbl2.Text = "-";
             // 
-            // lbl10
+            // lbl1
             // 
-            this.lbl10.AutoSize = true;
-            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl10.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl10.Location = new System.Drawing.Point(432, 474);
-            this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(16, 24);
-            this.lbl10.TabIndex = 218;
-            this.lbl10.Text = "-";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbl1.Location = new System.Drawing.Point(432, 69);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(16, 24);
+            this.lbl1.TabIndex = 217;
+            this.lbl1.Text = "-";
             // 
-            // lbl9
+            // shapeContainer2
             // 
-            this.lbl9.AutoSize = true;
-            this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl9.Location = new System.Drawing.Point(432, 429);
-            this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(16, 24);
-            this.lbl9.TabIndex = 219;
-            this.lbl9.Text = "-";
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1,
+            this.rectangleShape3,
+            this.rectangleShape2,
+            this.rectangleShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(631, 566);
+            this.shapeContainer2.TabIndex = 0;
+            this.shapeContainer2.TabStop = false;
             // 
-            // lbl8
+            // dgvGrades
             // 
-            this.lbl8.AutoSize = true;
-            this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl8.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl8.Location = new System.Drawing.Point(432, 384);
-            this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(16, 24);
-            this.lbl8.TabIndex = 220;
-            this.lbl8.Text = "-";
+            this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrades.Location = new System.Drawing.Point(523, 205);
+            this.dgvGrades.Name = "dgvGrades";
+            this.dgvGrades.Size = new System.Drawing.Size(349, 407);
+            this.dgvGrades.TabIndex = 214;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(797, 61);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(87, 26);
+            this.btnRefresh.TabIndex = 215;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(797, 677);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 216;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Grading
             // 

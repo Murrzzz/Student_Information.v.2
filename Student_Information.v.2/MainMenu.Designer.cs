@@ -120,6 +120,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvArchive = new System.Windows.Forms.DataGridView();
             this.pnlMasterList = new System.Windows.Forms.Panel();
+            this.btnPrintMasteList = new System.Windows.Forms.Button();
             this.btnRefreshMasterlist = new System.Windows.Forms.Button();
             this.btnMessageMasterList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -570,7 +571,7 @@
             this.btnUpdate_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate_Class.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate_Class.Location = new System.Drawing.Point(879, 628);
+            this.btnUpdate_Class.Location = new System.Drawing.Point(868, 618);
             this.btnUpdate_Class.Name = "btnUpdate_Class";
             this.btnUpdate_Class.Size = new System.Drawing.Size(78, 30);
             this.btnUpdate_Class.TabIndex = 7;
@@ -586,7 +587,7 @@
             this.btnAdd_Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd_Class.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd_Class.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Class.Location = new System.Drawing.Point(781, 628);
+            this.btnAdd_Class.Location = new System.Drawing.Point(770, 618);
             this.btnAdd_Class.Name = "btnAdd_Class";
             this.btnAdd_Class.Size = new System.Drawing.Size(73, 30);
             this.btnAdd_Class.TabIndex = 6;
@@ -1352,6 +1353,7 @@
             // pnlMasterList
             // 
             this.pnlMasterList.BackColor = System.Drawing.Color.White;
+            this.pnlMasterList.Controls.Add(this.btnPrintMasteList);
             this.pnlMasterList.Controls.Add(this.btnRefreshMasterlist);
             this.pnlMasterList.Controls.Add(this.btnMessageMasterList);
             this.pnlMasterList.Controls.Add(this.button1);
@@ -1367,6 +1369,22 @@
             this.pnlMasterList.Size = new System.Drawing.Size(965, 665);
             this.pnlMasterList.TabIndex = 31;
             this.pnlMasterList.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMasterList_Paint);
+            // 
+            // btnPrintMasteList
+            // 
+            this.btnPrintMasteList.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintMasteList.FlatAppearance.BorderSize = 0;
+            this.btnPrintMasteList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnPrintMasteList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintMasteList.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintMasteList.ForeColor = System.Drawing.Color.White;
+            this.btnPrintMasteList.Location = new System.Drawing.Point(641, 621);
+            this.btnPrintMasteList.Name = "btnPrintMasteList";
+            this.btnPrintMasteList.Size = new System.Drawing.Size(93, 35);
+            this.btnPrintMasteList.TabIndex = 179;
+            this.btnPrintMasteList.Text = "Print";
+            this.btnPrintMasteList.UseVisualStyleBackColor = false;
+            this.btnPrintMasteList.Click += new System.EventHandler(this.btnPrintMasteList_Click);
             // 
             // btnRefreshMasterlist
             // 
@@ -1738,14 +1756,14 @@
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMasterList);
+            this.Controls.Add(this.pnlArchiveList);
             this.Controls.Add(this.pnlEnrolledList);
             this.Controls.Add(this.pnlClass);
             this.Controls.Add(this.pnlAcc);
             this.Controls.Add(this.pnlAccounts);
             this.Controls.Add(this.pnlSubjects);
             this.Controls.Add(this.pnlEnroll);
-            this.Controls.Add(this.pnlMasterList);
-            this.Controls.Add(this.pnlArchiveList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             //this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1911,5 +1929,6 @@
         private System.Windows.Forms.Button btnRefreshMasterlist;
         private System.Windows.Forms.Button btnRefreshArchive;
         private System.Windows.Forms.Button btnRefreshEnrolled;
+        private System.Windows.Forms.Button btnPrintMasteList;
     }
 }

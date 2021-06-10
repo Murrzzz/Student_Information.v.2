@@ -502,6 +502,18 @@ namespace Student_Information.v._2
 
         }
 
+        private void txtGmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtGmail.Text.Contains("@gmail.com"))
+            {
+                lblerrorgmail.Text = "Correct the Format";
+            }
+            else
+            {
+                lblerrorgmail.Text = "";
+            }
+        }
+
       
     }     
 }

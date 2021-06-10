@@ -59,7 +59,6 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtGmail = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -114,6 +113,8 @@
             this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblerrorgmail = new System.Windows.Forms.Label();
             this.pnlAdd_Subject.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -496,6 +497,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblerrorgmail);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.txtStudentNumber);
             this.groupBox3.Controls.Add(this.txtGmail);
@@ -505,16 +507,6 @@
             this.groupBox3.Size = new System.Drawing.Size(1008, 88);
             this.groupBox3.TabIndex = 147;
             this.groupBox3.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(581, 34);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 20);
-            this.label19.TabIndex = 181;
-            this.label19.Text = "Gmail";
             // 
             // txtStudentNumber
             // 
@@ -535,6 +527,7 @@
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Size = new System.Drawing.Size(265, 29);
             this.txtGmail.TabIndex = 180;
+            this.txtGmail.TextChanged += new System.EventHandler(this.txtGmail_TextChanged);
             // 
             // label39
             // 
@@ -1099,6 +1092,26 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(581, 34);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 20);
+            this.label19.TabIndex = 181;
+            this.label19.Text = "Gmail";
+            // 
+            // lblerrorgmail
+            // 
+            this.lblerrorgmail.AutoSize = true;
+            this.lblerrorgmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblerrorgmail.ForeColor = System.Drawing.Color.Red;
+            this.lblerrorgmail.Location = new System.Drawing.Point(695, 63);
+            this.lblerrorgmail.Name = "lblerrorgmail";
+            this.lblerrorgmail.Size = new System.Drawing.Size(0, 18);
+            this.lblerrorgmail.TabIndex = 182;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1221,9 +1234,10 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.TextBox txtGmail;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label lblerrorgmail;
+        private System.Windows.Forms.Label label19;
     }
 }

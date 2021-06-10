@@ -29,6 +29,12 @@ namespace Student_Information.v._2
         public static string[] SubCode=new string [30];
         public static string[] SubUnits=new string[30];
 
+        //Variable that carry the data in tha datagrid view to print
+        public static string[] Student_id = new string[30];
+        public static string[] Student_Fname = new string[30];
+        public static string[] Student_Mname = new string[30];
+        public static string[] Student_Lname = new string[30];
+
         public static int count_sub = 0;//Count subjects into the print form
 
         public static int masterAndArchiveChoose = 0;
@@ -416,6 +422,7 @@ namespace Student_Information.v._2
         private void button2_Click(object sender, EventArgs e)
         {
             Hide_panels();
+            AutoComplete_EnrolledMasterlist();
             pnlEnrolledList.Show ();
         }
 
@@ -454,11 +461,45 @@ namespace Student_Information.v._2
             ad.Show();
            //add to Add form
         }
-    
+
         private void pnlMasterList_Paint(object sender, PaintEventArgs e)
         {
-            
+            //ReadData_inDatabase();
         }
+
+        private void ReadData_inDatabase()
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand adapt1 = new OleDbCommand("Select count(*) from [Stud_Info]", con);
+
+                int i = 0;
+                int a = 2;
+                count_sub = (int)adapt1.ExecuteScalar();//i use the count to count the rowws
+
+                while (i < count_sub)
+                {
+                   
+
+                    Student_id[a] = dgvStudentList.Rows[i].Cells[0].Value.ToString();
+                    Student_Lname[a] = dgvStudentList.Rows[i].Cells[1].Value.ToString();
+                    Student_Fname[a] = dgvStudentList.Rows[i].Cells[2].Value.ToString();
+                    Student_Mname[a] = dgvStudentList.Rows[i].Cells[2].Value.ToString();
+                    Console.WriteLine(count_sub);
+                    i++;
+                    a++;
+                }
+                PrintMasterlist printt = new PrintMasterlist(this);
+                printt.Show();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void SelectStudents()
         {
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select [Stud_Id],[Stud_Lname],[Stud_Fname],[Stud_Mname],[Stud_Gmail],[Stud_Age],[Stud_Gender] from [Stud_Info]", con);
@@ -1184,6 +1225,7 @@ namespace Student_Information.v._2
         private void button11_Click(object sender, EventArgs e)
         {
             Select_Enrolee_Search();
+            AutoComplete_EnrolledMasterlist();
         }
         private void Select_Enrolee_Search()
         {
@@ -1260,6 +1302,11 @@ namespace Student_Information.v._2
         private void btnRefreshEnrolled_Click(object sender, EventArgs e)
         {
             Select_Enrolee();
+        }
+
+        private void btnPrintMasteList_Click(object sender, EventArgs e)
+        {
+            ReadData_inDatabase();
         }
     }
 }

@@ -62,6 +62,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintMasterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintMasterlist.Designer.cs">
+      <DependentUpon>PrintMasterlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="DGVPrinter.cs" />
     <Compile Include="frmLogin.cs" />
     <Compile Include="Grading.cs">
@@ -154,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintMasterlist.resx">
+      <DependentUpon>PrintMasterlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grading.resx">
       <DependentUpon>Grading.cs</DependentUpon>

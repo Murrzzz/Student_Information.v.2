@@ -147,7 +147,7 @@ namespace Student_Information.v._2
         private void btnC1_Click(object sender, EventArgs e)
         {
             cmbSub1.Text = "";
-            //txtGr1.Text = "";
+            txtGr1.Text = "";
         }
 
         private void btnC2_Click(object sender, EventArgs e)
@@ -614,6 +614,407 @@ namespace Student_Information.v._2
             else if ((txtGr1.Text == "5") || (txtGr1.Text == "5.00"))
             {
                 lbl1.Text = "75";
+            }  
+        }
+
+        private void txtGr2_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr2.Text == ""))
+            {
+                lbl2.Text = "-";
+            }
+            else if ((txtGr2.Text == "1") || (txtGr2.Text == "1.00"))
+            {
+                lbl2.Text = "98-100";
+            }
+            else if (txtGr2.Text == "1.25")
+            {
+                lbl2.Text = "95-97";
+            }
+            else if ((txtGr2.Text == "1.5") || (txtGr2.Text == "1.50"))
+            {
+                lbl2.Text = "92-94";
+            }
+            else if ((txtGr2.Text == "1.7") || (txtGr2.Text == "1.75"))
+            {
+                lbl2.Text = "89-91";
+            }
+            else if ((txtGr2.Text == "2") || (txtGr2.Text == "2.00"))
+            {
+                lbl2.Text = "86-88";
+            }
+            else if (txtGr2.Text == "2.25")
+            {
+                lbl1.Text = "83-85";
+            }
+            else if ((txtGr1.Text == "2.5") || (txtGr1.Text == "2.50"))
+            {
+                lbl1.Text = "80-82";
+            }
+            else if ((txtGr1.Text == "2.75") || (txtGr1.Text == "2.7"))
+            {
+                lbl1.Text = "77-79";
+            }
+            else if ((txtGr1.Text == "5") || (txtGr1.Text == "5.00"))
+            {
+                lbl1.Text = "75";
+            }  
+        }
+
+        private void txtGr3_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr3.Text == ""))
+            {
+                lbl3.Text = "-";
+            }
+            else if ((txtGr3.Text == "1") || (txtGr3.Text == "1.00"))
+            {
+                lbl3.Text = "98-100";
+            }
+            else if (txtGr3.Text == "1.25")
+            {
+                lbl3.Text = "95-97";
+            }
+            else if ((txtGr3.Text == "1.5") || (txtGr3.Text == "1.50"))
+            {
+                lbl3.Text = "92-94";
+            }
+            else if ((txtGr3.Text == "1.7") || (txtGr3.Text == "1.75"))
+            {
+                lbl3.Text = "89-91";
+            }
+            else if ((txtGr3.Text == "2") || (txtGr3.Text == "2.00"))
+            {
+                lbl3.Text = "86-88";
+            }
+            else if (txtGr3.Text == "2.25")
+            {
+                lbl3.Text = "83-85";
+            }
+            else if ((txtGr3.Text == "2.5") || (txtGr3.Text == "2.50"))
+            {
+                lbl3.Text = "80-82";
+            }
+            else if ((txtGr3.Text == "2.75") || (txtGr3.Text == "2.7"))
+            {
+                lbl3.Text = "77-79";
+            }
+            else if ((txtGr3.Text == "5") || (txtGr3.Text == "5.00"))
+            {
+                lbl3.Text = "75";
+            }  
+        }
+
+        private void txtGr4_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr4.Text == ""))
+            {
+                lbl4.Text = "-";
+            }
+            else if ((txtGr4.Text == "1") || (txtGr4.Text == "1.00"))
+            {
+                lbl4.Text = "98-100";
+            }
+            else if (txtGr4.Text == "1.25")
+            {
+                lbl4.Text = "95-97";
+            }
+            else if ((txtGr4.Text == "1.5") || (txtGr4.Text == "1.50"))
+            {
+                lbl4.Text = "92-94";
+            }
+            else if ((txtGr4.Text == "1.7") || (txtGr4.Text == "1.75"))
+            {
+                lbl4.Text = "89-91";
+            }
+            else if ((txtGr4.Text == "2") || (txtGr4.Text == "2.00"))
+            {
+                lbl4.Text = "86-88";
+            }
+            else if (txtGr4.Text == "2.25")
+            {
+                lbl4.Text = "83-85";
+            }
+            else if ((txtGr4.Text == "2.5") || (txtGr4.Text == "2.50"))
+            {
+                lbl4.Text = "80-82";
+            }
+            else if ((txtGr4.Text == "2.75") || (txtGr4.Text == "2.7"))
+            {
+                lbl4.Text = "77-79";
+            }
+            else if ((txtGr4.Text == "5") || (txtGr4.Text == "5.00"))
+            {
+                lbl4.Text = "75";
+            }  
+        }
+
+        private void rectangleShape2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGr5_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr5.Text == ""))
+            {
+                lbl5.Text = "-";
+            }
+            else if ((txtGr5.Text == "1") || (txtGr5.Text == "1.00"))
+            {
+                lbl5.Text = "98-100";
+            }
+            else if (txtGr5.Text == "1.25")
+            {
+                lbl5.Text = "95-97";
+            }
+            else if ((txtGr5.Text == "1.5") || (txtGr5.Text == "1.50"))
+            {
+                lbl5.Text = "92-94";
+            }
+            else if ((txtGr5.Text == "1.7") || (txtGr5.Text == "1.75"))
+            {
+                lbl5.Text = "89-91";
+            }
+            else if ((txtGr5.Text == "2") || (txtGr5.Text == "2.00"))
+            {
+                lbl5.Text = "86-88";
+            }
+            else if (txtGr5.Text == "2.25")
+            {
+                lbl5.Text = "83-85";
+            }
+            else if ((txtGr5.Text == "2.5") || (txtGr5.Text == "2.50"))
+            {
+                lbl5.Text = "80-82";
+            }
+            else if ((txtGr5.Text == "2.75") || (txtGr5.Text == "2.7"))
+            {
+                lbl5.Text = "77-79";
+            }
+            else if ((txtGr5.Text == "5") || (txtGr5.Text == "5.00"))
+            {
+                lbl5.Text = "75";
+            }  
+        }
+
+        private void txtGr6_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr6.Text == ""))
+            {
+                lbl6.Text = "-";
+            }
+            else if ((txtGr6.Text == "1") || (txtGr6.Text == "1.00"))
+            {
+                lbl6.Text = "98-100";
+            }
+            else if (txtGr6.Text == "1.25")
+            {
+                lbl6.Text = "95-97";
+            }
+            else if ((txtGr6.Text == "1.5") || (txtGr6.Text == "1.50"))
+            {
+                lbl6.Text = "92-94";
+            }
+            else if ((txtGr6.Text == "1.7") || (txtGr6.Text == "1.75"))
+            {
+                lbl6.Text = "89-91";
+            }
+            else if ((txtGr6.Text == "2") || (txtGr6.Text == "2.00"))
+            {
+                lbl6.Text = "86-88";
+            }
+            else if (txtGr6.Text == "2.25")
+            {
+                lbl6.Text = "83-85";
+            }
+            else if ((txtGr6.Text == "2.5") || (txtGr6.Text == "2.50"))
+            {
+                lbl6.Text = "80-82";
+            }
+            else if ((txtGr6.Text == "2.75") || (txtGr6.Text == "2.7"))
+            {
+                lbl6.Text = "77-79";
+            }
+            else if ((txtGr6.Text == "5") || (txtGr6.Text == "5.00"))
+            {
+                lbl6.Text = "75";
+            }  
+        }
+
+        private void txtGr7_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr7.Text == ""))
+            {
+                lbl7.Text = "-";
+            }
+            else if ((txtGr7.Text == "1") || (txtGr7.Text == "1.00"))
+            {
+                lbl7.Text = "98-100";
+            }
+            else if (txtGr7.Text == "1.25")
+            {
+                lbl7.Text = "95-97";
+            }
+            else if ((txtGr7.Text == "1.5") || (txtGr7.Text == "1.50"))
+            {
+                lbl7.Text = "92-94";
+            }
+            else if ((txtGr7.Text == "1.7") || (txtGr7.Text == "1.75"))
+            {
+                lbl7.Text = "89-91";
+            }
+            else if ((txtGr7.Text == "2") || (txtGr7.Text == "2.00"))
+            {
+                lbl7.Text = "86-88";
+            }
+            else if (txtGr7.Text == "2.25")
+            {
+                lbl7.Text = "83-85";
+            }
+            else if ((txtGr7.Text == "2.5") || (txtGr7.Text == "2.50"))
+            {
+                lbl7.Text = "80-82";
+            }
+            else if ((txtGr7.Text == "2.75") || (txtGr7.Text == "2.7"))
+            {
+                lbl7.Text = "77-79";
+            }
+            else if ((txtGr7.Text == "5") || (txtGr7.Text == "5.00"))
+            {
+                lbl7.Text = "75";
+            }  
+        }
+
+        private void txtGr8_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr8.Text == ""))
+            {
+                lbl8.Text = "-";
+            }
+            else if ((txtGr8.Text == "1") || (txtGr8.Text == "1.00"))
+            {
+                lbl8.Text = "98-100";
+            }
+            else if (txtGr8.Text == "1.25")
+            {
+                lbl8.Text = "95-97";
+            }
+            else if ((txtGr8.Text == "1.5") || (txtGr8.Text == "1.50"))
+            {
+                lbl8.Text = "92-94";
+            }
+            else if ((txtGr8.Text == "1.7") || (txtGr8.Text == "1.75"))
+            {
+                lbl8.Text = "89-91";
+            }
+            else if ((txtGr8.Text == "2") || (txtGr8.Text == "2.00"))
+            {
+                lbl8.Text = "86-88";
+            }
+            else if (txtGr8.Text == "2.25")
+            {
+                lbl8.Text = "83-85";
+            }
+            else if ((txtGr8.Text == "2.5") || (txtGr8.Text == "2.50"))
+            {
+                lbl8.Text = "80-82";
+            }
+            else if ((txtGr8.Text == "2.75") || (txtGr8.Text == "2.7"))
+            {
+                lbl8.Text = "77-79";
+            }
+            else if ((txtGr8.Text == "5") || (txtGr8.Text == "5.00"))
+            {
+                lbl8.Text = "75";
+            }  
+        }
+
+        private void txtGr9_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr9.Text == ""))
+            {
+                lbl9.Text = "-";
+            }
+            else if ((txtGr9.Text == "1") || (txtGr9.Text == "1.00"))
+            {
+                lbl9.Text = "98-100";
+            }
+            else if (txtGr9.Text == "1.25")
+            {
+                lbl9.Text = "95-97";
+            }
+            else if ((txtGr9.Text == "1.5") || (txtGr9.Text == "1.50"))
+            {
+                lbl9.Text = "92-94";
+            }
+            else if ((txtGr9.Text == "1.7") || (txtGr9.Text == "1.75"))
+            {
+                lbl9.Text = "89-91";
+            }
+            else if ((txtGr9.Text == "2") || (txtGr9.Text == "2.00"))
+            {
+                lbl9.Text = "86-88";
+            }
+            else if (txtGr9.Text == "2.25")
+            {
+                lbl9.Text = "83-85";
+            }
+            else if ((txtGr9.Text == "2.5") || (txtGr9.Text == "2.50"))
+            {
+                lbl9.Text = "80-82";
+            }
+            else if ((txtGr9.Text == "2.75") || (txtGr9.Text == "2.7"))
+            {
+                lbl9.Text = "77-79";
+            }
+            else if ((txtGr9.Text == "5") || (txtGr9.Text == "5.00"))
+            {
+                lbl9.Text = "75";
+            }  
+        }
+
+        private void txtGr10_TextChanged(object sender, EventArgs e)
+        {
+            if ((txtGr10.Text == ""))
+            {
+                lbl10.Text = "-";
+            }
+            else if ((txtGr10.Text == "1") || (txtGr10.Text == "1.00"))
+            {
+                lbl10.Text = "98-100";
+            }
+            else if (txtGr10.Text == "1.25")
+            {
+                lbl10.Text = "95-97";
+            }
+            else if ((txtGr10.Text == "1.5") || (txtGr10.Text == "1.50"))
+            {
+                lbl10.Text = "92-94";
+            }
+            else if ((txtGr10.Text == "1.7") || (txtGr10.Text == "1.75"))
+            {
+                lbl10.Text = "89-91";
+            }
+            else if ((txtGr10.Text == "2") || (txtGr10.Text == "2.00"))
+            {
+                lbl10.Text = "86-88";
+            }
+            else if (txtGr10.Text == "2.25")
+            {
+                lbl10.Text = "83-85";
+            }
+            else if ((txtGr10.Text == "2.5") || (txtGr10.Text == "2.50"))
+            {
+                lbl10.Text = "80-82";
+            }
+            else if ((txtGr10.Text == "2.75") || (txtGr10.Text == "2.7"))
+            {
+                lbl10.Text = "77-79";
+            }
+            else if ((txtGr10.Text == "5") || (txtGr10.Text == "5.00"))
+            {
+                lbl10.Text = "75";
             }  
         }
     

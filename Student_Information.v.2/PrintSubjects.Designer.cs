@@ -29,30 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintSubjects));
-            this.PDFreader = new AxAcroPDFLib.AxAcroPDF();
-            ((System.ComponentModel.ISupportInitialize)(this.PDFreader)).BeginInit();
+            this.PDFreaderr = new AxAcroPDFLib.AxAcroPDF();
+            ((System.ComponentModel.ISupportInitialize)(this.PDFreaderr)).BeginInit();
             this.SuspendLayout();
             // 
-            // PDFreader
+            // PDFreaderr
             // 
-            this.PDFreader.Enabled = true;
-            this.PDFreader.Location = new System.Drawing.Point(1, 0);
-            this.PDFreader.Name = "PDFreader";
-            this.PDFreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("PDFreader.OcxState")));
-            this.PDFreader.Size = new System.Drawing.Size(1207, 896);
-            this.PDFreader.TabIndex = 0;
-            this.PDFreader.OnError += new System.EventHandler(this.axAcroPDF1_OnError);
+            this.PDFreaderr.Enabled = true;
+            this.PDFreaderr.Location = new System.Drawing.Point(-1, 1);
+            this.PDFreaderr.Name = "PDFreaderr";
+            this.PDFreaderr.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("PDFreaderr.OcxState")));
+            this.PDFreaderr.Size = new System.Drawing.Size(1245, 895);
+            this.PDFreaderr.TabIndex = 0;
             // 
             // PrintSubjects
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 891);
-            this.Controls.Add(this.PDFreader);
+            this.ClientSize = new System.Drawing.Size(1246, 895);
+            this.Controls.Add(this.PDFreaderr);
             this.Name = "PrintSubjects";
-            this.Text = "PrintSubjects";
-            this.Load += new System.EventHandler(this.PrintSubjects_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PDFreader)).EndInit();
+            this.Load += new System.EventHandler(this.PrintSubjects_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.PDFreaderr)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,6 +56,7 @@
         #endregion
 
         private AxAcroPDFLib.AxAcroPDF PDFreader;
+        private AxAcroPDFLib.AxAcroPDF PDFreaderr;
 
     }
 }
