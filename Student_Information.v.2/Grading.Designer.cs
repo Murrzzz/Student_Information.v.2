@@ -922,8 +922,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvGrades);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.dgvGrades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Grading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
